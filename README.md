@@ -20,7 +20,9 @@ output/final-V.dat
 Get the data:
 
 wget http://www.cs.cmu.edu/%7Echongw/data/citeulike/items.dat -P /data/
+
 wget http://www.cs.cmu.edu/%7Echongw/data/citeulike/users.dat -P /data/
+
 wget http://www.cs.cmu.edu/%7Echongw/data/citeulike/mult.dat -P /data/
 
 
