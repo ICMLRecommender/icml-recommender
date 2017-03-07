@@ -1,7 +1,7 @@
 # icml-recommender
 
-This is the CTR code from (https://github.com/blei-lab/ctr). 
-To be extended to take as input mult_user.dat and final_user.gamma.
+This is the CTR code from https://github.com/blei-lab/ctr. 
+To be extended to take as input user_mult.dat and user_final.gamma.
 
 Input:
 data/users.dat, data/items.dat, data/mult.dat 
