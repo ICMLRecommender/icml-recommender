@@ -17,16 +17,6 @@ output/final-V.dat
 
 # Usage
 
-Get the data:
-
-wget http://www.cs.cmu.edu/%7Echongw/data/citeulike/items.dat -P /data/   
-
-wget http://www.cs.cmu.edu/%7Echongw/data/citeulike/users.dat -P /data/   
-
-wget http://www.cs.cmu.edu/%7Echongw/data/citeulike/mult.dat -P /data/   
-
-
-Then run ctr:
 
 ctr/ctr --directory output/ --user data/users.dat --item data/items.dat  --mult data/mult.dat --theta_init lda-output/final.gamma  --beta_init lda-output/final.beta 
 
