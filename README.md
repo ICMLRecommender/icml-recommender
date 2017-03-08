@@ -17,7 +17,10 @@ output/final-V.dat
 
 # Usage
 
+1. Compile ctr using the make file in the ctr directory:     
+make
 
-ctr/ctr --directory output/ --user data/users.dat --item data/items.dat  --mult data/mult.dat --theta_init lda-output/final.gamma  --beta_init lda-output/final.beta 
+2. Run ctr:     
+ctr/ctr --directory output/ --user data/users.dat --item data/items.dat  --mult data/mult.dat --theta_init lda_output/final.gamma  --beta_init lda_output/final.beta 
 
 
