@@ -1,4 +1,4 @@
-\title{Extension of CTR}
+\title{\textbf{Extension} of CTR}
 \author{
         Valerio Perrone \\
 }
@@ -17,6 +17,7 @@
 \usepackage{float}
 %\usepackage{amsmath}
 \usepackage{mathtools}
+\usepackage[a4paper, total={6in, 8in}]{geometry}
 
 
 
@@ -63,8 +64,45 @@ This is an EM-style algorithm to learn MAP estimates. The goal is to maximize th
 
 \begin{align*}
 L &= - \frac{\lambda_u}{2} \sum_i \bm{(u_i - \theta^u_i)^T(u_i - \theta^u_i)} -\frac{\lambda_v}{2} \sum_j (v_j - \theta^v_j)^T(v_j - \theta^v_j) \\ 
-&+ \bm{ \sum_i \sum_m log( \sum_k \theta^u_{ik} \beta_{k,w^u_{im}})}  + \sum_j \sum_n log( \sum_k \theta^v_{jk} \beta_{k,w^v_{jn}}) - \sum_{i,j} \frac{c_{i,j}}{2} (r_{ij} - u^T_{i} v_{j})^2.
+& \bm{+ \sum_i \sum_m log( \sum_k \theta^u_{ik} \beta_{k,w^u_{im}})}  + \sum_j \sum_n log( \sum_k \theta^v_{jk} \beta_{k,w^v_{jn}}) - \sum_{i,j} \frac{c_{i,j}}{2} (r_{ij} - u^T_{i} v_{j})^2.
 \end{align*}
+
+
+
+The updates are the following:
+
+\begin{enumerate}
+
+\item Given $\theta^v_j,\theta^u_i$  $\rightarrow$ update $u_i$ and $v_j$:
+\begin{align*}
+u_i &\leftarrow (VC_i V^T + \lambda_u I_k)^{-1} (V C_i R_i \bm{+ \lambda_u \theta^u_i}) \\
+v_i &\leftarrow (UC_j U^T + \lambda_v I_k)^{-1} (U C_j R_j + \lambda_v \theta^v_j)
+\end{align*}
+
+where $C_i$ is the diagonal matrix with $c_{ij}$ on the diagonal and $R_i = (r_{ij})_{j=1}^J$ for user $i$.
+
+
+\item Given $U, V$  $\rightarrow$ update $\theta^v_j$ and $\theta^u_i$ by projection gradient using the following\footnote{After defining $\phi_{jnk}$ as the probability that word $z_{jn}$ (i.e. the $n$th word in document $j$) is assigned to topic $k$.}:
+
+\begin{align*}
+L(\theta^v_j) &\geq - \frac{\lambda_v}{2} (v_j - \theta^v_j)^T(v_j - \theta^v_j) + \sum_n \sum_k \phi^v_{jnk}(log\theta^v_{jk}\beta_{k,w^v_{jn}} - log \phi^v_{jnk})  \\
+\bm{L(\theta^u_i)} &\bm{\geq - \frac{\lambda_u}{2} (u_i - \theta^u_i)^T(u_i - \theta^u_i) + \sum_m \sum_k \phi^u_{ink}(log\theta^u_{ik}\beta_{k,w^u_{im}} - log \phi^u_{ink})}
+\end{align*}
+
+given that the optimal $\phi^v_{jnk}$, $\phi^u_{imk}$ and $\beta$ satisfy:
+
+\begin{align*}
+\phi^v_{jnk} &\propto \theta^v_{jk} \beta_{k,w^v_{jn}} \\
+\bm{\phi^u_{imk}} &\propto \bm{\theta^u_{ik} \beta_{k,w^u_{im}}} \\
+\bm{\beta_{kw}} &\bm{\propto \sum_j \sum_i \sum_n \sum_m \phi_{ijnmk} 1[w_{ijnm} = w].}
+\end{align*}
+
+
+
+\end{enumerate}
+
+
+
 
 
 
