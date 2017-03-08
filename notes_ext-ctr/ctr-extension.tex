@@ -1,0 +1,77 @@
+\title{Extension of CTR}
+\author{
+        Valerio Perrone \\
+}
+\date{\today}
+
+\documentclass[12pt]{article}
+
+\usepackage{verbatim}
+\usepackage{amsmath}
+\usepackage{bm}
+%\setlength\parindent{0pt}
+\usepackage{caption}
+\usepackage{subcaption}
+\usepackage{enumerate}
+%\usepackage{MnSymbol}
+\usepackage{float}
+%\usepackage{amsmath}
+\usepackage{mathtools}
+
+
+
+\begin{document}
+\maketitle
+
+
+\section{Model}
+Assume there are $K$ topics $\beta := \beta_{1:K}$ and that these are the same for users and items. 
+
+
+\begin{enumerate}
+\item For each user $i$,
+\begin{enumerate}
+\item  Draw topic proportions  $\theta^u_i \sim$ Dirichlet($\alpha$).
+\item  Draw item latent offset  $\epsilon^u_i \sim$ N($0, \lambda_u^{-1} I_k$) and set the item latent vector as $\bm{u_i = \epsilon^u_i + \theta^u_i}$.
+\item  For each word $w^u_{in}$.
+\begin{enumerate}
+\item  Draw topic assignment $z^u_{im} \sim$ Mult($\theta^u$).
+\item  Draw word $w^u_{im} \sim$ Mult($\beta_{z^u_{im}}$).
+\end{enumerate}
+\end{enumerate}
+
+
+\item For each item $j$,
+\begin{enumerate}
+\item  Draw topic proportions  $\theta^v_j \sim$ Dirichlet($\alpha$).
+\item  Draw item latent offset  $\epsilon^v_j \sim$ N($0, \lambda_v^{-1} I_k$) and set the item latent vector as $v_j = \epsilon^v_j + \theta^v_j$.
+\item  For each word $w^v_{jn}$.
+\begin{enumerate}
+\item  Draw topic assignment $z^v_{jn} \sim$ Mult($\theta$).
+\item  Draw word $w^v_{jn} \sim$ Mult($\beta_{z_{jn}}$).
+\end{enumerate}
+\end{enumerate}
+
+\item For each user-item pair $(i,j)$, draw the rating $r_{ij} \sim$ N($u^T_i v_j, c^{-1}_{ij}$).
+\end{enumerate}
+
+
+
+
+\section{Inference}
+This is an EM-style algorithm to learn MAP estimates. The goal is to maximize the complete log likelihood
+
+\begin{align*}
+L &= - \frac{\lambda_u}{2} \sum_i \bm{(u_i - \theta^u_i)^T(u_i - \theta^u_i)} -\frac{\lambda_v}{2} \sum_j (v_j - \theta^v_j)^T(v_j - \theta^v_j) \\ 
+&+ \bm{ \sum_i \sum_m log( \sum_k \theta^u_{ik} \beta_{k,w^u_{im}})}  + \sum_j \sum_n log( \sum_k \theta^v_{jk} \beta_{k,w^v_{jn}}) - \sum_{i,j} \frac{c_{i,j}}{2} (r_{ij} - u^T_{i} v_{j})^2.
+\end{align*}
+
+
+
+
+
+
+
+
+
+\end{document}
