@@ -18,9 +18,10 @@ output/final-V.dat
 # Usage
 
 1. Compile ctr using the make file in the ctr directory:     
-make
+make  
 
 2. Run ctr:     
-ctr/ctr --directory output/ --user data/users.dat --item data/items.dat  --mult data/mult.dat --theta_init lda_output/final.gamma  --beta_init lda_output/final.beta 
+ctr/ctr --directory output/ --user data/users.dat --item data/items.dat  --mult data/mult.dat --theta_init lda_output/final.gamma  --beta_init lda_output/final.beta   
 
-
+3. Given final-U.dat, final-V.dat, save in output/ the top 10 recommendations for each user:    
+Rscript rating.R  output/  200 10
