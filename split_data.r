@@ -11,19 +11,19 @@ lda_data_path = 'lda_output'
 # ------------------------------------------
 users = readLines(file.path(data_path, 'users.dat')) %>% 
   strsplit(' ') %>% 
-  lapply(tbl_df) %>% 
+  lapply(function(x) data_frame(item = x[-1])) %>% 
   bind_rows(.id = 'user') %>% 
   transmute(user = as.factor(as.integer(user)-1), # user ids start at 0
-            item = as.factor(as.integer(value)))
+            item = as.factor(as.integer(item)))
 
 # items contain the same data but rows are items instead of users
 
 # items = readLines(file.path(data_path, 'items.dat')) %>% 
 #   strsplit(' ') %>% 
-#   lapply(tbl_df) %>% 
+#   lapply(function(x) data_frame(user = x[-1])) %>% 
 #   bind_rows(.id = 'item') %>% 
 #   transmute(item = as.factor(as.integer(item)-1), # item ids start at 0
-#             user = as.factor(as.integer(value)))
+#             user = as.factor(as.integer(user)))
 
 # read mult.dat (items word counts)
 # ------------------------------------------
@@ -79,15 +79,17 @@ for (n in names(users_split)) {
     write_delim(file.path(lda_data_path, paste0('final_', n, '.gamma')), delim = ' ')
   
   # save users file
+  cnt = count(users_split[[n]], user)$n
+  
   split(users_split[[n]]$item, users_split[[n]]$user) %>% 
-    lapply(function(x) paste(x, collapse=" ")) %>% 
-    unlist() %>% 
+    mapply(function(x,y) paste(c(x,y), collapse=" "), cnt, .) %>% 
     writeLines(file.path(data_path, paste0('users_', n, '.dat')))
   
   # save items file
+  cnt = count(users_split[[n]], item)$n
+  
   split(users_split[[n]]$user, users_split[[n]]$item) %>% 
-    lapply(function(x) paste(x, collapse=" ")) %>% 
-    unlist() %>% 
+    mapply(function(x,y) paste(c(x,y), collapse=" "), cnt, .) %>% 
     writeLines(file.path(data_path, paste0('items_', n, '.dat')))
 }
 
