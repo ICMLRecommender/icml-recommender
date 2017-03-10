@@ -79,17 +79,17 @@ for (n in names(users_split)) {
     write_delim(file.path(lda_data_path, paste0('final_', n, '.gamma')), delim = ' ')
   
   # save users file
-  cnt = count(users_split[[n]], user)$n
+  ucnt = count(users_split[[n]], user)$n
   
   split(users_split[[n]]$item, users_split[[n]]$user) %>% 
-    mapply(function(x,y) paste(c(x,y), collapse=" "), cnt, .) %>% 
+    mapply(function(x,y) paste(c(x,y), collapse=" "), ucnt, .) %>% 
     writeLines(file.path(data_path, paste0('users_', n, '.dat')))
   
   # save items file
-  cnt = count(users_split[[n]], item)$n
+  icnt = count(users_split[[n]], item)$n
   
   split(users_split[[n]]$user, users_split[[n]]$item) %>% 
-    mapply(function(x,y) paste(c(x,y), collapse=" "), cnt, .) %>% 
+    mapply(function(x,y) paste(c(x,y), collapse=" "), icnt, .) %>% 
     writeLines(file.path(data_path, paste0('items_', n, '.dat')))
 }
 
