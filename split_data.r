@@ -13,27 +13,28 @@ users = readLines(file.path(data_path, 'users.dat')) %>%
   strsplit(' ') %>% 
   lapply(tbl_df) %>% 
   bind_rows(.id = 'user') %>% 
-  transmute(user = as.factor(as.integer(user)), 
+  transmute(user = as.factor(as.integer(user)-1), # user ids start at 0
             item = as.factor(as.integer(value)))
+
+# items = readLines(file.path(data_path, 'items.dat')) %>% 
+#   strsplit(' ') %>% 
+#   lapply(tbl_df) %>% 
+#   bind_rows(.id = 'item') %>% 
+#   transmute(item = as.factor(as.integer(item)-1), # item ids start at 0
+#             user = as.factor(as.integer(value)))
 
 # read mult.dat (items word counts)
 # ------------------------------------------
 mult = readLines(file.path(data_path, 'mult.dat')) %>% 
   strsplit(' ')
 
-items = sapply(mult, function(x) x[[1]])
-names(mult) = items
-
-mult = mult %>% 
-  lapply(function(x) data_frame(word_count = x[-1])) %>% 
-  bind_rows(.id = "item") %>% 
-  mutate(item = as.factor(as.integer(item)))
+names(mult) = seq(0, length(mult)-1)
 
 # read final.gamma (items topic proportions)
 # ------------------------------------------
 gamma = read_delim(file.path(lda_data_path, 'final.gamma'), 
                    delim = ' ', col_names = FALSE) %>% 
-  mutate(item = as.factor(1:n())) %>% 
+  mutate(item = as.factor(seq(0, n()-1))) %>% 
   select(item, everything())
 
 # split user bookmarks into library and like
@@ -54,27 +55,21 @@ users_split = users %>%
 # save files
 # ------------------------------------------
 for (n in names(users_split)) {
-  # filter mult
-  mult_split = mult %>% 
-    filter(item %in% unique(users_split[[n]][["item"]]))
+  items = sort(unique(users_split[[n]][["item"]]))
   
   # filter gamma
   gamma_split = gamma %>% 
-    filter(item %in% unique(users_split[[n]][["item"]]))
+    filter(item %in% items)
   
   # drop item levels
   users_split[[n]] = users_split[[n]] %>% 
-    mutate(item = as.factor(as.integer(droplevels(item))))
+    mutate(item = as.factor(as.integer(droplevels(item))-1))
   gamma_split = gamma_split %>%  
-    mutate(item = as.factor(as.integer(droplevels(item))))
-  mult_split = mult_split %>%  
-    mutate(item = as.factor(as.integer(droplevels(item))))
+    mutate(item = as.factor(as.integer(droplevels(item))-1))
   
   # save mult file
-  mult_split = split(mult_split$word_count, mult_split$item)
-  
-  mapply(function(x,y) paste(c(x,y), collapse=" "), 
-         names(mult_split), mult_split) %>% 
+  mult[items] %>% 
+    unlist() %>% 
     writeLines(file.path(data_path, paste0('mult_', n, '.dat')))
   
   # save gamma file
