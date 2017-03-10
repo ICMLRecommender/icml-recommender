@@ -81,6 +81,8 @@ v_i &\leftarrow (UC_j U^T + \lambda_v I_k)^{-1} (U C_j R_j + \lambda_v \theta^v_
 
 where $C_i$ is the diagonal matrix with $c_{ij}$ on the diagonal and $R_i = (r_{ij})_{j=1}^J$ for user $i$.
 
+Note: the following is only needed if we want to update $\theta$.
+
 
 \item Given $U, V$  $\rightarrow$ update $\theta^v_j$ and $\theta^u_i$ by projection gradient using the following\footnote{After defining $\phi_{jnk}$ as the probability that word $z_{jn}$ (i.e. the $n$th word in document $j$) is assigned to topic $k$.}:
 
@@ -94,8 +96,9 @@ given that the optimal $\phi^v_{jnk}$, $\phi^u_{imk}$ and $\beta$ satisfy:
 \begin{align*}
 \phi^v_{jnk} &\propto \theta^v_{jk} \beta_{k,w^v_{jn}} \\
 \bm{\phi^u_{imk}} &\propto \bm{\theta^u_{ik} \beta_{k,w^u_{im}}} \\
-\bm{\beta_{kw}} &\bm{\propto \sum_j \sum_i \sum_n \sum_m \phi_{ijnmk} 1[w_{ijnm} = w].}
+\bm{\beta_{kw}} & \propto C_1 \sum_j  \sum_n  \phi_{jnk} 1[w_{jn} = w]  \bm{+   C_2 \sum_i \sum_m  \phi_{imk} 1[w_{im} = w]}
 \end{align*}
+where $C1$ and $C2$ follow from Appendix A.4.1 in the Latent Dirichlet Allocation paper.
 
 
 
