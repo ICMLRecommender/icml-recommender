@@ -16,6 +16,8 @@ users = readLines(file.path(data_path, 'users.dat')) %>%
   transmute(user = as.factor(as.integer(user)-1), # user ids start at 0
             item = as.factor(as.integer(value)))
 
+# items contain the same data but rows are items instead of users
+
 # items = readLines(file.path(data_path, 'items.dat')) %>% 
 #   strsplit(' ') %>% 
 #   lapply(tbl_df) %>% 
@@ -25,8 +27,7 @@ users = readLines(file.path(data_path, 'users.dat')) %>%
 
 # read mult.dat (items word counts)
 # ------------------------------------------
-mult = readLines(file.path(data_path, 'mult.dat')) %>% 
-  strsplit(' ')
+mult = readLines(file.path(data_path, 'mult.dat'))
 
 names(mult) = seq(0, length(mult)-1)
 
