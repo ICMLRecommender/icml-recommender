@@ -1,3 +1,5 @@
+#!/usr/bin/Rscript
+
 # Recommends top papers to each user given U and V
 # (latent user and item representations found by CTR)
 
@@ -36,4 +38,5 @@ for (j in 1:dim(score)[1]){
 }
   
 rec.path <- sprintf("%s/recommendations.txt", path)
-write.table(recommendations, rec.path, sep="\t")
+write.table(recommendations, rec.path, sep="\t", 
+            quote = FALSE, col.names = FALSE)

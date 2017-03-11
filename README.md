@@ -1,7 +1,7 @@
 # icml-recommender
 
 This is the CTR code from https://github.com/blei-lab/ctr. 
-To be extended to take as input user_mult.dat and user_final.gamma.
+To be extended to take as input mult_library.dat and final_library.gamma.
 
 Input:  
 data/users.dat   
@@ -21,7 +21,7 @@ output/final-V.dat
 make  
 
 2. Run ctr:     
-ctr/ctr --directory output/ --user data/users.dat --item data/items.dat  --mult data/mult.dat --theta_init lda_output/final.gamma  --beta_init lda_output/final.beta   
+ctr2/ctr --directory output/ --user data/users_like.dat --item data/items_like.dat  --mult_v data/mult_like.dat --mult_u data/mult_u_library.dat --theta_v_init lda_output/final_like.gamma --theta_u_init lda_output/final_library.gamma_u --beta_init lda_output/final.beta   
 
 3. Given final-U.dat, final-V.dat, save in output/ the top 10 recommendations for each user:    
 Rscript rating.R  output/  200 10

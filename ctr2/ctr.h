@@ -12,7 +12,6 @@ struct ctr_hyperparameter {
   double b;
   double lambda_u;
   double lambda_v;
-  double learning_rate;
   double alpha_u_smooth;
   double alpha_v_smooth;
   int    random_seed;
@@ -25,13 +24,12 @@ struct ctr_hyperparameter {
   
   void set(double aa, double bb, 
            double lu, double lv, 
-           double lr, double aus, double avs,
+           double aus, double avs,
            int rs, int mi, int sl,    
 		   int tuo, int tvo,
 		   int cr, int lda_r) {
     a = aa; b = bb; 
     lambda_u = lu; lambda_v = lv; 
-    learning_rate = lr;
     alpha_u_smooth = aus; alpha_v_smooth = avs;
     random_seed = rs; max_iter = mi;
     save_lag = sl;
@@ -45,7 +43,6 @@ struct ctr_hyperparameter {
     fprintf(file, "b = %.4f\n", b);
     fprintf(file, "lambda_u = %.4f\n", lambda_u);
     fprintf(file, "lambda_v = %.4f\n", lambda_v);
-    fprintf(file, "learning_rate = %.6f\n", learning_rate);
     fprintf(file, "alpha_u_smooth = %.6f\n", alpha_u_smooth);
     fprintf(file, "alpha_v_smooth = %.6f\n", alpha_v_smooth);
     fprintf(file, "random seed = %d\n", (int)random_seed);
@@ -63,27 +60,21 @@ class c_ctr {
 public:
   c_ctr();
   ~c_ctr();
-  void read_init_information(const char* theta_v_init_path, 
+  void read_init_information_v(const char* theta_v_init_path, 
                              const char* beta_init_path, 
-                             const c_corpus* c, double alpha_v_smooth);
+                             const c_corpus* c_v, double alpha_v_smooth);
 
-  void read_init_information_lib(const char* theta_u_init_path,
-                             const c_corpus* c_lib, double alpha_u_smooth);
+  void read_init_information_u(const char* theta_u_init_path,
+                             const c_corpus* c_u, double alpha_u_smooth);
 
   void set_model_parameters(int num_factors, 
                             int num_users, 
-                            int num_items,
-                            int num_items_lib);
+                            int num_items);
 
   void learn_map_estimate(const c_data* users, const c_data* items, 
-		  	  	  	  	  const c_data* users_lib, const c_data* items_lib,
-                          const c_corpus* c, const c_corpus* c_lib,
+                          const c_corpus* c_u, const c_corpus* c_v,
 						  const ctr_hyperparameter* param,
                           const char* directory);
-
-  void stochastic_learn_map_estimate(const c_data* users, const c_data* items, 
-                                     const c_corpus* c, const ctr_hyperparameter* param, 
-                                     const char* directory);
 
   void init_model(int ctr_run);
 
@@ -102,7 +93,6 @@ public:
   int m_num_factors; // m_num_topics
   int m_num_items; // m_num_docs
   int m_num_users; // num of users
-  int m_num_items_lib; // m_num_docs
 };
 
 #endif // CTR_H

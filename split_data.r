@@ -1,3 +1,4 @@
+#!/usr/bin/Rscript
 require(tidyr)
 require(dplyr)
 require(readr)
@@ -9,38 +10,58 @@ lda_data_path = 'lda_output'
 
 # read users.dat (user bookmarks)
 # ------------------------------------------
-users = readLines(file.path(data_path, 'users.dat')) %>% 
+fn = file.path(data_path, 'users.dat')
+cat("reading", fn, "\n")
+
+users = readLines(fn) %>% 
   strsplit(' ') %>% 
   lapply(function(x) data_frame(item = x[-1])) %>% 
   bind_rows(.id = 'user') %>% 
-  transmute(user = as.factor(as.integer(user)-1), # user ids start at 0
-            item = as.factor(as.integer(item)))
+  transmute(user = as.integer(user)-1, # user ids start at 0
+            item = as.integer(item))
 
 # items contain the same data but rows are items instead of users
-
-# items = readLines(file.path(data_path, 'items.dat')) %>% 
+# fn = file.path(data_path, 'items.dat')
+# cat("reading", fn, "\n")
+# 
+# items = readLines(fn) %>% 
 #   strsplit(' ') %>% 
 #   lapply(function(x) data_frame(user = x[-1])) %>% 
 #   bind_rows(.id = 'item') %>% 
-#   transmute(item = as.factor(as.integer(item)-1), # item ids start at 0
-#             user = as.factor(as.integer(user)))
+#   transmute(item = as.integer(item)-1, # item ids start at 0
+#             user = as.integer(user))
 
 # read mult.dat (items word counts)
 # ------------------------------------------
-mult = readLines(file.path(data_path, 'mult.dat'))
+fn = file.path(data_path, 'mult.dat')
+cat("reading", fn, "\n")
 
-names(mult) = seq(0, length(mult)-1)
+mult = readLines(fn) %>% 
+  strsplit(" ")
+
+names(mult) = seq(0, length(mult)-1) # item ids start at 0
+
+mult = mult %>% 
+  lapply(function(x) data_frame(word_count = x[-1])) %>% 
+  bind_rows(.id = "item") %>% 
+  separate(word_count, c("word", "count"), sep = ":") %>% 
+  mutate_all(funs(as.integer))
 
 # read final.gamma (items topic proportions)
 # ------------------------------------------
-gamma = read_delim(file.path(lda_data_path, 'final.gamma'), 
-                   delim = ' ', col_names = FALSE) %>% 
-  mutate(item = as.factor(seq(0, n()-1))) %>% 
+fn = file.path(lda_data_path, 'final.gamma')
+cat("reading", fn, "\n")
+
+gamma = read_delim(fn, delim = ' ', col_names = FALSE, 
+                   col_types = cols(.default = col_double())) %>% 
+  mutate(item = seq(0, n()-1)) %>%  # item ids start at 0
   select(item, everything())
 
 # split user bookmarks into library and like
 # ------------------------------------------
 r = 0.5 # ratio of user library items
+
+cat("splitting with ratio", r, "\n")
 
 # for all users assign each item to a group (library/like)
 users = users %>% 
@@ -56,40 +77,94 @@ users_split = users %>%
 # save files
 # ------------------------------------------
 for (n in names(users_split)) {
+  cat("  split:", n, "\n")
   items = sort(unique(users_split[[n]][["item"]]))
   
-  # filter gamma
+  # filter mult and gamma
+  mult_split = mult %>% 
+    filter(item %in% items)
   gamma_split = gamma %>% 
     filter(item %in% items)
   
-  # drop item levels
+  # reset user and item ids
   users_split[[n]] = users_split[[n]] %>% 
-    mutate(item = as.factor(as.integer(droplevels(item))-1))
+    mutate(user = as.integer(droplevels(as.factor(user)))-1,
+           item = as.integer(droplevels(as.factor(item)))-1)
+  mult_split = mult_split %>%  
+    mutate(item = as.integer(droplevels(as.factor(item)))-1)
   gamma_split = gamma_split %>%  
-    mutate(item = as.factor(as.integer(droplevels(item))-1))
-  
-  # save mult file
-  mult[items] %>% 
-    unlist() %>% 
-    writeLines(file.path(data_path, paste0('mult_', n, '.dat')))
-  
-  # save gamma file
-  gamma_split %>% 
-    select(-item) %>% 
-    write_delim(file.path(lda_data_path, paste0('final_', n, '.gamma')), delim = ' ')
+    mutate(item = as.integer(droplevels(as.factor(item)))-1)
   
   # save users file
+  fn = file.path(data_path, paste0('users_', n, '.dat'))
+  cat("    writing", fn, "\n")
+  
   ucnt = count(users_split[[n]], user)$n
   
   split(users_split[[n]]$item, users_split[[n]]$user) %>% 
     mapply(function(x,y) paste(c(x,y), collapse=" "), ucnt, .) %>% 
-    writeLines(file.path(data_path, paste0('users_', n, '.dat')))
+    writeLines(fn)
   
   # save items file
+  fn = file.path(data_path, paste0('items_', n, '.dat'))
+  cat("    writing", fn, "\n")
+  
   icnt = count(users_split[[n]], item)$n
   
   split(users_split[[n]]$user, users_split[[n]]$item) %>% 
     mapply(function(x,y) paste(c(x,y), collapse=" "), icnt, .) %>% 
-    writeLines(file.path(data_path, paste0('items_', n, '.dat')))
+    writeLines(fn)
+  
+  # save mult file
+  fn = file.path(data_path, paste0('mult_', n, '.dat'))
+  cat("    writing", fn, "\n")
+  
+  wcnt = count(mult_split, item)$n
+  
+  mult_split %>% 
+    unite("word_count", word, count, sep = ":") %>% 
+    split(.$item) %>% 
+    mapply(function(x,y) paste(c(x, y$word_count), collapse=" "), wcnt, .) %>% 
+    writeLines(fn)
+  
+  # save mult_user file
+  fn = file.path(data_path, paste0('mult_u_', n, '.dat'))
+  cat("    writing", fn, "\n")
+  
+  mult_user_split = users_split[[n]] %>% 
+    left_join(mult_split, by="item") %>% 
+    select(-item) %>% 
+    group_by(user, word) %>% 
+    summarize(count = sum(count)) %>% 
+    ungroup()
+  
+  uwcnt = count(mult_user_split, user)$n
+  
+  mult_user_split %>% 
+    unite("word_count", word, count, sep = ":") %>% 
+    split(.$user) %>% 
+    mapply(function(x,y) paste(c(x, y$word_count), collapse=" "), uwcnt, .) %>% 
+    writeLines(fn)
+  
+  # save gamma file
+  fn = file.path(lda_data_path, paste0('final_', n, '.gamma'))
+  cat("    writing", fn, "\n")
+  
+  gamma_split %>% 
+    select(-item) %>% 
+    write_delim(fn, delim = ' ', col_names = FALSE)
+  
+  # save gamma_u file
+  # user topic proportions by averaging over their documents
+  fn = file.path(lda_data_path, paste0('final_', n, '.gamma_u'))
+  cat("    writing", fn, "\n")
+  
+  gamma_split_users = users_split[[n]] %>% 
+    left_join(gamma_split, by = "item") %>% 
+    select(-item) %>% 
+    group_by(user) %>% 
+    summarise_all(funs(mean)) %>% 
+    select(-user) %>% 
+    write_delim(fn, delim = ' ', col_names = FALSE)
 }
 
