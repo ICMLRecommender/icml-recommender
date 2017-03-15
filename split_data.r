@@ -1,4 +1,5 @@
 #!/usr/bin/Rscript
+require(magrittr)
 require(tidyr)
 require(dplyr)
 require(readr)

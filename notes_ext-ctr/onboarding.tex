@@ -1,0 +1,54 @@
+\title{User onboarding}
+\author{
+        Valerio Perrone \\
+}
+\date{\today}
+
+\documentclass[12pt]{article}
+
+\usepackage{verbatim}
+\usepackage{amsmath}
+\usepackage{bm}
+%\setlength\parindent{0pt}
+\usepackage{caption}
+\usepackage{subcaption}
+\usepackage{enumerate}
+%\usepackage{MnSymbol}
+\usepackage{float}
+%\usepackage{amsmath}
+\usepackage{mathtools}
+\usepackage[a4paper, total={6in, 8in}]{geometry}
+
+
+
+\begin{document}
+\maketitle
+
+
+\begin{itemize}
+\item We will run LDA on ICML2017 papers once they are available and find $K$ topics, which we label by hand.
+\item The frontend needs to present users with these topics at onboarding and save the selected topics for each user $i$ into a binary vector $c_i= (c_{i1},\dots,c_{iK})$.
+\item For all $i$ we read $c_i$ from the database (how/where is it saved? TODO: coordinate with the backend) and update our prior over $\theta_i \sim$ Dirichlet($ \alpha + c_{i1},\dots,\alpha + c_{ik} $) (setting for example $\alpha = 1$, but should be tuned) so that for each $k$
+\begin{align*}
+\hat{\theta}_{ik} = \frac{\alpha + c_{ik}}{ K \alpha + c_{i1} + \dots + c_{iK}}.
+\end{align*} 
+\item Give $\hat{\theta}$ to CTR as an input. Note: we are assuming we do not infer $\theta$.
+
+
+
+
+
+\end{itemize}
+
+
+
+
+
+
+
+
+
+
+
+
+\end{document}
