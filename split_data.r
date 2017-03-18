@@ -77,9 +77,9 @@ users_split = users %>%
 
 # save files
 # ------------------------------------------
-for (n in names(users_split)) {
-  cat("  split:", n, "\n")
-  items = sort(unique(users_split[[n]][["item"]]))
+for (nm in names(users_split)) {
+  cat("  split:", nm, "\n")
+  items = sort(unique(users_split[[nm]][["item"]]))
   
   # filter mult and gamma
   mult_split = mult %>% 
@@ -88,7 +88,7 @@ for (n in names(users_split)) {
     filter(item %in% items)
   
   # reset user and item ids
-  users_split[[n]] = users_split[[n]] %>% 
+  users_split[[nm]] = users_split[[nm]] %>% 
     mutate(user = as.integer(droplevels(as.factor(user)))-1,
            item = as.integer(droplevels(as.factor(item)))-1)
   mult_split = mult_split %>%  
@@ -97,27 +97,28 @@ for (n in names(users_split)) {
     mutate(item = as.integer(droplevels(as.factor(item)))-1)
   
   # save users file
-  fn = file.path(data_path, paste0('users_', n, '.dat'))
+  fn = file.path(data_path, paste0('users_', nm, '.dat'))
   cat("    writing", fn, "\n")
   
-  ucnt = count(users_split[[n]], user)$n
+  ucnt = count(users_split[[nm]], user)$n
   
-  split(users_split[[n]]$item, users_split[[n]]$user) %>% 
+  split(users_split[[nm]]$item, users_split[[nm]]$user) %>% 
     mapply(function(x,y) paste(c(x,y), collapse=" "), ucnt, .) %>% 
     writeLines(fn)
   
   # save items file
-  fn = file.path(data_path, paste0('items_', n, '.dat'))
+  fn = file.path(data_path, paste0('items_', nm, '.dat'))
   cat("    writing", fn, "\n")
   
-  icnt = count(users_split[[n]], item)$n
+  icnt = count(users_split[[nm]], item)$n
   
-  split(users_split[[n]]$user, users_split[[n]]$item) %>% 
+  split(users_split[[nm]]$user, users_split[[nm]]$item) %>% 
     mapply(function(x,y) paste(c(x,y), collapse=" "), icnt, .) %>% 
     writeLines(fn)
   
-  # save mult file
-  fn = file.path(data_path, paste0('mult_', n, '.dat'))
+  # save mult_v file
+  # items word counts
+  fn = file.path(data_path, paste0('mult_v_', nm, '.dat'))
   cat("    writing", fn, "\n")
   
   wcnt = count(mult_split, item)$n
@@ -128,11 +129,12 @@ for (n in names(users_split)) {
     mapply(function(x,y) paste(c(x, y$word_count), collapse=" "), wcnt, .) %>% 
     writeLines(fn)
   
-  # save mult_user file
-  fn = file.path(data_path, paste0('mult_u_', n, '.dat'))
+  # save mult_u file
+  # users word counts
+  fn = file.path(data_path, paste0('mult_u_', nm, '.dat'))
   cat("    writing", fn, "\n")
   
-  mult_user_split = users_split[[n]] %>% 
+  mult_user_split = users_split[[nm]] %>% 
     left_join(mult_split, by="item") %>% 
     select(-item) %>% 
     group_by(user, word) %>% 
@@ -147,8 +149,9 @@ for (n in names(users_split)) {
     mapply(function(x,y) paste(c(x, y$word_count), collapse=" "), uwcnt, .) %>% 
     writeLines(fn)
   
-  # save gamma file
-  fn = file.path(lda_data_path, paste0('final_', n, '.gamma'))
+  # save gamma_v file
+  # items topic proportions
+  fn = file.path(lda_data_path, paste0('final_', nm, '.gamma_v'))
   cat("    writing", fn, "\n")
   
   gamma_split %>% 
@@ -157,10 +160,10 @@ for (n in names(users_split)) {
   
   # save gamma_u file
   # user topic proportions by averaging over their documents
-  fn = file.path(lda_data_path, paste0('final_', n, '.gamma_u'))
+  fn = file.path(lda_data_path, paste0('final_', nm, '.gamma_u'))
   cat("    writing", fn, "\n")
   
-  gamma_split_users = users_split[[n]] %>% 
+  users_split[[nm]] %>% 
     left_join(gamma_split, by = "item") %>% 
     select(-item) %>% 
     group_by(user) %>% 
