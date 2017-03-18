@@ -1,4 +1,5 @@
 #include "utils.h"
+#include <stdexcept>
 
 extern gsl_rng * RANDOM_NUMBER;
 
@@ -78,7 +79,7 @@ void vct_fprintf(FILE * file, const gsl_vector * v) {
   size_t i;
   for (i = 0; i < v->size; i++)
     fprintf(file, "%10.15e ", vget(v, i));
-    fprintf(file, "\n");
+  fprintf(file, "\n");
 }
 
 
@@ -101,7 +102,8 @@ void mtx_fscanf(FILE* file, gsl_matrix* m) {
   double x;
   for (i = 0; i < m->size1; i++) {
     for (j = 0; j < m->size2; j++) {
-      fscanf(file, "%lf", &x);
+      if (fscanf(file, "%lf", &x) != 1)
+        throw std::runtime_error(std::string("failed to read matrix"));
       mset(m, i, j, x);
     }
   }
@@ -182,12 +184,11 @@ double log_det(const gsl_matrix* m) {
 void sym_eigen(gsl_matrix* m, gsl_vector* vals, gsl_matrix* vects) {
   gsl_eigen_symmv_workspace* wk;
   gsl_matrix* mcpy;
-  int r;
 
   mcpy = gsl_matrix_alloc(m->size1, m->size2);
   wk = gsl_eigen_symmv_alloc(m->size1);
   gsl_matrix_memcpy(mcpy, m);
-  r = gsl_eigen_symmv(mcpy, vals, vects, wk);
+  gsl_eigen_symmv(mcpy, vals, vects, wk);
   gsl_eigen_symmv_free(wk);
   gsl_matrix_free(mcpy);
 }

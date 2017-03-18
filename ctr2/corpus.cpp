@@ -1,6 +1,7 @@
 #include "corpus.h"
 #include <assert.h>
 #include <stdio.h>
+#include <stdexcept>
 
 c_corpus::c_corpus() {
   m_num_docs = 0;
@@ -33,7 +34,8 @@ void c_corpus::read_data(const char * data_filename, int OFFSET) {
   while ((fscanf(fileptr, "%10d", &length) != EOF)) {
     c_document * doc = new c_document(length);
     for (n = 0; n < length; n++) {
-      fscanf(fileptr, "%10d:%10d", &word, &count);
+      if (fscanf(fileptr, "%10d:%10d", &word, &count) != 2)
+        throw std::runtime_error(std::string("failed to read ") + data_filename);
       word = word - OFFSET;
       doc->m_words[n] = word;
       doc->m_counts[n] = count;

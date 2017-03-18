@@ -1,5 +1,6 @@
 #include <assert.h>
 #include <stdio.h>
+#include <stdexcept>
 #include "data.h"
 
 c_data::c_data() {
@@ -26,7 +27,8 @@ void c_data::read_data(const char * data_filename, int OFFSET) {
     if (length > 0) {
       ids = new int[length];
       for (n = 0; n < length; n++) {
-        fscanf(fileptr, "%10d", &id);
+        if (fscanf(fileptr, "%10d", &id) != 1)
+        	throw std::runtime_error(std::string("failed to read ") + data_filename);
         ids[n] = id - OFFSET;
       }
     }

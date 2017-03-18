@@ -22,9 +22,11 @@
 #include <memory.h>
 
 
+/* 
 #define outlog(format, args...) \
     fprintf(stderr, format, args); \
     fprintf(stderr, "\n");
+*/
 
 int compare (const void * a, const void * b);
 

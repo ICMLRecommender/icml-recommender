@@ -174,7 +174,8 @@ void c_ctr::learn_map_estimate(const c_data* users, const c_data* items,
   }
 
   /* tmp variables for indexes */
-  int i, j, m, n, l, k;
+  // int i, j, m, n, l, k;
+  int i, j, m, n, l;
   int* item_ids; 
   int* user_ids;
 
@@ -195,7 +196,7 @@ void c_ctr::learn_map_estimate(const c_data* users, const c_data* items,
     for (j = 0; j < m_num_items; j ++) {
       m = items->m_vec_len[j];
       if (m>0) {
-        gsl_vector_const_view v = gsl_matrix_const_row(m_V, i);
+        gsl_vector_const_view v = gsl_matrix_const_row(m_V, j);
         gsl_blas_dger(1.0, &v.vector, &v.vector, XX);
       }
     }
