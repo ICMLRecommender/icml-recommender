@@ -2,7 +2,6 @@ require(rvest)
 require(tidyr)
 require(dplyr)
 require(jsonlite)
-require(readr)
 
 data_path = "data/icml2016"
 
@@ -28,19 +27,8 @@ if (dl_review)
 if (dl_rebuttal)
   dir.create(file.path(data_path, "rebuttals"), showWarnings = FALSE)
 
-
-# Proceedings
+# Papers
 #======================
-html = read_html(papers_url)
-
-urls = html %>% 
-  html_nodes("div.paper p.links a") %>% 
-  html_attr("href")
-
-papers = data_frame(url = urls) %>% 
-  filter(grepl("^.*\\.html$", url)) %>% 
-  mutate(url = paste0(papers_url, url))
-  
 parse_paper = function(url) {
   html = read_html(url)
   
@@ -87,18 +75,21 @@ parse_paper = function(url) {
   return(tbl_df(out))
 }
 
-papers = papers %>% 
+html = read_html(papers_url)
+
+urls = html %>% 
+  html_nodes("div.paper p.links a") %>% 
+  html_attr("href")
+
+papers = data_frame(url = urls) %>% 
+  filter(grepl("^.*\\.html$", url)) %>% 
+  mutate(url = paste0(papers_url, url)) %>% 
   group_by(url) %>% 
   do(parse_paper(.$url)) %>% 
   ungroup()
 
 # Schedule
-#===========
-
-html = read_html(schedule_url) %>% 
-  html_node("#schedule") %>% 
-  html_children()
-
+#===============================
 fix_affiliations  = function(x) {
   x[x == "The University of Hong Kong"] = "University of Hong Kong"
   x[x == "Baidu SVAIL"] = "Baidu USA, Inc."
@@ -160,6 +151,10 @@ parse_talk = function(html) {
   
   return(out)
 }
+
+html = read_html(schedule_url) %>% 
+  html_node("#schedule") %>% 
+  html_children()
 
 start = FALSE
 p = progress_estimated(length(html))
