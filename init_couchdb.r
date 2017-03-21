@@ -2,12 +2,12 @@ require(jsonlite)
 require(dplyr)
 require(sofa)
 
-data_path = "data/icml2016"
-
 # read data
 #====================
+data_path = "data/icml2016"
+
 readLines(file.path(data_path, "authors.json")) %>% 
-  paste( collapse="")
+  paste(collapse="")
 
 papers = readLines(file.path(data_path, "papers.json")) %>% 
   paste( collapse="") %>% 
@@ -27,6 +27,11 @@ sessions = readLines(file.path(data_path, "sessions.json")) %>%
 # write to couchDB
 #=============================
 cdb = Cushion$new()
+
+# cdb = Cushion$new(host = "icml.papro.org.uk",
+#                   path = "couchdb",
+#                   port = NULL,
+#                   transport = "https")
 
 ping(cdb)
 db_list(cdb)
