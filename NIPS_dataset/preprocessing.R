@@ -1,6 +1,6 @@
 # Preprocess NIPS10 dataset
 # Author: Valerio Perrone
-# 16 March 2017
+# March 2017
 
 
 
