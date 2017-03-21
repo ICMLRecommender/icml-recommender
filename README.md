@@ -34,8 +34,8 @@ output/final-V.dat
     ctr2/ctr --directory output/ --user data/users_like.dat --item data/items_like.dat  --mult_v data/mult_v_like.dat --mult_u data/mult_u_library.dat --theta_v_init lda_output/final_like.gamma_v --theta_u_init lda_output/final_library.gamma_u --beta_init lda_output/final.beta   
     ```
 
-3. Given final-U.dat, final-V.dat, save in output/ the top 10 recommendations for each user:    
+3. Given final-U.dat, final-V.dat, user.dat, saves in output/ up to (e.g.) 20 recommendations for each user. This example is for K = 200.    
     
     ```sh
-    ./rating.R  output/  200 10
+    ./rating.R  output/  200 20
     ```
