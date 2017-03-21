@@ -1,6 +1,6 @@
 CC = g++
-CFLAGS_RELEASE = -Wall -DNDEBUG -s -O3
-#CFLAGS_RELEASE = -DNDEBUG -s -O3 -ffast-math -DHAVE_INLINE -DGSL_RANGE_CHECK_OFF
+CFLAGS_RELEASE = -Wall -DNDEBUG -O3
+#CFLAGS_RELEASE = -Wall -DNDEBUG -O3 -ffast-math -DHAVE_INLINE -DGSL_RANGE_CHECK_OFF
 CFLAGS_DEBUG = -g -Wall -pedantic -ansi
 LDFLAGS = -lgsl -lm -lgslcblas
 
