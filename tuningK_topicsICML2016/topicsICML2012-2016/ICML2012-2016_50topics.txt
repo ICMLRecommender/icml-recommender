@@ -1,0 +1,650 @@
+topic 000
+   entropy
+   human
+   option
+   options
+   objects
+   object
+   proc
+   block
+   planning
+   humans
+
+
+topic 001
+   bayesian
+   carlo
+   monte
+   posterior
+   processes
+   mcmc
+   inference
+   predictive
+   likelihood
+   variance
+
+
+topic 002
+   manifold
+   view
+   embedding
+   correlation
+   canonical
+   nonlinear
+   manifolds
+   views
+   dimensionality
+   dimension
+
+
+topic 003
+   network
+   networks
+   memory
+   arxiv
+   deep
+   recurrent
+   attention
+   sequence
+   architecture
+   tasks
+
+
+topic 004
+   path
+   constraints
+   paths
+   product
+   cycle
+   networks
+   constraint
+   piecewise
+   solutions
+   bayesian
+
+
+topic 005
+   regret
+   bandit
+   bandits
+   reward
+   contextual
+   armed
+   rewards
+   round
+   feedback
+   combinatorial
+
+
+topic 006
+   layer
+   deep
+   layers
+   networks
+   network
+   convolutional
+   pooling
+   image
+   images
+   representations
+
+
+topic 007
+   tasks
+   group
+   groups
+   multitask
+   selection
+   fourier
+   transfer
+   additive
+   synthetic
+   coefficients
+
+
+topic 008
+   lemma
+   condition
+   proposition
+   conditions
+   holds
+   exists
+   assumptions
+   equation
+   satisfies
+   prove
+
+
+topic 009
+   active
+   greedy
+   selection
+   budget
+   selected
+   stage
+   maximization
+   select
+   target
+   krause
+
+
+topic 010
+   subspace
+   columns
+   projection
+   projections
+   column
+   rows
+   subspaces
+   projected
+   orthogonal
+   separable
+
+
+topic 011
+   topic
+   topics
+   document
+   words
+   documents
+   dirichlet
+   modeling
+   blei
+   latent
+   word
+
+
+topic 012
+   rule
+   iteration
+   iterations
+   support
+   speedup
+   decision
+   rules
+   implementation
+   parallel
+   speed
+
+
+topic 013
+   game
+   agent
+   games
+   uncertainty
+   belief
+   strategy
+   agents
+   decision
+   play
+   action
+
+
+topic 014
+   network
+   nodes
+   node
+   networks
+   distributed
+   influence
+   social
+   communication
+   edges
+   inference
+
+
+topic 015
+   lasso
+   norm
+   regularization
+   sparsity
+   regularized
+   penalty
+   selection
+   constraints
+   constraint
+   solving
+
+
+topic 016
+   word
+   words
+   language
+   context
+   text
+   representations
+   embeddings
+   embedding
+   corpus
+   vocabulary
+
+
+topic 017
+   poisson
+   gamma
+   dirichlet
+   beta
+   processes
+   nonparametric
+   mixture
+   inference
+   infinite
+   cell
+
+
+topic 018
+   lemma
+   polynomial
+   randomized
+   principal
+   power
+   eigenvalues
+   component
+   running
+   norm
+   projection
+
+
+topic 019
+   image
+   images
+   object
+   visual
+   pose
+   recognition
+   pixel
+   objects
+   cvpr
+   category
+
+
+topic 020
+   latent
+   likelihood
+   generative
+   inference
+   conditional
+   binary
+   graphical
+   probabilistic
+   factors
+   joint
+
+
+topic 021
+   newton
+   hessian
+   quasi
+   bfgs
+   descent
+   direction
+   power
+   testing
+   update
+   null
+
+
+topic 022
+   factorization
+   missing
+   ratings
+   collaborative
+   rating
+   filtering
+   users
+   entries
+   user
+   binary
+
+
+topic 023
+   clustering
+   cluster
+   clusters
+   clus
+   spectral
+   partition
+   tering
+   split
+   similarity
+   normalized
+
+
+topic 024
+   policy
+   action
+   reward
+   reinforcement
+   policies
+   control
+   states
+   actions
+   iteration
+   mdps
+
+
+topic 025
+   label
+   labels
+   classifier
+   margin
+   classifiers
+   supervised
+   binary
+   labeled
+   instance
+   classes
+
+
+topic 026
+   kernel
+   kernels
+   support
+   machines
+   cortes
+   smola
+   olkopf
+   mapping
+   structured
+   product
+
+
+topic 027
+   risk
+   hypothesis
+   generalization
+   stability
+   learner
+   boosting
+   weak
+   lemma
+   mechanism
+   learners
+
+
+topic 028
+   hidden
+   layer
+   units
+   networks
+   network
+   deep
+   hinton
+   weights
+   weight
+   activation
+
+
+topic 029
+   distance
+   metric
+   nearest
+   neighbor
+   similarity
+   distances
+   dimensionality
+   euclidean
+   neighbors
+   reduction
+
+
+topic 030
+   graph
+   graphs
+   edge
+   edges
+   vertices
+   vertex
+   nodes
+   weighted
+   connected
+   weights
+
+
+topic 031
+   estimator
+   variance
+   estimators
+   estimates
+   bias
+   estimating
+   estimated
+   minimax
+   uniform
+   unbiased
+
+
+topic 032
+   dictionary
+   gibbs
+   coding
+   mixing
+   sampler
+   chain
+   codes
+   scheme
+   markov
+   conditional
+
+
+topic 033
+   recovery
+   measurements
+   sensing
+   signal
+   recover
+   arxiv
+   compressed
+   measurement
+   condition
+   support
+
+
+topic 034
+   ranking
+   rank
+   pairwise
+   score
+   scores
+   scoring
+   comparisons
+   partial
+   ranked
+   pairs
+
+
+topic 035
+   density
+   conditional
+   dependence
+   kernel
+   operator
+   rkhs
+   measures
+   hilbert
+   valued
+   tests
+
+
+topic 036
+   variational
+   bayesian
+   inference
+   posterior
+   mixture
+   likelihood
+   divergence
+   bayes
+   priors
+   expectation
+
+
+topic 037
+   online
+   batch
+   update
+   adaptive
+   descent
+   strongly
+   mini
+   smooth
+   averaging
+   updates
+
+
+topic 038
+   tree
+   trees
+   node
+   nodes
+   leaf
+   hierarchical
+   root
+   decision
+   depth
+   split
+
+
+topic 039
+   rank
+   tensor
+   norm
+   decomposition
+   spectral
+   matrices
+   completion
+   singular
+   nuclear
+   trace
+
+
+topic 040
+   user
+   items
+   item
+   users
+   query
+   preference
+   list
+   queries
+   pair
+   pairs
+
+
+topic 041
+   detection
+   series
+   temporal
+   event
+   events
+   video
+   change
+   frame
+   tracking
+   activity
+
+
+topic 042
+   inference
+   structured
+   graphical
+   message
+   marginal
+   partition
+   passing
+   energy
+   potentials
+   marginals
+
+
+topic 043
+   regret
+   feedback
+   bandit
+   exploration
+   action
+   confidence
+   online
+   learner
+   lemma
+   armed
+
+
+topic 044
+   noise
+   robust
+   noisy
+   corrupted
+   outliers
+   robustness
+   outlier
+   effect
+   errors
+   range
+
+
+topic 045
+   code
+   bits
+   binary
+   program
+   codes
+   retrieval
+   query
+   source
+   precision
+   representation
+
+
+topic 046
+   markov
+   states
+   sequence
+   transition
+   hidden
+   chain
+   observations
+   sequences
+   observation
+   chains
+
+
+topic 047
+   matrices
+   covariance
+   diagonal
+   inverse
+   diag
+   entries
+   precision
+   block
+   structured
+   definite
+
+
+topic 048
+   dual
+   coordinate
+   descent
+   primal
+   iteration
+   strongly
+   smooth
+   minimization
+   iterations
+   block
+
+
+topic 049
+   domain
+   target
+   source
+   adaptation
+   domains
+   transfer
+   labeled
+   shift
+   cross
+   tasks
+
+
