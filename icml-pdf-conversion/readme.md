@@ -17,3 +17,15 @@ To convert txt to dat:
 
 Full example:
 > python pdfconversion.py -p '../icml2016/*.pdf' -t ../icml2016/txt_files/ -m full
+
+
+_____________________________________________________________________________________________
+# Running LDA-C to get topic proportions and topics
+
+Get topic proportions (e.g., with K = 200 topics)
+
+> lda-c/lda  est 0.005 200 lda-c/settings.txt   /icml2016/mult.dat   random  /icml2016/results/
+
+Get topics (e.g., showing the top W = 10 words)
+
+> python lda-c/topics.py /icml2016/results/final.beta /icml2016/vocab.dat  10
