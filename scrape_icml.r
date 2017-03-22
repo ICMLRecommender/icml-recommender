@@ -117,8 +117,7 @@ parse_talk = function(html) {
   out$session_time = html %>% 
     html_node(xpath = "text()") %>% 
     html_text() %>% 
-    sub("–", "", .) %>% 
-    trimws()
+    gsub("[^[:digit:]:]", "", .)
   
   out$authors = html %>% 
     html_node(".authors") %>% 
