@@ -6,7 +6,7 @@
 # For license information, see LICENSE.TXT
 
 # Usage:
-#  python pdfconversion.py -p icml2016/*.pdf -t icml2016/txt_files -m pdf2txt
+#  python pdfconversion.py -p 'icml2016/*.pdf' -t icml2016/txt_files -m pdf2txt
 #  python pdfconversion.py -t icml2016/txt_files -m txt2dat
 
 import os

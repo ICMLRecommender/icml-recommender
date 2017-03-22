@@ -10,7 +10,7 @@ sudo pip install -r requirements.txt
 # Usage
 
 To convert pdf to txt:
->  python pdfconversion.py -p icml2016/*.pdf -t icml2016/txt_files -m pdf2txt
+>  python pdfconversion.py -p 'icml2016/*.pdf' -t icml2016/txt_files -m pdf2txt
 
 To convert txt to dat:
 >  python pdfconversion.py -t icml2016/txt_files -m txt2dat
