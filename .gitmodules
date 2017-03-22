@@ -1,3 +1,6 @@
 [submodule "lda-c"]
 	path = lda-c
 	url = https://github.com/blei-lab/lda-c.git
+[submodule "ctr"]
+	path = ctr
+	url = https://github.com/blei-lab/ctr.git
