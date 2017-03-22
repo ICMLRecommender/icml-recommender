@@ -34,6 +34,10 @@ parse_paper = function(url) {
   
   out = list(url = url)
   
+  out$key = out$url %>% 
+    basename() %>% 
+    tools::file_path_sans_ext()
+  
   out$title = html %>% 
     html_nodes("h1") %>% 
     html_text() %>% 
@@ -60,6 +64,7 @@ parse_paper = function(url) {
   out$supp_pdf_url = html %>% 
     html_nodes("#extras ul li:nth-child(2) a") %>% 
     html_attr("href")
+  
   
   if (length(out$supp_pdf_url)==0)
     out$supp_pdf_url = NA
@@ -135,9 +140,9 @@ parse_talk = function(html) {
     html_node(".lnks a") %>% 
     html_attr("href")
   
-  out$review_url = paste0(reviews_url, out$id,".txt")
+  out$review_url = paste0(reviews_url, out$paper_id,".txt")
   
-  out$rebuttal_url = paste0(rebuttals_url, out$id,".txt")
+  out$rebuttal_url = paste0(rebuttals_url, out$paper_id,".txt")
   
   out$poster_session = html %>% 
     html_nodes(".pos_ses") %>% 
@@ -156,6 +161,7 @@ html = read_html(schedule_url) %>%
   html_node("#schedule") %>% 
   html_children()
 
+schedule = NULL
 start = FALSE
 p = progress_estimated(length(html))
 for (i in seq_along(html)) {
@@ -246,8 +252,8 @@ sessions = joined %>%
 papers = joined %>% 
   left_join(sessions, by = c("session_title", "session_chair", "session_day", "session_location")) %>% 
   left_join(paper_authors, by="paper_id") %>% 
-  select(paper_id, title, abstract, author_ids, url, pdf_url, supp_pdf_url, 
-       reviews_url, rebuttal_url, session_id, session_time, poster_session)
+  select(paper_id, title, abstract, author_ids, key, url, pdf_url, supp_pdf_url, 
+       review_url, rebuttal_url, session_id, session_time, poster_session)
 
 # Write json
 #============
