@@ -1,0 +1,3 @@
+[submodule "lda-c"]
+	path = lda-c
+	url = https://github.com/blei-lab/lda-c.git
