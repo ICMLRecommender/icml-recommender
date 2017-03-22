@@ -4,7 +4,7 @@
 require(jsonlite)
 
 # results_path = "/homes/perrone/ctr/ICML2016/results50/"
-# txt_files_path = "/homes/perrone/ctr/ICML2016/icml_pdf_conversion/icml2016/"
+# txt_files_path = "/homes/perrone/ctr/ICML2016/icml_pdf_conversion/icml2016/txt_files/"
 
 results_path = "data/icml2016/lda_output"
 txt_files_path = "data/icml2016/papers_txt"
