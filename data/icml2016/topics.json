@@ -1,0 +1,7274 @@
+[
+  {
+    "topic_id": 19,
+    "words": [
+      {
+        "word": "kernel",
+        "weight": 0.1172
+      },
+      {
+        "word": "kernels",
+        "weight": 0.0204
+      },
+      {
+        "word": "rkhs",
+        "weight": 0.0147
+      },
+      {
+        "word": "regression",
+        "weight": 0.0115
+      },
+      {
+        "word": "embedding",
+        "weight": 0.0104
+      },
+      {
+        "word": "prediction",
+        "weight": 0.0088
+      },
+      {
+        "word": "hilbert",
+        "weight": 0.0071
+      },
+      {
+        "word": "machines",
+        "weight": 0.0064
+      },
+      {
+        "word": "summary",
+        "weight": 0.0063
+      },
+      {
+        "word": "conditional",
+        "weight": 0.006
+      }
+    ],
+    "top_words": "kernel kernels rkhs",
+    "papers": [
+      {
+        "key": "kusano16",
+        "weight": 0.9996,
+        "title": "Persistence weighted Gaussian kernel for topological data analysis"
+      },
+      {
+        "key": "si16",
+        "weight": 0.9995,
+        "title": "Computationally Efficient Nyström Approximation using Fast Transforms"
+      },
+      {
+        "key": "cutajar16",
+        "weight": 0.8316,
+        "title": "Preconditioning Kernel Matrices"
+      },
+      {
+        "key": "mitrovic16",
+        "weight": 0.658,
+        "title": "DR-ABC: Approximate Bayesian Computation with Kernel-Based Distribution Regression"
+      },
+      {
+        "key": "daib16",
+        "weight": 0.5462,
+        "title": "Discriminative Embeddings of Latent Variable Models for Structured Data"
+      },
+      {
+        "key": "hwangb16",
+        "weight": 0.3761,
+        "title": "Automatic Construction of Nonparametric Relational Regression Models for Multiple Time Series"
+      },
+      {
+        "key": "niu16",
+        "weight": 0.3388,
+        "title": "Fast Parameter Inference in Nonlinear Dynamical Systems using Iterative Gradient Matching"
+      },
+      {
+        "key": "chwialkowski16",
+        "weight": 0.2252,
+        "title": "A Kernel Test of Goodness of Fit"
+      },
+      {
+        "key": "kanagawa16",
+        "weight": 0.2196,
+        "title": "Gaussian process nonparametric tensor estimator and its minimax optimality"
+      },
+      {
+        "key": "asteris16",
+        "weight": 0.2173,
+        "title": "A Simple and Provable Algorithm for Sparse Diagonal CCA"
+      },
+      {
+        "key": "lih16",
+        "weight": 0.213,
+        "title": "Fast DPP Sampling for Nystrom with Application to Kernel Methods"
+      },
+      {
+        "key": "michaeli16",
+        "weight": 0.1966,
+        "title": "Nonparametric Canonical Correlation Analysis"
+      },
+      {
+        "key": "choromanski16",
+        "weight": 0.1869,
+        "title": "Recycling Randomness with Structure for Sublinear time Kernel Expansions"
+      },
+      {
+        "key": "kandasamy16",
+        "weight": 0.1853,
+        "title": "Additive Approximations in High Dimensional Nonparametric Regression via the SALSA"
+      },
+      {
+        "key": "liub16",
+        "weight": 0.1782,
+        "title": "A Kernelized Stein Discrepancy for Goodness-of-fit Tests"
+      },
+      {
+        "key": "vladymyrov16",
+        "weight": 0.1628,
+        "title": "The Variational Nystrom method for large-scale spectral problems"
+      },
+      {
+        "key": "ramaswamy16",
+        "weight": 0.1628,
+        "title": "Mixture Proportion Estimation via Kernel Embeddings of Distributions"
+      },
+      {
+        "key": "peyre16",
+        "weight": 0.1303,
+        "title": "Gromov-Wasserstein Averaging of Kernel and Distance Matrices"
+      }
+    ]
+  },
+  {
+    "topic_id": 31,
+    "words": [
+      {
+        "word": "graph",
+        "weight": 0.0923
+      },
+      {
+        "word": "graphs",
+        "weight": 0.0391
+      },
+      {
+        "word": "nodes",
+        "weight": 0.0223
+      },
+      {
+        "word": "edges",
+        "weight": 0.0157
+      },
+      {
+        "word": "spectral",
+        "weight": 0.0157
+      },
+      {
+        "word": "edge",
+        "weight": 0.0156
+      },
+      {
+        "word": "node",
+        "weight": 0.0128
+      },
+      {
+        "word": "flow",
+        "weight": 0.0123
+      },
+      {
+        "word": "vertices",
+        "weight": 0.0089
+      },
+      {
+        "word": "recovery",
+        "weight": 0.0065
+      },
+      {
+        "word": "vertex",
+        "weight": 0.0061
+      },
+      {
+        "word": "field",
+        "weight": 0.0058
+      },
+      {
+        "word": "community",
+        "weight": 0.0055
+      },
+      {
+        "word": "labeling",
+        "weight": 0.0053
+      },
+      {
+        "word": "neighborhood",
+        "weight": 0.0052
+      }
+    ],
+    "top_words": "graph graphs nodes",
+    "papers": [
+      {
+        "key": "veldt16",
+        "weight": 0.9997,
+        "title": "A Simple and Strongly-Local Flow-Based Method for Cut Improvement"
+      },
+      {
+        "key": "chena16",
+        "weight": 0.9371,
+        "title": "Community Recovery in Graphs with Locality"
+      },
+      {
+        "key": "niepert16",
+        "weight": 0.8443,
+        "title": "Learning Convolutional Neural Networks for Graphs"
+      },
+      {
+        "key": "weller16",
+        "weight": 0.5549,
+        "title": "Uprooting and Rerooting Graphical Models"
+      },
+      {
+        "key": "liuf16",
+        "weight": 0.5381,
+        "title": "Cross-Graph Learning of Multi-Relational Associations"
+      },
+      {
+        "key": "tremblay16",
+        "weight": 0.3073,
+        "title": "Compressive Spectral Clustering"
+      },
+      {
+        "key": "yanga16",
+        "weight": 0.2576,
+        "title": "Revisiting Semi-Supervised Learning with Graph Embeddings"
+      },
+      {
+        "key": "colin16",
+        "weight": 0.2155,
+        "title": "Gossip Dual Averaging for Decentralized Optimization of Pairwise Functions"
+      },
+      {
+        "key": "vladymyrov16",
+        "weight": 0.1703,
+        "title": "The Variational Nystrom method for large-scale spectral problems"
+      },
+      {
+        "key": "cohena16",
+        "weight": 0.1468,
+        "title": "Online Learning with Feedback Graphs Without the Graphs"
+      },
+      {
+        "key": "ok16",
+        "weight": 0.1425,
+        "title": "Optimality of Belief Propagation for Crowdsourced Classification"
+      }
+    ]
+  },
+  {
+    "topic_id": 6,
+    "words": [
+      {
+        "word": "clustering",
+        "weight": 0.0866
+      },
+      {
+        "word": "cluster",
+        "weight": 0.0519
+      },
+      {
+        "word": "clusters",
+        "weight": 0.0207
+      },
+      {
+        "word": "distributed",
+        "weight": 0.0134
+      },
+      {
+        "word": "clus",
+        "weight": 0.0098
+      },
+      {
+        "word": "communication",
+        "weight": 0.0091
+      },
+      {
+        "word": "tree",
+        "weight": 0.0082
+      },
+      {
+        "word": "ratio",
+        "weight": 0.0073
+      },
+      {
+        "word": "edges",
+        "weight": 0.0073
+      },
+      {
+        "word": "discrete",
+        "weight": 0.0072
+      },
+      {
+        "word": "edge",
+        "weight": 0.0071
+      },
+      {
+        "word": "correlation",
+        "weight": 0.0068
+      },
+      {
+        "word": "costs",
+        "weight": 0.0068
+      },
+      {
+        "word": "modes",
+        "weight": 0.0063
+      },
+      {
+        "word": "distance",
+        "weight": 0.0059
+      },
+      {
+        "word": "server",
+        "weight": 0.0057
+      },
+      {
+        "word": "tering",
+        "weight": 0.0052
+      },
+      {
+        "word": "potential",
+        "weight": 0.0052
+      },
+      {
+        "word": "sharing",
+        "weight": 0.0051
+      }
+    ],
+    "top_words": "clustering cluster clusters",
+    "papers": [
+      {
+        "key": "chenc16",
+        "weight": 0.9706,
+        "title": "Clustering High Dimensional Categorical Data via Topographical Features"
+      },
+      {
+        "key": "puleo16",
+        "weight": 0.9293,
+        "title": "Correlation Clustering and Biclustering with Locally Bounded Errors"
+      },
+      {
+        "key": "ding16",
+        "weight": 0.8907,
+        "title": "\\(K\\)-Means Clustering with Distributed Dimensions"
+      },
+      {
+        "key": "xieb16",
+        "weight": 0.5017,
+        "title": "Unsupervised Deep Embedding for Clustering Analysis"
+      },
+      {
+        "key": "korda16",
+        "weight": 0.3592,
+        "title": "Distributed Clustering of Linear Bandits in Peer to Peer Networks"
+      },
+      {
+        "key": "tremblay16",
+        "weight": 0.351,
+        "title": "Compressive Spectral Clustering"
+      },
+      {
+        "key": "nock16",
+        "weight": 0.2695,
+        "title": "k-variates++: more pluses in the k-means++"
+      },
+      {
+        "key": "bottesch16",
+        "weight": 0.1601,
+        "title": "Speeding up k-means by approximating Euclidean distances via block vectors"
+      },
+      {
+        "key": "vikram16",
+        "weight": 0.1537,
+        "title": "Interactive Bayesian Hierarchical Clustering"
+      },
+      {
+        "key": "hashimoto16",
+        "weight": 0.1194,
+        "title": "Learning Population-Level Diffusions with Generative RNNs"
+      },
+      {
+        "key": "zahavy16",
+        "weight": 0.1088,
+        "title": "Graying the black box: Understanding DQNs"
+      }
+    ]
+  },
+  {
+    "topic_id": 43,
+    "words": [
+      {
+        "word": "regret",
+        "weight": 0.0635
+      },
+      {
+        "word": "online",
+        "weight": 0.0307
+      },
+      {
+        "word": "feedback",
+        "weight": 0.0213
+      },
+      {
+        "word": "bandit",
+        "weight": 0.013
+      },
+      {
+        "word": "learner",
+        "weight": 0.0111
+      },
+      {
+        "word": "lemma",
+        "weight": 0.011
+      },
+      {
+        "word": "contextual",
+        "weight": 0.0092
+      },
+      {
+        "word": "round",
+        "weight": 0.0083
+      },
+      {
+        "word": "action",
+        "weight": 0.0083
+      },
+      {
+        "word": "policy",
+        "weight": 0.0076
+      },
+      {
+        "word": "losses",
+        "weight": 0.0075
+      },
+      {
+        "word": "actions",
+        "weight": 0.0074
+      },
+      {
+        "word": "dynamic",
+        "weight": 0.0072
+      },
+      {
+        "word": "prediction",
+        "weight": 0.007
+      },
+      {
+        "word": "adversarial",
+        "weight": 0.0061
+      },
+      {
+        "word": "inequality",
+        "weight": 0.006
+      },
+      {
+        "word": "constraint",
+        "weight": 0.0056
+      },
+      {
+        "word": "cesa",
+        "weight": 0.0056
+      },
+      {
+        "word": "bianchi",
+        "weight": 0.0056
+      },
+      {
+        "word": "oracle",
+        "weight": 0.0055
+      },
+      {
+        "word": "hazan",
+        "weight": 0.0052
+      }
+    ],
+    "top_words": "regret online feedback",
+    "papers": [
+      {
+        "key": "syrgkanis16",
+        "weight": 0.9996,
+        "title": "Efficient Algorithms for Adversarial Contextual Learning"
+      },
+      {
+        "key": "yangb16",
+        "weight": 0.9995,
+        "title": "Tracking Slowly Moving Clairvoyant: Optimal Dynamic Regret of Online Learning with True and Noisy Gradient"
+      },
+      {
+        "key": "gyorgy16",
+        "weight": 0.8825,
+        "title": "Shifting Regret, Mirror Descent, and Matrices"
+      },
+      {
+        "key": "rakhlin16",
+        "weight": 0.8443,
+        "title": "BISTRO: An Efficient Relaxation-Based Method for Contextual Bandits"
+      },
+      {
+        "key": "cohena16",
+        "weight": 0.7922,
+        "title": "Online Learning with Feedback Graphs Without the Graphs"
+      },
+      {
+        "key": "jenatton16",
+        "weight": 0.7795,
+        "title": "Adaptive Algorithms for Online Convex Optimization with Long-term Constraints"
+      },
+      {
+        "key": "medina16",
+        "weight": 0.6727,
+        "title": "No-Regret Algorithms for Heavy-Tailed Linear Bandits"
+      },
+      {
+        "key": "anava16",
+        "weight": 0.6193,
+        "title": "Heteroscedastic Sequences: Beyond Gaussianity"
+      },
+      {
+        "key": "zhangb16",
+        "weight": 0.4642,
+        "title": "Online Stochastic Linear Optimization under One-bit Feedback"
+      },
+      {
+        "key": "heidari16",
+        "weight": 0.1639,
+        "title": "Pricing a Low-regret Seller"
+      },
+      {
+        "key": "metzen16",
+        "weight": 0.13,
+        "title": "Minimum Regret Search for Single- and Multi-Task Optimization"
+      },
+      {
+        "key": "komiyama16",
+        "weight": 0.13,
+        "title": "Copeland Dueling Bandit Problem: Regret Lower Bound, Optimal Algorithm, and Computationally Efficient Algorithm"
+      },
+      {
+        "key": "hazanb16",
+        "weight": 0.1136,
+        "title": "On Graduated Optimization for Stochastic Non-Convex Problems"
+      }
+    ]
+  },
+  {
+    "topic_id": 21,
+    "words": [
+      {
+        "word": "rank",
+        "weight": 0.0551
+      },
+      {
+        "word": "matrices",
+        "weight": 0.0324
+      },
+      {
+        "word": "tensor",
+        "weight": 0.0218
+      },
+      {
+        "word": "decomposition",
+        "weight": 0.0134
+      },
+      {
+        "word": "spectral",
+        "weight": 0.0128
+      },
+      {
+        "word": "robust",
+        "weight": 0.0078
+      },
+      {
+        "word": "subspace",
+        "weight": 0.0071
+      },
+      {
+        "word": "noise",
+        "weight": 0.007
+      },
+      {
+        "word": "eigenvalues",
+        "weight": 0.0067
+      },
+      {
+        "word": "singular",
+        "weight": 0.0067
+      },
+      {
+        "word": "sparse",
+        "weight": 0.0065
+      },
+      {
+        "word": "numerical",
+        "weight": 0.0063
+      },
+      {
+        "word": "projection",
+        "weight": 0.0062
+      },
+      {
+        "word": "cand",
+        "weight": 0.006
+      },
+      {
+        "word": "norm",
+        "weight": 0.0055
+      },
+      {
+        "word": "measurements",
+        "weight": 0.0054
+      },
+      {
+        "word": "recovery",
+        "weight": 0.0053
+      },
+      {
+        "word": "symmetric",
+        "weight": 0.0051
+      },
+      {
+        "word": "completion",
+        "weight": 0.0051
+      },
+      {
+        "word": "orthogonal",
+        "weight": 0.0051
+      }
+    ],
+    "top_words": "rank matrices tensor",
+    "papers": [
+      {
+        "key": "ubaru16",
+        "weight": 0.962,
+        "title": "Fast methods for estimating the Numerical rank of large matrices"
+      },
+      {
+        "key": "khetan16",
+        "weight": 0.8353,
+        "title": "Data-driven Rank Breaking for Efficient Rank Aggregation"
+      },
+      {
+        "key": "colombo16",
+        "weight": 0.7612,
+        "title": "Tensor Decomposition via Joint Matrix Schur Decomposition"
+      },
+      {
+        "key": "tu16",
+        "weight": 0.7435,
+        "title": "Low-rank Solutions of Linear Matrix Equations via Procrustes Flow"
+      },
+      {
+        "key": "zhange16",
+        "weight": 0.6494,
+        "title": "Provable Non-convex Phase Retrieval with Outliers: Median TruncatedWirtinger Flow"
+      },
+      {
+        "key": "kasai16",
+        "weight": 0.6343,
+        "title": "Low-rank tensor completion: a Riemannian manifold preconditioning approach"
+      },
+      {
+        "key": "trouillon16",
+        "weight": 0.6053,
+        "title": "Complex Embeddings for Simple Link Prediction"
+      },
+      {
+        "key": "yu16",
+        "weight": 0.5922,
+        "title": "Learning from Multiway Data: Simple and Efficient Tensor Regression"
+      },
+      {
+        "key": "chiang16",
+        "weight": 0.5111,
+        "title": "Robust Principal Component Analysis with Side Information"
+      },
+      {
+        "key": "shen16",
+        "weight": 0.4061,
+        "title": "Online Low-Rank Subspace Clustering by Basis Dictionary Pursuit"
+      },
+      {
+        "key": "kapralov16",
+        "weight": 0.3611,
+        "title": "How to Fake Multiply by a Gaussian Matrix"
+      },
+      {
+        "key": "tremblay16",
+        "weight": 0.3118,
+        "title": "Compressive Spectral Clustering"
+      },
+      {
+        "key": "rahmani16",
+        "weight": 0.306,
+        "title": "A Subspace Learning Approach for High Dimensional Matrix Decomposition with Efficient Column/Row Sampling"
+      },
+      {
+        "key": "aroraa16",
+        "weight": 0.2732,
+        "title": "Stochastic Optimization for Multiview Representation Learning using Partial Least Squares"
+      },
+      {
+        "key": "geb16",
+        "weight": 0.2335,
+        "title": "Efficient Algorithms for Large-scale Generalized Eigenvector Computation and Canonical Correlation Analysis"
+      },
+      {
+        "key": "gonen16",
+        "weight": 0.2244,
+        "title": "Solving Ridge Regression using Sketched Preconditioned SVRG"
+      },
+      {
+        "key": "lii16",
+        "weight": 0.224,
+        "title": "Recovery guarantee of weighted low-rank approximation via alternating minimization"
+      },
+      {
+        "key": "wipf16",
+        "weight": 0.2187,
+        "title": "Analysis of Variational Bayesian Factorizations for Sparse and Low-Rank Estimation"
+      },
+      {
+        "key": "peyre16",
+        "weight": 0.2175,
+        "title": "Gromov-Wasserstein Averaging of Kernel and Distance Matrices"
+      },
+      {
+        "key": "liuf16",
+        "weight": 0.2006,
+        "title": "Cross-Graph Learning of Multi-Relational Associations"
+      },
+      {
+        "key": "blondel16",
+        "weight": 0.1999,
+        "title": "Polynomial Networks and Factorization Machines: New Insights and Efficient Training Algorithms"
+      },
+      {
+        "key": "podosinnikova16",
+        "weight": 0.1957,
+        "title": "Beyond CCA: Moment Matching for Multi-View Models"
+      },
+      {
+        "key": "vladymyrov16",
+        "weight": 0.1832,
+        "title": "The Variational Nystrom method for large-scale spectral problems"
+      },
+      {
+        "key": "lig16",
+        "weight": 0.1684,
+        "title": "Gaussian quadrature for matrix inverse forms with applications"
+      },
+      {
+        "key": "gui16",
+        "weight": 0.1272,
+        "title": "Towards Faster Rates and Oracle Property for Low-Rank Matrix Estimation"
+      },
+      {
+        "key": "imaizumi16",
+        "weight": 0.1247,
+        "title": "Doubly Decomposing Nonparametric Tensor Regression"
+      },
+      {
+        "key": "kanagawa16",
+        "weight": 0.1015,
+        "title": "Gaussian process nonparametric tensor estimator and its minimax optimality"
+      }
+    ]
+  },
+  {
+    "topic_id": 18,
+    "words": [
+      {
+        "word": "policy",
+        "weight": 0.0483
+      },
+      {
+        "word": "tasks",
+        "weight": 0.0195
+      },
+      {
+        "word": "reinforcement",
+        "weight": 0.0185
+      },
+      {
+        "word": "control",
+        "weight": 0.0172
+      },
+      {
+        "word": "learned",
+        "weight": 0.0113
+      },
+      {
+        "word": "deep",
+        "weight": 0.0113
+      },
+      {
+        "word": "dynamics",
+        "weight": 0.0106
+      },
+      {
+        "word": "continuous",
+        "weight": 0.0105
+      },
+      {
+        "word": "policies",
+        "weight": 0.0101
+      },
+      {
+        "word": "action",
+        "weight": 0.01
+      },
+      {
+        "word": "network",
+        "weight": 0.0095
+      },
+      {
+        "word": "free",
+        "weight": 0.0091
+      },
+      {
+        "word": "advantage",
+        "weight": 0.0088
+      },
+      {
+        "word": "trajectory",
+        "weight": 0.0071
+      },
+      {
+        "word": "entropy",
+        "weight": 0.0065
+      },
+      {
+        "word": "actions",
+        "weight": 0.0059
+      },
+      {
+        "word": "domains",
+        "weight": 0.0054
+      }
+    ],
+    "top_words": "policy tasks reinforcement",
+    "papers": [
+      {
+        "key": "gu16",
+        "weight": 0.9997,
+        "title": "Continuous Deep Q-Learning with Model-based Acceleration"
+      },
+      {
+        "key": "akrour16",
+        "weight": 0.9996,
+        "title": "Model-Free Trajectory Optimization for Reinforcement Learning"
+      },
+      {
+        "key": "finn16",
+        "weight": 0.9875,
+        "title": "Guided Cost Learning: Deep Inverse Optimal Control via Policy Optimization"
+      },
+      {
+        "key": "duan16",
+        "weight": 0.8018,
+        "title": "Benchmarking Deep Reinforcement Learning for Continuous Control"
+      },
+      {
+        "key": "ho16",
+        "weight": 0.6015,
+        "title": "Model-Free Imitation Learning with Policy Optimization"
+      },
+      {
+        "key": "wangf16",
+        "weight": 0.4972,
+        "title": "Dueling Network Architectures for Deep Reinforcement Learning"
+      },
+      {
+        "key": "mniha16",
+        "weight": 0.4581,
+        "title": "Asynchronous Methods for Deep Reinforcement Learning"
+      },
+      {
+        "key": "metzen16",
+        "weight": 0.123,
+        "title": "Minimum Regret Search for Single- and Multi-Task Optimization"
+      }
+    ]
+  },
+  {
+    "topic_id": 24,
+    "words": [
+      {
+        "word": "network",
+        "weight": 0.046
+      },
+      {
+        "word": "layer",
+        "weight": 0.0285
+      },
+      {
+        "word": "deep",
+        "weight": 0.0184
+      },
+      {
+        "word": "activation",
+        "weight": 0.0178
+      },
+      {
+        "word": "layers",
+        "weight": 0.0159
+      },
+      {
+        "word": "image",
+        "weight": 0.012
+      },
+      {
+        "word": "relu",
+        "weight": 0.0117
+      },
+      {
+        "word": "convolutional",
+        "weight": 0.0112
+      },
+      {
+        "word": "reconstruction",
+        "weight": 0.0107
+      },
+      {
+        "word": "width",
+        "weight": 0.0105
+      },
+      {
+        "word": "images",
+        "weight": 0.0085
+      },
+      {
+        "word": "filters",
+        "weight": 0.0083
+      },
+      {
+        "word": "convolution",
+        "weight": 0.0068
+      },
+      {
+        "word": "unsupervised",
+        "weight": 0.0064
+      },
+      {
+        "word": "architecture",
+        "weight": 0.0063
+      },
+      {
+        "word": "encoder",
+        "weight": 0.0063
+      },
+      {
+        "word": "equation",
+        "weight": 0.0062
+      },
+      {
+        "word": "pooling",
+        "weight": 0.006
+      },
+      {
+        "word": "cifar",
+        "weight": 0.0053
+      },
+      {
+        "word": "fully",
+        "weight": 0.0053
+      },
+      {
+        "word": "energy",
+        "weight": 0.0052
+      },
+      {
+        "word": "generative",
+        "weight": 0.0052
+      },
+      {
+        "word": "baseline",
+        "weight": 0.0051
+      }
+    ],
+    "top_words": "network layer deep",
+    "papers": [
+      {
+        "key": "wei16",
+        "weight": 0.991,
+        "title": "Network Morphism"
+      },
+      {
+        "key": "xiec16",
+        "weight": 0.9656,
+        "title": "A Theory of Generative ConvNet"
+      },
+      {
+        "key": "shang16",
+        "weight": 0.9628,
+        "title": "Understanding and Improving Convolutional Neural Networks via Concatenated Rectified Linear Units"
+      },
+      {
+        "key": "zhangc16",
+        "weight": 0.9161,
+        "title": "Augmenting Supervised Neural Networks with Unsupervised Objectives for Large-scale Image Classification"
+      },
+      {
+        "key": "zhangd16",
+        "weight": 0.5632,
+        "title": "L1-regularized Neural Networks are Improperly Learnable in Polynomial Time"
+      },
+      {
+        "key": "zhai16",
+        "weight": 0.533,
+        "title": "Deep Structured Energy Based Models for Anomaly Detection"
+      },
+      {
+        "key": "linb16",
+        "weight": 0.4594,
+        "title": "Fixed Point Quantization of Deep Convolutional Networks"
+      },
+      {
+        "key": "pezeshki16",
+        "weight": 0.4402,
+        "title": "Deconstructing the Ladder Network Architecture"
+      },
+      {
+        "key": "safran16",
+        "weight": 0.1902,
+        "title": "On the Quality of the Initial Basin in Overspecified Neural Networks"
+      },
+      {
+        "key": "lia16",
+        "weight": 0.1848,
+        "title": "Multi-Bias Non-linear Activation in Deep Neural Networks"
+      },
+      {
+        "key": "arpita16",
+        "weight": 0.1848,
+        "title": "Why Regularized Auto-Encoders learn Sparse Representation?"
+      },
+      {
+        "key": "xieb16",
+        "weight": 0.1695,
+        "title": "Unsupervised Deep Embedding for Clustering Analysis"
+      },
+      {
+        "key": "hazanb16",
+        "weight": 0.1036,
+        "title": "On Graduated Optimization for Stochastic Non-Convex Problems"
+      }
+    ]
+  },
+  {
+    "topic_id": 35,
+    "words": [
+      {
+        "word": "variational",
+        "weight": 0.0456
+      },
+      {
+        "word": "latent",
+        "weight": 0.0389
+      },
+      {
+        "word": "inference",
+        "weight": 0.0378
+      },
+      {
+        "word": "posterior",
+        "weight": 0.0248
+      },
+      {
+        "word": "bayesian",
+        "weight": 0.0198
+      },
+      {
+        "word": "likelihood",
+        "weight": 0.0119
+      },
+      {
+        "word": "distributions",
+        "weight": 0.0085
+      },
+      {
+        "word": "generative",
+        "weight": 0.0083
+      },
+      {
+        "word": "hierarchical",
+        "weight": 0.0063
+      },
+      {
+        "word": "community",
+        "weight": 0.0061
+      },
+      {
+        "word": "mixture",
+        "weight": 0.0061
+      },
+      {
+        "word": "field",
+        "weight": 0.0057
+      },
+      {
+        "word": "poisson",
+        "weight": 0.0054
+      },
+      {
+        "word": "jordan",
+        "weight": 0.0053
+      },
+      {
+        "word": "tensor",
+        "weight": 0.0053
+      },
+      {
+        "word": "priors",
+        "weight": 0.0052
+      },
+      {
+        "word": "gradients",
+        "weight": 0.0051
+      }
+    ],
+    "top_words": "variational latent inference",
+    "papers": [
+      {
+        "key": "schein16",
+        "weight": 0.9997,
+        "title": "Bayesian Poisson Tucker Decomposition for Learning the Structure of International Relations"
+      },
+      {
+        "key": "xiea16",
+        "weight": 0.9949,
+        "title": "Diversity-Promoting Bayesian Learning of Latent Variable Models"
+      },
+      {
+        "key": "zhaoa16",
+        "weight": 0.9194,
+        "title": "Collapsed Variational Inference for Sum-Product Networks"
+      },
+      {
+        "key": "ranganath16",
+        "weight": 0.9151,
+        "title": "Hierarchical Variational Models"
+      },
+      {
+        "key": "mnihb16",
+        "weight": 0.4869,
+        "title": "Variational Inference for Monte Carlo Objectives"
+      },
+      {
+        "key": "platanios16",
+        "weight": 0.335,
+        "title": "Estimating Accuracy from Unlabeled Data: A Bayesian Approach"
+      },
+      {
+        "key": "bornschein16",
+        "weight": 0.2778,
+        "title": "Bidirectional Helmholtz Machines"
+      },
+      {
+        "key": "maaloe16",
+        "weight": 0.2735,
+        "title": "Auxiliary Deep Generative Models"
+      },
+      {
+        "key": "paige16",
+        "weight": 0.2716,
+        "title": "Inference Networks for Sequential Monte Carlo in Graphical Models"
+      },
+      {
+        "key": "mandt16",
+        "weight": 0.2633,
+        "title": "A Variational Analysis of Stochastic Gradient Algorithms"
+      },
+      {
+        "key": "miao16",
+        "weight": 0.2411,
+        "title": "Neural Variational Inference for Text Processing"
+      },
+      {
+        "key": "zhangf16",
+        "weight": 0.2388,
+        "title": "Markov Latent Feature Models"
+      },
+      {
+        "key": "rezende16",
+        "weight": 0.1648,
+        "title": "One-Shot Generalization in Deep Generative Models"
+      },
+      {
+        "key": "leea16",
+        "weight": 0.1632,
+        "title": "Hawkes Processes with Stochastic Excitations"
+      },
+      {
+        "key": "bonilla16",
+        "weight": 0.1449,
+        "title": "Extended and Unscented Kitchen Sinks"
+      },
+      {
+        "key": "mitrovic16",
+        "weight": 0.1419,
+        "title": "DR-ABC: Approximate Bayesian Computation with Kernel-Based Distribution Regression"
+      },
+      {
+        "key": "su16",
+        "weight": 0.129,
+        "title": "Nonlinear Statistical Learning with Truncated Gaussian Graphical Models"
+      },
+      {
+        "key": "songa16",
+        "weight": 0.126,
+        "title": "Factored Temporal Sigmoid Belief Networks for Sequence Learning"
+      },
+      {
+        "key": "wipf16",
+        "weight": 0.1245,
+        "title": "Analysis of Variational Bayesian Factorizations for Sparse and Low-Rank Estimation"
+      }
+    ]
+  },
+  {
+    "topic_id": 49,
+    "words": [
+      {
+        "word": "attention",
+        "weight": 0.0445
+      },
+      {
+        "word": "memory",
+        "weight": 0.0267
+      },
+      {
+        "word": "question",
+        "weight": 0.0203
+      },
+      {
+        "word": "network",
+        "weight": 0.0145
+      },
+      {
+        "word": "mechanism",
+        "weight": 0.0126
+      },
+      {
+        "word": "deep",
+        "weight": 0.012
+      },
+      {
+        "word": "answer",
+        "weight": 0.0114
+      },
+      {
+        "word": "generative",
+        "weight": 0.0105
+      },
+      {
+        "word": "answering",
+        "weight": 0.0091
+      },
+      {
+        "word": "tasks",
+        "weight": 0.0086
+      },
+      {
+        "word": "image",
+        "weight": 0.0085
+      },
+      {
+        "word": "hidden",
+        "weight": 0.0075
+      },
+      {
+        "word": "images",
+        "weight": 0.0068
+      },
+      {
+        "word": "visual",
+        "weight": 0.0061
+      },
+      {
+        "word": "sentence",
+        "weight": 0.0059
+      },
+      {
+        "word": "words",
+        "weight": 0.0058
+      },
+      {
+        "word": "word",
+        "weight": 0.0057
+      },
+      {
+        "word": "inference",
+        "weight": 0.0056
+      },
+      {
+        "word": "layer",
+        "weight": 0.0054
+      },
+      {
+        "word": "representations",
+        "weight": 0.0053
+      },
+      {
+        "word": "generalization",
+        "weight": 0.0052
+      },
+      {
+        "word": "facts",
+        "weight": 0.0051
+      }
+    ],
+    "top_words": "attention memory question",
+    "papers": [
+      {
+        "key": "xiong16",
+        "weight": 0.9997,
+        "title": "Dynamic Memory Networks for Visual and Textual Question Answering"
+      },
+      {
+        "key": "kumar16",
+        "weight": 0.9996,
+        "title": "Ask Me Anything: Dynamic Memory Networks for Natural Language Processing"
+      },
+      {
+        "key": "rezende16",
+        "weight": 0.8251,
+        "title": "One-Shot Generalization in Deep Generative Models"
+      },
+      {
+        "key": "miao16",
+        "weight": 0.7025,
+        "title": "Neural Variational Inference for Text Processing"
+      },
+      {
+        "key": "lie16",
+        "weight": 0.6826,
+        "title": "Learning to Generate with Memory"
+      },
+      {
+        "key": "riemer16",
+        "weight": 0.3786,
+        "title": "Correcting Forecasts with Multifactor Neural Attention"
+      },
+      {
+        "key": "allamanis16",
+        "weight": 0.3771,
+        "title": "A Convolutional Attention Network for Extreme Summarization of Source Code"
+      },
+      {
+        "key": "martins16",
+        "weight": 0.2479,
+        "title": "From Softmax to Sparsemax: A Sparse Model of Attention and Multi-Label Classification"
+      },
+      {
+        "key": "almahairi16",
+        "weight": 0.2352,
+        "title": "Dynamic Capacity Networks"
+      },
+      {
+        "key": "he16",
+        "weight": 0.1383,
+        "title": "Opponent Modeling in Deep Reinforcement Learning"
+      }
+    ]
+  },
+  {
+    "topic_id": 13,
+    "words": [
+      {
+        "word": "policy",
+        "weight": 0.044
+      },
+      {
+        "word": "agent",
+        "weight": 0.0205
+      },
+      {
+        "word": "action",
+        "weight": 0.0175
+      },
+      {
+        "word": "reward",
+        "weight": 0.0174
+      },
+      {
+        "word": "reinforcement",
+        "weight": 0.0155
+      },
+      {
+        "word": "states",
+        "weight": 0.0122
+      },
+      {
+        "word": "evaluation",
+        "weight": 0.0109
+      },
+      {
+        "word": "estimator",
+        "weight": 0.0095
+      },
+      {
+        "word": "agents",
+        "weight": 0.0093
+      },
+      {
+        "word": "game",
+        "weight": 0.0091
+      },
+      {
+        "word": "decision",
+        "weight": 0.009
+      },
+      {
+        "word": "games",
+        "weight": 0.009
+      },
+      {
+        "word": "actions",
+        "weight": 0.0089
+      },
+      {
+        "word": "course",
+        "weight": 0.0083
+      },
+      {
+        "word": "policies",
+        "weight": 0.0077
+      },
+      {
+        "word": "bias",
+        "weight": 0.0069
+      },
+      {
+        "word": "rewards",
+        "weight": 0.0059
+      },
+      {
+        "word": "behavior",
+        "weight": 0.0055
+      },
+      {
+        "word": "importance",
+        "weight": 0.0053
+      },
+      {
+        "word": "grid",
+        "weight": 0.0051
+      }
+    ],
+    "top_words": "policy agent action",
+    "papers": [
+      {
+        "key": "simsek16",
+        "weight": 0.9668,
+        "title": "Why Most Decisions Are Easy in Tetris—And Perhaps in Other Sequential Decision Problems, As Well"
+      },
+      {
+        "key": "hoiles16",
+        "weight": 0.948,
+        "title": "Bounded Off-Policy Evaluation with Missing Data for Course Recommendation and Curriculum Design"
+      },
+      {
+        "key": "abel16",
+        "weight": 0.8891,
+        "title": "Near Optimal Behavior via Approximate State Abstraction"
+      },
+      {
+        "key": "jiang16",
+        "weight": 0.8406,
+        "title": "Doubly Robust Off-policy Value Evaluation for Reinforcement Learning"
+      },
+      {
+        "key": "he16",
+        "weight": 0.815,
+        "title": "Opponent Modeling in Deep Reinforcement Learning"
+      },
+      {
+        "key": "zahavy16",
+        "weight": 0.6678,
+        "title": "Graying the black box: Understanding DQNs"
+      },
+      {
+        "key": "thomasa16",
+        "weight": 0.5616,
+        "title": "Data-Efficient Off-Policy Policy Evaluation for Reinforcement Learning"
+      },
+      {
+        "key": "deramo16",
+        "weight": 0.4324,
+        "title": "Estimating Maximum Expected Value through Gaussian Approximation"
+      },
+      {
+        "key": "dalal16",
+        "weight": 0.3688,
+        "title": "Hierarchical Decision Making In Electricity Grid Management"
+      },
+      {
+        "key": "mniha16",
+        "weight": 0.3508,
+        "title": "Asynchronous Methods for Deep Reinforcement Learning"
+      },
+      {
+        "key": "osband16",
+        "weight": 0.3434,
+        "title": "Generalization and Exploration via Randomized Value Functions"
+      },
+      {
+        "key": "zaremba16",
+        "weight": 0.2513,
+        "title": "Learning Simple Algorithms from Examples"
+      },
+      {
+        "key": "perolat16",
+        "weight": 0.2277,
+        "title": "Softened Approximate Policy Iteration for Markov Games"
+      },
+      {
+        "key": "wangf16",
+        "weight": 0.2148,
+        "title": "Dueling Network Architectures for Deep Reinforcement Learning"
+      },
+      {
+        "key": "korda16",
+        "weight": 0.1879,
+        "title": "Distributed Clustering of Linear Bandits in Peer to Peer Networks"
+      },
+      {
+        "key": "wangb16",
+        "weight": 0.1132,
+        "title": "The Knowledge Gradient for Sequential Decision Making with Stochastic Binary Feedbacks"
+      },
+      {
+        "key": "oh16",
+        "weight": 0.1044,
+        "title": "Control of Memory, Active Perception, and Action in Minecraft"
+      }
+    ]
+  },
+  {
+    "topic_id": 26,
+    "words": [
+      {
+        "word": "label",
+        "weight": 0.0437
+      },
+      {
+        "word": "labels",
+        "weight": 0.0271
+      },
+      {
+        "word": "conditional",
+        "weight": 0.0144
+      },
+      {
+        "word": "prediction",
+        "weight": 0.0143
+      },
+      {
+        "word": "deep",
+        "weight": 0.0139
+      },
+      {
+        "word": "energy",
+        "weight": 0.0133
+      },
+      {
+        "word": "structured",
+        "weight": 0.0124
+      },
+      {
+        "word": "inference",
+        "weight": 0.0086
+      },
+      {
+        "word": "hidden",
+        "weight": 0.0068
+      },
+      {
+        "word": "classifiers",
+        "weight": 0.0065
+      },
+      {
+        "word": "network",
+        "weight": 0.0061
+      },
+      {
+        "word": "classifier",
+        "weight": 0.0059
+      },
+      {
+        "word": "binary",
+        "weight": 0.0058
+      },
+      {
+        "word": "component",
+        "weight": 0.0051
+      },
+      {
+        "word": "predictions",
+        "weight": 0.0051
+      },
+      {
+        "word": "independence",
+        "weight": 0.0051
+      },
+      {
+        "word": "joint",
+        "weight": 0.0051
+      }
+    ],
+    "top_words": "label labels conditional",
+    "papers": [
+      {
+        "key": "lij16",
+        "weight": 0.9997,
+        "title": "Conditional Bernoulli Mixtures for Multi-label Classification"
+      },
+      {
+        "key": "belanger16",
+        "weight": 0.9679,
+        "title": "Structured Prediction Energy Networks"
+      },
+      {
+        "key": "shaham16",
+        "weight": 0.853,
+        "title": "A Deep Learning Approach to Unsupervised Ensemble Learning"
+      },
+      {
+        "key": "cisse16",
+        "weight": 0.8112,
+        "title": "ADIOS: Architectures Deep In Output Space"
+      },
+      {
+        "key": "songb16",
+        "weight": 0.3564,
+        "title": "Training Deep Neural Networks via Direct Loss Minimization"
+      },
+      {
+        "key": "platanios16",
+        "weight": 0.2698,
+        "title": "Estimating Accuracy from Unlabeled Data: A Bayesian Approach"
+      },
+      {
+        "key": "adams16",
+        "weight": 0.2437,
+        "title": "Hierarchical Span-Based Conditional Random Fields for Labeling and Segmenting Events in Wearable Sensor Data Streams"
+      },
+      {
+        "key": "guan16",
+        "weight": 0.1756,
+        "title": "Efficient Multi-Instance Learning for Activity Recognition from Time Series Data Using an Auto-Regressive Hidden Markov Model"
+      },
+      {
+        "key": "su16",
+        "weight": 0.1751,
+        "title": "Nonlinear Statistical Learning with Truncated Gaussian Graphical Models"
+      },
+      {
+        "key": "natarajan16",
+        "weight": 0.1643,
+        "title": "Optimal Classification with Multivariate Losses"
+      },
+      {
+        "key": "zhai16",
+        "weight": 0.1403,
+        "title": "Deep Structured Energy Based Models for Anomaly Detection"
+      },
+      {
+        "key": "daib16",
+        "weight": 0.1087,
+        "title": "Discriminative Embeddings of Latent Variable Models for Structured Data"
+      }
+    ]
+  },
+  {
+    "topic_id": 38,
+    "words": [
+      {
+        "word": "factorization",
+        "weight": 0.0423
+      },
+      {
+        "word": "message",
+        "weight": 0.0204
+      },
+      {
+        "word": "response",
+        "weight": 0.0203
+      },
+      {
+        "word": "missing",
+        "weight": 0.0201
+      },
+      {
+        "word": "completion",
+        "weight": 0.0168
+      },
+      {
+        "word": "passing",
+        "weight": 0.0164
+      },
+      {
+        "word": "poisson",
+        "weight": 0.0158
+      },
+      {
+        "word": "minimization",
+        "weight": 0.0132
+      },
+      {
+        "word": "entries",
+        "weight": 0.0132
+      },
+      {
+        "word": "sparsity",
+        "weight": 0.0125
+      },
+      {
+        "word": "binary",
+        "weight": 0.0106
+      },
+      {
+        "word": "factors",
+        "weight": 0.01
+      },
+      {
+        "word": "negative",
+        "weight": 0.0091
+      },
+      {
+        "word": "equation",
+        "weight": 0.0089
+      },
+      {
+        "word": "ratings",
+        "weight": 0.0076
+      },
+      {
+        "word": "collaborative",
+        "weight": 0.007
+      },
+      {
+        "word": "element",
+        "weight": 0.0068
+      },
+      {
+        "word": "filtering",
+        "weight": 0.0067
+      },
+      {
+        "word": "responses",
+        "weight": 0.0066
+      },
+      {
+        "word": "inference",
+        "weight": 0.0066
+      },
+      {
+        "word": "matrices",
+        "weight": 0.0066
+      },
+      {
+        "word": "gamma",
+        "weight": 0.0066
+      },
+      {
+        "word": "movie",
+        "weight": 0.0065
+      },
+      {
+        "word": "rank",
+        "weight": 0.0064
+      },
+      {
+        "word": "user",
+        "weight": 0.0064
+      },
+      {
+        "word": "sparse",
+        "weight": 0.006
+      },
+      {
+        "word": "item",
+        "weight": 0.0059
+      },
+      {
+        "word": "additive",
+        "weight": 0.0058
+      },
+      {
+        "word": "likelihood",
+        "weight": 0.0056
+      },
+      {
+        "word": "graph",
+        "weight": 0.0054
+      },
+      {
+        "word": "rating",
+        "weight": 0.0052
+      }
+    ],
+    "top_words": "factorization message response",
+    "papers": [
+      {
+        "key": "ravanbakhsha16",
+        "weight": 0.9997,
+        "title": "Boolean Matrix Factorization and Noisy Completion via Message Passing"
+      },
+      {
+        "key": "basbug16",
+        "weight": 0.9996,
+        "title": "Hierarchical Compound Poisson Factorization"
+      },
+      {
+        "key": "baib16",
+        "weight": 0.3617,
+        "title": "Algorithms for Optimizing the Ratio of Submodular Functions"
+      },
+      {
+        "key": "lan16",
+        "weight": 0.2522,
+        "title": "Dealbreaker: A Nonlinear Latent Variable Model for Educational Data"
+      }
+    ]
+  },
+  {
+    "topic_id": 46,
+    "words": [
+      {
+        "word": "estimator",
+        "weight": 0.0402
+      },
+      {
+        "word": "estimators",
+        "weight": 0.0224
+      },
+      {
+        "word": "median",
+        "weight": 0.0197
+      },
+      {
+        "word": "noise",
+        "weight": 0.0137
+      },
+      {
+        "word": "squared",
+        "weight": 0.0112
+      },
+      {
+        "word": "testing",
+        "weight": 0.011
+      },
+      {
+        "word": "tests",
+        "weight": 0.0104
+      },
+      {
+        "word": "generalized",
+        "weight": 0.0087
+      },
+      {
+        "word": "power",
+        "weight": 0.0086
+      },
+      {
+        "word": "null",
+        "weight": 0.0084
+      },
+      {
+        "word": "statistic",
+        "weight": 0.0078
+      },
+      {
+        "word": "distributions",
+        "weight": 0.0074
+      },
+      {
+        "word": "hypothesis",
+        "weight": 0.0072
+      },
+      {
+        "word": "private",
+        "weight": 0.0069
+      },
+      {
+        "word": "asymptotic",
+        "weight": 0.0066
+      },
+      {
+        "word": "estimating",
+        "weight": 0.0062
+      },
+      {
+        "word": "uniform",
+        "weight": 0.0061
+      },
+      {
+        "word": "parametric",
+        "weight": 0.0053
+      },
+      {
+        "word": "density",
+        "weight": 0.0052
+      },
+      {
+        "word": "likelihood",
+        "weight": 0.0052
+      }
+    ],
+    "top_words": "estimator estimators median",
+    "papers": [
+      {
+        "key": "rogers16",
+        "weight": 0.9996,
+        "title": "Differentially Private Chi-Squared Hypothesis Testing: Goodness of Fit and Independence Testing"
+      },
+      {
+        "key": "caragiannis16",
+        "weight": 0.9996,
+        "title": "Truthful Univariate Estimators"
+      },
+      {
+        "key": "lei16",
+        "weight": 0.8915,
+        "title": "Power of Ordered Hypothesis Testing"
+      },
+      {
+        "key": "liub16",
+        "weight": 0.6822,
+        "title": "A Kernelized Stein Discrepancy for Goodness-of-fit Tests"
+      },
+      {
+        "key": "shahb16",
+        "weight": 0.6806,
+        "title": "Stochastically Transitive Models for Pairwise Comparisons: Statistical and Computational Issues"
+      },
+      {
+        "key": "chwialkowski16",
+        "weight": 0.5321,
+        "title": "A Kernel Test of Goodness of Fit"
+      },
+      {
+        "key": "vojnovic16",
+        "weight": 0.4802,
+        "title": "Parameter Estimation for Generalized Thurstone Choice Models"
+      },
+      {
+        "key": "zhange16",
+        "weight": 0.3503,
+        "title": "Provable Non-convex Phase Retrieval with Outliers: Median TruncatedWirtinger Flow"
+      },
+      {
+        "key": "gaob16",
+        "weight": 0.321,
+        "title": "Conditional Dependence via Shannon Capacity: Axioms, Estimators and Applications"
+      },
+      {
+        "key": "thomasa16",
+        "weight": 0.3082,
+        "title": "Data-Efficient Off-Policy Policy Evaluation for Reinforcement Learning"
+      },
+      {
+        "key": "deramo16",
+        "weight": 0.2344,
+        "title": "Estimating Maximum Expected Value through Gaussian Approximation"
+      },
+      {
+        "key": "couillet16",
+        "weight": 0.1558,
+        "title": "A Random Matrix Approach to Echo-State Neural Networks"
+      },
+      {
+        "key": "erraqabi16",
+        "weight": 0.1515,
+        "title": "Pliable Rejection Sampling"
+      },
+      {
+        "key": "patrini16",
+        "weight": 0.1368,
+        "title": "Loss factorization, weakly supervised learning and label noise robustness"
+      },
+      {
+        "key": "kairouz16",
+        "weight": 0.1362,
+        "title": "Discrete Distribution Estimation under Local Privacy"
+      },
+      {
+        "key": "mnihb16",
+        "weight": 0.1315,
+        "title": "Variational Inference for Monte Carlo Objectives"
+      },
+      {
+        "key": "gaoa16",
+        "weight": 0.1289,
+        "title": "Exact Exponent in Optimal Rates for Crowdsourcing"
+      },
+      {
+        "key": "ramaswamy16",
+        "weight": 0.1166,
+        "title": "Mixture Proportion Estimation via Kernel Embeddings of Distributions"
+      },
+      {
+        "key": "jiang16",
+        "weight": 0.1094,
+        "title": "Doubly Robust Off-policy Value Evaluation for Reinforcement Learning"
+      }
+    ]
+  },
+  {
+    "topic_id": 23,
+    "words": [
+      {
+        "word": "sparse",
+        "weight": 0.04
+      },
+      {
+        "word": "norm",
+        "weight": 0.0212
+      },
+      {
+        "word": "lasso",
+        "weight": 0.0158
+      },
+      {
+        "word": "nonconvex",
+        "weight": 0.0143
+      },
+      {
+        "word": "sparsity",
+        "weight": 0.013
+      },
+      {
+        "word": "proximal",
+        "weight": 0.0122
+      },
+      {
+        "word": "group",
+        "weight": 0.0112
+      },
+      {
+        "word": "regularization",
+        "weight": 0.0079
+      },
+      {
+        "word": "estimator",
+        "weight": 0.0061
+      },
+      {
+        "word": "direct",
+        "weight": 0.0055
+      },
+      {
+        "word": "operator",
+        "weight": 0.0054
+      },
+      {
+        "word": "regularizers",
+        "weight": 0.0052
+      },
+      {
+        "word": "thresholding",
+        "weight": 0.0052
+      },
+      {
+        "word": "regularizer",
+        "weight": 0.0051
+      }
+    ],
+    "top_words": "sparse norm lasso",
+    "papers": [
+      {
+        "key": "melnyk16",
+        "weight": 0.9996,
+        "title": "Estimating Structured Vector Autoregressive Models"
+      },
+      {
+        "key": "wangh16",
+        "weight": 0.9958,
+        "title": "Epigraph projections for fast general convex programming"
+      },
+      {
+        "key": "yao16",
+        "weight": 0.9681,
+        "title": "Efficient Learning with a Family of Nonconvex Regularizers by Redistributing Nonconvexity"
+      },
+      {
+        "key": "fazayeli16",
+        "weight": 0.8875,
+        "title": "Generalized Direct Change Estimation in Ising Model Structure"
+      },
+      {
+        "key": "lid16",
+        "weight": 0.6133,
+        "title": "Stochastic Variance Reduced Optimization for Nonconvex Sparse Learning"
+      },
+      {
+        "key": "yangc16",
+        "weight": 0.5606,
+        "title": "Sparse Nonlinear Regression: Parameter Estimation under Nonconvexity"
+      },
+      {
+        "key": "asteris16",
+        "weight": 0.4613,
+        "title": "A Simple and Provable Algorithm for Sparse Diagonal CCA"
+      },
+      {
+        "key": "gui16",
+        "weight": 0.325,
+        "title": "Towards Faster Rates and Oracle Property for Low-Rank Matrix Estimation"
+      },
+      {
+        "key": "wipf16",
+        "weight": 0.2195,
+        "title": "Analysis of Variational Bayesian Factorizations for Sparse and Low-Rank Estimation"
+      },
+      {
+        "key": "ravi16",
+        "weight": 0.1969,
+        "title": "Experimental Design on a Budget for Sparse Linear Models and Applications"
+      },
+      {
+        "key": "wange16",
+        "weight": 0.1717,
+        "title": "No penalty no tears: Least squares in high-dimensional linear models"
+      },
+      {
+        "key": "blondel16",
+        "weight": 0.1638,
+        "title": "Polynomial Networks and Factorization Machines: New Insights and Efficient Training Algorithms"
+      },
+      {
+        "key": "liuc16",
+        "weight": 0.1492,
+        "title": "Structure Learning of Partitioned Markov Networks"
+      },
+      {
+        "key": "lan16",
+        "weight": 0.1116,
+        "title": "Dealbreaker: A Nonlinear Latent Variable Model for Educational Data"
+      },
+      {
+        "key": "yenb16",
+        "weight": 0.1087,
+        "title": "PD-Sparse : A Primal and Dual Sparse Approach to Extreme Multiclass and Multilabel Classification"
+      },
+      {
+        "key": "martins16",
+        "weight": 0.1074,
+        "title": "From Softmax to Sparsemax: A Sparse Model of Attention and Multi-Label Classification"
+      }
+    ]
+  },
+  {
+    "topic_id": 15,
+    "words": [
+      {
+        "word": "memory",
+        "weight": 0.0391
+      },
+      {
+        "word": "lstm",
+        "weight": 0.0187
+      },
+      {
+        "word": "tasks",
+        "weight": 0.0157
+      },
+      {
+        "word": "network",
+        "weight": 0.0155
+      },
+      {
+        "word": "video",
+        "weight": 0.0124
+      },
+      {
+        "word": "rank",
+        "weight": 0.0114
+      },
+      {
+        "word": "architectures",
+        "weight": 0.0109
+      },
+      {
+        "word": "pooling",
+        "weight": 0.0106
+      },
+      {
+        "word": "temporal",
+        "weight": 0.0084
+      },
+      {
+        "word": "maps",
+        "weight": 0.008
+      },
+      {
+        "word": "copy",
+        "weight": 0.0078
+      },
+      {
+        "word": "classes",
+        "weight": 0.0074
+      },
+      {
+        "word": "deep",
+        "weight": 0.0072
+      },
+      {
+        "word": "correct",
+        "weight": 0.0067
+      },
+      {
+        "word": "length",
+        "weight": 0.0064
+      },
+      {
+        "word": "block",
+        "weight": 0.006
+      },
+      {
+        "word": "action",
+        "weight": 0.0059
+      },
+      {
+        "word": "meta",
+        "weight": 0.0057
+      },
+      {
+        "word": "indicator",
+        "weight": 0.0056
+      },
+      {
+        "word": "retrieval",
+        "weight": 0.0055
+      },
+      {
+        "word": "short",
+        "weight": 0.0053
+      },
+      {
+        "word": "representation",
+        "weight": 0.0053
+      },
+      {
+        "word": "unseen",
+        "weight": 0.0052
+      }
+    ],
+    "top_words": "memory lstm tasks",
+    "papers": [
+      {
+        "key": "fernando16",
+        "weight": 0.9997,
+        "title": "Learning End-to-end Video Classification with Rank-Pooling"
+      },
+      {
+        "key": "santoro16",
+        "weight": 0.9996,
+        "title": "Meta-Learning with Memory-Augmented Neural Networks"
+      },
+      {
+        "key": "oh16",
+        "weight": 0.8953,
+        "title": "Control of Memory, Active Perception, and Action in Minecraft"
+      },
+      {
+        "key": "danihelka16",
+        "weight": 0.8401,
+        "title": "Associative Long Short-Term Memory"
+      },
+      {
+        "key": "zaremba16",
+        "weight": 0.4545,
+        "title": "Learning Simple Algorithms from Examples"
+      },
+      {
+        "key": "henaff16",
+        "weight": 0.1756,
+        "title": "Recurrent Orthogonal Networks and Long-Memory Tasks"
+      },
+      {
+        "key": "allamanis16",
+        "weight": 0.1158,
+        "title": "A Convolutional Attention Network for Extreme Summarization of Source Code"
+      }
+    ]
+  },
+  {
+    "topic_id": 25,
+    "words": [
+      {
+        "word": "dropout",
+        "weight": 0.039
+      },
+      {
+        "word": "network",
+        "weight": 0.0199
+      },
+      {
+        "word": "layer",
+        "weight": 0.0164
+      },
+      {
+        "word": "deep",
+        "weight": 0.0149
+      },
+      {
+        "word": "uncertainty",
+        "weight": 0.0146
+      },
+      {
+        "word": "bayesian",
+        "weight": 0.012
+      },
+      {
+        "word": "variational",
+        "weight": 0.0093
+      },
+      {
+        "word": "posterior",
+        "weight": 0.0083
+      },
+      {
+        "word": "inference",
+        "weight": 0.0078
+      },
+      {
+        "word": "layers",
+        "weight": 0.0076
+      },
+      {
+        "word": "hidden",
+        "weight": 0.0073
+      },
+      {
+        "word": "likelihood",
+        "weight": 0.007
+      },
+      {
+        "word": "predictive",
+        "weight": 0.007
+      },
+      {
+        "word": "student",
+        "weight": 0.0064
+      },
+      {
+        "word": "pseudo",
+        "weight": 0.0059
+      },
+      {
+        "word": "adams",
+        "weight": 0.0055
+      },
+      {
+        "word": "regression",
+        "weight": 0.0053
+      },
+      {
+        "word": "nonlinear",
+        "weight": 0.0051
+      }
+    ],
+    "top_words": "dropout network layer",
+    "papers": [
+      {
+        "key": "bulo16",
+        "weight": 0.9968,
+        "title": "Dropout distillation"
+      },
+      {
+        "key": "louizos16",
+        "weight": 0.9814,
+        "title": "Structured and Efficient Variational Deep Learning with Matrix Gaussian Posteriors"
+      },
+      {
+        "key": "gal16",
+        "weight": 0.975,
+        "title": "Dropout as a Bayesian Approximation: Representing Model Uncertainty in Deep Learning"
+      },
+      {
+        "key": "bui16",
+        "weight": 0.7386,
+        "title": "Deep Gaussian Processes for Regression using Approximate Expectation Propagation"
+      },
+      {
+        "key": "lan16",
+        "weight": 0.5404,
+        "title": "Dealbreaker: A Nonlinear Latent Variable Model for Educational Data"
+      },
+      {
+        "key": "hernandez-lobatob16",
+        "weight": 0.2972,
+        "title": "Black-Box Alpha Divergence Minimization"
+      },
+      {
+        "key": "su16",
+        "weight": 0.167,
+        "title": "Nonlinear Statistical Learning with Truncated Gaussian Graphical Models"
+      }
+    ]
+  },
+  {
+    "topic_id": 22,
+    "words": [
+      {
+        "word": "matrices",
+        "weight": 0.0376
+      },
+      {
+        "word": "structured",
+        "weight": 0.0189
+      },
+      {
+        "word": "rank",
+        "weight": 0.0106
+      },
+      {
+        "word": "private",
+        "weight": 0.0106
+      },
+      {
+        "word": "risk",
+        "weight": 0.0102
+      },
+      {
+        "word": "estimator",
+        "weight": 0.0079
+      },
+      {
+        "word": "singular",
+        "weight": 0.0068
+      },
+      {
+        "word": "differential",
+        "weight": 0.0067
+      },
+      {
+        "word": "norm",
+        "weight": 0.0066
+      },
+      {
+        "word": "projection",
+        "weight": 0.0066
+      },
+      {
+        "word": "projections",
+        "weight": 0.0065
+      },
+      {
+        "word": "oracle",
+        "weight": 0.0063
+      },
+      {
+        "word": "compressed",
+        "weight": 0.0061
+      },
+      {
+        "word": "mechanism",
+        "weight": 0.0058
+      },
+      {
+        "word": "lemma",
+        "weight": 0.0056
+      },
+      {
+        "word": "penalty",
+        "weight": 0.0054
+      }
+    ],
+    "top_words": "matrices structured rank",
+    "papers": [
+      {
+        "key": "kasiviswanathan16",
+        "weight": 0.9782,
+        "title": "Efficient Private Empirical Risk Minimization for High-dimensional Learning"
+      },
+      {
+        "key": "choromanska16",
+        "weight": 0.8617,
+        "title": "Binary embeddings with structured hashed projections"
+      },
+      {
+        "key": "abernethy16",
+        "weight": 0.8545,
+        "title": "Faster Convex Optimization: Simulated Annealing with an Efficient Universal Barrier"
+      },
+      {
+        "key": "choromanski16",
+        "weight": 0.7912,
+        "title": "Recycling Randomness with Structure for Sublinear time Kernel Expansions"
+      },
+      {
+        "key": "gui16",
+        "weight": 0.5474,
+        "title": "Towards Faster Rates and Oracle Property for Low-Rank Matrix Estimation"
+      },
+      {
+        "key": "fanti16",
+        "weight": 0.5231,
+        "title": "Metadata-conscious anonymous messaging"
+      },
+      {
+        "key": "shahb16",
+        "weight": 0.246,
+        "title": "Stochastically Transitive Models for Pairwise Comparisons: Statistical and Computational Issues"
+      },
+      {
+        "key": "zadeh16",
+        "weight": 0.1481,
+        "title": "Geometric Mean Metric Learning"
+      }
+    ]
+  },
+  {
+    "topic_id": 32,
+    "words": [
+      {
+        "word": "hidden",
+        "weight": 0.0371
+      },
+      {
+        "word": "layer",
+        "weight": 0.0357
+      },
+      {
+        "word": "network",
+        "weight": 0.028
+      },
+      {
+        "word": "units",
+        "weight": 0.0238
+      },
+      {
+        "word": "layers",
+        "weight": 0.0183
+      },
+      {
+        "word": "deep",
+        "weight": 0.0145
+      },
+      {
+        "word": "threshold",
+        "weight": 0.012
+      },
+      {
+        "word": "relu",
+        "weight": 0.0118
+      },
+      {
+        "word": "mnist",
+        "weight": 0.0105
+      },
+      {
+        "word": "trained",
+        "weight": 0.0081
+      },
+      {
+        "word": "pixel",
+        "weight": 0.0081
+      },
+      {
+        "word": "image",
+        "weight": 0.0079
+      },
+      {
+        "word": "activation",
+        "weight": 0.0074
+      },
+      {
+        "word": "hinton",
+        "weight": 0.0074
+      },
+      {
+        "word": "images",
+        "weight": 0.0065
+      },
+      {
+        "word": "bengio",
+        "weight": 0.0061
+      },
+      {
+        "word": "pixels",
+        "weight": 0.0061
+      },
+      {
+        "word": "lstm",
+        "weight": 0.0056
+      },
+      {
+        "word": "unit",
+        "weight": 0.0053
+      },
+      {
+        "word": "sigmoid",
+        "weight": 0.0051
+      },
+      {
+        "word": "weights",
+        "weight": 0.0051
+      }
+    ],
+    "top_words": "hidden layer network",
+    "papers": [
+      {
+        "key": "oord16",
+        "weight": 0.9997,
+        "title": "Pixel Recurrent Neural Networks"
+      },
+      {
+        "key": "panb16",
+        "weight": 0.9997,
+        "title": "Expressiveness of Rectifier Networks"
+      },
+      {
+        "key": "gilad-bachrach16",
+        "weight": 0.7776,
+        "title": "CryptoNets: Applying Neural Networks to Encrypted Data with High Throughput and Accuracy"
+      },
+      {
+        "key": "bornschein16",
+        "weight": 0.3921,
+        "title": "Bidirectional Helmholtz Machines"
+      },
+      {
+        "key": "zheng16",
+        "weight": 0.3261,
+        "title": "A Neural Autoregressive Approach to Collaborative Filtering"
+      },
+      {
+        "key": "steeg16",
+        "weight": 0.2512,
+        "title": "The Information Sieve"
+      },
+      {
+        "key": "su16",
+        "weight": 0.2099,
+        "title": "Nonlinear Statistical Learning with Truncated Gaussian Graphical Models"
+      },
+      {
+        "key": "arpita16",
+        "weight": 0.2019,
+        "title": "Why Regularized Auto-Encoders learn Sparse Representation?"
+      },
+      {
+        "key": "arjovsky16",
+        "weight": 0.195,
+        "title": "Unitary Evolution Recurrent Neural Networks"
+      },
+      {
+        "key": "mnihb16",
+        "weight": 0.1931,
+        "title": "Variational Inference for Monte Carlo Objectives"
+      },
+      {
+        "key": "lie16",
+        "weight": 0.1776,
+        "title": "Learning to Generate with Memory"
+      },
+      {
+        "key": "paige16",
+        "weight": 0.1483,
+        "title": "Inference Networks for Sequential Monte Carlo in Graphical Models"
+      },
+      {
+        "key": "shaham16",
+        "weight": 0.1467,
+        "title": "A Deep Learning Approach to Unsupervised Ensemble Learning"
+      }
+    ]
+  },
+  {
+    "topic_id": 30,
+    "words": [
+      {
+        "word": "greedy",
+        "weight": 0.036
+      },
+      {
+        "word": "maximization",
+        "weight": 0.0144
+      },
+      {
+        "word": "constraints",
+        "weight": 0.0127
+      },
+      {
+        "word": "monotone",
+        "weight": 0.0107
+      },
+      {
+        "word": "columns",
+        "weight": 0.0098
+      },
+      {
+        "word": "price",
+        "weight": 0.0088
+      },
+      {
+        "word": "constraint",
+        "weight": 0.0087
+      },
+      {
+        "word": "round",
+        "weight": 0.0083
+      },
+      {
+        "word": "stage",
+        "weight": 0.0083
+      },
+      {
+        "word": "pair",
+        "weight": 0.0079
+      },
+      {
+        "word": "column",
+        "weight": 0.0077
+      },
+      {
+        "word": "elements",
+        "weight": 0.0074
+      },
+      {
+        "word": "cardinality",
+        "weight": 0.0071
+      },
+      {
+        "word": "selection",
+        "weight": 0.007
+      },
+      {
+        "word": "lemma",
+        "weight": 0.0069
+      },
+      {
+        "word": "capacity",
+        "weight": 0.0067
+      },
+      {
+        "word": "distributed",
+        "weight": 0.0064
+      },
+      {
+        "word": "items",
+        "weight": 0.0063
+      },
+      {
+        "word": "image",
+        "weight": 0.0059
+      },
+      {
+        "word": "krause",
+        "weight": 0.0053
+      },
+      {
+        "word": "ratio",
+        "weight": 0.0053
+      },
+      {
+        "word": "images",
+        "weight": 0.0052
+      },
+      {
+        "word": "sparse",
+        "weight": 0.0051
+      }
+    ],
+    "top_words": "greedy maximization constraints",
+    "papers": [
+      {
+        "key": "altschuler16",
+        "weight": 0.9996,
+        "title": "Greedy Column Subset Selection: New Bounds and Distributed Algorithms"
+      },
+      {
+        "key": "lucic16",
+        "weight": 0.9996,
+        "title": "Horizontally Scalable Submodular Maximization"
+      },
+      {
+        "key": "balkanski16",
+        "weight": 0.9938,
+        "title": "Learning Sparse Combinatorial Representations via Two-stage Submodular Maximization"
+      },
+      {
+        "key": "mirzasoleiman16",
+        "weight": 0.8639,
+        "title": "Fast Constrained Submodular Maximization: Personalized Data Summarization"
+      },
+      {
+        "key": "baib16",
+        "weight": 0.6141,
+        "title": "Algorithms for Optimizing the Ratio of Submodular Functions"
+      },
+      {
+        "key": "heidari16",
+        "weight": 0.4358,
+        "title": "Pricing a Low-regret Seller"
+      },
+      {
+        "key": "vojnovic16",
+        "weight": 0.2526,
+        "title": "Parameter Estimation for Generalized Thurstone Choice Models"
+      },
+      {
+        "key": "asteris16",
+        "weight": 0.1481,
+        "title": "A Simple and Provable Algorithm for Sparse Diagonal CCA"
+      },
+      {
+        "key": "singla16",
+        "weight": 0.1256,
+        "title": "Actively Learning Hemimetrics with Applications to Eliciting User Preferences"
+      },
+      {
+        "key": "lim16",
+        "weight": 0.1198,
+        "title": "A Box-Constrained Approach for Hard Permutation Problems"
+      },
+      {
+        "key": "lig16",
+        "weight": 0.1074,
+        "title": "Gaussian quadrature for matrix inverse forms with applications"
+      },
+      {
+        "key": "komiyama16",
+        "weight": 0.1028,
+        "title": "Copeland Dueling Bandit Problem: Regret Lower Bound, Optimal Algorithm, and Computationally Efficient Algorithm"
+      }
+    ]
+  },
+  {
+    "topic_id": 28,
+    "words": [
+      {
+        "word": "domain",
+        "weight": 0.0337
+      },
+      {
+        "word": "adaptation",
+        "weight": 0.0173
+      },
+      {
+        "word": "target",
+        "weight": 0.0172
+      },
+      {
+        "word": "covariance",
+        "weight": 0.0149
+      },
+      {
+        "word": "source",
+        "weight": 0.0138
+      },
+      {
+        "word": "components",
+        "weight": 0.0126
+      },
+      {
+        "word": "poisson",
+        "weight": 0.0122
+      },
+      {
+        "word": "domains",
+        "weight": 0.0107
+      },
+      {
+        "word": "bayesian",
+        "weight": 0.0099
+      },
+      {
+        "word": "joint",
+        "weight": 0.0088
+      },
+      {
+        "word": "conditional",
+        "weight": 0.0083
+      },
+      {
+        "word": "latent",
+        "weight": 0.0082
+      },
+      {
+        "word": "component",
+        "weight": 0.0077
+      },
+      {
+        "word": "distributions",
+        "weight": 0.0068
+      },
+      {
+        "word": "generalized",
+        "weight": 0.0064
+      },
+      {
+        "word": "series",
+        "weight": 0.0058
+      },
+      {
+        "word": "shared",
+        "weight": 0.0056
+      },
+      {
+        "word": "base",
+        "weight": 0.0055
+      }
+    ],
+    "top_words": "domain adaptation target",
+    "papers": [
+      {
+        "key": "germain16",
+        "weight": 0.9997,
+        "title": "A New PAC-Bayesian Perspective on Domain Adaptation"
+      },
+      {
+        "key": "pandey16",
+        "weight": 0.9995,
+        "title": "On collapsed representation of hierarchical Completely Random Measures"
+      },
+      {
+        "key": "menon16",
+        "weight": 0.9722,
+        "title": "Linking losses for density ratio and class-probability estimation"
+      },
+      {
+        "key": "gong16",
+        "weight": 0.9567,
+        "title": "Domain Adaptation with Conditional Transferable Components"
+      },
+      {
+        "key": "podosinnikova16",
+        "weight": 0.804,
+        "title": "Beyond CCA: Moment Matching for Multi-View Models"
+      },
+      {
+        "key": "hwangb16",
+        "weight": 0.5816,
+        "title": "Automatic Construction of Nonparametric Relational Regression Models for Multiple Time Series"
+      },
+      {
+        "key": "gea16",
+        "weight": 0.4769,
+        "title": "Rich Component Analysis"
+      },
+      {
+        "key": "platanios16",
+        "weight": 0.1388,
+        "title": "Estimating Accuracy from Unlabeled Data: A Bayesian Approach"
+      }
+    ]
+  },
+  {
+    "topic_id": 33,
+    "words": [
+      {
+        "word": "layer",
+        "weight": 0.0327
+      },
+      {
+        "word": "layers",
+        "weight": 0.028
+      },
+      {
+        "word": "network",
+        "weight": 0.0244
+      },
+      {
+        "word": "deep",
+        "weight": 0.0226
+      },
+      {
+        "word": "convolutional",
+        "weight": 0.0163
+      },
+      {
+        "word": "batch",
+        "weight": 0.014
+      },
+      {
+        "word": "convolution",
+        "weight": 0.0123
+      },
+      {
+        "word": "normalization",
+        "weight": 0.0119
+      },
+      {
+        "word": "maps",
+        "weight": 0.0104
+      },
+      {
+        "word": "relu",
+        "weight": 0.0089
+      },
+      {
+        "word": "hidden",
+        "weight": 0.0088
+      },
+      {
+        "word": "cifar",
+        "weight": 0.0088
+      },
+      {
+        "word": "group",
+        "weight": 0.0071
+      },
+      {
+        "word": "activation",
+        "weight": 0.0069
+      },
+      {
+        "word": "activations",
+        "weight": 0.0069
+      },
+      {
+        "word": "weight",
+        "weight": 0.0065
+      },
+      {
+        "word": "architecture",
+        "weight": 0.0064
+      },
+      {
+        "word": "dropout",
+        "weight": 0.0064
+      },
+      {
+        "word": "forward",
+        "weight": 0.0062
+      },
+      {
+        "word": "feed",
+        "weight": 0.0062
+      },
+      {
+        "word": "units",
+        "weight": 0.0059
+      },
+      {
+        "word": "validation",
+        "weight": 0.0057
+      },
+      {
+        "word": "mnist",
+        "weight": 0.0056
+      },
+      {
+        "word": "filter",
+        "weight": 0.0052
+      },
+      {
+        "word": "connected",
+        "weight": 0.0051
+      },
+      {
+        "word": "hinton",
+        "weight": 0.0051
+      },
+      {
+        "word": "fully",
+        "weight": 0.0051
+      }
+    ],
+    "top_words": "layer layers network",
+    "papers": [
+      {
+        "key": "wanga16",
+        "weight": 0.9997,
+        "title": "Analysis of Deep Neural Networks with Extended Data Jacobian Matrix"
+      },
+      {
+        "key": "arpitb16",
+        "weight": 0.9997,
+        "title": "Normalization Propagation: A Parametric Technique for Removing Internal Covariate Shift in Deep Networks"
+      },
+      {
+        "key": "lia16",
+        "weight": 0.8147,
+        "title": "Multi-Bias Non-linear Activation in Deep Neural Networks"
+      },
+      {
+        "key": "cohenc16",
+        "weight": 0.8029,
+        "title": "Group Equivariant Convolutional Networks"
+      },
+      {
+        "key": "luketina16",
+        "weight": 0.4848,
+        "title": "Scalable Gradient-Based Tuning of Continuous Regularization Hyperparameters"
+      },
+      {
+        "key": "grosse16",
+        "weight": 0.4607,
+        "title": "A Kronecker-factored approximate Fisher matrix for convolution layers"
+      },
+      {
+        "key": "dieleman16",
+        "weight": 0.4481,
+        "title": "Exploiting Cyclic Symmetry in Convolutional Neural Networks"
+      },
+      {
+        "key": "ravanbakhshb16",
+        "weight": 0.3735,
+        "title": "Estimating Cosmological Parameters from the Dark Matter Distribution"
+      },
+      {
+        "key": "diamos16",
+        "weight": 0.3302,
+        "title": "Persistent RNNs: Stashing Recurrent Weights On-Chip"
+      },
+      {
+        "key": "linb16",
+        "weight": 0.2234,
+        "title": "Fixed Point Quantization of Deep Convolutional Networks"
+      },
+      {
+        "key": "almahairi16",
+        "weight": 0.1413,
+        "title": "Dynamic Capacity Networks"
+      },
+      {
+        "key": "niepert16",
+        "weight": 0.1389,
+        "title": "Learning Convolutional Neural Networks for Graphs"
+      },
+      {
+        "key": "zahavy16",
+        "weight": 0.1163,
+        "title": "Graying the black box: Understanding DQNs"
+      },
+      {
+        "key": "amodei16",
+        "weight": 0.1131,
+        "title": "Deep Speech 2 : End-to-End Speech Recognition in English and Mandarin"
+      },
+      {
+        "key": "cisse16",
+        "weight": 0.1127,
+        "title": "ADIOS: Architectures Deep In Output Space"
+      },
+      {
+        "key": "allamanis16",
+        "weight": 0.1112,
+        "title": "A Convolutional Attention Network for Extreme Summarization of Source Code"
+      },
+      {
+        "key": "wangf16",
+        "weight": 0.1092,
+        "title": "Dueling Network Architectures for Deep Reinforcement Learning"
+      }
+    ]
+  },
+  {
+    "topic_id": 27,
+    "words": [
+      {
+        "word": "gibbs",
+        "weight": 0.0321
+      },
+      {
+        "word": "markov",
+        "weight": 0.0186
+      },
+      {
+        "word": "mixing",
+        "weight": 0.017
+      },
+      {
+        "word": "sampler",
+        "weight": 0.0162
+      },
+      {
+        "word": "chain",
+        "weight": 0.0159
+      },
+      {
+        "word": "monte",
+        "weight": 0.0117
+      },
+      {
+        "word": "carlo",
+        "weight": 0.0116
+      },
+      {
+        "word": "mcmc",
+        "weight": 0.01
+      },
+      {
+        "word": "bias",
+        "weight": 0.0078
+      },
+      {
+        "word": "distributions",
+        "weight": 0.0071
+      },
+      {
+        "word": "nodes",
+        "weight": 0.0069
+      },
+      {
+        "word": "inverse",
+        "weight": 0.0069
+      },
+      {
+        "word": "estimates",
+        "weight": 0.0068
+      },
+      {
+        "word": "conditional",
+        "weight": 0.0067
+      },
+      {
+        "word": "chains",
+        "weight": 0.0063
+      },
+      {
+        "word": "target",
+        "weight": 0.0063
+      },
+      {
+        "word": "discrete",
+        "weight": 0.0062
+      },
+      {
+        "word": "partition",
+        "weight": 0.0057
+      },
+      {
+        "word": "sequential",
+        "weight": 0.0056
+      },
+      {
+        "word": "coupling",
+        "weight": 0.0051
+      },
+      {
+        "word": "marginal",
+        "weight": 0.0051
+      }
+    ],
+    "top_words": "gibbs markov mixing",
+    "papers": [
+      {
+        "key": "rainforth16",
+        "weight": 0.9995,
+        "title": "Interacting Particle Markov Chain Monte Carlo"
+      },
+      {
+        "key": "sa16",
+        "weight": 0.9197,
+        "title": "Ensuring Rapid Mixing and Low Bias for Asynchronous Gibbs Sampling"
+      },
+      {
+        "key": "carlson16",
+        "weight": 0.8713,
+        "title": "Partition Functions from Rao-Blackwellized Tempered Sampling"
+      },
+      {
+        "key": "tosh16",
+        "weight": 0.6902,
+        "title": "Mixing Rates for the Alternating Gibbs Sampler over Restricted Boltzmann Machines and Friends"
+      },
+      {
+        "key": "lig16",
+        "weight": 0.6296,
+        "title": "Gaussian quadrature for matrix inverse forms with applications"
+      },
+      {
+        "key": "lih16",
+        "weight": 0.5984,
+        "title": "Fast DPP Sampling for Nystrom with Application to Kernel Methods"
+      },
+      {
+        "key": "chenb16",
+        "weight": 0.5372,
+        "title": "Scalable Discrete Sampling as a Multi-Armed Bandit Problem"
+      },
+      {
+        "key": "bloem-reddy16",
+        "weight": 0.4436,
+        "title": "Slice Sampling on Hamiltonian Trajectories"
+      },
+      {
+        "key": "vikram16",
+        "weight": 0.3929,
+        "title": "Interactive Bayesian Hierarchical Clustering"
+      },
+      {
+        "key": "chwialkowski16",
+        "weight": 0.1775,
+        "title": "A Kernel Test of Goodness of Fit"
+      },
+      {
+        "key": "bornschein16",
+        "weight": 0.1699,
+        "title": "Bidirectional Helmholtz Machines"
+      },
+      {
+        "key": "simsekli16",
+        "weight": 0.1592,
+        "title": "Stochastic Quasi-Newton Langevin Monte Carlo"
+      },
+      {
+        "key": "erraqabi16",
+        "weight": 0.1106,
+        "title": "Pliable Rejection Sampling"
+      },
+      {
+        "key": "zhangf16",
+        "weight": 0.1097,
+        "title": "Markov Latent Feature Models"
+      },
+      {
+        "key": "piatkowski16",
+        "weight": 0.1077,
+        "title": "Stochastic Discrete Clenshaw-Curtis Quadrature"
+      },
+      {
+        "key": "roychowdhury16",
+        "weight": 0.1018,
+        "title": "Robust Monte Carlo Sampling using Riemannian Nosé-Poincaré Hamiltonian Dynamics"
+      }
+    ]
+  },
+  {
+    "topic_id": 17,
+    "words": [
+      {
+        "word": "regret",
+        "weight": 0.0315
+      },
+      {
+        "word": "bandit",
+        "weight": 0.029
+      },
+      {
+        "word": "armed",
+        "weight": 0.0208
+      },
+      {
+        "word": "bandits",
+        "weight": 0.0156
+      },
+      {
+        "word": "reward",
+        "weight": 0.0148
+      },
+      {
+        "word": "confidence",
+        "weight": 0.0137
+      },
+      {
+        "word": "bubeck",
+        "weight": 0.0123
+      },
+      {
+        "word": "exploration",
+        "weight": 0.012
+      },
+      {
+        "word": "rewards",
+        "weight": 0.0089
+      },
+      {
+        "word": "budget",
+        "weight": 0.0075
+      },
+      {
+        "word": "lemma",
+        "weight": 0.0069
+      },
+      {
+        "word": "round",
+        "weight": 0.0066
+      },
+      {
+        "word": "rounds",
+        "weight": 0.0064
+      },
+      {
+        "word": "correct",
+        "weight": 0.0056
+      },
+      {
+        "word": "gaps",
+        "weight": 0.0056
+      },
+      {
+        "word": "stage",
+        "weight": 0.0054
+      },
+      {
+        "word": "auer",
+        "weight": 0.0051
+      }
+    ],
+    "top_words": "regret bandit armed",
+    "papers": [
+      {
+        "key": "locatelli16",
+        "weight": 0.9996,
+        "title": "An optimal algorithm for the Thresholding Bandit Problem"
+      },
+      {
+        "key": "rosenski16",
+        "weight": 0.9995,
+        "title": "Multi-Player Bandits – a Musical Chairs Approach"
+      },
+      {
+        "key": "degenne16",
+        "weight": 0.9994,
+        "title": "Anytime optimal algorithms in stochastic multi-armed bandits"
+      },
+      {
+        "key": "david16",
+        "weight": 0.9866,
+        "title": "PAC Lower Bounds and Efficient Algorithms for The Max \\(K\\)-Armed Bandit Problem"
+      },
+      {
+        "key": "wu16",
+        "weight": 0.9633,
+        "title": "Conservative Bandits"
+      },
+      {
+        "key": "jun16",
+        "weight": 0.9537,
+        "title": "Anytime Exploration for Multi-armed Bandits using Confidence Information"
+      },
+      {
+        "key": "komiyama16",
+        "weight": 0.4691,
+        "title": "Copeland Dueling Bandit Problem: Regret Lower Bound, Optimal Algorithm, and Computationally Efficient Algorithm"
+      },
+      {
+        "key": "heidari16",
+        "weight": 0.3999,
+        "title": "Pricing a Low-regret Seller"
+      },
+      {
+        "key": "zhangb16",
+        "weight": 0.2838,
+        "title": "Online Stochastic Linear Optimization under One-bit Feedback"
+      },
+      {
+        "key": "korda16",
+        "weight": 0.2746,
+        "title": "Distributed Clustering of Linear Bandits in Peer to Peer Networks"
+      },
+      {
+        "key": "chenb16",
+        "weight": 0.2575,
+        "title": "Scalable Discrete Sampling as a Multi-Armed Bandit Problem"
+      },
+      {
+        "key": "fanti16",
+        "weight": 0.1935,
+        "title": "Metadata-conscious anonymous messaging"
+      },
+      {
+        "key": "medina16",
+        "weight": 0.1566,
+        "title": "No-Regret Algorithms for Heavy-Tailed Linear Bandits"
+      },
+      {
+        "key": "wangb16",
+        "weight": 0.1173,
+        "title": "The Knowledge Gradient for Sequential Decision Making with Stochastic Binary Feedbacks"
+      }
+    ]
+  },
+  {
+    "topic_id": 4,
+    "words": [
+      {
+        "word": "pose",
+        "weight": 0.0309
+      },
+      {
+        "word": "pooling",
+        "weight": 0.023
+      },
+      {
+        "word": "layers",
+        "weight": 0.0228
+      },
+      {
+        "word": "convolutional",
+        "weight": 0.0185
+      },
+      {
+        "word": "deep",
+        "weight": 0.0148
+      },
+      {
+        "word": "layer",
+        "weight": 0.0148
+      },
+      {
+        "word": "network",
+        "weight": 0.0142
+      },
+      {
+        "word": "object",
+        "weight": 0.0141
+      },
+      {
+        "word": "images",
+        "weight": 0.0095
+      },
+      {
+        "word": "depth",
+        "weight": 0.0094
+      },
+      {
+        "word": "fine",
+        "weight": 0.0092
+      },
+      {
+        "word": "activation",
+        "weight": 0.0087
+      },
+      {
+        "word": "category",
+        "weight": 0.0086
+      },
+      {
+        "word": "tensor",
+        "weight": 0.0083
+      },
+      {
+        "word": "filters",
+        "weight": 0.0074
+      },
+      {
+        "word": "recognition",
+        "weight": 0.0069
+      },
+      {
+        "word": "representation",
+        "weight": 0.0066
+      },
+      {
+        "word": "view",
+        "weight": 0.0061
+      },
+      {
+        "word": "representations",
+        "weight": 0.0059
+      },
+      {
+        "word": "relu",
+        "weight": 0.0059
+      },
+      {
+        "word": "shallow",
+        "weight": 0.0056
+      },
+      {
+        "word": "arithmetic",
+        "weight": 0.0055
+      },
+      {
+        "word": "digit",
+        "weight": 0.0054
+      },
+      {
+        "word": "capacity",
+        "weight": 0.0053
+      },
+      {
+        "word": "efficiency",
+        "weight": 0.0052
+      }
+    ],
+    "top_words": "pose pooling layers",
+    "papers": [
+      {
+        "key": "elhoseiny16",
+        "weight": 0.9997,
+        "title": "A Comparative Analysis and Study of Multiview CNN Models for Joint Object Categorization and Pose Estimation"
+      },
+      {
+        "key": "cohenb16",
+        "weight": 0.9997,
+        "title": "Convolutional Rectifier Networks as Generalized Tensor Decompositions"
+      },
+      {
+        "key": "wiatowski16",
+        "weight": 0.9996,
+        "title": "Discrete Deep Feature Extraction: A Theory and New Architectures"
+      },
+      {
+        "key": "dieleman16",
+        "weight": 0.5514,
+        "title": "Exploiting Cyclic Symmetry in Convolutional Neural Networks"
+      },
+      {
+        "key": "almahairi16",
+        "weight": 0.4867,
+        "title": "Dynamic Capacity Networks"
+      },
+      {
+        "key": "cohenc16",
+        "weight": 0.1968,
+        "title": "Group Equivariant Convolutional Networks"
+      }
+    ]
+  },
+  {
+    "topic_id": 2,
+    "words": [
+      {
+        "word": "images",
+        "weight": 0.0308
+      },
+      {
+        "word": "image",
+        "weight": 0.0288
+      },
+      {
+        "word": "softmax",
+        "weight": 0.0257
+      },
+      {
+        "word": "text",
+        "weight": 0.0164
+      },
+      {
+        "word": "network",
+        "weight": 0.0144
+      },
+      {
+        "word": "tasks",
+        "weight": 0.0141
+      },
+      {
+        "word": "transfer",
+        "weight": 0.0107
+      },
+      {
+        "word": "visual",
+        "weight": 0.0102
+      },
+      {
+        "word": "convolutional",
+        "weight": 0.0094
+      },
+      {
+        "word": "deep",
+        "weight": 0.009
+      },
+      {
+        "word": "learned",
+        "weight": 0.0086
+      },
+      {
+        "word": "style",
+        "weight": 0.0085
+      },
+      {
+        "word": "generative",
+        "weight": 0.0069
+      },
+      {
+        "word": "similarity",
+        "weight": 0.0067
+      },
+      {
+        "word": "noise",
+        "weight": 0.0062
+      },
+      {
+        "word": "trained",
+        "weight": 0.0061
+      },
+      {
+        "word": "margin",
+        "weight": 0.0059
+      },
+      {
+        "word": "face",
+        "weight": 0.0059
+      },
+      {
+        "word": "generate",
+        "weight": 0.0058
+      },
+      {
+        "word": "train",
+        "weight": 0.0057
+      },
+      {
+        "word": "content",
+        "weight": 0.0051
+      }
+    ],
+    "top_words": "images image softmax",
+    "papers": [
+      {
+        "key": "reed16",
+        "weight": 0.9932,
+        "title": "Generative Adversarial Text to Image Synthesis"
+      },
+      {
+        "key": "larsen16",
+        "weight": 0.9589,
+        "title": "Autoencoding beyond pixels using a learned similarity metric"
+      },
+      {
+        "key": "liud16",
+        "weight": 0.93,
+        "title": "Large-Margin Softmax Loss for Convolutional Neural Networks"
+      },
+      {
+        "key": "ulyanov16",
+        "weight": 0.8945,
+        "title": "Texture Networks: Feed-forward Synthesis of Textures and Stylized Images"
+      },
+      {
+        "key": "leeb16",
+        "weight": 0.8312,
+        "title": "Asymmetric Multi-task Learning Based on Task Relatedness and Loss"
+      },
+      {
+        "key": "songb16",
+        "weight": 0.1076,
+        "title": "Training Deep Neural Networks via Direct Loss Minimization"
+      },
+      {
+        "key": "almahairi16",
+        "weight": 0.106,
+        "title": "Dynamic Capacity Networks"
+      },
+      {
+        "key": "lerer16",
+        "weight": 0.1036,
+        "title": "Learning Physical Intuition of Block Towers by Example"
+      }
+    ]
+  },
+  {
+    "topic_id": 37,
+    "words": [
+      {
+        "word": "columns",
+        "weight": 0.0305
+      },
+      {
+        "word": "group",
+        "weight": 0.0203
+      },
+      {
+        "word": "lasso",
+        "weight": 0.0173
+      },
+      {
+        "word": "subspace",
+        "weight": 0.0151
+      },
+      {
+        "word": "column",
+        "weight": 0.0142
+      },
+      {
+        "word": "selection",
+        "weight": 0.0142
+      },
+      {
+        "word": "rows",
+        "weight": 0.0126
+      },
+      {
+        "word": "subspaces",
+        "weight": 0.0091
+      },
+      {
+        "word": "series",
+        "weight": 0.0086
+      },
+      {
+        "word": "hyperparameters",
+        "weight": 0.0084
+      },
+      {
+        "word": "noise",
+        "weight": 0.0083
+      },
+      {
+        "word": "hyperparameter",
+        "weight": 0.0081
+      },
+      {
+        "word": "sparse",
+        "weight": 0.0079
+      },
+      {
+        "word": "regression",
+        "weight": 0.0077
+      },
+      {
+        "word": "lemma",
+        "weight": 0.0073
+      },
+      {
+        "word": "selected",
+        "weight": 0.0069
+      },
+      {
+        "word": "false",
+        "weight": 0.0068
+      },
+      {
+        "word": "conditions",
+        "weight": 0.0063
+      },
+      {
+        "word": "consistency",
+        "weight": 0.0062
+      },
+      {
+        "word": "rank",
+        "weight": 0.006
+      },
+      {
+        "word": "direction",
+        "weight": 0.0059
+      },
+      {
+        "word": "clustering",
+        "weight": 0.0058
+      },
+      {
+        "word": "entries",
+        "weight": 0.0057
+      },
+      {
+        "word": "sampled",
+        "weight": 0.0052
+      },
+      {
+        "word": "hold",
+        "weight": 0.0051
+      }
+    ],
+    "top_words": "columns group lasso",
+    "papers": [
+      {
+        "key": "pimentel-alarcon16",
+        "weight": 0.9997,
+        "title": "The Information-Theoretic Requirements of Subspace Clustering with Missing Data"
+      },
+      {
+        "key": "bauer16",
+        "weight": 0.9778,
+        "title": "The Arrow of Time in Multivariate Time Series"
+      },
+      {
+        "key": "daia16",
+        "weight": 0.9009,
+        "title": "The knockoff filter for FDR control in group-sparse and multitask regression"
+      },
+      {
+        "key": "zhanga16",
+        "weight": 0.8774,
+        "title": "On the Consistency of Feature Selection With Lasso for Non-linear Targets"
+      },
+      {
+        "key": "wange16",
+        "weight": 0.6976,
+        "title": "No penalty no tears: Least squares in high-dimensional linear models"
+      },
+      {
+        "key": "rahmani16",
+        "weight": 0.6936,
+        "title": "A Subspace Learning Approach for High Dimensional Matrix Decomposition with Efficient Column/Row Sampling"
+      },
+      {
+        "key": "xua16",
+        "weight": 0.2806,
+        "title": "False Discovery Rate Control and Statistical Quality Assessment of Annotators in Crowdsourced Ranking"
+      },
+      {
+        "key": "oswal16",
+        "weight": 0.258,
+        "title": "Representational Similarity Learning with Application to Brain Networks"
+      },
+      {
+        "key": "luketina16",
+        "weight": 0.2382,
+        "title": "Scalable Gradient-Based Tuning of Continuous Regularization Hyperparameters"
+      },
+      {
+        "key": "pedregosa16",
+        "weight": 0.1961,
+        "title": "Hyperparameter optimization with approximate gradient"
+      },
+      {
+        "key": "bhattacharya16",
+        "weight": 0.1328,
+        "title": "Non-negative Matrix Factorization under Heavy Noise"
+      },
+      {
+        "key": "kapralov16",
+        "weight": 0.1062,
+        "title": "How to Fake Multiply by a Gaussian Matrix"
+      }
+    ]
+  },
+  {
+    "topic_id": 36,
+    "words": [
+      {
+        "word": "tree",
+        "weight": 0.0294
+      },
+      {
+        "word": "distance",
+        "weight": 0.0128
+      },
+      {
+        "word": "descent",
+        "weight": 0.0127
+      },
+      {
+        "word": "constraints",
+        "weight": 0.0127
+      },
+      {
+        "word": "instances",
+        "weight": 0.0086
+      },
+      {
+        "word": "trees",
+        "weight": 0.0083
+      },
+      {
+        "word": "node",
+        "weight": 0.008
+      },
+      {
+        "word": "leaves",
+        "weight": 0.0077
+      },
+      {
+        "word": "direction",
+        "weight": 0.0074
+      },
+      {
+        "word": "distributions",
+        "weight": 0.0068
+      },
+      {
+        "word": "inner",
+        "weight": 0.0059
+      },
+      {
+        "word": "binary",
+        "weight": 0.0057
+      },
+      {
+        "word": "prediction",
+        "weight": 0.0056
+      },
+      {
+        "word": "inference",
+        "weight": 0.0054
+      },
+      {
+        "word": "importance",
+        "weight": 0.0053
+      },
+      {
+        "word": "fisher",
+        "weight": 0.0053
+      }
+    ],
+    "top_words": "tree distance descent",
+    "papers": [
+      {
+        "key": "kantchelian16",
+        "weight": 0.96,
+        "title": "Evasion and Hardening of Tree Ensemble Classifiers"
+      },
+      {
+        "key": "canevet16",
+        "weight": 0.9359,
+        "title": "Importance Sampling Tree for Large-scale Empirical Expectation"
+      },
+      {
+        "key": "thomasb16",
+        "weight": 0.9213,
+        "title": "Energetic Natural Gradient Descent"
+      },
+      {
+        "key": "mussmann16",
+        "weight": 0.7326,
+        "title": "Learning and Inference via Maximum Inner Product Search"
+      },
+      {
+        "key": "achim16",
+        "weight": 0.6994,
+        "title": "Beyond Parity Constraints: Fourier Analysis of Hash Functions for Inference"
+      },
+      {
+        "key": "vikram16",
+        "weight": 0.4157,
+        "title": "Interactive Bayesian Hierarchical Clustering"
+      },
+      {
+        "key": "gopal16",
+        "weight": 0.4097,
+        "title": "Adaptive Sampling for SGD by Exploiting Side Information"
+      },
+      {
+        "key": "erraqabi16",
+        "weight": 0.344,
+        "title": "Pliable Rejection Sampling"
+      },
+      {
+        "key": "bornschein16",
+        "weight": 0.1003,
+        "title": "Bidirectional Helmholtz Machines"
+      }
+    ]
+  },
+  {
+    "topic_id": 9,
+    "words": [
+      {
+        "word": "label",
+        "weight": 0.0277
+      },
+      {
+        "word": "labels",
+        "weight": 0.0209
+      },
+      {
+        "word": "losses",
+        "weight": 0.0149
+      },
+      {
+        "word": "threshold",
+        "weight": 0.0146
+      },
+      {
+        "word": "target",
+        "weight": 0.0122
+      },
+      {
+        "word": "logistic",
+        "weight": 0.012
+      },
+      {
+        "word": "dimension",
+        "weight": 0.0117
+      },
+      {
+        "word": "extreme",
+        "weight": 0.0109
+      },
+      {
+        "word": "sparse",
+        "weight": 0.0104
+      },
+      {
+        "word": "decision",
+        "weight": 0.0103
+      },
+      {
+        "word": "prediction",
+        "weight": 0.0093
+      },
+      {
+        "word": "binary",
+        "weight": 0.0092
+      },
+      {
+        "word": "tree",
+        "weight": 0.0083
+      },
+      {
+        "word": "multiclass",
+        "weight": 0.0082
+      },
+      {
+        "word": "streams",
+        "weight": 0.008
+      },
+      {
+        "word": "regression",
+        "weight": 0.0074
+      },
+      {
+        "word": "belief",
+        "weight": 0.0072
+      },
+      {
+        "word": "learner",
+        "weight": 0.007
+      },
+      {
+        "word": "estimates",
+        "weight": 0.0062
+      },
+      {
+        "word": "classifiers",
+        "weight": 0.0061
+      },
+      {
+        "word": "node",
+        "weight": 0.0055
+      },
+      {
+        "word": "valid",
+        "weight": 0.0055
+      },
+      {
+        "word": "hypothesis",
+        "weight": 0.0055
+      },
+      {
+        "word": "multivariate",
+        "weight": 0.0053
+      }
+    ],
+    "top_words": "label labels losses",
+    "papers": [
+      {
+        "key": "jasinska16",
+        "weight": 0.9997,
+        "title": "Extreme F-measure Maximization using Sparse Probability Estimates"
+      },
+      {
+        "key": "yoon16",
+        "weight": 0.9996,
+        "title": "ForecastICU: A Prognostic Decision Support System for Timely Prediction of Intensive Care Unit Admission"
+      },
+      {
+        "key": "liua16",
+        "weight": 0.9126,
+        "title": "The Teaching Dimension of Linear Learners"
+      },
+      {
+        "key": "natarajan16",
+        "weight": 0.7084,
+        "title": "Optimal Classification with Multivariate Losses"
+      },
+      {
+        "key": "yenb16",
+        "weight": 0.3605,
+        "title": "PD-Sparse : A Primal and Dual Sparse Approach to Extreme Multiclass and Multilabel Classification"
+      },
+      {
+        "key": "martins16",
+        "weight": 0.3182,
+        "title": "From Softmax to Sparsemax: A Sparse Model of Attention and Multi-Label Classification"
+      },
+      {
+        "key": "wangb16",
+        "weight": 0.2379,
+        "title": "The Knowledge Gradient for Sequential Decision Making with Stochastic Binary Feedbacks"
+      },
+      {
+        "key": "patrini16",
+        "weight": 0.1395,
+        "title": "Loss factorization, weakly supervised learning and label noise robustness"
+      }
+    ]
+  },
+  {
+    "topic_id": 39,
+    "words": [
+      {
+        "word": "regression",
+        "weight": 0.0265
+      },
+      {
+        "word": "noise",
+        "weight": 0.0199
+      },
+      {
+        "word": "tensor",
+        "weight": 0.0125
+      },
+      {
+        "word": "additive",
+        "weight": 0.0123
+      },
+      {
+        "word": "view",
+        "weight": 0.0094
+      },
+      {
+        "word": "estimator",
+        "weight": 0.0082
+      },
+      {
+        "word": "nonlinear",
+        "weight": 0.0078
+      },
+      {
+        "word": "nonparametric",
+        "weight": 0.0077
+      },
+      {
+        "word": "recovery",
+        "weight": 0.0069
+      },
+      {
+        "word": "sparse",
+        "weight": 0.0067
+      },
+      {
+        "word": "canonical",
+        "weight": 0.0064
+      },
+      {
+        "word": "correlation",
+        "weight": 0.0061
+      },
+      {
+        "word": "generalized",
+        "weight": 0.0061
+      },
+      {
+        "word": "squares",
+        "weight": 0.0059
+      },
+      {
+        "word": "assumptions",
+        "weight": 0.0057
+      },
+      {
+        "word": "dominant",
+        "weight": 0.0056
+      },
+      {
+        "word": "synthetic",
+        "weight": 0.0051
+      }
+    ],
+    "top_words": "regression noise tensor",
+    "papers": [
+      {
+        "key": "bhowmik16",
+        "weight": 0.9972,
+        "title": "Sparse Parameter Recovery from Aggregated Data"
+      },
+      {
+        "key": "kandasamy16",
+        "weight": 0.8143,
+        "title": "Additive Approximations in High Dimensional Nonparametric Regression via the SALSA"
+      },
+      {
+        "key": "imaizumi16",
+        "weight": 0.7606,
+        "title": "Doubly Decomposing Nonparametric Tensor Regression"
+      },
+      {
+        "key": "michaeli16",
+        "weight": 0.6566,
+        "title": "Nonparametric Canonical Correlation Analysis"
+      },
+      {
+        "key": "bhattacharya16",
+        "weight": 0.6229,
+        "title": "Non-negative Matrix Factorization under Heavy Noise"
+      },
+      {
+        "key": "kanagawa16",
+        "weight": 0.524,
+        "title": "Gaussian process nonparametric tensor estimator and its minimax optimality"
+      },
+      {
+        "key": "gea16",
+        "weight": 0.4223,
+        "title": "Rich Component Analysis"
+      },
+      {
+        "key": "yangc16",
+        "weight": 0.3796,
+        "title": "Sparse Nonlinear Regression: Parameter Estimation under Nonconvexity"
+      },
+      {
+        "key": "hashimoto16",
+        "weight": 0.3608,
+        "title": "Learning Population-Level Diffusions with Generative RNNs"
+      },
+      {
+        "key": "geb16",
+        "weight": 0.3591,
+        "title": "Efficient Algorithms for Large-scale Generalized Eigenvector Computation and Canonical Correlation Analysis"
+      },
+      {
+        "key": "acharya16",
+        "weight": 0.3549,
+        "title": "Fast Algorithms for Segmented Regression"
+      },
+      {
+        "key": "aroraa16",
+        "weight": 0.2165,
+        "title": "Stochastic Optimization for Multiview Representation Learning using Partial Least Squares"
+      },
+      {
+        "key": "yu16",
+        "weight": 0.1643,
+        "title": "Learning from Multiway Data: Simple and Efficient Tensor Regression"
+      }
+    ]
+  },
+  {
+    "topic_id": 41,
+    "words": [
+      {
+        "word": "user",
+        "weight": 0.026
+      },
+      {
+        "word": "items",
+        "weight": 0.0251
+      },
+      {
+        "word": "item",
+        "weight": 0.0225
+      },
+      {
+        "word": "ranking",
+        "weight": 0.0211
+      },
+      {
+        "word": "bandits",
+        "weight": 0.0121
+      },
+      {
+        "word": "ratings",
+        "weight": 0.012
+      },
+      {
+        "word": "users",
+        "weight": 0.0117
+      },
+      {
+        "word": "position",
+        "weight": 0.0113
+      },
+      {
+        "word": "regret",
+        "weight": 0.0111
+      },
+      {
+        "word": "rating",
+        "weight": 0.0092
+      },
+      {
+        "word": "recommendation",
+        "weight": 0.0091
+      },
+      {
+        "word": "reward",
+        "weight": 0.009
+      },
+      {
+        "word": "bias",
+        "weight": 0.0085
+      },
+      {
+        "word": "agent",
+        "weight": 0.008
+      },
+      {
+        "word": "rank",
+        "weight": 0.0073
+      },
+      {
+        "word": "feedback",
+        "weight": 0.0062
+      },
+      {
+        "word": "global",
+        "weight": 0.0062
+      },
+      {
+        "word": "contextual",
+        "weight": 0.0062
+      },
+      {
+        "word": "proposition",
+        "weight": 0.0058
+      },
+      {
+        "word": "bandit",
+        "weight": 0.0058
+      },
+      {
+        "word": "weight",
+        "weight": 0.0054
+      },
+      {
+        "word": "evaluation",
+        "weight": 0.0052
+      },
+      {
+        "word": "list",
+        "weight": 0.0052
+      }
+    ],
+    "top_words": "user items item",
+    "papers": [
+      {
+        "key": "lif16",
+        "weight": 0.9996,
+        "title": "Contextual Combinatorial Cascading Bandits"
+      },
+      {
+        "key": "malherbe16",
+        "weight": 0.9995,
+        "title": "A ranking approach to global optimization"
+      },
+      {
+        "key": "katariya16",
+        "weight": 0.9852,
+        "title": "DCM Bandits: Learning to Rank with Multiple Clicks"
+      },
+      {
+        "key": "schnabel16",
+        "weight": 0.9004,
+        "title": "Recommendations as Treatments: Debiasing Learning and Evaluation"
+      },
+      {
+        "key": "zheng16",
+        "weight": 0.479,
+        "title": "A Neural Autoregressive Approach to Collaborative Filtering"
+      },
+      {
+        "key": "xua16",
+        "weight": 0.2547,
+        "title": "False Discovery Rate Control and Statistical Quality Assessment of Annotators in Crowdsourced Ranking"
+      },
+      {
+        "key": "vojnovic16",
+        "weight": 0.2507,
+        "title": "Parameter Estimation for Generalized Thurstone Choice Models"
+      },
+      {
+        "key": "singla16",
+        "weight": 0.2171,
+        "title": "Actively Learning Hemimetrics with Applications to Eliciting User Preferences"
+      },
+      {
+        "key": "komiyama16",
+        "weight": 0.2087,
+        "title": "Copeland Dueling Bandit Problem: Regret Lower Bound, Optimal Algorithm, and Computationally Efficient Algorithm"
+      },
+      {
+        "key": "korda16",
+        "weight": 0.1483,
+        "title": "Distributed Clustering of Linear Bandits in Peer to Peer Networks"
+      },
+      {
+        "key": "wangg16",
+        "weight": 0.1084,
+        "title": "Isotonic Hawkes Processes"
+      },
+      {
+        "key": "mirzasoleiman16",
+        "weight": 0.101,
+        "title": "Fast Constrained Submodular Maximization: Personalized Data Summarization"
+      }
+    ]
+  },
+  {
+    "topic_id": 11,
+    "words": [
+      {
+        "word": "policy",
+        "weight": 0.0256
+      },
+      {
+        "word": "smooth",
+        "weight": 0.0177
+      },
+      {
+        "word": "noise",
+        "weight": 0.0121
+      },
+      {
+        "word": "expert",
+        "weight": 0.0072
+      },
+      {
+        "word": "weight",
+        "weight": 0.0072
+      },
+      {
+        "word": "weights",
+        "weight": 0.007
+      },
+      {
+        "word": "weighted",
+        "weight": 0.0068
+      },
+      {
+        "word": "lemma",
+        "weight": 0.0067
+      },
+      {
+        "word": "prediction",
+        "weight": 0.006
+      },
+      {
+        "word": "deterministic",
+        "weight": 0.006
+      },
+      {
+        "word": "alternating",
+        "weight": 0.006
+      },
+      {
+        "word": "guarantee",
+        "weight": 0.0056
+      },
+      {
+        "word": "minimization",
+        "weight": 0.0053
+      },
+      {
+        "word": "states",
+        "weight": 0.0053
+      },
+      {
+        "word": "policies",
+        "weight": 0.0051
+      },
+      {
+        "word": "utility",
+        "weight": 0.0051
+      },
+      {
+        "word": "norm",
+        "weight": 0.0051
+      },
+      {
+        "word": "condition",
+        "weight": 0.005
+      }
+    ],
+    "top_words": "policy smooth noise",
+    "papers": [
+      {
+        "key": "le16",
+        "weight": 0.9995,
+        "title": "Smooth Imitation Learning for Online Sequence Prediction"
+      },
+      {
+        "key": "la16",
+        "weight": 0.8748,
+        "title": "Cumulative Prospect Theory Meets Reinforcement Learning: Prediction and Control"
+      },
+      {
+        "key": "lii16",
+        "weight": 0.7757,
+        "title": "Recovery guarantee of weighted low-rank approximation via alternating minimization"
+      },
+      {
+        "key": "balle16",
+        "weight": 0.7423,
+        "title": "Differentially Private Policy Evaluation"
+      },
+      {
+        "key": "couillet16",
+        "weight": 0.5266,
+        "title": "A Random Matrix Approach to Echo-State Neural Networks"
+      },
+      {
+        "key": "chiang16",
+        "weight": 0.3619,
+        "title": "Robust Principal Component Analysis with Side Information"
+      },
+      {
+        "key": "ho16",
+        "weight": 0.2118,
+        "title": "Model-Free Imitation Learning with Policy Optimization"
+      }
+    ]
+  },
+  {
+    "topic_id": 12,
+    "words": [
+      {
+        "word": "supervised",
+        "weight": 0.0245
+      },
+      {
+        "word": "embeddings",
+        "weight": 0.022
+      },
+      {
+        "word": "lstm",
+        "weight": 0.0213
+      },
+      {
+        "word": "semi",
+        "weight": 0.0185
+      },
+      {
+        "word": "deep",
+        "weight": 0.0163
+      },
+      {
+        "word": "embedding",
+        "weight": 0.0153
+      },
+      {
+        "word": "prediction",
+        "weight": 0.013
+      },
+      {
+        "word": "unlabeled",
+        "weight": 0.0107
+      },
+      {
+        "word": "layer",
+        "weight": 0.0107
+      },
+      {
+        "word": "labeled",
+        "weight": 0.0098
+      },
+      {
+        "word": "word",
+        "weight": 0.009
+      },
+      {
+        "word": "text",
+        "weight": 0.0089
+      },
+      {
+        "word": "generative",
+        "weight": 0.0089
+      },
+      {
+        "word": "auxiliary",
+        "weight": 0.0087
+      },
+      {
+        "word": "region",
+        "weight": 0.0083
+      },
+      {
+        "word": "trained",
+        "weight": 0.0072
+      },
+      {
+        "word": "words",
+        "weight": 0.0071
+      },
+      {
+        "word": "network",
+        "weight": 0.0067
+      },
+      {
+        "word": "block",
+        "weight": 0.0063
+      },
+      {
+        "word": "hidden",
+        "weight": 0.0061
+      },
+      {
+        "word": "layers",
+        "weight": 0.0055
+      },
+      {
+        "word": "blocks",
+        "weight": 0.0053
+      },
+      {
+        "word": "hinton",
+        "weight": 0.0052
+      },
+      {
+        "word": "sequences",
+        "weight": 0.0051
+      },
+      {
+        "word": "instances",
+        "weight": 0.0051
+      }
+    ],
+    "top_words": "supervised embeddings lstm",
+    "papers": [
+      {
+        "key": "johnson16",
+        "weight": 0.9997,
+        "title": "Supervised and Semi-Supervised Text Categorization using LSTM for Region Embeddings"
+      },
+      {
+        "key": "songa16",
+        "weight": 0.8575,
+        "title": "Factored Temporal Sigmoid Belief Networks for Sequence Learning"
+      },
+      {
+        "key": "lerer16",
+        "weight": 0.8533,
+        "title": "Learning Physical Intuition of Block Towers by Example"
+      },
+      {
+        "key": "yanga16",
+        "weight": 0.7046,
+        "title": "Revisiting Semi-Supervised Learning with Graph Embeddings"
+      },
+      {
+        "key": "maaloe16",
+        "weight": 0.5975,
+        "title": "Auxiliary Deep Generative Models"
+      },
+      {
+        "key": "trouillon16",
+        "weight": 0.2681,
+        "title": "Complex Embeddings for Simple Link Prediction"
+      },
+      {
+        "key": "linb16",
+        "weight": 0.2005,
+        "title": "Fixed Point Quantization of Deep Convolutional Networks"
+      },
+      {
+        "key": "xieb16",
+        "weight": 0.1565,
+        "title": "Unsupervised Deep Embedding for Clustering Analysis"
+      },
+      {
+        "key": "pezeshki16",
+        "weight": 0.1527,
+        "title": "Deconstructing the Ladder Network Architecture"
+      }
+    ]
+  },
+  {
+    "topic_id": 48,
+    "words": [
+      {
+        "word": "private",
+        "weight": 0.0244
+      },
+      {
+        "word": "user",
+        "weight": 0.017
+      },
+      {
+        "word": "markov",
+        "weight": 0.0138
+      },
+      {
+        "word": "check",
+        "weight": 0.0134
+      },
+      {
+        "word": "activity",
+        "weight": 0.0093
+      },
+      {
+        "word": "classifier",
+        "weight": 0.0083
+      },
+      {
+        "word": "states",
+        "weight": 0.0083
+      },
+      {
+        "word": "global",
+        "weight": 0.0081
+      },
+      {
+        "word": "preference",
+        "weight": 0.0073
+      },
+      {
+        "word": "prediction",
+        "weight": 0.0071
+      },
+      {
+        "word": "series",
+        "weight": 0.007
+      },
+      {
+        "word": "users",
+        "weight": 0.0066
+      },
+      {
+        "word": "mechanism",
+        "weight": 0.0062
+      },
+      {
+        "word": "auxiliary",
+        "weight": 0.006
+      },
+      {
+        "word": "classifiers",
+        "weight": 0.0059
+      },
+      {
+        "word": "recognition",
+        "weight": 0.0057
+      },
+      {
+        "word": "differential",
+        "weight": 0.0056
+      },
+      {
+        "word": "segmentation",
+        "weight": 0.0056
+      },
+      {
+        "word": "observations",
+        "weight": 0.0054
+      },
+      {
+        "word": "transition",
+        "weight": 0.0054
+      },
+      {
+        "word": "processes",
+        "weight": 0.0053
+      },
+      {
+        "word": "inference",
+        "weight": 0.0052
+      },
+      {
+        "word": "hidden",
+        "weight": 0.0051
+      },
+      {
+        "word": "labels",
+        "weight": 0.005
+      }
+    ],
+    "top_words": "private user markov",
+    "papers": [
+      {
+        "key": "pana16",
+        "weight": 0.9997,
+        "title": "Markov-modulated Marked Poisson Processes for Check-in Data"
+      },
+      {
+        "key": "hamm16",
+        "weight": 0.9996,
+        "title": "Learning privately from multiparty data"
+      },
+      {
+        "key": "saeedi16",
+        "weight": 0.8683,
+        "title": "The Segmented iHMM: A Simple, Efficient Hierarchical Infinite HMM"
+      },
+      {
+        "key": "kairouz16",
+        "weight": 0.8524,
+        "title": "Discrete Distribution Estimation under Local Privacy"
+      },
+      {
+        "key": "guan16",
+        "weight": 0.5418,
+        "title": "Efficient Multi-Instance Learning for Activity Recognition from Time Series Data Using an Auto-Regressive Hidden Markov Model"
+      },
+      {
+        "key": "zhangf16",
+        "weight": 0.3544,
+        "title": "Markov Latent Feature Models"
+      },
+      {
+        "key": "adams16",
+        "weight": 0.3373,
+        "title": "Hierarchical Span-Based Conditional Random Fields for Labeling and Segmenting Events in Wearable Sensor Data Streams"
+      },
+      {
+        "key": "balle16",
+        "weight": 0.2011,
+        "title": "Differentially Private Policy Evaluation"
+      }
+    ]
+  },
+  {
+    "topic_id": 45,
+    "words": [
+      {
+        "word": "block",
+        "weight": 0.024
+      },
+      {
+        "word": "bfgs",
+        "weight": 0.0186
+      },
+      {
+        "word": "wolfe",
+        "weight": 0.0147
+      },
+      {
+        "word": "frank",
+        "weight": 0.0143
+      },
+      {
+        "word": "coordinate",
+        "weight": 0.0138
+      },
+      {
+        "word": "dual",
+        "weight": 0.0112
+      },
+      {
+        "word": "network",
+        "weight": 0.0078
+      },
+      {
+        "word": "descent",
+        "weight": 0.0075
+      },
+      {
+        "word": "distributed",
+        "weight": 0.0067
+      },
+      {
+        "word": "memory",
+        "weight": 0.0066
+      },
+      {
+        "word": "metric",
+        "weight": 0.0065
+      },
+      {
+        "word": "oracle",
+        "weight": 0.0065
+      },
+      {
+        "word": "averaging",
+        "weight": 0.0065
+      },
+      {
+        "word": "lacoste",
+        "weight": 0.0065
+      },
+      {
+        "word": "julien",
+        "weight": 0.0061
+      },
+      {
+        "word": "updates",
+        "weight": 0.006
+      },
+      {
+        "word": "hessian",
+        "weight": 0.0059
+      },
+      {
+        "word": "quadratic",
+        "weight": 0.0051
+      }
+    ],
+    "top_words": "block bfgs wolfe",
+    "papers": [
+      {
+        "key": "wangd16",
+        "weight": 0.9997,
+        "title": "Parallel and Distributed Block-Coordinate Frank-Wolfe Algorithms"
+      },
+      {
+        "key": "osokin16",
+        "weight": 0.9997,
+        "title": "Minding the Gaps for Block Frank-Wolfe Optimization of Structured SVMs"
+      },
+      {
+        "key": "gower16",
+        "weight": 0.9201,
+        "title": "Stochastic Block BFGS: Squeezing More Curvature out of Data"
+      },
+      {
+        "key": "curtis16",
+        "weight": 0.7707,
+        "title": "A Self-Correcting Variable-Metric Algorithm for Stochastic Optimization"
+      },
+      {
+        "key": "lim16",
+        "weight": 0.567,
+        "title": "A Box-Constrained Approach for Hard Permutation Problems"
+      },
+      {
+        "key": "colin16",
+        "weight": 0.5055,
+        "title": "Gossip Dual Averaging for Decentralized Optimization of Pairwise Functions"
+      },
+      {
+        "key": "yenb16",
+        "weight": 0.2535,
+        "title": "PD-Sparse : A Primal and Dual Sparse Approach to Extreme Multiclass and Multilabel Classification"
+      },
+      {
+        "key": "taylor16",
+        "weight": 0.2196,
+        "title": "Training Neural Networks Without Gradients: A Scalable ADMM Approach"
+      },
+      {
+        "key": "qub16",
+        "weight": 0.1962,
+        "title": "SDNA: Stochastic Dual Newton Ascent for Empirical Risk Minimization"
+      },
+      {
+        "key": "yena16",
+        "weight": 0.1928,
+        "title": "A Convex Atomic-Norm Approach to Multiple Sequence Alignment and Motif Discovery"
+      },
+      {
+        "key": "bubeck16",
+        "weight": 0.1643,
+        "title": "Black-box Optimization with a Politician"
+      },
+      {
+        "key": "hazana16",
+        "weight": 0.1604,
+        "title": "Variance-Reduced and Projection-Free Stochastic Optimization"
+      },
+      {
+        "key": "peyre16",
+        "weight": 0.134,
+        "title": "Gromov-Wasserstein Averaging of Kernel and Distance Matrices"
+      }
+    ]
+  },
+  {
+    "topic_id": 5,
+    "words": [
+      {
+        "word": "human",
+        "weight": 0.0236
+      },
+      {
+        "word": "ridge",
+        "weight": 0.0189
+      },
+      {
+        "word": "active",
+        "weight": 0.017
+      },
+      {
+        "word": "principal",
+        "weight": 0.0159
+      },
+      {
+        "word": "label",
+        "weight": 0.0148
+      },
+      {
+        "word": "regression",
+        "weight": 0.0142
+      },
+      {
+        "word": "strongly",
+        "weight": 0.0135
+      },
+      {
+        "word": "items",
+        "weight": 0.0134
+      },
+      {
+        "word": "mixed",
+        "weight": 0.0131
+      },
+      {
+        "word": "type",
+        "weight": 0.0129
+      },
+      {
+        "word": "projection",
+        "weight": 0.0122
+      },
+      {
+        "word": "threshold",
+        "weight": 0.012
+      },
+      {
+        "word": "component",
+        "weight": 0.0107
+      },
+      {
+        "word": "interval",
+        "weight": 0.0101
+      },
+      {
+        "word": "lemma",
+        "weight": 0.0077
+      },
+      {
+        "word": "condition",
+        "weight": 0.0075
+      },
+      {
+        "word": "tasks",
+        "weight": 0.0074
+      },
+      {
+        "word": "classifier",
+        "weight": 0.007
+      },
+      {
+        "word": "lstms",
+        "weight": 0.0066
+      },
+      {
+        "word": "architectures",
+        "weight": 0.006
+      },
+      {
+        "word": "range",
+        "weight": 0.0057
+      },
+      {
+        "word": "components",
+        "weight": 0.0055
+      },
+      {
+        "word": "hypothesis",
+        "weight": 0.005
+      }
+    ],
+    "top_words": "human ridge active",
+    "papers": [
+      {
+        "key": "suh16",
+        "weight": 0.9997,
+        "title": "The Label Complexity of Mixed-Initiative Classifier Training"
+      },
+      {
+        "key": "balduzzi16",
+        "weight": 0.7834,
+        "title": "Strongly-Typed Recurrent Neural Networks"
+      },
+      {
+        "key": "frostig16",
+        "weight": 0.7509,
+        "title": "Principal Component Projection Without Principal Component Analysis"
+      }
+    ]
+  },
+  {
+    "topic_id": 7,
+    "words": [
+      {
+        "word": "dual",
+        "weight": 0.0235
+      },
+      {
+        "word": "strongly",
+        "weight": 0.0185
+      },
+      {
+        "word": "coordinate",
+        "weight": 0.0164
+      },
+      {
+        "word": "descent",
+        "weight": 0.016
+      },
+      {
+        "word": "primal",
+        "weight": 0.0145
+      },
+      {
+        "word": "safe",
+        "weight": 0.0138
+      },
+      {
+        "word": "zhang",
+        "weight": 0.0138
+      },
+      {
+        "word": "shalev",
+        "weight": 0.0116
+      },
+      {
+        "word": "shwartz",
+        "weight": 0.0115
+      },
+      {
+        "word": "accelerated",
+        "weight": 0.0109
+      },
+      {
+        "word": "smooth",
+        "weight": 0.0107
+      },
+      {
+        "word": "norm",
+        "weight": 0.01
+      },
+      {
+        "word": "regularized",
+        "weight": 0.0099
+      },
+      {
+        "word": "duality",
+        "weight": 0.0079
+      },
+      {
+        "word": "faster",
+        "weight": 0.0077
+      },
+      {
+        "word": "arik",
+        "weight": 0.0075
+      },
+      {
+        "word": "richt",
+        "weight": 0.0075
+      },
+      {
+        "word": "regression",
+        "weight": 0.0068
+      },
+      {
+        "word": "active",
+        "weight": 0.0064
+      },
+      {
+        "word": "epoch",
+        "weight": 0.0064
+      },
+      {
+        "word": "lasso",
+        "weight": 0.0063
+      },
+      {
+        "word": "objectives",
+        "weight": 0.0057
+      },
+      {
+        "word": "convexity",
+        "weight": 0.0055
+      },
+      {
+        "word": "rates",
+        "weight": 0.0054
+      },
+      {
+        "word": "lemma",
+        "weight": 0.0053
+      },
+      {
+        "word": "proximal",
+        "weight": 0.0053
+      },
+      {
+        "word": "iterations",
+        "weight": 0.0051
+      },
+      {
+        "word": "solving",
+        "weight": 0.0051
+      },
+      {
+        "word": "xiao",
+        "weight": 0.005
+      }
+    ],
+    "top_words": "dual strongly coordinate",
+    "papers": [
+      {
+        "key": "shibagaki16",
+        "weight": 0.9996,
+        "title": "Simultaneous Safe Screening of Features and Samples in Doubly Sparse Modeling"
+      },
+      {
+        "key": "allen-zhuc16",
+        "weight": 0.9996,
+        "title": "Even Faster Accelerated Coordinate Descent Using Non-Uniform Sampling"
+      },
+      {
+        "key": "dunner16",
+        "weight": 0.982,
+        "title": "Primal-Dual Rates and Certificates"
+      },
+      {
+        "key": "qua16",
+        "weight": 0.8793,
+        "title": "Fast Rate Analysis of Some Stochastic Optimization Algorithms"
+      },
+      {
+        "key": "shalev-shwartza16",
+        "weight": 0.8599,
+        "title": "SDCA without Duality, Regularization, and Individual Convexity"
+      },
+      {
+        "key": "qub16",
+        "weight": 0.6561,
+        "title": "SDNA: Stochastic Dual Newton Ascent for Empirical Risk Minimization"
+      },
+      {
+        "key": "allen-zhub16",
+        "weight": 0.6512,
+        "title": "Improved SVRG for Non-Strongly-Convex or Sum-of-Non-Convex Objectives"
+      },
+      {
+        "key": "gonen16",
+        "weight": 0.3879,
+        "title": "Solving Ridge Regression using Sketched Preconditioned SVRG"
+      },
+      {
+        "key": "allen-zhua16",
+        "weight": 0.3152,
+        "title": "Variance Reduction for Faster Non-Convex Optimization"
+      },
+      {
+        "key": "gopal16",
+        "weight": 0.302,
+        "title": "Adaptive Sampling for SGD by Exploiting Side Information"
+      },
+      {
+        "key": "garber16",
+        "weight": 0.2981,
+        "title": "Faster Eigenvector Computation via Shift-and-Invert Preconditioning"
+      },
+      {
+        "key": "yenb16",
+        "weight": 0.2348,
+        "title": "PD-Sparse : A Primal and Dual Sparse Approach to Extreme Multiclass and Multilabel Classification"
+      },
+      {
+        "key": "hashimoto16",
+        "weight": 0.1372,
+        "title": "Learning Population-Level Diffusions with Generative RNNs"
+      },
+      {
+        "key": "geb16",
+        "weight": 0.1367,
+        "title": "Efficient Algorithms for Large-scale Generalized Eigenvector Computation and Canonical Correlation Analysis"
+      },
+      {
+        "key": "zhangb16",
+        "weight": 0.1111,
+        "title": "Online Stochastic Linear Optimization under One-bit Feedback"
+      }
+    ]
+  },
+  {
+    "topic_id": 42,
+    "words": [
+      {
+        "word": "graphical",
+        "weight": 0.0233
+      },
+      {
+        "word": "conditional",
+        "weight": 0.0159
+      },
+      {
+        "word": "exponential",
+        "weight": 0.0151
+      },
+      {
+        "word": "likelihood",
+        "weight": 0.0106
+      },
+      {
+        "word": "risk",
+        "weight": 0.0097
+      },
+      {
+        "word": "supervised",
+        "weight": 0.009
+      },
+      {
+        "word": "distributions",
+        "weight": 0.0085
+      },
+      {
+        "word": "density",
+        "weight": 0.0081
+      },
+      {
+        "word": "poisson",
+        "weight": 0.0081
+      },
+      {
+        "word": "joint",
+        "weight": 0.008
+      },
+      {
+        "word": "dependencies",
+        "weight": 0.0078
+      },
+      {
+        "word": "sufficient",
+        "weight": 0.0068
+      },
+      {
+        "word": "lasso",
+        "weight": 0.0067
+      },
+      {
+        "word": "supervision",
+        "weight": 0.0066
+      },
+      {
+        "word": "design",
+        "weight": 0.0063
+      },
+      {
+        "word": "negative",
+        "weight": 0.0059
+      },
+      {
+        "word": "family",
+        "weight": 0.0057
+      },
+      {
+        "word": "pairwise",
+        "weight": 0.0055
+      },
+      {
+        "word": "node",
+        "weight": 0.0054
+      },
+      {
+        "word": "expectation",
+        "weight": 0.0053
+      },
+      {
+        "word": "factorization",
+        "weight": 0.0053
+      },
+      {
+        "word": "condition",
+        "weight": 0.0051
+      }
+    ],
+    "top_words": "graphical conditional exponential",
+    "papers": [
+      {
+        "key": "inouye16",
+        "weight": 0.9997,
+        "title": "Square Root Graphical Models: Multivariate Generalizations of Univariate Exponential Families that Permit Positive Dependencies"
+      },
+      {
+        "key": "kawakita16",
+        "weight": 0.9625,
+        "title": "Barron and Cover’s Theory in Supervised Learning and its Application to Lasso"
+      },
+      {
+        "key": "liuc16",
+        "weight": 0.8308,
+        "title": "Structure Learning of Partitioned Markov Networks"
+      },
+      {
+        "key": "raghunathan16",
+        "weight": 0.8253,
+        "title": "Estimation from Indirect Supervision with Linear Moments"
+      },
+      {
+        "key": "paige16",
+        "weight": 0.4583,
+        "title": "Inference Networks for Sequential Monte Carlo in Graphical Models"
+      },
+      {
+        "key": "su16",
+        "weight": 0.2066,
+        "title": "Nonlinear Statistical Learning with Truncated Gaussian Graphical Models"
+      },
+      {
+        "key": "piatkowski16",
+        "weight": 0.1315,
+        "title": "Stochastic Discrete Clenshaw-Curtis Quadrature"
+      },
+      {
+        "key": "patrini16",
+        "weight": 0.1008,
+        "title": "Loss factorization, weakly supervised learning and label noise robustness"
+      }
+    ]
+  },
+  {
+    "topic_id": 47,
+    "words": [
+      {
+        "word": "cell",
+        "weight": 0.0215
+      },
+      {
+        "word": "tree",
+        "weight": 0.0127
+      },
+      {
+        "word": "generalization",
+        "weight": 0.0123
+      },
+      {
+        "word": "queries",
+        "weight": 0.0106
+      },
+      {
+        "word": "cells",
+        "weight": 0.0091
+      },
+      {
+        "word": "decision",
+        "weight": 0.0091
+      },
+      {
+        "word": "trees",
+        "weight": 0.0079
+      },
+      {
+        "word": "uniform",
+        "weight": 0.0077
+      },
+      {
+        "word": "variation",
+        "weight": 0.0076
+      },
+      {
+        "word": "detection",
+        "weight": 0.0075
+      },
+      {
+        "word": "matter",
+        "weight": 0.0073
+      },
+      {
+        "word": "expression",
+        "weight": 0.0066
+      },
+      {
+        "word": "robust",
+        "weight": 0.0063
+      },
+      {
+        "word": "gene",
+        "weight": 0.0062
+      },
+      {
+        "word": "exploration",
+        "weight": 0.0061
+      },
+      {
+        "word": "basis",
+        "weight": 0.0055
+      },
+      {
+        "word": "technical",
+        "weight": 0.0054
+      },
+      {
+        "word": "cross",
+        "weight": 0.0051
+      }
+    ],
+    "top_words": "cell tree generalization",
+    "papers": [
+      {
+        "key": "guha16",
+        "weight": 0.9996,
+        "title": "Robust Random Cut Forest Based Anomaly Detection on Streams"
+      },
+      {
+        "key": "fan16",
+        "weight": 0.9995,
+        "title": "Accurate Robust and Efficient Error Estimation for Decision Trees"
+      },
+      {
+        "key": "prabhakaran16",
+        "weight": 0.8497,
+        "title": "Dirichlet Process Mixture Model for Correcting Technical Variation in Single-Cell Gene Expression Data"
+      },
+      {
+        "key": "liberty16",
+        "weight": 0.8018,
+        "title": "Stratified Sampling Meets Machine Learning"
+      },
+      {
+        "key": "osband16",
+        "weight": 0.4956,
+        "title": "Generalization and Exploration via Randomized Value Functions"
+      },
+      {
+        "key": "ravanbakhshb16",
+        "weight": 0.3471,
+        "title": "Estimating Cosmological Parameters from the Dark Matter Distribution"
+      },
+      {
+        "key": "hashimoto16",
+        "weight": 0.2817,
+        "title": "Learning Population-Level Diffusions with Generative RNNs"
+      },
+      {
+        "key": "zhai16",
+        "weight": 0.1846,
+        "title": "Deep Structured Energy Based Models for Anomaly Detection"
+      }
+    ]
+  },
+  {
+    "topic_id": 50,
+    "words": [
+      {
+        "word": "newton",
+        "weight": 0.0211
+      },
+      {
+        "word": "descent",
+        "weight": 0.0114
+      },
+      {
+        "word": "smooth",
+        "weight": 0.0113
+      },
+      {
+        "word": "strongly",
+        "weight": 0.0091
+      },
+      {
+        "word": "mini",
+        "weight": 0.0084
+      },
+      {
+        "word": "gradients",
+        "weight": 0.008
+      },
+      {
+        "word": "batch",
+        "weight": 0.0077
+      },
+      {
+        "word": "lemma",
+        "weight": 0.0074
+      },
+      {
+        "word": "zhang",
+        "weight": 0.007
+      },
+      {
+        "word": "nonconvex",
+        "weight": 0.007
+      },
+      {
+        "word": "iterations",
+        "weight": 0.0063
+      },
+      {
+        "word": "faster",
+        "weight": 0.0063
+      },
+      {
+        "word": "reduced",
+        "weight": 0.0061
+      },
+      {
+        "word": "quasi",
+        "weight": 0.0058
+      },
+      {
+        "word": "incremental",
+        "weight": 0.0058
+      },
+      {
+        "word": "convexity",
+        "weight": 0.0058
+      },
+      {
+        "word": "sizes",
+        "weight": 0.0053
+      },
+      {
+        "word": "hessian",
+        "weight": 0.0053
+      },
+      {
+        "word": "condition",
+        "weight": 0.0053
+      }
+    ],
+    "top_words": "newton descent smooth",
+    "papers": [
+      {
+        "key": "arjevani16",
+        "weight": 0.9996,
+        "title": "On the Iteration Complexity of Oblivious First-Order Optimization Algorithms"
+      },
+      {
+        "key": "rodomanov16",
+        "weight": 0.9995,
+        "title": "A Superlinearly-Convergent Proximal Newton-type Method for the Optimization of Finite Sums"
+      },
+      {
+        "key": "reddi16",
+        "weight": 0.9885,
+        "title": "Stochastic Variance Reduction for Nonconvex Optimization"
+      },
+      {
+        "key": "hazana16",
+        "weight": 0.8102,
+        "title": "Variance-Reduced and Projection-Free Stochastic Optimization"
+      },
+      {
+        "key": "perolat16",
+        "weight": 0.7615,
+        "title": "Softened Approximate Policy Iteration for Markov Games"
+      },
+      {
+        "key": "bubeck16",
+        "weight": 0.6531,
+        "title": "Black-box Optimization with a Politician"
+      },
+      {
+        "key": "acharya16",
+        "weight": 0.5186,
+        "title": "Fast Algorithms for Segmented Regression"
+      },
+      {
+        "key": "daneshmand16",
+        "weight": 0.503,
+        "title": "Starting Small - Learning with Adaptive Sample Sizes"
+      },
+      {
+        "key": "liue16",
+        "weight": 0.3421,
+        "title": "Quadratic Optimization with Orthogonality Constraints: Explicit Lojasiewicz Exponent and Linear Convergence of Line-Search Methods"
+      },
+      {
+        "key": "pedregosa16",
+        "weight": 0.3377,
+        "title": "Hyperparameter optimization with approximate gradient"
+      },
+      {
+        "key": "lid16",
+        "weight": 0.3253,
+        "title": "Stochastic Variance Reduced Optimization for Nonconvex Sparse Learning"
+      },
+      {
+        "key": "gonen16",
+        "weight": 0.3016,
+        "title": "Solving Ridge Regression using Sketched Preconditioned SVRG"
+      },
+      {
+        "key": "allen-zhua16",
+        "weight": 0.2678,
+        "title": "Variance Reduction for Faster Non-Convex Optimization"
+      },
+      {
+        "key": "curtis16",
+        "weight": 0.2289,
+        "title": "A Self-Correcting Variable-Metric Algorithm for Stochastic Optimization"
+      },
+      {
+        "key": "tu16",
+        "weight": 0.1903,
+        "title": "Low-rank Solutions of Linear Matrix Equations via Procrustes Flow"
+      },
+      {
+        "key": "gopal16",
+        "weight": 0.1624,
+        "title": "Adaptive Sampling for SGD by Exploiting Side Information"
+      },
+      {
+        "key": "qub16",
+        "weight": 0.1473,
+        "title": "SDNA: Stochastic Dual Newton Ascent for Empirical Risk Minimization"
+      },
+      {
+        "key": "abernethy16",
+        "weight": 0.145,
+        "title": "Faster Convex Optimization: Simulated Annealing with an Efficient Universal Barrier"
+      },
+      {
+        "key": "shalev-shwartza16",
+        "weight": 0.1392,
+        "title": "SDCA without Duality, Regularization, and Individual Convexity"
+      },
+      {
+        "key": "hazanb16",
+        "weight": 0.1303,
+        "title": "On Graduated Optimization for Stochastic Non-Convex Problems"
+      },
+      {
+        "key": "shen16",
+        "weight": 0.1256,
+        "title": "Online Low-Rank Subspace Clustering by Basis Dictionary Pursuit"
+      },
+      {
+        "key": "mandt16",
+        "weight": 0.1024,
+        "title": "A Variational Analysis of Stochastic Gradient Algorithms"
+      }
+    ]
+  },
+  {
+    "topic_id": 1,
+    "words": [
+      {
+        "word": "workers",
+        "weight": 0.021
+      },
+      {
+        "word": "labels",
+        "weight": 0.0206
+      },
+      {
+        "word": "tasks",
+        "weight": 0.0158
+      },
+      {
+        "word": "label",
+        "weight": 0.0139
+      },
+      {
+        "word": "stage",
+        "weight": 0.0127
+      },
+      {
+        "word": "correction",
+        "weight": 0.011
+      },
+      {
+        "word": "self",
+        "weight": 0.0109
+      },
+      {
+        "word": "answer",
+        "weight": 0.009
+      },
+      {
+        "word": "answers",
+        "weight": 0.0087
+      },
+      {
+        "word": "question",
+        "weight": 0.0085
+      },
+      {
+        "word": "quality",
+        "weight": 0.008
+      },
+      {
+        "word": "questions",
+        "weight": 0.0076
+      },
+      {
+        "word": "crowd",
+        "weight": 0.0075
+      },
+      {
+        "word": "majority",
+        "weight": 0.0066
+      },
+      {
+        "word": "mechanism",
+        "weight": 0.0065
+      },
+      {
+        "word": "noise",
+        "weight": 0.0064
+      },
+      {
+        "word": "optimality",
+        "weight": 0.0062
+      },
+      {
+        "word": "correct",
+        "weight": 0.006
+      },
+      {
+        "word": "zhou",
+        "weight": 0.0057
+      },
+      {
+        "word": "target",
+        "weight": 0.0056
+      },
+      {
+        "word": "mechanisms",
+        "weight": 0.0055
+      },
+      {
+        "word": "reference",
+        "weight": 0.0054
+      },
+      {
+        "word": "oracle",
+        "weight": 0.0054
+      },
+      {
+        "word": "weight",
+        "weight": 0.0053
+      },
+      {
+        "word": "voting",
+        "weight": 0.005
+      },
+      {
+        "word": "tree",
+        "weight": 0.005
+      }
+    ],
+    "top_words": "workers labels tasks",
+    "papers": [
+      {
+        "key": "shaha16",
+        "weight": 0.9997,
+        "title": "No Oops, You Won’t Do It Again: Mechanisms for Self-correction in Crowdsourcing"
+      },
+      {
+        "key": "ustinovskiy16",
+        "weight": 0.9996,
+        "title": "Meta–Gradient Boosted Decision Tree Model for Weight and Target Learning"
+      },
+      {
+        "key": "ok16",
+        "weight": 0.7573,
+        "title": "Optimality of Belief Propagation for Crowdsourced Classification"
+      },
+      {
+        "key": "gaoa16",
+        "weight": 0.4221,
+        "title": "Exact Exponent in Optimal Rates for Crowdsourcing"
+      },
+      {
+        "key": "zaremba16",
+        "weight": 0.1878,
+        "title": "Learning Simple Algorithms from Examples"
+      },
+      {
+        "key": "xua16",
+        "weight": 0.1712,
+        "title": "False Discovery Rate Control and Statistical Quality Assessment of Annotators in Crowdsourced Ranking"
+      },
+      {
+        "key": "patrini16",
+        "weight": 0.1424,
+        "title": "Loss factorization, weakly supervised learning and label noise robustness"
+      },
+      {
+        "key": "hazanb16",
+        "weight": 0.1211,
+        "title": "On Graduated Optimization for Stochastic Non-Convex Problems"
+      },
+      {
+        "key": "platanios16",
+        "weight": 0.1205,
+        "title": "Estimating Accuracy from Unlabeled Data: A Bayesian Approach"
+      }
+    ]
+  },
+  {
+    "topic_id": 40,
+    "words": [
+      {
+        "word": "inference",
+        "weight": 0.02
+      },
+      {
+        "word": "fourier",
+        "weight": 0.0165
+      },
+      {
+        "word": "code",
+        "weight": 0.0148
+      },
+      {
+        "word": "probabilistic",
+        "weight": 0.0125
+      },
+      {
+        "word": "tree",
+        "weight": 0.0115
+      },
+      {
+        "word": "graphical",
+        "weight": 0.0097
+      },
+      {
+        "word": "node",
+        "weight": 0.0087
+      },
+      {
+        "word": "partition",
+        "weight": 0.0076
+      },
+      {
+        "word": "domain",
+        "weight": 0.0068
+      },
+      {
+        "word": "representation",
+        "weight": 0.0066
+      },
+      {
+        "word": "alignment",
+        "weight": 0.0063
+      },
+      {
+        "word": "coefficients",
+        "weight": 0.0062
+      },
+      {
+        "word": "tractable",
+        "weight": 0.0059
+      },
+      {
+        "word": "degree",
+        "weight": 0.0058
+      },
+      {
+        "word": "instances",
+        "weight": 0.0055
+      },
+      {
+        "word": "artificial",
+        "weight": 0.0054
+      },
+      {
+        "word": "discrete",
+        "weight": 0.0051
+      },
+      {
+        "word": "return",
+        "weight": 0.0051
+      },
+      {
+        "word": "source",
+        "weight": 0.005
+      }
+    ],
+    "top_words": "inference fourier code",
+    "papers": [
+      {
+        "key": "xue16",
+        "weight": 0.9997,
+        "title": "Variable Elimination in the Fourier Domain"
+      },
+      {
+        "key": "bielik16",
+        "weight": 0.9997,
+        "title": "PHOG: Probabilistic Model for Code"
+      },
+      {
+        "key": "friesen16",
+        "weight": 0.9882,
+        "title": "The Sum-Product Theorem: A Foundation for Learning Tractable Models"
+      },
+      {
+        "key": "yena16",
+        "weight": 0.7832,
+        "title": "A Convex Atomic-Norm Approach to Multiple Sequence Alignment and Motif Discovery"
+      },
+      {
+        "key": "piatkowski16",
+        "weight": 0.7319,
+        "title": "Stochastic Discrete Clenshaw-Curtis Quadrature"
+      },
+      {
+        "key": "weller16",
+        "weight": 0.4311,
+        "title": "Uprooting and Rerooting Graphical Models"
+      },
+      {
+        "key": "meshi16",
+        "weight": 0.3264,
+        "title": "Train and Test Tightness of LP Relaxations in Structured Prediction"
+      },
+      {
+        "key": "allamanis16",
+        "weight": 0.2774,
+        "title": "A Convolutional Attention Network for Extreme Summarization of Source Code"
+      },
+      {
+        "key": "achim16",
+        "weight": 0.261,
+        "title": "Beyond Parity Constraints: Fourier Analysis of Hash Functions for Inference"
+      },
+      {
+        "key": "daib16",
+        "weight": 0.1735,
+        "title": "Discriminative Embeddings of Latent Variable Models for Structured Data"
+      },
+      {
+        "key": "guan16",
+        "weight": 0.1668,
+        "title": "Efficient Multi-Instance Learning for Activity Recognition from Time Series Data Using an Auto-Regressive Hidden Markov Model"
+      },
+      {
+        "key": "gilad-bachrach16",
+        "weight": 0.1389,
+        "title": "CryptoNets: Applying Neural Networks to Encrypted Data with High Throughput and Accuracy"
+      }
+    ]
+  },
+  {
+    "topic_id": 10,
+    "words": [
+      {
+        "word": "distance",
+        "weight": 0.0198
+      },
+      {
+        "word": "metric",
+        "weight": 0.0131
+      },
+      {
+        "word": "mixture",
+        "weight": 0.0111
+      },
+      {
+        "word": "condition",
+        "weight": 0.0102
+      },
+      {
+        "word": "topic",
+        "weight": 0.009
+      },
+      {
+        "word": "rank",
+        "weight": 0.008
+      },
+      {
+        "word": "lemma",
+        "weight": 0.0073
+      },
+      {
+        "word": "spaces",
+        "weight": 0.0064
+      },
+      {
+        "word": "aggregation",
+        "weight": 0.0062
+      },
+      {
+        "word": "geometric",
+        "weight": 0.0061
+      },
+      {
+        "word": "distances",
+        "weight": 0.0056
+      },
+      {
+        "word": "embedding",
+        "weight": 0.0055
+      },
+      {
+        "word": "queries",
+        "weight": 0.0054
+      },
+      {
+        "word": "experts",
+        "weight": 0.0054
+      },
+      {
+        "word": "negative",
+        "weight": 0.0053
+      },
+      {
+        "word": "concept",
+        "weight": 0.0053
+      },
+      {
+        "word": "proportion",
+        "weight": 0.0052
+      }
+    ],
+    "top_words": "distance metric mixture",
+    "papers": [
+      {
+        "key": "zhaob16",
+        "weight": 0.9995,
+        "title": "Learning Mixtures of Plackett-Luce Models"
+      },
+      {
+        "key": "korba16",
+        "weight": 0.997,
+        "title": "Controlling the distance to a Kemeny consensus without computing it"
+      },
+      {
+        "key": "papakonstantinou16",
+        "weight": 0.9569,
+        "title": "On the Power and Limits of Distance-Based Learning"
+      },
+      {
+        "key": "arorab16",
+        "weight": 0.8512,
+        "title": "Provable Algorithms for Inference in Topic Models"
+      },
+      {
+        "key": "glaude16",
+        "weight": 0.7589,
+        "title": "PAC learning of Probabilistic Automaton based on the Method of Moments"
+      },
+      {
+        "key": "ramaswamy16",
+        "weight": 0.6981,
+        "title": "Mixture Proportion Estimation via Kernel Embeddings of Distributions"
+      },
+      {
+        "key": "singla16",
+        "weight": 0.5393,
+        "title": "Actively Learning Hemimetrics with Applications to Eliciting User Preferences"
+      },
+      {
+        "key": "zadeh16",
+        "weight": 0.3766,
+        "title": "Geometric Mean Metric Learning"
+      },
+      {
+        "key": "peyre16",
+        "weight": 0.2984,
+        "title": "Gromov-Wasserstein Averaging of Kernel and Distance Matrices"
+      },
+      {
+        "key": "kapralov16",
+        "weight": 0.2036,
+        "title": "How to Fake Multiply by a Gaussian Matrix"
+      },
+      {
+        "key": "khetan16",
+        "weight": 0.1594,
+        "title": "Data-driven Rank Breaking for Efficient Rank Aggregation"
+      },
+      {
+        "key": "bhattacharya16",
+        "weight": 0.1429,
+        "title": "Non-negative Matrix Factorization under Heavy Noise"
+      },
+      {
+        "key": "abel16",
+        "weight": 0.1022,
+        "title": "Near Optimal Behavior via Approximate State Abstraction"
+      }
+    ]
+  },
+  {
+    "topic_id": 16,
+    "words": [
+      {
+        "word": "regularization",
+        "weight": 0.0197
+      },
+      {
+        "word": "generalization",
+        "weight": 0.018
+      },
+      {
+        "word": "stability",
+        "weight": 0.0174
+      },
+      {
+        "word": "risk",
+        "weight": 0.0157
+      },
+      {
+        "word": "sparsity",
+        "weight": 0.0111
+      },
+      {
+        "word": "stable",
+        "weight": 0.0085
+      },
+      {
+        "word": "regularized",
+        "weight": 0.0075
+      },
+      {
+        "word": "weight",
+        "weight": 0.0075
+      },
+      {
+        "word": "minimizing",
+        "weight": 0.0073
+      },
+      {
+        "word": "auto",
+        "weight": 0.0072
+      },
+      {
+        "word": "sparse",
+        "weight": 0.007
+      },
+      {
+        "word": "length",
+        "weight": 0.0068
+      },
+      {
+        "word": "bousquet",
+        "weight": 0.0064
+      },
+      {
+        "word": "descent",
+        "weight": 0.0062
+      },
+      {
+        "word": "train",
+        "weight": 0.0058
+      },
+      {
+        "word": "representation",
+        "weight": 0.0057
+      },
+      {
+        "word": "shwartz",
+        "weight": 0.0057
+      },
+      {
+        "word": "shalev",
+        "weight": 0.0057
+      },
+      {
+        "word": "lemma",
+        "weight": 0.0057
+      },
+      {
+        "word": "epochs",
+        "weight": 0.0051
+      }
+    ],
+    "top_words": "regularization generalization stability",
+    "papers": [
+      {
+        "key": "hardt16",
+        "weight": 0.9638,
+        "title": "Train faster, generalize better: Stability of stochastic gradient descent"
+      },
+      {
+        "key": "lib16",
+        "weight": 0.7902,
+        "title": "Low-Rank Matrix Approximation with Stability"
+      },
+      {
+        "key": "shalev-shwartzb16",
+        "weight": 0.7139,
+        "title": "Minimizing the Maximal Loss: How and Why"
+      },
+      {
+        "key": "arpita16",
+        "weight": 0.6131,
+        "title": "Why Regularized Auto-Encoders learn Sparse Representation?"
+      },
+      {
+        "key": "daneshmand16",
+        "weight": 0.4113,
+        "title": "Starting Small - Learning with Adaptive Sample Sizes"
+      },
+      {
+        "key": "lina16",
+        "weight": 0.4053,
+        "title": "Generalization Properties and Implicit Regularization for Multiple Passes SGM"
+      },
+      {
+        "key": "allen-zhua16",
+        "weight": 0.3533,
+        "title": "Variance Reduction for Faster Non-Convex Optimization"
+      },
+      {
+        "key": "allen-zhub16",
+        "weight": 0.3336,
+        "title": "Improved SVRG for Non-Strongly-Convex or Sum-of-Non-Convex Objectives"
+      },
+      {
+        "key": "zhangd16",
+        "weight": 0.202,
+        "title": "L1-regularized Neural Networks are Improperly Learnable in Polynomial Time"
+      },
+      {
+        "key": "liberty16",
+        "weight": 0.1978,
+        "title": "Stratified Sampling Meets Machine Learning"
+      },
+      {
+        "key": "patrini16",
+        "weight": 0.1614,
+        "title": "Loss factorization, weakly supervised learning and label noise robustness"
+      },
+      {
+        "key": "meshi16",
+        "weight": 0.1608,
+        "title": "Train and Test Tightness of LP Relaxations in Structured Prediction"
+      }
+    ]
+  },
+  {
+    "topic_id": 44,
+    "words": [
+      {
+        "word": "bayesian",
+        "weight": 0.0191
+      },
+      {
+        "word": "objectives",
+        "weight": 0.0145
+      },
+      {
+        "word": "posterior",
+        "weight": 0.0094
+      },
+      {
+        "word": "carlo",
+        "weight": 0.0092
+      },
+      {
+        "word": "monte",
+        "weight": 0.0091
+      },
+      {
+        "word": "energy",
+        "weight": 0.0081
+      },
+      {
+        "word": "dynamics",
+        "weight": 0.008
+      },
+      {
+        "word": "expensive",
+        "weight": 0.0071
+      },
+      {
+        "word": "global",
+        "weight": 0.0071
+      },
+      {
+        "word": "noise",
+        "weight": 0.0058
+      },
+      {
+        "word": "evaluations",
+        "weight": 0.0057
+      },
+      {
+        "word": "entropy",
+        "weight": 0.0056
+      },
+      {
+        "word": "equation",
+        "weight": 0.0053
+      },
+      {
+        "word": "observations",
+        "weight": 0.0051
+      }
+    ],
+    "top_words": "bayesian objectives posterior",
+    "papers": [
+      {
+        "key": "shahc16",
+        "weight": 0.9996,
+        "title": "Pareto Frontier Learning with Expensive Correlated Objectives"
+      },
+      {
+        "key": "hernandez-lobatoa16",
+        "weight": 0.9907,
+        "title": "Predictive Entropy Search for Multi-objective Bayesian Optimization"
+      },
+      {
+        "key": "carr16",
+        "weight": 0.8934,
+        "title": "BASC: Applying Bayesian Optimization to the Search for Global Minima on Potential Energy Surfaces"
+      },
+      {
+        "key": "roychowdhury16",
+        "weight": 0.8433,
+        "title": "Robust Monte Carlo Sampling using Riemannian Nosé-Poincaré Hamiltonian Dynamics"
+      },
+      {
+        "key": "metzen16",
+        "weight": 0.7275,
+        "title": "Minimum Regret Search for Single- and Multi-Task Optimization"
+      },
+      {
+        "key": "simsekli16",
+        "weight": 0.6773,
+        "title": "Stochastic Quasi-Newton Langevin Monte Carlo"
+      },
+      {
+        "key": "niu16",
+        "weight": 0.4145,
+        "title": "Fast Parameter Inference in Nonlinear Dynamical Systems using Iterative Gradient Matching"
+      },
+      {
+        "key": "wangb16",
+        "weight": 0.3964,
+        "title": "The Knowledge Gradient for Sequential Decision Making with Stochastic Binary Feedbacks"
+      },
+      {
+        "key": "hernandez-lobatob16",
+        "weight": 0.3835,
+        "title": "Black-Box Alpha Divergence Minimization"
+      },
+      {
+        "key": "wipf16",
+        "weight": 0.363,
+        "title": "Analysis of Variational Bayesian Factorizations for Sparse and Low-Rank Estimation"
+      },
+      {
+        "key": "bloem-reddy16",
+        "weight": 0.249,
+        "title": "Slice Sampling on Hamiltonian Trajectories"
+      },
+      {
+        "key": "luketina16",
+        "weight": 0.2141,
+        "title": "Scalable Gradient-Based Tuning of Continuous Regularization Hyperparameters"
+      },
+      {
+        "key": "leea16",
+        "weight": 0.1451,
+        "title": "Hawkes Processes with Stochastic Excitations"
+      },
+      {
+        "key": "mnihb16",
+        "weight": 0.1446,
+        "title": "Variational Inference for Monte Carlo Objectives"
+      },
+      {
+        "key": "chenb16",
+        "weight": 0.1325,
+        "title": "Scalable Discrete Sampling as a Multi-Armed Bandit Problem"
+      },
+      {
+        "key": "pedregosa16",
+        "weight": 0.1242,
+        "title": "Hyperparameter optimization with approximate gradient"
+      },
+      {
+        "key": "bonilla16",
+        "weight": 0.1163,
+        "title": "Extended and Unscented Kitchen Sinks"
+      }
+    ]
+  },
+  {
+    "topic_id": 3,
+    "words": [
+      {
+        "word": "speech",
+        "weight": 0.019
+      },
+      {
+        "word": "recurrent",
+        "weight": 0.0169
+      },
+      {
+        "word": "noise",
+        "weight": 0.0147
+      },
+      {
+        "word": "memory",
+        "weight": 0.0125
+      },
+      {
+        "word": "deep",
+        "weight": 0.0119
+      },
+      {
+        "word": "recognition",
+        "weight": 0.0105
+      },
+      {
+        "word": "network",
+        "weight": 0.0104
+      },
+      {
+        "word": "activation",
+        "weight": 0.0099
+      },
+      {
+        "word": "noisy",
+        "weight": 0.0092
+      },
+      {
+        "word": "lstm",
+        "weight": 0.0085
+      },
+      {
+        "word": "hidden",
+        "weight": 0.0078
+      },
+      {
+        "word": "layer",
+        "weight": 0.0073
+      },
+      {
+        "word": "trained",
+        "weight": 0.007
+      },
+      {
+        "word": "gradients",
+        "weight": 0.0069
+      },
+      {
+        "word": "bengio",
+        "weight": 0.0068
+      },
+      {
+        "word": "length",
+        "weight": 0.0066
+      },
+      {
+        "word": "graves",
+        "weight": 0.0061
+      },
+      {
+        "word": "hard",
+        "weight": 0.0059
+      },
+      {
+        "word": "activations",
+        "weight": 0.0054
+      },
+      {
+        "word": "yoshua",
+        "weight": 0.0054
+      },
+      {
+        "word": "orthogonal",
+        "weight": 0.0053
+      },
+      {
+        "word": "units",
+        "weight": 0.0052
+      },
+      {
+        "word": "tanh",
+        "weight": 0.0051
+      }
+    ],
+    "top_words": "speech recurrent noise",
+    "papers": [
+      {
+        "key": "gulcehre16",
+        "weight": 0.9997,
+        "title": "Noisy Activation Functions"
+      },
+      {
+        "key": "hwanga16",
+        "weight": 0.9564,
+        "title": "Sequence to Sequence Training of CTC-RNNs with Partial Windowing"
+      },
+      {
+        "key": "amodei16",
+        "weight": 0.8866,
+        "title": "Deep Speech 2 : End-to-End Speech Recognition in English and Mandarin"
+      },
+      {
+        "key": "arjovsky16",
+        "weight": 0.7855,
+        "title": "Unitary Evolution Recurrent Neural Networks"
+      },
+      {
+        "key": "henaff16",
+        "weight": 0.7549,
+        "title": "Recurrent Orthogonal Networks and Long-Memory Tasks"
+      },
+      {
+        "key": "diamos16",
+        "weight": 0.6615,
+        "title": "Persistent RNNs: Stashing Recurrent Weights On-Chip"
+      },
+      {
+        "key": "taylor16",
+        "weight": 0.3255,
+        "title": "Training Neural Networks Without Gradients: A Scalable ADMM Approach"
+      },
+      {
+        "key": "pezeshki16",
+        "weight": 0.2964,
+        "title": "Deconstructing the Ladder Network Architecture"
+      },
+      {
+        "key": "mniha16",
+        "weight": 0.1907,
+        "title": "Asynchronous Methods for Deep Reinforcement Learning"
+      },
+      {
+        "key": "balduzzi16",
+        "weight": 0.1815,
+        "title": "Strongly-Typed Recurrent Neural Networks"
+      },
+      {
+        "key": "danihelka16",
+        "weight": 0.1595,
+        "title": "Associative Long Short-Term Memory"
+      },
+      {
+        "key": "duan16",
+        "weight": 0.1105,
+        "title": "Benchmarking Deep Reinforcement Learning for Continuous Control"
+      }
+    ]
+  },
+  {
+    "topic_id": 34,
+    "words": [
+      {
+        "word": "processes",
+        "weight": 0.0169
+      },
+      {
+        "word": "events",
+        "weight": 0.0092
+      },
+      {
+        "word": "power",
+        "weight": 0.009
+      },
+      {
+        "word": "event",
+        "weight": 0.0086
+      },
+      {
+        "word": "similarity",
+        "weight": 0.0082
+      },
+      {
+        "word": "regression",
+        "weight": 0.0081
+      },
+      {
+        "word": "impact",
+        "weight": 0.0077
+      },
+      {
+        "word": "network",
+        "weight": 0.007
+      },
+      {
+        "word": "regularization",
+        "weight": 0.0069
+      },
+      {
+        "word": "geometric",
+        "weight": 0.0058
+      },
+      {
+        "word": "inference",
+        "weight": 0.0056
+      },
+      {
+        "word": "lasso",
+        "weight": 0.0054
+      }
+    ],
+    "top_words": "processes events power",
+    "papers": [
+      {
+        "key": "baia16",
+        "weight": 0.8844,
+        "title": "Differential Geometric Regularization for Supervised Learning of Classifiers"
+      },
+      {
+        "key": "xuc16",
+        "weight": 0.8676,
+        "title": "Learning Granger Causality for Hawkes Processes"
+      },
+      {
+        "key": "johansson16",
+        "weight": 0.8151,
+        "title": "Learning Representations for Counterfactual Inference"
+      },
+      {
+        "key": "wangg16",
+        "weight": 0.7859,
+        "title": "Isotonic Hawkes Processes"
+      },
+      {
+        "key": "dalal16",
+        "weight": 0.6179,
+        "title": "Hierarchical Decision Making In Electricity Grid Management"
+      },
+      {
+        "key": "ravi16",
+        "weight": 0.6167,
+        "title": "Experimental Design on a Budget for Sparse Linear Models and Applications"
+      },
+      {
+        "key": "oswal16",
+        "weight": 0.6104,
+        "title": "Representational Similarity Learning with Application to Brain Networks"
+      },
+      {
+        "key": "riemer16",
+        "weight": 0.4965,
+        "title": "Correcting Forecasts with Multifactor Neural Attention"
+      },
+      {
+        "key": "leea16",
+        "weight": 0.4872,
+        "title": "Hawkes Processes with Stochastic Excitations"
+      },
+      {
+        "key": "zadeh16",
+        "weight": 0.1965,
+        "title": "Geometric Mean Metric Learning"
+      },
+      {
+        "key": "ravanbakhshb16",
+        "weight": 0.135,
+        "title": "Estimating Cosmological Parameters from the Dark Matter Distribution"
+      }
+    ]
+  },
+  {
+    "topic_id": 29,
+    "words": [
+      {
+        "word": "inference",
+        "weight": 0.0166
+      },
+      {
+        "word": "stability",
+        "weight": 0.015
+      },
+      {
+        "word": "variational",
+        "weight": 0.0141
+      },
+      {
+        "word": "predictive",
+        "weight": 0.0134
+      },
+      {
+        "word": "regression",
+        "weight": 0.0107
+      },
+      {
+        "word": "noise",
+        "weight": 0.0105
+      },
+      {
+        "word": "region",
+        "weight": 0.0105
+      },
+      {
+        "word": "dynamics",
+        "weight": 0.0091
+      },
+      {
+        "word": "distributed",
+        "weight": 0.0086
+      },
+      {
+        "word": "covariance",
+        "weight": 0.0082
+      },
+      {
+        "word": "stationary",
+        "weight": 0.0079
+      },
+      {
+        "word": "latent",
+        "weight": 0.0073
+      },
+      {
+        "word": "sparse",
+        "weight": 0.0067
+      },
+      {
+        "word": "control",
+        "weight": 0.0067
+      },
+      {
+        "word": "observation",
+        "weight": 0.0064
+      },
+      {
+        "word": "observations",
+        "weight": 0.006
+      },
+      {
+        "word": "forward",
+        "weight": 0.0059
+      },
+      {
+        "word": "filter",
+        "weight": 0.0053
+      }
+    ],
+    "top_words": "inference stability variational",
+    "papers": [
+      {
+        "key": "vinogradska16",
+        "weight": 0.9997,
+        "title": "Stability of Controllers for Gaussian Process Forward Models"
+      },
+      {
+        "key": "hoang16",
+        "weight": 0.9997,
+        "title": "A Distributed Variational Inference Framework for Unifying Parallel Sparse Gaussian Process Regression Models"
+      },
+      {
+        "key": "sun16",
+        "weight": 0.9593,
+        "title": "Learning to Filter with Predictive State Inference Machines"
+      },
+      {
+        "key": "mandt16",
+        "weight": 0.6257,
+        "title": "A Variational Analysis of Stochastic Gradient Algorithms"
+      },
+      {
+        "key": "bonilla16",
+        "weight": 0.6086,
+        "title": "Extended and Unscented Kitchen Sinks"
+      },
+      {
+        "key": "bloem-reddy16",
+        "weight": 0.2096,
+        "title": "Slice Sampling on Hamiltonian Trajectories"
+      },
+      {
+        "key": "bui16",
+        "weight": 0.1371,
+        "title": "Deep Gaussian Processes for Regression using Approximate Expectation Propagation"
+      }
+    ]
+  },
+  {
+    "topic_id": 14,
+    "words": [
+      {
+        "word": "dictionary",
+        "weight": 0.0146
+      },
+      {
+        "word": "manifold",
+        "weight": 0.0131
+      },
+      {
+        "word": "sparse",
+        "weight": 0.0113
+      },
+      {
+        "word": "online",
+        "weight": 0.0097
+      },
+      {
+        "word": "descent",
+        "weight": 0.0088
+      },
+      {
+        "word": "matrices",
+        "weight": 0.0087
+      },
+      {
+        "word": "block",
+        "weight": 0.0081
+      },
+      {
+        "word": "relaxations",
+        "weight": 0.0076
+      },
+      {
+        "word": "decomposition",
+        "weight": 0.0072
+      },
+      {
+        "word": "constraints",
+        "weight": 0.0069
+      },
+      {
+        "word": "fisher",
+        "weight": 0.0062
+      },
+      {
+        "word": "proposition",
+        "weight": 0.0059
+      },
+      {
+        "word": "kronecker",
+        "weight": 0.0057
+      },
+      {
+        "word": "column",
+        "weight": 0.005
+      }
+    ],
+    "top_words": "dictionary manifold sparse",
+    "papers": [
+      {
+        "key": "xub16",
+        "weight": 0.988,
+        "title": "Matrix Eigen-decomposition via Doubly Stochastic Riemannian Optimization"
+      },
+      {
+        "key": "wangc16",
+        "weight": 0.9749,
+        "title": "On the Statistical Limits of Convex Relaxations"
+      },
+      {
+        "key": "mensch16",
+        "weight": 0.9179,
+        "title": "Dictionary Learning for Massive Matrix Factorization"
+      },
+      {
+        "key": "liue16",
+        "weight": 0.6367,
+        "title": "Quadratic Optimization with Orthogonality Constraints: Explicit Lojasiewicz Exponent and Linear Convergence of Line-Search Methods"
+      },
+      {
+        "key": "grosse16",
+        "weight": 0.539,
+        "title": "A Kronecker-factored approximate Fisher matrix for convolution layers"
+      },
+      {
+        "key": "kasai16",
+        "weight": 0.3388,
+        "title": "Low-rank tensor completion: a Riemannian manifold preconditioning approach"
+      },
+      {
+        "key": "shen16",
+        "weight": 0.213,
+        "title": "Online Low-Rank Subspace Clustering by Basis Dictionary Pursuit"
+      },
+      {
+        "key": "vladymyrov16",
+        "weight": 0.162,
+        "title": "The Variational Nystrom method for large-scale spectral problems"
+      },
+      {
+        "key": "colombo16",
+        "weight": 0.1034,
+        "title": "Tensor Decomposition via Joint Matrix Schur Decomposition"
+      }
+    ]
+  },
+  {
+    "topic_id": 20,
+    "words": [
+      {
+        "word": "nearest",
+        "weight": 0.0136
+      },
+      {
+        "word": "event",
+        "weight": 0.0121
+      },
+      {
+        "word": "distance",
+        "weight": 0.0105
+      },
+      {
+        "word": "early",
+        "weight": 0.0078
+      },
+      {
+        "word": "detection",
+        "weight": 0.0076
+      },
+      {
+        "word": "block",
+        "weight": 0.0073
+      },
+      {
+        "word": "query",
+        "weight": 0.0068
+      },
+      {
+        "word": "distances",
+        "weight": 0.0058
+      },
+      {
+        "word": "mutual",
+        "weight": 0.0055
+      },
+      {
+        "word": "remainder",
+        "weight": 0.0054
+      },
+      {
+        "word": "reliable",
+        "weight": 0.0052
+      }
+    ],
+    "top_words": "nearest event distance",
+    "papers": [
+      {
+        "key": "lic16",
+        "weight": 0.9997,
+        "title": "Fast k-Nearest Neighbour Search via Dynamic Continuous Indexing"
+      },
+      {
+        "key": "sangnier16",
+        "weight": 0.9867,
+        "title": "Early and Reliable Event Detection Using Proximity Space Representation"
+      },
+      {
+        "key": "newling16",
+        "weight": 0.9086,
+        "title": "Fast k-means with accurate bounds"
+      },
+      {
+        "key": "bottesch16",
+        "weight": 0.8395,
+        "title": "Speeding up k-means by approximating Euclidean distances via block vectors"
+      },
+      {
+        "key": "steeg16",
+        "weight": 0.6583,
+        "title": "The Information Sieve"
+      },
+      {
+        "key": "gaob16",
+        "weight": 0.6558,
+        "title": "Conditional Dependence via Shannon Capacity: Axioms, Estimators and Applications"
+      },
+      {
+        "key": "adams16",
+        "weight": 0.3662,
+        "title": "Hierarchical Span-Based Conditional Random Fields for Labeling and Segmenting Events in Wearable Sensor Data Streams"
+      },
+      {
+        "key": "fanti16",
+        "weight": 0.2761,
+        "title": "Metadata-conscious anonymous messaging"
+      }
+    ]
+  },
+  {
+    "topic_id": 8,
+    "words": [
+      {
+        "word": "eigenvector",
+        "weight": 0.0107
+      },
+      {
+        "word": "power",
+        "weight": 0.0099
+      },
+      {
+        "word": "runtime",
+        "weight": 0.0091
+      },
+      {
+        "word": "lemma",
+        "weight": 0.009
+      },
+      {
+        "word": "bias",
+        "weight": 0.0079
+      },
+      {
+        "word": "global",
+        "weight": 0.0071
+      },
+      {
+        "word": "minimization",
+        "weight": 0.007
+      },
+      {
+        "word": "initial",
+        "weight": 0.007
+      },
+      {
+        "word": "direct",
+        "weight": 0.0068
+      },
+      {
+        "word": "hinge",
+        "weight": 0.0064
+      },
+      {
+        "word": "initialization",
+        "weight": 0.0057
+      },
+      {
+        "word": "iterations",
+        "weight": 0.0052
+      }
+    ],
+    "top_words": "eigenvector power runtime",
+    "papers": [
+      {
+        "key": "shamirb16",
+        "weight": 0.9431,
+        "title": "Convergence of Stochastic Gradient Descent for PCA"
+      },
+      {
+        "key": "safran16",
+        "weight": 0.8079,
+        "title": "On the Quality of the Initial Basin in Overspecified Neural Networks"
+      },
+      {
+        "key": "shamira16",
+        "weight": 0.7547,
+        "title": "Fast Stochastic Algorithms for SVD and PCA: Convergence Properties and Convexity"
+      },
+      {
+        "key": "nock16",
+        "weight": 0.6281,
+        "title": "k-variates++: more pluses in the k-means++"
+      },
+      {
+        "key": "garber16",
+        "weight": 0.6235,
+        "title": "Faster Eigenvector Computation via Shift-and-Invert Preconditioning"
+      },
+      {
+        "key": "lina16",
+        "weight": 0.4922,
+        "title": "Generalization Properties and Implicit Regularization for Multiple Passes SGM"
+      },
+      {
+        "key": "songb16",
+        "weight": 0.4695,
+        "title": "Training Deep Neural Networks via Direct Loss Minimization"
+      },
+      {
+        "key": "meshi16",
+        "weight": 0.456,
+        "title": "Train and Test Tightness of LP Relaxations in Structured Prediction"
+      },
+      {
+        "key": "blondel16",
+        "weight": 0.3897,
+        "title": "Polynomial Networks and Factorization Machines: New Insights and Efficient Training Algorithms"
+      },
+      {
+        "key": "hazanb16",
+        "weight": 0.3856,
+        "title": "On Graduated Optimization for Stochastic Non-Convex Problems"
+      },
+      {
+        "key": "deramo16",
+        "weight": 0.2543,
+        "title": "Estimating Maximum Expected Value through Gaussian Approximation"
+      },
+      {
+        "key": "geb16",
+        "weight": 0.205,
+        "title": "Efficient Algorithms for Large-scale Generalized Eigenvector Computation and Canonical Correlation Analysis"
+      },
+      {
+        "key": "tosh16",
+        "weight": 0.1882,
+        "title": "Mixing Rates for the Alternating Gibbs Sampler over Restricted Boltzmann Machines and Friends"
+      },
+      {
+        "key": "colin16",
+        "weight": 0.1683,
+        "title": "Gossip Dual Averaging for Decentralized Optimization of Pairwise Functions"
+      },
+      {
+        "key": "aroraa16",
+        "weight": 0.1502,
+        "title": "Stochastic Optimization for Multiview Representation Learning using Partial Least Squares"
+      },
+      {
+        "key": "pedregosa16",
+        "weight": 0.1341,
+        "title": "Hyperparameter optimization with approximate gradient"
+      },
+      {
+        "key": "hernandez-lobatob16",
+        "weight": 0.1091,
+        "title": "Black-Box Alpha Divergence Minimization"
+      }
+    ]
+  }
+]

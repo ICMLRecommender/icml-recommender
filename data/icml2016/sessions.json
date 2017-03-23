@@ -1,0 +1,1848 @@
+[
+  {
+    "session_id": 1,
+    "session_day": "Monday",
+    "session_title": "Bayesian Nonparametric Methods",
+    "session_chair": "Hal Daume III",
+    "session_location": "Soho",
+    "talks": [
+      {
+        "session_time": "2016-06-20 10:20:00",
+        "paper_id": 754
+      },
+      {
+        "session_time": "2016-06-20 10:37:00",
+        "paper_id": 45
+      },
+      {
+        "session_time": "2016-06-20 10:54:00",
+        "paper_id": 1205
+      },
+      {
+        "session_time": "2016-06-20 11:30:00",
+        "paper_id": 521
+      },
+      {
+        "session_time": "2016-06-20 11:47:00",
+        "paper_id": 34
+      },
+      {
+        "session_time": "2016-06-20 12:04:00",
+        "paper_id": 1264
+      }
+    ]
+  },
+  {
+    "session_id": 2,
+    "session_day": "Monday",
+    "session_title": "Clustering",
+    "session_chair": "Alexandru Niculescu-Mizil",
+    "session_location": "Empire",
+    "talks": [
+      {
+        "session_time": "2016-06-20 10:20:00",
+        "paper_id": 409
+      },
+      {
+        "session_time": "2016-06-20 10:37:00",
+        "paper_id": 631
+      },
+      {
+        "session_time": "2016-06-20 10:54:00",
+        "paper_id": 1164
+      },
+      {
+        "session_time": "2016-06-20 11:30:00",
+        "paper_id": 437
+      },
+      {
+        "session_time": "2016-06-20 11:47:00",
+        "paper_id": 64
+      },
+      {
+        "session_time": "2016-06-20 12:04:00",
+        "paper_id": 462
+      }
+    ]
+  },
+  {
+    "session_id": 3,
+    "session_day": "Monday",
+    "session_title": "Matrix Factorization / Neuroscience Applications",
+    "session_chair": "Jennifer Dy",
+    "session_location": "Liberty",
+    "talks": [
+      {
+        "session_time": "2016-06-20 10:20:00",
+        "paper_id": 845
+      },
+      {
+        "session_time": "2016-06-20 10:37:00",
+        "paper_id": 533
+      },
+      {
+        "session_time": "2016-06-20 10:54:00",
+        "paper_id": 292
+      },
+      {
+        "session_time": "2016-06-20 11:30:00",
+        "paper_id": 478
+      },
+      {
+        "session_time": "2016-06-20 11:47:00",
+        "paper_id": 805
+      },
+      {
+        "session_time": "2016-06-20 12:04:00",
+        "paper_id": 258
+      }
+    ]
+  },
+  {
+    "session_id": 4,
+    "session_day": "Monday",
+    "session_title": "Neural Networks and Deep Learning",
+    "session_chair": "Hugo Larochelle",
+    "session_location": "Ballroom 1+2+Juliard",
+    "talks": [
+      {
+        "session_time": "2016-06-20 10:20:00",
+        "paper_id": 720
+      },
+      {
+        "session_time": "2016-06-20 10:37:00",
+        "paper_id": 551
+      },
+      {
+        "session_time": "2016-06-20 10:54:00",
+        "paper_id": 1188
+      },
+      {
+        "session_time": "2016-06-20 11:30:00",
+        "paper_id": 1054
+      },
+      {
+        "session_time": "2016-06-20 11:47:00",
+        "paper_id": 544
+      },
+      {
+        "session_time": "2016-06-20 12:04:00",
+        "paper_id": 516
+      }
+    ]
+  },
+  {
+    "session_id": 5,
+    "session_day": "Monday",
+    "session_title": "Online Learning",
+    "session_chair": "Alina Beygelzimer",
+    "session_location": "Lyceum",
+    "talks": [
+      {
+        "session_time": "2016-06-20 10:20:00",
+        "paper_id": 383
+      },
+      {
+        "session_time": "2016-06-20 10:37:00",
+        "paper_id": 995
+      },
+      {
+        "session_time": "2016-06-20 10:54:00",
+        "paper_id": 917
+      },
+      {
+        "session_time": "2016-06-20 11:30:00",
+        "paper_id": 198
+      },
+      {
+        "session_time": "2016-06-20 11:47:00",
+        "paper_id": 212
+      },
+      {
+        "session_time": "2016-06-20 12:04:00",
+        "paper_id": 199
+      }
+    ]
+  },
+  {
+    "session_id": 6,
+    "session_day": "Monday",
+    "session_title": "Optimization (Continuous)",
+    "session_chair": "Sebastien Bubeck",
+    "session_location": "Marquis",
+    "talks": [
+      {
+        "session_time": "2016-06-20 10:20:00",
+        "paper_id": 341
+      },
+      {
+        "session_time": "2016-06-20 10:37:00",
+        "paper_id": 153
+      },
+      {
+        "session_time": "2016-06-20 10:54:00",
+        "paper_id": 315
+      },
+      {
+        "session_time": "2016-06-20 11:30:00",
+        "paper_id": 759
+      },
+      {
+        "session_time": "2016-06-20 11:47:00",
+        "paper_id": 705
+      },
+      {
+        "session_time": "2016-06-20 12:04:00",
+        "paper_id": 370
+      }
+    ]
+  },
+  {
+    "session_id": 7,
+    "session_day": "Monday",
+    "session_title": "Reinforcement Learning",
+    "session_chair": "Joelle Pineau",
+    "session_location": "Ballroom 3+4",
+    "talks": [
+      {
+        "session_time": "2016-06-20 10:20:00",
+        "paper_id": 809
+      },
+      {
+        "session_time": "2016-06-20 10:37:00",
+        "paper_id": 829
+      },
+      {
+        "session_time": "2016-06-20 10:54:00",
+        "paper_id": 1242
+      },
+      {
+        "session_time": "2016-06-20 11:30:00",
+        "paper_id": 880
+      },
+      {
+        "session_time": "2016-06-20 11:47:00",
+        "paper_id": 629
+      },
+      {
+        "session_time": "2016-06-20 12:04:00",
+        "paper_id": 927
+      }
+    ]
+  },
+  {
+    "session_id": 8,
+    "session_day": "Monday",
+    "session_title": "Bandit Problems",
+    "session_chair": "Shie Mannor",
+    "session_location": "Empire",
+    "talks": [
+      {
+        "session_time": "2016-06-20 14:00:00",
+        "paper_id": 788
+      },
+      {
+        "session_time": "2016-06-20 14:17:00",
+        "paper_id": 443
+      },
+      {
+        "session_time": "2016-06-20 14:34:00",
+        "paper_id": 746
+      },
+      {
+        "session_time": "2016-06-20 15:10:00",
+        "paper_id": 410
+      },
+      {
+        "session_time": "2016-06-20 15:27:00",
+        "paper_id": 582
+      },
+      {
+        "session_time": "2016-06-20 15:44:00",
+        "paper_id": 770
+      }
+    ]
+  },
+  {
+    "session_id": 9,
+    "session_day": "Monday",
+    "session_title": "Graphical Models",
+    "session_chair": "Stefano Ermon",
+    "session_location": "Soho",
+    "talks": [
+      {
+        "session_time": "2016-06-20 14:00:00",
+        "paper_id": 174
+      },
+      {
+        "session_time": "2016-06-20 14:17:00",
+        "paper_id": 1047
+      },
+      {
+        "session_time": "2016-06-20 14:34:00",
+        "paper_id": 1221
+      },
+      {
+        "session_time": "2016-06-20 15:10:00",
+        "paper_id": 891
+      },
+      {
+        "session_time": "2016-06-20 15:27:00",
+        "paper_id": 616
+      },
+      {
+        "session_time": "2016-06-20 15:44:00",
+        "paper_id": 1103
+      }
+    ]
+  },
+  {
+    "session_id": 10,
+    "session_day": "Monday",
+    "session_title": "Machine Learning Applications",
+    "session_chair": "Balazs Kegl",
+    "session_location": "Marquis",
+    "talks": [
+      {
+        "session_time": "2016-06-20 14:00:00",
+        "paper_id": 750
+      },
+      {
+        "session_time": "2016-06-20 14:17:00",
+        "paper_id": 141
+      },
+      {
+        "session_time": "2016-06-20 14:34:00",
+        "paper_id": 1078
+      },
+      {
+        "session_time": "2016-06-20 15:10:00",
+        "paper_id": 419
+      },
+      {
+        "session_time": "2016-06-20 15:27:00",
+        "paper_id": 714
+      },
+      {
+        "session_time": "2016-06-20 15:44:00",
+        "paper_id": 882
+      }
+    ]
+  },
+  {
+    "session_id": 11,
+    "session_day": "Monday",
+    "session_title": "Matrix Factorization and Related Topics",
+    "session_chair": "Alex Kulesza",
+    "session_location": "Lyceum",
+    "talks": [
+      {
+        "session_time": "2016-06-20 14:00:00",
+        "paper_id": 966
+      },
+      {
+        "session_time": "2016-06-20 14:17:00",
+        "paper_id": 384
+      },
+      {
+        "session_time": "2016-06-20 14:34:00",
+        "paper_id": 717
+      },
+      {
+        "session_time": "2016-06-20 15:10:00",
+        "paper_id": 220
+      },
+      {
+        "session_time": "2016-06-20 15:27:00",
+        "paper_id": 1017
+      },
+      {
+        "session_time": "2016-06-20 15:44:00",
+        "paper_id": 692
+      }
+    ]
+  },
+  {
+    "session_id": 12,
+    "session_day": "Monday",
+    "session_title": "Neural Networks and Deep Learning",
+    "session_chair": "Honglak Lee",
+    "session_location": "Ballroom 1+2+Juliard",
+    "talks": [
+      {
+        "session_time": "2016-06-20 14:00:00",
+        "paper_id": 76
+      },
+      {
+        "session_time": "2016-06-20 14:17:00",
+        "paper_id": 945
+      },
+      {
+        "session_time": "2016-06-20 14:34:00",
+        "paper_id": 998
+      },
+      {
+        "session_time": "2016-06-20 15:10:00",
+        "paper_id": 335
+      },
+      {
+        "session_time": "2016-06-20 15:27:00",
+        "paper_id": 1016
+      },
+      {
+        "session_time": "2016-06-20 15:44:00",
+        "paper_id": 806
+      }
+    ]
+  },
+  {
+    "session_id": 13,
+    "session_day": "Monday",
+    "session_title": "Optimization / Online Learning",
+    "session_chair": "Satyen Kale",
+    "session_location": "Ballroom 3+4",
+    "talks": [
+      {
+        "session_time": "2016-06-20 14:00:00",
+        "paper_id": 1318
+      },
+      {
+        "session_time": "2016-06-20 14:17:00",
+        "paper_id": 344
+      },
+      {
+        "session_time": "2016-06-20 14:34:00",
+        "paper_id": 140
+      },
+      {
+        "session_time": "2016-06-20 15:10:00",
+        "paper_id": 139
+      },
+      {
+        "session_time": "2016-06-20 15:27:00",
+        "paper_id": 1184
+      },
+      {
+        "session_time": "2016-06-20 15:44:00",
+        "paper_id": 678
+      }
+    ]
+  },
+  {
+    "session_id": 14,
+    "session_day": "Monday",
+    "session_title": "Transfer Learning / Learning Theory",
+    "session_chair": "Alina Beygelzimer",
+    "session_location": "Liberty",
+    "talks": [
+      {
+        "session_time": "2016-06-20 14:00:00",
+        "paper_id": 405
+      },
+      {
+        "session_time": "2016-06-20 14:17:00",
+        "paper_id": 1275
+      },
+      {
+        "session_time": "2016-06-20 14:34:00",
+        "paper_id": 371
+      },
+      {
+        "session_time": "2016-06-20 15:10:00",
+        "paper_id": 138
+      },
+      {
+        "session_time": "2016-06-20 15:27:00",
+        "paper_id": 58
+      },
+      {
+        "session_time": "2016-06-20 15:44:00",
+        "paper_id": 330
+      }
+    ]
+  },
+  {
+    "session_id": 15,
+    "session_day": "Monday",
+    "session_title": "Approximate Inference",
+    "session_chair": "Jun Zhu",
+    "session_location": "Marquis",
+    "talks": [
+      {
+        "session_time": "2016-06-20 16:15:00",
+        "paper_id": 438
+      },
+      {
+        "session_time": "2016-06-20 16:32:00",
+        "paper_id": 1342
+      },
+      {
+        "session_time": "2016-06-20 16:49:00",
+        "paper_id": 1028
+      },
+      {
+        "session_time": "2016-06-20 17:25:00",
+        "paper_id": 146
+      },
+      {
+        "session_time": "2016-06-20 17:42:00",
+        "paper_id": 1167
+      },
+      {
+        "session_time": "2016-06-20 17:59:00",
+        "paper_id": 429
+      }
+    ]
+  },
+  {
+    "session_id": 16,
+    "session_day": "Monday",
+    "session_title": "Metric and  Manifold Learning / Kernel Methods",
+    "session_chair": "Le Song",
+    "session_location": "Lyceum",
+    "talks": [
+      {
+        "session_time": "2016-06-20 16:15:00",
+        "paper_id": 322
+      },
+      {
+        "session_time": "2016-06-20 16:32:00",
+        "paper_id": 1107
+      },
+      {
+        "session_time": "2016-06-20 16:49:00",
+        "paper_id": 468
+      },
+      {
+        "session_time": "2016-06-20 17:25:00",
+        "paper_id": 128
+      },
+      {
+        "session_time": "2016-06-20 17:42:00",
+        "paper_id": 964
+      },
+      {
+        "session_time": "2016-06-20 17:59:00",
+        "paper_id": 1193
+      }
+    ]
+  },
+  {
+    "session_id": 17,
+    "session_day": "Monday",
+    "session_title": "Neural Networks and Deep Learning I",
+    "session_chair": "Kyunghyun Cho",
+    "session_location": "Ballroom 1+2+Juliard",
+    "talks": [
+      {
+        "session_time": "2016-06-20 16:15:00",
+        "paper_id": 639
+      },
+      {
+        "session_time": "2016-06-20 16:32:00",
+        "paper_id": 992
+      },
+      {
+        "session_time": "2016-06-20 16:49:00",
+        "paper_id": 500
+      },
+      {
+        "session_time": "2016-06-20 17:25:00",
+        "paper_id": 1361
+      },
+      {
+        "session_time": "2016-06-20 17:42:00",
+        "paper_id": 281
+      },
+      {
+        "session_time": "2016-06-20 17:59:00",
+        "paper_id": 951
+      }
+    ]
+  },
+  {
+    "session_id": 18,
+    "session_day": "Monday",
+    "session_title": "Neural Networks and Deep Learning II (Computer Vision)",
+    "session_chair": "Laurens van der Maaten",
+    "session_location": "Ballroom 3+4",
+    "talks": [
+      {
+        "session_time": "2016-06-20 16:15:00",
+        "paper_id": 1335
+      },
+      {
+        "session_time": "2016-06-20 16:32:00",
+        "paper_id": 554
+      },
+      {
+        "session_time": "2016-06-20 16:49:00",
+        "paper_id": 209
+      },
+      {
+        "session_time": "2016-06-20 17:25:00",
+        "paper_id": 257
+      },
+      {
+        "session_time": "2016-06-20 17:42:00",
+        "paper_id": 279
+      },
+      {
+        "session_time": "2016-06-20 17:59:00",
+        "paper_id": 129
+      }
+    ]
+  },
+  {
+    "session_id": 19,
+    "session_day": "Monday",
+    "session_title": "Online Learning",
+    "session_chair": "Csaba Szepesvari",
+    "session_location": "Liberty",
+    "talks": [
+      {
+        "session_time": "2016-06-20 16:15:00",
+        "paper_id": 1154
+      },
+      {
+        "session_time": "2016-06-20 16:32:00",
+        "paper_id": 65
+      },
+      {
+        "session_time": "2016-06-20 16:49:00",
+        "paper_id": 581
+      },
+      {
+        "session_time": "2016-06-20 17:25:00",
+        "paper_id": 579
+      },
+      {
+        "session_time": "2016-06-20 17:42:00",
+        "paper_id": 566
+      },
+      {
+        "session_time": "2016-06-20 17:59:00",
+        "paper_id": 612
+      }
+    ]
+  },
+  {
+    "session_id": 20,
+    "session_day": "Monday",
+    "session_title": "Statistical Learning Theory",
+    "session_chair": "Ohad Shamir",
+    "session_location": "Empire",
+    "talks": [
+      {
+        "session_time": "2016-06-20 16:15:00",
+        "paper_id": 898
+      },
+      {
+        "session_time": "2016-06-20 16:32:00",
+        "paper_id": 299
+      },
+      {
+        "session_time": "2016-06-20 16:49:00",
+        "paper_id": 1049
+      },
+      {
+        "session_time": "2016-06-20 17:25:00",
+        "paper_id": 1032
+      },
+      {
+        "session_time": "2016-06-20 17:42:00",
+        "paper_id": 766
+      },
+      {
+        "session_time": "2016-06-20 17:59:00",
+        "paper_id": 103
+      }
+    ]
+  },
+  {
+    "session_id": 21,
+    "session_day": "Monday",
+    "session_title": "Structured Prediction / Monte Carlo Methods",
+    "session_chair": "Martin Jaggi",
+    "session_location": "Soho",
+    "talks": [
+      {
+        "session_time": "2016-06-20 16:15:00",
+        "paper_id": 881
+      },
+      {
+        "session_time": "2016-06-20 16:32:00",
+        "paper_id": 818
+      },
+      {
+        "session_time": "2016-06-20 16:49:00",
+        "paper_id": 1062
+      },
+      {
+        "session_time": "2016-06-20 17:25:00",
+        "paper_id": 703
+      },
+      {
+        "session_time": "2016-06-20 17:42:00",
+        "paper_id": 1043
+      },
+      {
+        "session_time": "2016-06-20 17:59:00",
+        "paper_id": 1115
+      }
+    ]
+  },
+  {
+    "session_id": 22,
+    "session_day": "Tuesday",
+    "session_title": "Approximate Inference",
+    "session_chair": "Jon Mcauliffe",
+    "session_location": "Liberty",
+    "talks": [
+      {
+        "session_time": "2016-06-21 10:30:00",
+        "paper_id": 168
+      },
+      {
+        "session_time": "2016-06-21 10:47:00",
+        "paper_id": 178
+      },
+      {
+        "session_time": "2016-06-21 11:04:00",
+        "paper_id": 719
+      },
+      {
+        "session_time": "2016-06-21 11:40:00",
+        "paper_id": 1000
+      },
+      {
+        "session_time": "2016-06-21 11:57:00",
+        "paper_id": 479
+      },
+      {
+        "session_time": "2016-06-21 12:14:00",
+        "paper_id": 699
+      }
+    ]
+  },
+  {
+    "session_id": 23,
+    "session_day": "Tuesday",
+    "session_title": "Neural Networks and Deep Learning",
+    "session_chair": "Hal Daume III",
+    "session_location": "Ballroom 1+2+Juliard",
+    "talks": [
+      {
+        "session_time": "2016-06-21 10:30:00",
+        "paper_id": 608
+      },
+      {
+        "session_time": "2016-06-21 10:47:00",
+        "paper_id": 971
+      },
+      {
+        "session_time": "2016-06-21 11:04:00",
+        "paper_id": 665
+      },
+      {
+        "session_time": "2016-06-21 11:40:00",
+        "paper_id": 1067
+      },
+      {
+        "session_time": "2016-06-21 11:57:00",
+        "paper_id": 270
+      },
+      {
+        "session_time": "2016-06-21 12:14:00",
+        "paper_id": 1316
+      }
+    ]
+  },
+  {
+    "session_id": 24,
+    "session_day": "Tuesday",
+    "session_title": "Optimization (Combinatorial)",
+    "session_chair": "Andreas Krause",
+    "session_location": "Marquis",
+    "talks": [
+      {
+        "session_time": "2016-06-21 10:30:00",
+        "paper_id": 1225
+      },
+      {
+        "session_time": "2016-06-21 10:47:00",
+        "paper_id": 1332
+      },
+      {
+        "session_time": "2016-06-21 11:04:00",
+        "paper_id": 1015
+      },
+      {
+        "session_time": "2016-06-21 11:40:00",
+        "paper_id": 642
+      },
+      {
+        "session_time": "2016-06-21 11:57:00",
+        "paper_id": 1104
+      },
+      {
+        "session_time": "2016-06-21 12:14:00",
+        "paper_id": 1031
+      }
+    ]
+  },
+  {
+    "session_id": 25,
+    "session_day": "Tuesday",
+    "session_title": "Reinforcement Learning",
+    "session_chair": "Tom Erez",
+    "session_location": "Ballroom 3+4",
+    "talks": [
+      {
+        "session_time": "2016-06-21 10:30:00",
+        "paper_id": 628
+      },
+      {
+        "session_time": "2016-06-21 10:47:00",
+        "paper_id": 1055
+      },
+      {
+        "session_time": "2016-06-21 11:04:00",
+        "paper_id": 312
+      },
+      {
+        "session_time": "2016-06-21 11:40:00",
+        "paper_id": 1307
+      },
+      {
+        "session_time": "2016-06-21 11:57:00",
+        "paper_id": 1322
+      },
+      {
+        "session_time": "2016-06-21 12:14:00",
+        "paper_id": 1228
+      }
+    ]
+  },
+  {
+    "session_id": 26,
+    "session_day": "Tuesday",
+    "session_title": "Sampling / Kernel Methods",
+    "session_chair": "Marius Kloft",
+    "session_location": "Empire",
+    "talks": [
+      {
+        "session_time": "2016-06-21 10:30:00",
+        "paper_id": 387
+      },
+      {
+        "session_time": "2016-06-21 10:47:00",
+        "paper_id": 981
+      },
+      {
+        "session_time": "2016-06-21 11:04:00",
+        "paper_id": 1177
+      },
+      {
+        "session_time": "2016-06-21 11:40:00",
+        "paper_id": 142
+      },
+      {
+        "session_time": "2016-06-21 11:57:00",
+        "paper_id": 44
+      },
+      {
+        "session_time": "2016-06-21 12:14:00",
+        "paper_id": 336
+      }
+    ]
+  },
+  {
+    "session_id": 27,
+    "session_day": "Tuesday",
+    "session_title": "Sparsity and Compressed Sensing",
+    "session_chair": "Gal Chechik",
+    "session_location": "Soho",
+    "talks": [
+      {
+        "session_time": "2016-06-21 10:30:00",
+        "paper_id": 380
+      },
+      {
+        "session_time": "2016-06-21 10:47:00",
+        "paper_id": 1033
+      },
+      {
+        "session_time": "2016-06-21 11:04:00",
+        "paper_id": 304
+      },
+      {
+        "session_time": "2016-06-21 11:40:00",
+        "paper_id": 469
+      },
+      {
+        "session_time": "2016-06-21 11:57:00",
+        "paper_id": 385
+      },
+      {
+        "session_time": "2016-06-21 12:14:00",
+        "paper_id": 1036
+      }
+    ]
+  },
+  {
+    "session_id": 28,
+    "session_day": "Tuesday",
+    "session_title": "Unsupervised Learning / Representation Learning",
+    "session_chair": "Jennifer Dy",
+    "session_location": "Lyceum",
+    "talks": [
+      {
+        "session_time": "2016-06-21 10:30:00",
+        "paper_id": 903
+      },
+      {
+        "session_time": "2016-06-21 10:47:00",
+        "paper_id": 66
+      },
+      {
+        "session_time": "2016-06-21 11:04:00",
+        "paper_id": 1197
+      },
+      {
+        "session_time": "2016-06-21 11:40:00",
+        "paper_id": 1348
+      },
+      {
+        "session_time": "2016-06-21 11:57:00",
+        "paper_id": 62
+      },
+      {
+        "session_time": "2016-06-21 12:14:00",
+        "paper_id": 1210
+      }
+    ]
+  },
+  {
+    "session_id": 29,
+    "session_day": "Tuesday",
+    "session_title": "Learning Theory",
+    "session_chair": "Jon Mcauliffe",
+    "session_location": "Liberty",
+    "talks": [
+      {
+        "session_time": "2016-06-21 15:40:00",
+        "paper_id": 59
+      },
+      {
+        "session_time": "2016-06-21 15:57:00",
+        "paper_id": 1287
+      },
+      {
+        "session_time": "2016-06-21 16:14:00",
+        "paper_id": 3
+      },
+      {
+        "session_time": "2016-06-21 16:31:00",
+        "paper_id": 1279
+      }
+    ]
+  },
+  {
+    "session_id": 30,
+    "session_day": "Tuesday",
+    "session_title": "Matrix Factorization and Related Topics",
+    "session_chair": "Roger Grosse",
+    "session_location": "Empire",
+    "talks": [
+      {
+        "session_time": "2016-06-21 15:40:00",
+        "paper_id": 1051
+      },
+      {
+        "session_time": "2016-06-21 15:57:00",
+        "paper_id": 1052
+      },
+      {
+        "session_time": "2016-06-21 16:14:00",
+        "paper_id": 1269
+      },
+      {
+        "session_time": "2016-06-21 16:31:00",
+        "paper_id": 224
+      }
+    ]
+  },
+  {
+    "session_id": 31,
+    "session_day": "Tuesday",
+    "session_title": "Neural Networks and Deep Learning I",
+    "session_chair": "Nicolas Le Roux",
+    "session_location": "Ballroom 1+2+Juliard",
+    "talks": [
+      {
+        "session_time": "2016-06-21 15:40:00",
+        "paper_id": 599
+      },
+      {
+        "session_time": "2016-06-21 15:57:00",
+        "paper_id": 1122
+      },
+      {
+        "session_time": "2016-06-21 16:14:00",
+        "paper_id": 793
+      },
+      {
+        "session_time": "2016-06-21 16:31:00",
+        "paper_id": 52
+      }
+    ]
+  },
+  {
+    "session_id": 32,
+    "session_day": "Tuesday",
+    "session_title": "Neural Networks and Deep Learning II",
+    "session_chair": "Alexandru Niculescu-Mizil",
+    "session_location": "Ballroom 3+4",
+    "talks": [
+      {
+        "session_time": "2016-06-21 15:40:00",
+        "paper_id": 23
+      },
+      {
+        "session_time": "2016-06-21 15:57:00",
+        "paper_id": 1229
+      },
+      {
+        "session_time": "2016-06-21 16:14:00",
+        "paper_id": 231
+      },
+      {
+        "session_time": "2016-06-21 16:31:00",
+        "paper_id": 943
+      }
+    ]
+  },
+  {
+    "session_id": 33,
+    "session_day": "Tuesday",
+    "session_title": "Optimization (Continuous)",
+    "session_chair": "Le Song",
+    "session_location": "Lyceum",
+    "talks": [
+      {
+        "session_time": "2016-06-21 15:40:00",
+        "paper_id": 654
+      },
+      {
+        "session_time": "2016-06-21 15:57:00",
+        "paper_id": 1125
+      },
+      {
+        "session_time": "2016-06-21 16:14:00",
+        "paper_id": 727
+      },
+      {
+        "session_time": "2016-06-21 16:31:00",
+        "paper_id": 1286
+      }
+    ]
+  },
+  {
+    "session_id": 34,
+    "session_day": "Tuesday",
+    "session_title": "Reinforcement Learning",
+    "session_chair": "Lihong Li",
+    "session_location": "Marquis",
+    "talks": [
+      {
+        "session_time": "2016-06-21 15:40:00",
+        "paper_id": 30
+      },
+      {
+        "session_time": "2016-06-21 15:57:00",
+        "paper_id": 327
+      },
+      {
+        "session_time": "2016-06-21 16:14:00",
+        "paper_id": 1274
+      },
+      {
+        "session_time": "2016-06-21 16:31:00",
+        "paper_id": 885
+      }
+    ]
+  },
+  {
+    "session_id": 35,
+    "session_day": "Tuesday",
+    "session_title": "Unsupervised Learning / Applications",
+    "session_chair": "Jeff Bilmes",
+    "session_location": "Soho",
+    "talks": [
+      {
+        "session_time": "2016-06-21 15:40:00",
+        "paper_id": 1023
+      },
+      {
+        "session_time": "2016-06-21 15:57:00",
+        "paper_id": 825
+      },
+      {
+        "session_time": "2016-06-21 16:14:00",
+        "paper_id": 487
+      },
+      {
+        "session_time": "2016-06-21 16:31:00",
+        "paper_id": 1349
+      }
+    ]
+  },
+  {
+    "session_id": 36,
+    "session_day": "Tuesday",
+    "session_title": "Graphical Models",
+    "session_chair": "Jun Zhu",
+    "session_location": "Soho",
+    "talks": [
+      {
+        "session_time": "2016-06-21 17:10:00",
+        "paper_id": 4
+      },
+      {
+        "session_time": "2016-06-21 17:27:00",
+        "paper_id": 210
+      },
+      {
+        "session_time": "2016-06-21 17:44:00",
+        "paper_id": 733
+      },
+      {
+        "session_time": "2016-06-21 18:01:00",
+        "paper_id": 1155
+      }
+    ]
+  },
+  {
+    "session_id": 37,
+    "session_day": "Tuesday",
+    "session_title": "Large Scale Learning and Big Data",
+    "session_chair": "Andreas Krause",
+    "session_location": "Empire",
+    "talks": [
+      {
+        "session_time": "2016-06-21 17:10:00",
+        "paper_id": 698
+      },
+      {
+        "session_time": "2016-06-21 17:27:00",
+        "paper_id": 823
+      },
+      {
+        "session_time": "2016-06-21 17:44:00",
+        "paper_id": 811
+      },
+      {
+        "session_time": "2016-06-21 18:01:00",
+        "paper_id": 563
+      }
+    ]
+  },
+  {
+    "session_id": 38,
+    "session_day": "Tuesday",
+    "session_title": "Neural Networks and Deep Learning I",
+    "session_chair": "Yoshua Bengio",
+    "session_location": "Ballroom 1+2+Juliard",
+    "talks": [
+      {
+        "session_time": "2016-06-21 17:10:00",
+        "paper_id": 1096
+      },
+      {
+        "session_time": "2016-06-21 17:27:00",
+        "paper_id": 439
+      },
+      {
+        "session_time": "2016-06-21 17:44:00",
+        "paper_id": 1278
+      },
+      {
+        "session_time": "2016-06-21 18:01:00",
+        "paper_id": 113
+      }
+    ]
+  },
+  {
+    "session_id": 39,
+    "session_day": "Tuesday",
+    "session_title": "Neural Networks and Deep Learning II",
+    "session_chair": "David Sontag",
+    "session_location": "Ballroom 3+4",
+    "talks": [
+      {
+        "session_time": "2016-06-21 17:10:00",
+        "paper_id": 1345
+      },
+      {
+        "session_time": "2016-06-21 17:27:00",
+        "paper_id": 839
+      },
+      {
+        "session_time": "2016-06-21 17:44:00",
+        "paper_id": 208
+      },
+      {
+        "session_time": "2016-06-21 18:01:00",
+        "paper_id": 920
+      }
+    ]
+  },
+  {
+    "session_id": 40,
+    "session_day": "Tuesday",
+    "session_title": "Optimization (Continuous)",
+    "session_chair": "Tong Zhang",
+    "session_location": "Lyceum",
+    "talks": [
+      {
+        "session_time": "2016-06-21 17:10:00",
+        "paper_id": 440
+      },
+      {
+        "session_time": "2016-06-21 17:27:00",
+        "paper_id": 543
+      },
+      {
+        "session_time": "2016-06-21 17:44:00",
+        "paper_id": 1224
+      },
+      {
+        "session_time": "2016-06-21 18:01:00",
+        "paper_id": 783
+      }
+    ]
+  },
+  {
+    "session_id": 41,
+    "session_day": "Tuesday",
+    "session_title": "Reinforcement Learning",
+    "session_chair": "Tom Erez",
+    "session_location": "Marquis",
+    "talks": [
+      {
+        "session_time": "2016-06-21 17:10:00",
+        "paper_id": 470
+      },
+      {
+        "session_time": "2016-06-21 17:27:00",
+        "paper_id": 985
+      },
+      {
+        "session_time": "2016-06-21 17:44:00",
+        "paper_id": 680
+      },
+      {
+        "session_time": "2016-06-21 18:01:00",
+        "paper_id": 854
+      }
+    ]
+  },
+  {
+    "session_id": 42,
+    "session_day": "Tuesday",
+    "session_title": "Supervised Learning",
+    "session_chair": "Nicolas Le Roux",
+    "session_location": "Liberty",
+    "talks": [
+      {
+        "session_time": "2016-06-21 17:10:00",
+        "paper_id": 1040
+      },
+      {
+        "session_time": "2016-06-21 17:27:00",
+        "paper_id": 1206
+      },
+      {
+        "session_time": "2016-06-21 17:44:00",
+        "paper_id": 866
+      },
+      {
+        "session_time": "2016-06-21 18:01:00",
+        "paper_id": 152
+      }
+    ]
+  },
+  {
+    "session_id": 43,
+    "session_day": "Wednesday",
+    "session_title": "Feature Selection and Dimensionality Reduction",
+    "session_chair": "Laurens van der Maaten",
+    "session_location": "Empire",
+    "talks": [
+      {
+        "session_time": "2016-06-22 08:30:00",
+        "paper_id": 93
+      },
+      {
+        "session_time": "2016-06-22 08:47:00",
+        "paper_id": 831
+      },
+      {
+        "session_time": "2016-06-22 09:04:00",
+        "paper_id": 744
+      },
+      {
+        "session_time": "2016-06-22 09:21:00",
+        "paper_id": 1190
+      },
+      {
+        "session_time": "2016-06-22 09:38:00",
+        "paper_id": 974
+      }
+    ]
+  },
+  {
+    "session_id": 44,
+    "session_day": "Wednesday",
+    "session_title": "Gaussian Processes",
+    "session_chair": "Roger Grosse",
+    "session_location": "Lyceum",
+    "talks": [
+      {
+        "session_time": "2016-06-22 08:30:00",
+        "paper_id": 273
+      },
+      {
+        "session_time": "2016-06-22 08:47:00",
+        "paper_id": 188
+      },
+      {
+        "session_time": "2016-06-22 09:04:00",
+        "paper_id": 706
+      },
+      {
+        "session_time": "2016-06-22 09:21:00",
+        "paper_id": 1129
+      },
+      {
+        "session_time": "2016-06-22 09:38:00",
+        "paper_id": 775
+      }
+    ]
+  },
+  {
+    "session_id": 45,
+    "session_day": "Wednesday",
+    "session_title": "Graph Analysis/ Spectral Methods",
+    "session_chair": "Alex Kulesza",
+    "session_location": "Soho",
+    "talks": [
+      {
+        "session_time": "2016-06-22 08:30:00",
+        "paper_id": 56
+      },
+      {
+        "session_time": "2016-06-22 08:47:00",
+        "paper_id": 887
+      },
+      {
+        "session_time": "2016-06-22 09:04:00",
+        "paper_id": 328
+      },
+      {
+        "session_time": "2016-06-22 09:21:00",
+        "paper_id": 969
+      },
+      {
+        "session_time": "2016-06-22 09:38:00",
+        "paper_id": 1019
+      }
+    ]
+  },
+  {
+    "session_id": 46,
+    "session_day": "Wednesday",
+    "session_title": "Multi-label, multi-task, and neural networks",
+    "session_chair": "Joelle Pineau",
+    "session_location": "Marquis",
+    "talks": [
+      {
+        "session_time": "2016-06-22 08:30:00",
+        "paper_id": 135
+      },
+      {
+        "session_time": "2016-06-22 08:47:00",
+        "paper_id": 997
+      },
+      {
+        "session_time": "2016-06-22 09:04:00",
+        "paper_id": 445
+      },
+      {
+        "session_time": "2016-06-22 09:21:00",
+        "paper_id": 1114
+      },
+      {
+        "session_time": "2016-06-22 09:38:00",
+        "paper_id": 1215
+      }
+    ]
+  },
+  {
+    "session_id": 47,
+    "session_day": "Wednesday",
+    "session_title": "Neural Networks and Deep Learning I",
+    "session_chair": "Samy Bengio",
+    "session_location": "Ballroom 1+2+Juliard",
+    "talks": [
+      {
+        "session_time": "2016-06-22 08:30:00",
+        "paper_id": 804
+      },
+      {
+        "session_time": "2016-06-22 08:47:00",
+        "paper_id": 22
+      },
+      {
+        "session_time": "2016-06-22 09:04:00",
+        "paper_id": 755
+      },
+      {
+        "session_time": "2016-06-22 09:21:00",
+        "paper_id": 351
+      },
+      {
+        "session_time": "2016-06-22 09:38:00",
+        "paper_id": 1319
+      }
+    ]
+  },
+  {
+    "session_id": 48,
+    "session_day": "Wednesday",
+    "session_title": "Optimization (Continuous)",
+    "session_chair": "Shie Mannor",
+    "session_location": "Ballroom 3+4",
+    "talks": [
+      {
+        "session_time": "2016-06-22 08:30:00",
+        "paper_id": 832
+      },
+      {
+        "session_time": "2016-06-22 08:47:00",
+        "paper_id": 865
+      },
+      {
+        "session_time": "2016-06-22 09:04:00",
+        "paper_id": 1375
+      },
+      {
+        "session_time": "2016-06-22 09:21:00",
+        "paper_id": 731
+      },
+      {
+        "session_time": "2016-06-22 09:38:00",
+        "paper_id": 296
+      }
+    ]
+  },
+  {
+    "session_id": 49,
+    "session_day": "Wednesday",
+    "session_title": "Ranking and Preference Learning",
+    "session_chair": "Tong Zhang",
+    "session_location": "Liberty",
+    "talks": [
+      {
+        "session_time": "2016-06-22 08:30:00",
+        "paper_id": 1327
+      },
+      {
+        "session_time": "2016-06-22 08:47:00",
+        "paper_id": 50
+      },
+      {
+        "session_time": "2016-06-22 09:04:00",
+        "paper_id": 253
+      },
+      {
+        "session_time": "2016-06-22 09:21:00",
+        "paper_id": 1306
+      },
+      {
+        "session_time": "2016-06-22 09:38:00",
+        "paper_id": 784
+      }
+    ]
+  },
+  {
+    "session_id": 50,
+    "session_day": "Wednesday",
+    "session_title": "Applications and Time-Series Analysis",
+    "session_chair": "Jon Mcauliffe",
+    "session_location": "Marquis",
+    "talks": [
+      {
+        "session_time": "2016-06-22 10:20:00",
+        "paper_id": 1003
+      },
+      {
+        "session_time": "2016-06-22 10:37:00",
+        "paper_id": 785
+      },
+      {
+        "session_time": "2016-06-22 10:54:00",
+        "paper_id": 1308
+      },
+      {
+        "session_time": "2016-06-22 11:30:00",
+        "paper_id": 558
+      },
+      {
+        "session_time": "2016-06-22 11:47:00",
+        "paper_id": 1093
+      },
+      {
+        "session_time": "2016-06-22 12:04:00",
+        "paper_id": 789
+      }
+    ]
+  },
+  {
+    "session_id": 51,
+    "session_day": "Wednesday",
+    "session_title": "Crowdsourcing and Interactive Learning",
+    "session_chair": "Yisong Yue",
+    "session_location": "Soho",
+    "talks": [
+      {
+        "session_time": "2016-06-22 10:20:00",
+        "paper_id": 1
+      },
+      {
+        "session_time": "2016-06-22 10:37:00",
+        "paper_id": 1246
+      },
+      {
+        "session_time": "2016-06-22 10:54:00",
+        "paper_id": 529
+      },
+      {
+        "session_time": "2016-06-22 11:30:00",
+        "paper_id": 691
+      },
+      {
+        "session_time": "2016-06-22 11:47:00",
+        "paper_id": 203
+      },
+      {
+        "session_time": "2016-06-22 12:04:00",
+        "paper_id": 272
+      }
+    ]
+  },
+  {
+    "session_id": 52,
+    "session_day": "Wednesday",
+    "session_title": "Dimensionality Reduction / Private Learning",
+    "session_chair": "Jeff Bilmes",
+    "session_location": "Lyceum",
+    "talks": [
+      {
+        "session_time": "2016-06-22 10:20:00",
+        "paper_id": 1130
+      },
+      {
+        "session_time": "2016-06-22 10:37:00",
+        "paper_id": 238
+      },
+      {
+        "session_time": "2016-06-22 10:54:00",
+        "paper_id": 175
+      },
+      {
+        "session_time": "2016-06-22 11:30:00",
+        "paper_id": 984
+      },
+      {
+        "session_time": "2016-06-22 11:47:00",
+        "paper_id": 182
+      },
+      {
+        "session_time": "2016-06-22 12:04:00",
+        "paper_id": 148
+      }
+    ]
+  },
+  {
+    "session_id": 53,
+    "session_day": "Wednesday",
+    "session_title": "Learning Theory",
+    "session_chair": "Alina Beygelzimer",
+    "session_location": "Liberty",
+    "talks": [
+      {
+        "session_time": "2016-06-22 10:20:00",
+        "paper_id": 496
+      },
+      {
+        "session_time": "2016-06-22 10:37:00",
+        "paper_id": 329
+      },
+      {
+        "session_time": "2016-06-22 10:54:00",
+        "paper_id": 507
+      },
+      {
+        "session_time": "2016-06-22 11:30:00",
+        "paper_id": 600
+      },
+      {
+        "session_time": "2016-06-22 11:47:00",
+        "paper_id": 1030
+      },
+      {
+        "session_time": "2016-06-22 12:04:00",
+        "paper_id": 573
+      }
+    ]
+  },
+  {
+    "session_id": 54,
+    "session_day": "Wednesday",
+    "session_title": "Monte Carlo Methods",
+    "session_chair": "Stefano Ermon",
+    "session_location": "Empire",
+    "talks": [
+      {
+        "session_time": "2016-06-22 10:20:00",
+        "paper_id": 1180
+      },
+      {
+        "session_time": "2016-06-22 10:37:00",
+        "paper_id": 1359
+      },
+      {
+        "session_time": "2016-06-22 10:54:00",
+        "paper_id": 1202
+      },
+      {
+        "session_time": "2016-06-22 11:30:00",
+        "paper_id": 1356
+      },
+      {
+        "session_time": "2016-06-22 11:47:00",
+        "paper_id": 1299
+      },
+      {
+        "session_time": "2016-06-22 12:04:00",
+        "paper_id": 306
+      }
+    ]
+  },
+  {
+    "session_id": 55,
+    "session_day": "Wednesday",
+    "session_title": "Neural Networks and Deep Learning",
+    "session_chair": "Yoshua Bengio",
+    "session_location": "Ballroom 1+2+Juliard",
+    "talks": [
+      {
+        "session_time": "2016-06-22 10:20:00",
+        "paper_id": 485
+      },
+      {
+        "session_time": "2016-06-22 10:37:00",
+        "paper_id": 732
+      },
+      {
+        "session_time": "2016-06-22 10:54:00",
+        "paper_id": 871
+      },
+      {
+        "session_time": "2016-06-22 11:30:00",
+        "paper_id": 413
+      },
+      {
+        "session_time": "2016-06-22 11:47:00",
+        "paper_id": 1149
+      },
+      {
+        "session_time": "2016-06-22 12:04:00",
+        "paper_id": 303
+      }
+    ]
+  },
+  {
+    "session_id": 56,
+    "session_day": "Wednesday",
+    "session_title": "Optimization (Continuous)",
+    "session_chair": "Satyen Kale",
+    "session_location": "Ballroom 3+4",
+    "talks": [
+      {
+        "session_time": "2016-06-22 10:20:00",
+        "paper_id": 421
+      },
+      {
+        "session_time": "2016-06-22 10:37:00",
+        "paper_id": 586
+      },
+      {
+        "session_time": "2016-06-22 10:54:00",
+        "paper_id": 834
+      },
+      {
+        "session_time": "2016-06-22 11:30:00",
+        "paper_id": 305
+      },
+      {
+        "session_time": "2016-06-22 11:47:00",
+        "paper_id": 1170
+      },
+      {
+        "session_time": "2016-06-22 12:04:00",
+        "paper_id": 423
+      },
+      {
+        "session_time": "2016-06-22 15:40:00",
+        "paper_id": 1293
+      },
+      {
+        "session_time": "2016-06-22 15:57:00",
+        "paper_id": 363
+      },
+      {
+        "session_time": "2016-06-22 16:14:00",
+        "paper_id": 451
+      }
+    ]
+  },
+  {
+    "session_id": 57,
+    "session_day": "Wednesday",
+    "session_title": "Causal Inference",
+    "session_chair": "David Sontag",
+    "session_location": "Soho",
+    "talks": [
+      {
+        "session_time": "2016-06-22 15:40:00",
+        "paper_id": 959
+      },
+      {
+        "session_time": "2016-06-22 15:57:00",
+        "paper_id": 1237
+      },
+      {
+        "session_time": "2016-06-22 16:14:00",
+        "paper_id": 801
+      }
+    ]
+  },
+  {
+    "session_id": 58,
+    "session_day": "Wednesday",
+    "session_title": "Kernel Methods",
+    "session_chair": "Marius Kloft",
+    "session_location": "Marquis",
+    "talks": [
+      {
+        "session_time": "2016-06-22 15:40:00",
+        "paper_id": 707
+      },
+      {
+        "session_time": "2016-06-22 15:57:00",
+        "paper_id": 942
+      },
+      {
+        "session_time": "2016-06-22 16:14:00",
+        "paper_id": 1208
+      }
+    ]
+  },
+  {
+    "session_id": 59,
+    "session_day": "Wednesday",
+    "session_title": "Matrix Factorization and Related Topics",
+    "session_chair": "Stefanie Jegelka",
+    "session_location": "Lyceum",
+    "talks": [
+      {
+        "session_time": "2016-06-22 15:40:00",
+        "paper_id": 1120
+      },
+      {
+        "session_time": "2016-06-22 15:57:00",
+        "paper_id": 725
+      },
+      {
+        "session_time": "2016-06-22 16:14:00",
+        "paper_id": 499
+      }
+    ]
+  },
+  {
+    "session_id": 60,
+    "session_day": "Wednesday",
+    "session_title": "Optimization",
+    "session_chair": "Lihong Li",
+    "session_location": "Liberty",
+    "talks": [
+      {
+        "session_time": "2016-06-22 15:40:00",
+        "paper_id": 675
+      },
+      {
+        "session_time": "2016-06-22 15:57:00",
+        "paper_id": 181
+      },
+      {
+        "session_time": "2016-06-22 16:14:00",
+        "paper_id": 960
+      }
+    ]
+  },
+  {
+    "session_id": 61,
+    "session_day": "Wednesday",
+    "session_title": "Privacy, Anonymity, and Security",
+    "session_chair": "Gal Chechik",
+    "session_location": "Empire",
+    "talks": [
+      {
+        "session_time": "2016-06-22 15:40:00",
+        "paper_id": 278
+      },
+      {
+        "session_time": "2016-06-22 15:57:00",
+        "paper_id": 980
+      },
+      {
+        "session_time": "2016-06-22 16:14:00",
+        "paper_id": 1101
+      }
+    ]
+  },
+  {
+    "session_id": 62,
+    "session_day": "Wednesday",
+    "session_title": "Supervised Learning",
+    "session_chair": "Csaba Szepesvari",
+    "session_location": "Ballroom 3+4",
+    "talks": [
+      {
+        "session_time": "2016-06-22 15:40:00",
+        "paper_id": 1113
+      },
+      {
+        "session_time": "2016-06-22 15:57:00",
+        "paper_id": 400
+      },
+      {
+        "session_time": "2016-06-22 16:14:00",
+        "paper_id": 337
+      }
+    ]
+  }
+]
