@@ -1,28 +1,29 @@
 require(jsonlite)
 require(dplyr)
+require(tidyr)
+require(readr)
 require(sofa)
 
 # read data
 #====================
 data_path = "data/icml2016"
 
-readLines(file.path(data_path, "authors.json")) %>% 
-  paste(collapse="")
-
-papers = readLines(file.path(data_path, "papers.json")) %>% 
-  paste( collapse="") %>% 
+papers = file(file.path(data_path, "papers.json")) %>% 
   fromJSON() %>% 
   tbl_df()
 
-authors = readLines(file.path(data_path, "authors.json")) %>% 
-  paste( collapse="") %>% 
+authors = file(file.path(data_path, "authors.json")) %>% 
   fromJSON() %>% 
   tbl_df()
 
-sessions = readLines(file.path(data_path, "sessions.json")) %>% 
-  paste( collapse="") %>% 
+sessions = file(file.path(data_path, "sessions.json")) %>% 
   fromJSON() %>% 
   tbl_df()
+
+topics = file(file.path(data_path, "topics.json")) %>% 
+  fromJSON() %>% 
+  tbl_df()
+
 
 # write to couchDB
 #=============================
@@ -50,3 +51,8 @@ if ("sessions" %in% db_list(cdb))
   cdb %>% db_delete("sessions")
 cdb %>% db_create("sessions")
 cdb %>% db_bulk_create("sessions", apply(sessions, 1, function(x) toJSON(x, auto_unbox=TRUE)))
+
+if ("topics" %in% db_list(cdb)) 
+  cdb %>% db_delete("topics")
+cdb %>% db_create("topics")
+cdb %>% db_bulk_create("topics", apply(topics, 1, function(x) toJSON(x, auto_unbox=TRUE)))
