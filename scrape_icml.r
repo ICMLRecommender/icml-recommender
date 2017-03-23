@@ -112,7 +112,7 @@ parse_talk = function(html) {
   out$paper_id = html %>% 
     html_node(".titlepaper") %>% 
     html_attr("id") %>% 
-    as.numeric()
+    as.integer()
   
   out$session_time = html %>% 
     html_node(xpath = "text()") %>% 
@@ -224,10 +224,9 @@ authors = joined %>%
   arrange(desc(affiliation)) %>% 
   fill(affiliation) %>% 
   group_by(author, affiliation) %>% 
-  nest(.key = paper_ids) %>% 
-  mutate(paper_ids = lapply(paper_ids, function(x) unlist(x, use.names = FALSE))) %>% 
+  summarise(paper_ids = list(paper_id)) %>% 
   ungroup() %>% 
-  mutate(author_id = 1:n()) %>% 
+  mutate(author_id = seq_len(n())) %>% 
   select(author_id, everything())
   
 paper_authors = authors %>% 
@@ -235,17 +234,25 @@ paper_authors = authors %>%
   unnest() %>% 
   rename(paper_id = paper_ids) %>% 
   group_by(paper_id) %>% 
-  nest(.key = author_ids) %>% 
-  mutate(author_ids = lapply(author_ids, function(x) unlist(x, use.names = FALSE))) %>% 
+  summarise(author_ids = list(author_id)) %>% 
   ungroup()
 
+todate = function(session_day, session_time) {
+  ind_day = match(session_day, c("Monday", "Tuesday", "Wednesday"))
+  date = paste0("2016-06-", c("20", "21", "22"))[ind_day]
+  ampm = ifelse(session_time>"07:59", "AM", "PM")
+  as.POSIXct(paste(date, session_time, ampm),
+             format ="%Y-%m-%d %I:%M %p")
+}
+
 sessions = joined %>% 
-  select(session_title, session_day, session_chair, session_location, session_time, paper_id) %>% 
-  group_by(session_title, session_day, session_chair, session_location) %>% 
-  arrange(session_time) %>% 
+  select(session_day, session_title, session_chair, session_location, session_time, paper_id) %>% 
+  mutate(session_time = todate(session_day, session_time)) %>% 
+  arrange(session_day, session_title, session_time) %>% 
+  group_by(session_day, session_title, session_chair, session_location) %>% 
   nest(.key = "talks") %>% 
   ungroup() %>% 
-  mutate(session_id = 1:n()) %>% 
+  mutate(session_id = seq_len(n())) %>% 
   select(session_id, everything())
 
 papers = joined %>% 
