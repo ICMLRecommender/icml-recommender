@@ -248,7 +248,7 @@ todate = function(session_day, session_time) {
 sessions = joined %>% 
   select(session_day, session_title, session_chair, session_location, session_time, paper_id) %>% 
   mutate(session_time = todate(session_day, session_time)) %>% 
-  arrange(session_day, session_title, session_time) %>% 
+  arrange(session_time, session_title) %>% 
   group_by(session_day, session_title, session_chair, session_location) %>% 
   nest(.key = "talks") %>% 
   ungroup() %>% 
