@@ -240,7 +240,7 @@ paper_authors = authors %>%
 todate = function(session_day, session_time) {
   ind_day = match(session_day, c("Monday", "Tuesday", "Wednesday"))
   date = paste0("2016-06-", c("20", "21", "22"))[ind_day]
-  ampm = ifelse(session_time>"07:59", "AM", "PM")
+  ampm = ifelse(session_time>"07:59" & session_time<"12:00", "AM", "PM")
   as.POSIXct(paste(date, session_time, ampm),
              format ="%Y-%m-%d %I:%M %p")
 }
@@ -274,3 +274,4 @@ authors %>%
 sessions %>% 
   toJSON(pretty=TRUE) %>% 
   write(file.path(data_path, "sessions.json"))
+
