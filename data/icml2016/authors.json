@@ -12,14 +12,14 @@
   {
     "author_id": 3,
     "author": "Aaron Sidford",
-    "paper_ids": [1051, 1184, 1224],
-    "affiliation": "Microsoft Research, New England"
+    "affiliation": "Microsoft Research, New England",
+    "paper_ids": [1051, 1184, 1224]
   },
   {
     "author_id": 4,
     "author": "Aaron Van den Oord",
-    "paper_ids": [806],
-    "affiliation": "Google Deepmind"
+    "affiliation": "Google Deepmind",
+    "paper_ids": [806]
   },
   {
     "author_id": 5,
@@ -39,8 +39,8 @@
   {
     "author_id": 8,
     "author": "Abram Friesen",
-    "paper_ids": [881],
-    "affiliation": "University of Washington"
+    "affiliation": "University of Washington",
+    "paper_ids": [881]
   },
   {
     "author_id": 9,
@@ -50,14 +50,14 @@
   {
     "author_id": 10,
     "author": "Adam Lerer",
-    "paper_ids": [209],
-    "affiliation": "Facebook AI Research"
+    "affiliation": "Facebook AI Research",
+    "paper_ids": [209]
   },
   {
     "author_id": 11,
     "author": "Adam Santoro",
-    "paper_ids": [839],
-    "affiliation": "Google DeepMind"
+    "affiliation": "Google DeepMind",
+    "paper_ids": [839]
   },
   {
     "author_id": 12,
@@ -67,14 +67,14 @@
   {
     "author_id": 13,
     "author": "Adith Swaminathan",
-    "paper_ids": [784],
-    "affiliation": "Cornell University"
+    "affiliation": "Cornell University",
+    "paper_ids": [784]
   },
   {
     "author_id": 14,
     "author": "Aditi Raghunathan",
-    "paper_ids": [1155],
-    "affiliation": "Stanford University"
+    "affiliation": "Stanford University",
+    "paper_ids": [1155]
   },
   {
     "author_id": 15,
@@ -84,50 +84,50 @@
   {
     "author_id": 16,
     "author": "Aditya Guntuboyina",
-    "paper_ids": [3],
-    "affiliation": "UC Berkeley"
+    "affiliation": "UC Berkeley",
+    "paper_ids": [3]
   },
   {
     "author_id": 17,
     "author": "Aditya Menon",
-    "paper_ids": [152],
-    "affiliation": "National ICT Australia"
+    "affiliation": "National ICT Australia",
+    "paper_ids": [152]
   },
   {
     "author_id": 18,
     "author": "Aditya Vempaty",
-    "paper_ids": [1345],
-    "affiliation": "IBM"
+    "affiliation": "IBM",
+    "paper_ids": [1345]
   },
   {
     "author_id": 19,
     "author": "Adrian Weller",
-    "paper_ids": [818, 4],
-    "affiliation": "University of Cambridge"
+    "affiliation": "University of Cambridge",
+    "paper_ids": [818, 4]
   },
   {
     "author_id": 20,
     "author": "Adria Puigdomenech Badia",
-    "paper_ids": [885],
-    "affiliation": "Google DeepMind"
+    "affiliation": "Google DeepMind",
+    "paper_ids": [885]
   },
   {
     "author_id": 21,
     "author": "Afshin Rostamizadeh",
-    "paper_ids": [1130],
-    "affiliation": "Google"
+    "affiliation": "Google",
+    "paper_ids": [1130]
   },
   {
     "author_id": 22,
     "author": "Ahmed Alaa",
-    "paper_ids": [785],
-    "affiliation": "University of California, Los Angeles"
+    "affiliation": "University of California, Los Angeles",
+    "paper_ids": [785]
   },
   {
     "author_id": 23,
     "author": "Ahmed Elgammal",
-    "paper_ids": [413],
-    "affiliation": "Rutgers University"
+    "affiliation": "Rutgers University",
+    "paper_ids": [413]
   },
   {
     "author_id": 24,
@@ -137,20 +137,20 @@
   {
     "author_id": 25,
     "author": "Akinori Fujino",
-    "paper_ids": [400],
-    "affiliation": "NTT"
+    "affiliation": "NTT",
+    "paper_ids": [400]
   },
   {
     "author_id": 26,
     "author": "Akram Erraqabi",
-    "paper_ids": [981],
-    "affiliation": "Inria Lille Nord Europe"
+    "affiliation": "Inria Lille Nord Europe",
+    "paper_ids": [981]
   },
   {
     "author_id": 27,
     "author": "Akshay Krishnamurthy",
-    "paper_ids": [995],
-    "affiliation": "Microsoft Research"
+    "affiliation": "Microsoft Research",
+    "paper_ids": [995]
   },
   {
     "author_id": 28,
@@ -160,20 +160,20 @@
   {
     "author_id": 29,
     "author": "Alan Gelfand",
-    "paper_ids": [1023],
-    "affiliation": "Duke University"
+    "affiliation": "Duke University",
+    "paper_ids": [1023]
   },
   {
     "author_id": 30,
     "author": "Aleksandar Stanic",
-    "paper_ids": [992],
-    "affiliation": "ETH Zurich"
+    "affiliation": "ETH Zurich",
+    "paper_ids": [992]
   },
   {
     "author_id": 31,
     "author": "Alessandro Nuara",
-    "paper_ids": [470],
-    "affiliation": "Politecnico di Milano"
+    "affiliation": "Politecnico di Milano",
+    "paper_ids": [470]
   },
   {
     "author_id": 32,
@@ -193,14 +193,14 @@
   {
     "author_id": 35,
     "author": "Alex Graves",
-    "paper_ids": [920, 885],
-    "affiliation": "Google DeepMind"
+    "affiliation": "Google DeepMind",
+    "paper_ids": [920, 885]
   },
   {
     "author_id": 36,
     "author": "Alex Kantchelian",
-    "paper_ids": [1062],
-    "affiliation": "University of California, Berk"
+    "affiliation": "University of California, Berk",
+    "paper_ids": [1062]
   },
   {
     "author_id": 37,
@@ -210,32 +210,32 @@
   {
     "author_id": 38,
     "author": "Ali Farhadi",
-    "paper_ids": [231],
-    "affiliation": "University of Washington"
+    "affiliation": "University of Washington",
+    "paper_ids": [231]
   },
   {
     "author_id": 39,
     "author": "Alistair Reid",
-    "paper_ids": [775],
-    "affiliation": "Data61"
+    "affiliation": "Data61",
+    "paper_ids": [775]
   },
   {
     "author_id": 40,
     "author": "Alon Cohen",
-    "paper_ids": [383],
-    "affiliation": "Technion"
+    "affiliation": "Technion",
+    "paper_ids": [383]
   },
   {
     "author_id": 41,
     "author": "Alon Gonen",
-    "paper_ids": [678],
-    "affiliation": "Hebrew University of Jerusalem"
+    "affiliation": "Hebrew University of Jerusalem",
+    "paper_ids": [678]
   },
   {
     "author_id": 42,
     "author": "Amar Shah",
-    "paper_ids": [516, 714, 882],
-    "affiliation": "University of Cambridge"
+    "affiliation": "University of Cambridge",
+    "paper_ids": [516, 714, 882]
   },
   {
     "author_id": 43,
@@ -245,14 +245,14 @@
   {
     "author_id": 44,
     "author": "Ambedkar Dukkipati",
-    "paper_ids": [754],
-    "affiliation": "Indian Institute of Science"
+    "affiliation": "Indian Institute of Science",
+    "paper_ids": [754]
   },
   {
     "author_id": 45,
     "author": "Ambrose Carr",
-    "paper_ids": [487],
-    "affiliation": "Columbia University"
+    "affiliation": "Columbia University",
+    "paper_ids": [487]
   },
   {
     "author_id": 46,
@@ -262,8 +262,8 @@
   {
     "author_id": 47,
     "author": "Amin Karbasi",
-    "paper_ids": [642],
-    "affiliation": "Yale University"
+    "affiliation": "Yale University",
+    "paper_ids": [642]
   },
   {
     "author_id": 48,
@@ -278,20 +278,20 @@
   {
     "author_id": 50,
     "author": "Amnon Shashua",
-    "paper_ids": [439],
-    "affiliation": "Mobileye"
+    "affiliation": "Mobileye",
+    "paper_ids": [439]
   },
   {
     "author_id": 51,
     "author": "Amr Bakry",
-    "paper_ids": [413],
-    "affiliation": "Rutgers University"
+    "affiliation": "Rutgers University",
+    "paper_ids": [413]
   },
   {
     "author_id": 52,
     "author": "Anastasia Podosinnikova",
-    "paper_ids": [220],
-    "affiliation": "INRIA – ENS"
+    "affiliation": "INRIA – ENS",
+    "paper_ids": [220]
   },
   {
     "author_id": 53,
@@ -301,8 +301,8 @@
   {
     "author_id": 54,
     "author": "Anders Boesen Lindbo Larsen",
-    "paper_ids": [732],
-    "affiliation": "Technical University of Denmar"
+    "affiliation": "Technical University of Denmar",
+    "paper_ids": [732]
   },
   {
     "author_id": 55,
@@ -317,8 +317,8 @@
   {
     "author_id": 57,
     "author": "Andrea Locatelli",
-    "paper_ids": [788],
-    "affiliation": "University of Potsdam"
+    "affiliation": "University of Potsdam",
+    "paper_ids": [788]
   },
   {
     "author_id": 58,
@@ -328,8 +328,8 @@
   {
     "author_id": 59,
     "author": "Andrej Risteski",
-    "paper_ids": [1052],
-    "affiliation": "Princeton University"
+    "affiliation": "Princeton University",
+    "paper_ids": [1052]
   },
   {
     "author_id": 60,
@@ -349,8 +349,8 @@
   {
     "author_id": 63,
     "author": "Andrew Lan",
-    "paper_ids": [141],
-    "affiliation": "Rice University"
+    "affiliation": "Rice University",
+    "paper_ids": [141]
   },
   {
     "author_id": 64,
@@ -370,8 +370,8 @@
   {
     "author_id": 67,
     "author": "Anh Tong",
-    "paper_ids": [1349],
-    "affiliation": "UNIST"
+    "affiliation": "UNIST",
+    "paper_ids": [1349]
   },
   {
     "author_id": 68,
@@ -381,14 +381,14 @@
   {
     "author_id": 69,
     "author": "Ankit Kumar",
-    "paper_ids": [665],
-    "affiliation": "MetaMind"
+    "affiliation": "MetaMind",
+    "paper_ids": [665]
   },
   {
     "author_id": 70,
     "author": "Ankit Patel",
-    "paper_ids": [1215],
-    "affiliation": "Rice University"
+    "affiliation": "Rice University",
+    "paper_ids": [1215]
   },
   {
     "author_id": 71,
@@ -398,14 +398,14 @@
   {
     "author_id": 72,
     "author": "Anna Choromanska",
-    "paper_ids": [175],
-    "affiliation": "Courant Institute, NYU"
+    "affiliation": "Courant Institute, NYU",
+    "paper_ids": [175]
   },
   {
     "author_id": 73,
     "author": "Anna Korba",
-    "paper_ids": [1327],
-    "affiliation": "Mines Paris Tech"
+    "affiliation": "Mines Paris Tech",
+    "paper_ids": [1327]
   },
   {
     "author_id": 74,
@@ -415,8 +415,8 @@
   {
     "author_id": 75,
     "author": "Anthony Joseph",
-    "paper_ids": [1062],
-    "affiliation": "UC Berkeley"
+    "affiliation": "UC Berkeley",
+    "paper_ids": [1062]
   },
   {
     "author_id": 76,
@@ -431,26 +431,26 @@
   {
     "author_id": 78,
     "author": "Anton Rodomanov",
-    "paper_ids": [1170],
-    "affiliation": "Higher School of Economics"
+    "affiliation": "Higher School of Economics",
+    "paper_ids": [1170]
   },
   {
     "author_id": 79,
     "author": "Aonan Zhang",
-    "paper_ids": [521],
-    "affiliation": "Columbia University"
+    "affiliation": "Columbia University",
+    "paper_ids": [521]
   },
   {
     "author_id": 80,
     "author": "Aram Galstyan",
-    "paper_ids": [66],
-    "affiliation": "Information Sciences Institute"
+    "affiliation": "Information Sciences Institute",
+    "paper_ids": [66]
   },
   {
     "author_id": 81,
     "author": "Ardavan Saeedi",
-    "paper_ids": [1205],
-    "affiliation": "MIT"
+    "affiliation": "MIT",
+    "paper_ids": [1205]
   },
   {
     "author_id": 82,
@@ -460,8 +460,8 @@
   {
     "author_id": 83,
     "author": "Ariel Procaccia",
-    "paper_ids": [59],
-    "affiliation": "Carnegie Mellon University"
+    "affiliation": "Carnegie Mellon University",
+    "paper_ids": [59]
   },
   {
     "author_id": 84,
@@ -471,8 +471,8 @@
   {
     "author_id": 85,
     "author": "Ari Pakman",
-    "paper_ids": [1299],
-    "affiliation": "Columbia University"
+    "affiliation": "Columbia University",
+    "paper_ids": [1299]
   },
   {
     "author_id": 86,
@@ -482,20 +482,20 @@
   {
     "author_id": 87,
     "author": "Arnaud Doucet",
-    "paper_ids": [1180],
-    "affiliation": "University of Oxford"
+    "affiliation": "University of Oxford",
+    "paper_ids": [1180]
   },
   {
     "author_id": 88,
     "author": "Arthur Gretton",
-    "paper_ids": [1177],
-    "affiliation": "UCL Gatsby"
+    "affiliation": "UCL Gatsby",
+    "paper_ids": [1177]
   },
   {
     "author_id": 89,
     "author": "Arthur Mensch",
-    "paper_ids": [805],
-    "affiliation": "Inria"
+    "affiliation": "Inria",
+    "paper_ids": [805]
   },
   {
     "author_id": 90,
@@ -505,32 +505,32 @@
   {
     "author_id": 91,
     "author": "Arun Venkatraman",
-    "paper_ids": [558],
-    "affiliation": "Carnegie Mellon University"
+    "affiliation": "Carnegie Mellon University",
+    "paper_ids": [558]
   },
   {
     "author_id": 92,
     "author": "Ashish Khetan",
-    "paper_ids": [50],
-    "affiliation": "UIUC"
+    "affiliation": "UIUC",
+    "paper_ids": [50]
   },
   {
     "author_id": 93,
     "author": "Ashish Sabharwal",
-    "paper_ids": [1028],
-    "affiliation": "Allen Institute for AI"
+    "affiliation": "Allen Institute for AI",
+    "paper_ids": [1028]
   },
   {
     "author_id": 94,
     "author": "Ashudeep Singh",
-    "paper_ids": [784],
-    "affiliation": "Cornell University"
+    "affiliation": "Cornell University",
+    "paper_ids": [784]
   },
   {
     "author_id": 95,
     "author": "Ashwinkumar Badanidiyuru",
-    "paper_ids": [642],
-    "affiliation": "Google Research"
+    "affiliation": "Google Research",
+    "paper_ids": [642]
   },
   {
     "author_id": 96,
@@ -540,44 +540,44 @@
   {
     "author_id": 97,
     "author": "Atsushi Shibagaki",
-    "paper_ids": [744],
-    "affiliation": "Nagoya Institute of Technology"
+    "affiliation": "Nagoya Institute of Technology",
+    "paper_ids": [744]
   },
   {
     "author_id": 98,
     "author": "Aurelien Bellet",
-    "paper_ids": [675],
-    "affiliation": "INRIA"
+    "affiliation": "INRIA",
+    "paper_ids": [675]
   },
   {
     "author_id": 99,
     "author": "Aurelien Lucchi",
-    "paper_ids": [705],
-    "affiliation": "ETHZ"
+    "affiliation": "ETHZ",
+    "paper_ids": [705]
   },
   {
     "author_id": 100,
     "author": "Avinava Dubey",
-    "paper_ids": [691],
-    "affiliation": "Carnegie Mellon University"
+    "affiliation": "Carnegie Mellon University",
+    "paper_ids": [691]
   },
   {
     "author_id": 101,
     "author": "Avradeep Bhowmik",
-    "paper_ids": [499],
-    "affiliation": "University of Texas at Austin"
+    "affiliation": "University of Texas at Austin",
+    "paper_ids": [499]
   },
   {
     "author_id": 102,
     "author": "Awni Hannun",
-    "paper_ids": [76, 945],
-    "affiliation": "Baidu USA, Inc."
+    "affiliation": "Baidu USA, Inc.",
+    "paper_ids": [76, 945]
   },
   {
     "author_id": 103,
     "author": "Baharan Mirzasoleiman",
-    "paper_ids": [1015, 642],
-    "affiliation": "ETH Zurich"
+    "affiliation": "ETH Zurich",
+    "paper_ids": [1015, 642]
   },
   {
     "author_id": 104,
@@ -587,14 +587,14 @@
   {
     "author_id": 105,
     "author": "Bamdev Mishra",
-    "paper_ids": [468],
-    "affiliation": "Amazon Development Centre India"
+    "affiliation": "Amazon Development Centre India",
+    "paper_ids": [468]
   },
   {
     "author_id": 106,
     "author": "Bangsheng Tang",
-    "paper_ids": [351],
-    "affiliation": "Hulu LLC"
+    "affiliation": "Hulu LLC",
+    "paper_ids": [351]
   },
   {
     "author_id": 107,
@@ -624,20 +624,20 @@
   {
     "author_id": 112,
     "author": "Basura Fernando",
-    "paper_ids": [554],
-    "affiliation": "ANU Canberra Australia"
+    "affiliation": "ANU Canberra Australia",
+    "paper_ids": [554]
   },
   {
     "author_id": 113,
     "author": "Benigno Uria",
-    "paper_ids": [920],
-    "affiliation": "Google DeepMind"
+    "affiliation": "Google DeepMind",
+    "paper_ids": [920]
   },
   {
     "author_id": 114,
     "author": "Benjamin Bloem-Reddy",
-    "paper_ids": [1359],
-    "affiliation": "Columbia University"
+    "affiliation": "Columbia University",
+    "paper_ids": [1359]
   },
   {
     "author_id": 115,
@@ -647,14 +647,14 @@
   {
     "author_id": 116,
     "author": "Benjamin Van Roy",
-    "paper_ids": [1055],
-    "affiliation": "Stanford University"
+    "affiliation": "Stanford University",
+    "paper_ids": [1055]
   },
   {
     "author_id": 117,
     "author": "Ben Recht",
-    "paper_ids": [573, 440],
-    "affiliation": "Berkeley"
+    "affiliation": "Berkeley",
+    "paper_ids": [573, 440]
   },
   {
     "author_id": 118,
@@ -669,26 +669,26 @@
   {
     "author_id": 120,
     "author": "Bertrand Thirion",
-    "paper_ids": [805],
-    "affiliation": "Inria"
+    "affiliation": "Inria",
+    "paper_ids": [805]
   },
   {
     "author_id": 121,
     "author": "Bharat Singh",
-    "paper_ids": [1215],
-    "affiliation": "University of Maryland, Colleg"
+    "affiliation": "University of Maryland, Colleg",
+    "paper_ids": [1215]
   },
   {
     "author_id": 122,
     "author": "Bhargava Kota",
-    "paper_ids": [544],
-    "affiliation": "SUNY Buffalo"
+    "affiliation": "SUNY Buffalo",
+    "paper_ids": [544]
   },
   {
     "author_id": 123,
     "author": "Bilal Piot",
-    "paper_ids": [854],
-    "affiliation": "Univ. Lille"
+    "affiliation": "Univ. Lille",
+    "paper_ids": [854]
   },
   {
     "author_id": 124,
@@ -698,8 +698,8 @@
   {
     "author_id": 125,
     "author": "Bingyu Wang",
-    "paper_ids": [1114],
-    "affiliation": "Northeastern University"
+    "affiliation": "Northeastern University",
+    "paper_ids": [1114]
   },
   {
     "author_id": 126,
@@ -709,14 +709,14 @@
   {
     "author_id": 127,
     "author": "Bo Dai",
-    "paper_ids": [1208],
-    "affiliation": "Georgia Tech"
+    "affiliation": "Georgia Tech",
+    "paper_ids": [1208]
   },
   {
     "author_id": 128,
     "author": "Borja Balle",
-    "paper_ids": [984],
-    "affiliation": "Lancaster University"
+    "affiliation": "Lancaster University",
+    "paper_ids": [984]
   },
   {
     "author_id": 129,
@@ -731,32 +731,32 @@
   {
     "author_id": 131,
     "author": "Bo Zhang",
-    "paper_ids": [551],
-    "affiliation": "Tsinghua University"
+    "affiliation": "Tsinghua University",
+    "paper_ids": [551]
   },
   {
     "author_id": 132,
     "author": "Brandon Amos",
-    "paper_ids": [616],
-    "affiliation": "Carnegie Mellon University"
+    "affiliation": "Carnegie Mellon University",
+    "paper_ids": [616]
   },
   {
     "author_id": 133,
     "author": "Branislav Kveton",
-    "paper_ids": [566],
-    "affiliation": "Adobe Research"
+    "affiliation": "Adobe Research",
+    "paper_ids": [566]
   },
   {
     "author_id": 134,
     "author": "Brian Kulis",
-    "paper_ids": [1202],
-    "affiliation": "Boston University"
+    "affiliation": "Boston University",
+    "paper_ids": [1202]
   },
   {
     "author_id": 135,
     "author": "Brooks Paige",
-    "paper_ids": [1356, 1180],
-    "affiliation": "University of Oxford"
+    "affiliation": "University of Oxford",
+    "paper_ids": [1356, 1180]
   },
   {
     "author_id": 136,
@@ -771,14 +771,14 @@
   {
     "author_id": 138,
     "author": "Bryan Catanzaro",
-    "paper_ids": [945, 76],
-    "affiliation": "Baidu USA, Inc."
+    "affiliation": "Baidu USA, Inc.",
+    "paper_ids": [945, 76]
   },
   {
     "author_id": 139,
     "author": "Bryan Kian Hsiang Low",
-    "paper_ids": [188],
-    "affiliation": "NUS"
+    "affiliation": "NUS",
+    "paper_ids": [188]
   },
   {
     "author_id": 140,
@@ -793,14 +793,14 @@
   {
     "author_id": 142,
     "author": "Caiming Xiong",
-    "paper_ids": [1067],
-    "affiliation": "MetaMind"
+    "affiliation": "MetaMind",
+    "paper_ids": [1067]
   },
   {
     "author_id": 143,
     "author": "Cameron Musco",
-    "paper_ids": [1051, 1184],
-    "affiliation": "Massachusetts Institute of Technology"
+    "affiliation": "Massachusetts Institute of Technology",
+    "paper_ids": [1051, 1184]
   },
   {
     "author_id": 144,
@@ -815,14 +815,14 @@
   {
     "author_id": 146,
     "author": "Carlo D’Eramo",
-    "paper_ids": [470],
-    "affiliation": "Politecnico di Milano"
+    "affiliation": "Politecnico di Milano",
+    "paper_ids": [470]
   },
   {
     "author_id": 147,
     "author": "Casper Kaae Sønderby",
-    "paper_ids": [699],
-    "affiliation": "University of Copenhagen"
+    "affiliation": "University of Copenhagen",
+    "paper_ids": [699]
   },
   {
     "author_id": 148,
@@ -832,26 +832,26 @@
   {
     "author_id": 149,
     "author": "Cedric Malherbe",
-    "paper_ids": [727],
-    "affiliation": "ENS Cachan"
+    "affiliation": "ENS Cachan",
+    "paper_ids": [727]
   },
   {
     "author_id": 150,
     "author": "Celestine Dünner",
-    "paper_ids": [370],
-    "affiliation": "IBM Research"
+    "affiliation": "IBM Research",
+    "paper_ids": [370]
   },
   {
     "author_id": 151,
     "author": "Changho Suh",
-    "paper_ids": [328],
-    "affiliation": "KAIST"
+    "affiliation": "KAIST",
+    "paper_ids": [328]
   },
   {
     "author_id": 152,
     "author": "Changhu Wang",
-    "paper_ids": [279],
-    "affiliation": "Microsoft Research"
+    "affiliation": "Microsoft Research",
+    "paper_ids": [279]
   },
   {
     "author_id": 153,
@@ -866,20 +866,20 @@
   {
     "author_id": 155,
     "author": "Chao Chen",
-    "paper_ids": [1221, 148],
-    "affiliation": "CUNY"
+    "affiliation": "CUNY",
+    "paper_ids": [1221, 148]
   },
   {
     "author_id": 156,
     "author": "Chao Gao",
-    "paper_ids": [299],
-    "affiliation": "Yale University"
+    "affiliation": "Yale University",
+    "paper_ids": [299]
   },
   {
     "author_id": 157,
     "author": "Chao Qu",
-    "paper_ids": [315],
-    "affiliation": "Nus"
+    "affiliation": "Nus",
+    "paper_ids": [315]
   },
   {
     "author_id": 158,
@@ -889,44 +889,44 @@
   {
     "author_id": 159,
     "author": "Chelsea Finn",
-    "paper_ids": [30],
-    "affiliation": "UC Berkeley"
+    "affiliation": "UC Berkeley",
+    "paper_ids": [30]
   },
   {
     "author_id": 160,
     "author": "Cheng Jie",
-    "paper_ids": [680],
-    "affiliation": "University of Maryland – College Park"
+    "affiliation": "University of Maryland – College Park",
+    "paper_ids": [680]
   },
   {
     "author_id": 161,
     "author": "Cheng Li",
-    "paper_ids": [1114],
-    "affiliation": "Northeastern University"
+    "affiliation": "Northeastern University",
+    "paper_ids": [1114]
   },
   {
     "author_id": 162,
     "author": "Cheng Soon Ong",
-    "paper_ids": [45, 152],
-    "affiliation": "NICTA"
+    "affiliation": "NICTA",
+    "paper_ids": [45, 152]
   },
   {
     "author_id": 163,
     "author": "Chengtao Li",
-    "paper_ids": [811, 964],
-    "affiliation": "MIT"
+    "affiliation": "MIT",
+    "paper_ids": [811, 964]
   },
   {
     "author_id": 164,
     "author": "Chenlei Leng",
-    "paper_ids": [831],
-    "affiliation": "University of Warwick"
+    "affiliation": "University of Warwick",
+    "paper_ids": [831]
   },
   {
     "author_id": 165,
     "author": "Chi Jin",
-    "paper_ids": [1184, 1224],
-    "affiliation": "UC Berkeley"
+    "affiliation": "UC Berkeley",
+    "paper_ids": [1184, 1224]
   },
   {
     "author_id": 166,
@@ -936,14 +936,14 @@
   {
     "author_id": 167,
     "author": "Cho-Jui Hsieh",
-    "paper_ids": [1033, 1193],
-    "affiliation": "UC Davis"
+    "affiliation": "UC Davis",
+    "paper_ids": [1033, 1193]
   },
   {
     "author_id": 168,
     "author": "Chong jin Ong",
-    "paper_ids": [315],
-    "affiliation": "Nus"
+    "affiliation": "Nus",
+    "paper_ids": [315]
   },
   {
     "author_id": 169,
@@ -953,38 +953,38 @@
   {
     "author_id": 170,
     "author": "Chongxuan Li",
-    "paper_ids": [551],
-    "affiliation": "Tsinghua University"
+    "affiliation": "Tsinghua University",
+    "paper_ids": [551]
   },
   {
     "author_id": 171,
     "author": "Chris Re",
-    "paper_ids": [733],
-    "affiliation": "Stanford University"
+    "affiliation": "Stanford University",
+    "paper_ids": [733]
   },
   {
     "author_id": 172,
     "author": "Christian Naesseth",
-    "paper_ids": [1180],
-    "affiliation": "Linköping University"
+    "affiliation": "Linköping University",
+    "paper_ids": [1180]
   },
   {
     "author_id": 173,
     "author": "Christoph Dann",
-    "paper_ids": [1293],
-    "affiliation": "Carnegie Mellon University"
+    "affiliation": "Carnegie Mellon University",
+    "paper_ids": [1293]
   },
   {
     "author_id": 174,
     "author": "Christopher Cox",
-    "paper_ids": [478],
-    "affiliation": "University of Wisconsin"
+    "affiliation": "University of Wisconsin",
+    "paper_ids": [478]
   },
   {
     "author_id": 175,
     "author": "Christopher De Sa",
-    "paper_ids": [733],
-    "affiliation": "Stanford"
+    "affiliation": "Stanford",
+    "paper_ids": [733]
   },
   {
     "author_id": 176,
@@ -994,26 +994,26 @@
   {
     "author_id": 177,
     "author": "Christopher Musco",
-    "paper_ids": [1051],
-    "affiliation": "Mass. Institute of Technology"
+    "affiliation": "Mass. Institute of Technology",
+    "paper_ids": [1051]
   },
   {
     "author_id": 178,
     "author": "Christopher Tosh",
-    "paper_ids": [387],
-    "affiliation": "UC San Diego"
+    "affiliation": "UC San Diego",
+    "paper_ids": [387]
   },
   {
     "author_id": 179,
     "author": "Christoph Studer",
-    "paper_ids": [141],
-    "affiliation": "Cornell University"
+    "affiliation": "Cornell University",
+    "paper_ids": [141]
   },
   {
     "author_id": 180,
     "author": "Christos Louizos",
-    "paper_ids": [793],
-    "affiliation": "University of Amsterdam"
+    "affiliation": "University of Amsterdam",
+    "paper_ids": [793]
   },
   {
     "author_id": 181,
@@ -1023,8 +1023,8 @@
   {
     "author_id": 182,
     "author": "Cijo Jose",
-    "paper_ids": [703],
-    "affiliation": "Idiap Research Institute/ Éc  "
+    "affiliation": "Idiap Research Institute/ Éc  ",
+    "paper_ids": [703]
   },
   {
     "author_id": 183,
@@ -1039,26 +1039,26 @@
   {
     "author_id": 185,
     "author": "Cong Han Lim",
-    "paper_ids": [1104],
-    "affiliation": "Univ of Wisconsin – Madison"
+    "affiliation": "Univ of Wisconsin – Madison",
+    "paper_ids": [1104]
   },
   {
     "author_id": 186,
     "author": "Csaba Szepesvari",
-    "paper_ids": [1318, 566, 680, 582],
-    "affiliation": "Alberta"
+    "affiliation": "Alberta",
+    "paper_ids": [1318, 566, 680, 582]
   },
   {
     "author_id": 187,
     "author": "Cynthia Lo",
-    "paper_ids": [419],
-    "affiliation": "Washington University in St. Louis"
+    "affiliation": "Washington University in St. Louis",
+    "paper_ids": [419]
   },
   {
     "author_id": 188,
     "author": "Daan Wierstra",
-    "paper_ids": [720, 839],
-    "affiliation": "Google DeepMind"
+    "affiliation": "Google DeepMind",
+    "paper_ids": [720, 839]
   },
   {
     "author_id": 189,
@@ -1068,14 +1068,14 @@
   {
     "author_id": 190,
     "author": "Dana Pe’er",
-    "paper_ids": [487],
-    "affiliation": "Columbia University"
+    "affiliation": "Columbia University",
+    "paper_ids": [487]
   },
   {
     "author_id": 191,
     "author": "Dan Garber",
-    "paper_ids": [1184],
-    "affiliation": "TTI Chicago"
+    "affiliation": "TTI Chicago",
+    "paper_ids": [1184]
   },
   {
     "author_id": 192,
@@ -1085,8 +1085,8 @@
   {
     "author_id": 193,
     "author": "Daniel Pimentel-Alarcon",
-    "paper_ids": [380],
-    "affiliation": "UW-Madison"
+    "affiliation": "UW-Madison",
+    "paper_ids": [380]
   },
   {
     "author_id": 194,
@@ -1096,14 +1096,14 @@
   {
     "author_id": 195,
     "author": "Daniel Steinberg",
-    "paper_ids": [775],
-    "affiliation": "DATA61"
+    "affiliation": "DATA61",
+    "paper_ids": [775]
   },
   {
     "author_id": 196,
     "author": "Danilo Rezende",
-    "paper_ids": [1000, 720],
-    "affiliation": "Google DeepMind"
+    "affiliation": "Google DeepMind",
+    "paper_ids": [1000, 720]
   },
   {
     "author_id": 197,
@@ -1118,14 +1118,14 @@
   {
     "author_id": 199,
     "author": "Darryl Lin",
-    "paper_ids": [1278],
-    "affiliation": "Qualcomm Research"
+    "affiliation": "Qualcomm Research",
+    "paper_ids": [1278]
   },
   {
     "author_id": 200,
     "author": "David Abel",
-    "paper_ids": [1307],
-    "affiliation": "Brown University"
+    "affiliation": "Brown University",
+    "paper_ids": [1307]
   },
   {
     "author_id": 201,
@@ -1135,20 +1135,20 @@
   {
     "author_id": 202,
     "author": "David Belanger",
-    "paper_ids": [445],
-    "affiliation": "University of Massachusetts Am"
+    "affiliation": "University of Massachusetts Am",
+    "paper_ids": [445]
   },
   {
     "author_id": 203,
     "author": "David Blei",
-    "paper_ids": [178, 168, 1264],
-    "affiliation": "Columbia"
+    "affiliation": "Columbia",
+    "paper_ids": [178, 168, 1264]
   },
   {
     "author_id": 204,
     "author": "David Carlson",
-    "paper_ids": [1299],
-    "affiliation": "Columbia University"
+    "affiliation": "Columbia University",
+    "paper_ids": [1299]
   },
   {
     "author_id": 205,
@@ -1158,26 +1158,26 @@
   {
     "author_id": 206,
     "author": "David Gifford",
-    "paper_ids": [1093],
-    "affiliation": "MIT"
+    "affiliation": "MIT",
+    "paper_ids": [1093]
   },
   {
     "author_id": 207,
     "author": "David Gleich",
-    "paper_ids": [887],
-    "affiliation": "Purdue University"
+    "affiliation": "Purdue University",
+    "paper_ids": [887]
   },
   {
     "author_id": 208,
     "author": "David Hershkowitz",
-    "paper_ids": [1307],
-    "affiliation": "Brown University"
+    "affiliation": "Brown University",
+    "paper_ids": [1307]
   },
   {
     "author_id": 209,
     "author": "David Inouye",
-    "paper_ids": [1103],
-    "affiliation": "University of Texas at Austin"
+    "affiliation": "University of Texas at Austin",
+    "paper_ids": [1103]
   },
   {
     "author_id": 210,
@@ -1187,26 +1187,26 @@
   {
     "author_id": 211,
     "author": "David Silver",
-    "paper_ids": [885],
-    "affiliation": "Google Deepmind"
+    "affiliation": "Google Deepmind",
+    "paper_ids": [885]
   },
   {
     "author_id": 212,
     "author": "David Sontag",
-    "paper_ids": [1348, 818],
-    "affiliation": "NYU"
+    "affiliation": "NYU",
+    "paper_ids": [1348, 818]
   },
   {
     "author_id": 213,
     "author": "David Tse",
-    "paper_ids": [328],
-    "affiliation": "Stanford University"
+    "affiliation": "Stanford University",
+    "paper_ids": [328]
   },
   {
     "author_id": 214,
     "author": "David Wipf",
-    "paper_ids": [429],
-    "affiliation": "Microsoft Research, Beijing"
+    "affiliation": "Microsoft Research, Beijing",
+    "paper_ids": [429]
   },
   {
     "author_id": 215,
@@ -1216,68 +1216,68 @@
   {
     "author_id": 216,
     "author": "Dengyong Zhou",
-    "paper_ids": [299, 1],
-    "affiliation": "Microsoft Research"
+    "affiliation": "Microsoft Research",
+    "paper_ids": [299, 1]
   },
   {
     "author_id": 217,
     "author": "Devansh Arpit",
-    "paper_ids": [62, 544],
-    "affiliation": "SUNY Buffalo"
+    "affiliation": "SUNY Buffalo",
+    "paper_ids": [62, 544]
   },
   {
     "author_id": 218,
     "author": "Dino Sejdinovic",
-    "paper_ids": [707],
-    "affiliation": "University of Oxford"
+    "affiliation": "University of Oxford",
+    "paper_ids": [707]
   },
   {
     "author_id": 219,
     "author": "Diogo Almeida",
-    "paper_ids": [1016],
-    "affiliation": "Enlitic"
+    "affiliation": "Enlitic",
+    "paper_ids": [1016]
   },
   {
     "author_id": 220,
     "author": "Dirk Husmeier",
-    "paper_ids": [789],
-    "affiliation": "University of Glasgow"
+    "affiliation": "University of Glasgow",
+    "paper_ids": [789]
   },
   {
     "author_id": 221,
     "author": "Dmitry Kropotov",
-    "paper_ids": [1170],
-    "affiliation": "Moscow State University"
+    "affiliation": "Moscow State University",
+    "paper_ids": [1170]
   },
   {
     "author_id": 222,
     "author": "Dmitry Ulyanov",
-    "paper_ids": [639],
-    "affiliation": "Skolkovo institute of science "
+    "affiliation": "Skolkovo institute of science ",
+    "paper_ids": [639]
   },
   {
     "author_id": 223,
     "author": "Doina Precup",
-    "paper_ids": [984],
-    "affiliation": "McGill"
+    "affiliation": "McGill",
+    "paper_ids": [984]
   },
   {
     "author_id": 224,
     "author": "Donald Goldfarb",
-    "paper_ids": [865],
-    "affiliation": "Columbia University"
+    "affiliation": "Columbia University",
+    "paper_ids": [865]
   },
   {
     "author_id": 225,
     "author": "Dongsheng Li",
-    "paper_ids": [148],
-    "affiliation": "IBM Research – China"
+    "affiliation": "IBM Research – China",
+    "paper_ids": [148]
   },
   {
     "author_id": 226,
     "author": "Dustin Tran",
-    "paper_ids": [168],
-    "affiliation": "Columbia University"
+    "affiliation": "Columbia University",
+    "paper_ids": [168]
   },
   {
     "author_id": 227,
@@ -1297,20 +1297,20 @@
   {
     "author_id": 230,
     "author": "Edwin Bonilla",
-    "paper_ids": [775],
-    "affiliation": "UNSW"
+    "affiliation": "UNSW",
+    "paper_ids": [775]
   },
   {
     "author_id": 231,
     "author": "Elad Gilboa",
-    "paper_ids": [1003],
-    "affiliation": "Technion"
+    "affiliation": "Technion",
+    "paper_ids": [1003]
   },
   {
     "author_id": 232,
     "author": "Elad Hazan",
-    "paper_ids": [1125, 329, 1184, 586, 834],
-    "affiliation": "Princeton University"
+    "affiliation": "Princeton University",
+    "paper_ids": [1125, 329, 1184, 586, 834]
   },
   {
     "author_id": 233,
@@ -1320,20 +1320,20 @@
   {
     "author_id": 234,
     "author": "Elham Azizi",
-    "paper_ids": [487],
-    "affiliation": "Columbia University"
+    "affiliation": "Columbia University",
+    "paper_ids": [487]
   },
   {
     "author_id": 235,
     "author": "Elham Khabiri",
-    "paper_ids": [1345],
-    "affiliation": "IBM"
+    "affiliation": "IBM",
+    "paper_ids": [1345]
   },
   {
     "author_id": 236,
     "author": "Emile Contal",
-    "paper_ids": [727],
-    "affiliation": "ENS Cachan"
+    "affiliation": "ENS Cachan",
+    "paper_ids": [727]
   },
   {
     "author_id": 237,
@@ -1348,8 +1348,8 @@
   {
     "author_id": 239,
     "author": "Emmanouil Antonios Platanios",
-    "paper_ids": [691],
-    "affiliation": "Carnegie Mellon University"
+    "affiliation": "Carnegie Mellon University",
+    "paper_ids": [691]
   },
   {
     "author_id": 240,
@@ -1369,26 +1369,26 @@
   {
     "author_id": 243,
     "author": "Erich Elsen",
-    "paper_ids": [76, 945],
-    "affiliation": "Baidu USA, Inc."
+    "affiliation": "Baidu USA, Inc.",
+    "paper_ids": [76, 945]
   },
   {
     "author_id": 244,
     "author": "Eric Sibony",
-    "paper_ids": [1327],
-    "affiliation": "Telecom Paris Tech"
+    "affiliation": "Telecom Paris Tech",
+    "paper_ids": [1327]
   },
   {
     "author_id": 245,
     "author": "Eric Xing",
-    "paper_ids": [731, 34],
-    "affiliation": "CMU"
+    "affiliation": "CMU",
+    "paper_ids": [731, 34]
   },
   {
     "author_id": 246,
     "author": "Eunho Yang",
-    "paper_ids": [135],
-    "affiliation": "IBM Research"
+    "affiliation": "IBM Research",
+    "paper_ids": [135]
   },
   {
     "author_id": 247,
@@ -1398,62 +1398,62 @@
   {
     "author_id": 248,
     "author": "Fabian Pedregosa",
-    "paper_ids": [337],
-    "affiliation": "INRIA"
+    "affiliation": "INRIA",
+    "paper_ids": [337]
   },
   {
     "author_id": 249,
     "author": "Farideh Fazayeli",
-    "paper_ids": [1032],
-    "affiliation": "University of Minnesota"
+    "affiliation": "University of Minnesota",
+    "paper_ids": [1032]
   },
   {
     "author_id": 250,
     "author": "Fenno Heath",
-    "paper_ids": [1345],
-    "affiliation": "IBM"
+    "affiliation": "IBM",
+    "paper_ids": [1345]
   },
   {
     "author_id": 251,
     "author": "Flavio Calmon",
-    "paper_ids": [1345],
-    "affiliation": "IBM"
+    "affiliation": "IBM",
+    "paper_ids": [1345]
   },
   {
     "author_id": 252,
     "author": "Francesco Orabona",
-    "paper_ids": [678],
-    "affiliation": "Yahoo"
+    "affiliation": "Yahoo",
+    "paper_ids": [678]
   },
   {
     "author_id": 253,
     "author": "Francis Bach",
-    "paper_ids": [220],
-    "affiliation": "Inria"
+    "affiliation": "Inria",
+    "paper_ids": [220]
   },
   {
     "author_id": 254,
     "author": "Francois Fleuret",
-    "paper_ids": [703, 437],
-    "affiliation": "Idiap research institute"
+    "affiliation": "Idiap research institute",
+    "paper_ids": [703, 437]
   },
   {
     "author_id": 255,
     "author": "François Laviolette",
-    "paper_ids": [405],
-    "affiliation": "GRAAL, Université Laval"
+    "affiliation": "GRAAL, Université Laval",
+    "paper_ids": [405]
   },
   {
     "author_id": 256,
     "author": "Frank Curtis",
-    "paper_ids": [305],
-    "affiliation": "Lehigh University"
+    "affiliation": "Lehigh University",
+    "paper_ids": [305]
   },
   {
     "author_id": 257,
     "author": "Frank Nielsen",
-    "paper_ids": [64, 330],
-    "affiliation": "Ecole Polytechnique and Sony CS Labs Inc."
+    "affiliation": "Ecole Polytechnique and Sony CS Labs Inc.",
+    "paper_ids": [64, 330]
   },
   {
     "author_id": 258,
@@ -1463,20 +1463,20 @@
   {
     "author_id": 259,
     "author": "Frederic Koehler",
-    "paper_ids": [1279],
-    "affiliation": "Princeton University"
+    "affiliation": "Princeton University",
+    "paper_ids": [1279]
   },
   {
     "author_id": 260,
     "author": "Fredrik Johansson",
-    "paper_ids": [1348],
-    "affiliation": "Chalmers Technical University"
+    "affiliation": "Chalmers Technical University",
+    "paper_ids": [1348]
   },
   {
     "author_id": 261,
     "author": "Fredrik Lindsten",
-    "paper_ids": [1180],
-    "affiliation": "Uppsala University"
+    "affiliation": "Uppsala University",
+    "paper_ids": [1180]
   },
   {
     "author_id": 262,
@@ -1496,38 +1496,38 @@
   {
     "author_id": 265,
     "author": "Gal Dalal",
-    "paper_ids": [1003],
-    "affiliation": "Technion"
+    "affiliation": "Technion",
+    "paper_ids": [1003]
   },
   {
     "author_id": 266,
     "author": "Gang Fu",
-    "paper_ids": [1130],
-    "affiliation": "Google Research"
+    "affiliation": "Google Research",
+    "paper_ids": [1130]
   },
   {
     "author_id": 267,
     "author": "Gaurav Pandey",
-    "paper_ids": [754],
-    "affiliation": "Indian Institute of Science"
+    "affiliation": "Indian Institute of Science",
+    "paper_ids": [754]
   },
   {
     "author_id": 268,
     "author": "Gavin Taylor",
-    "paper_ids": [1215],
-    "affiliation": "US Naval Academy"
+    "affiliation": "US Naval Academy",
+    "paper_ids": [1215]
   },
   {
     "author_id": 269,
     "author": "Genki Kusano",
-    "paper_ids": [942],
-    "affiliation": "Tohoku University"
+    "affiliation": "Tohoku University",
+    "paper_ids": [942]
   },
   {
     "author_id": 270,
     "author": "Geoff Gordon",
-    "paper_ids": [616],
-    "affiliation": "CMU"
+    "affiliation": "CMU",
+    "paper_ids": [616]
   },
   {
     "author_id": 271,
@@ -1537,92 +1537,92 @@
   {
     "author_id": 272,
     "author": "Geroge Atia",
-    "paper_ids": [563],
-    "affiliation": "University of Central Florida"
+    "affiliation": "University of Central Florida",
+    "paper_ids": [563]
   },
   {
     "author_id": 273,
     "author": "Gilles Puy",
-    "paper_ids": [462],
-    "affiliation": "Technicolor"
+    "affiliation": "Technicolor",
+    "paper_ids": [462]
   },
   {
     "author_id": 274,
     "author": "Gilles Wainrib",
-    "paper_ids": [258],
-    "affiliation": "ENS Ulm, Paris, France"
+    "affiliation": "ENS Ulm, Paris, France",
+    "paper_ids": [258]
   },
   {
     "author_id": 275,
     "author": "Giorgio Patrini",
-    "paper_ids": [330],
-    "affiliation": "ANU / Data61"
+    "affiliation": "ANU / Data61",
+    "paper_ids": [330]
   },
   {
     "author_id": 276,
     "author": "Giulia Fanti",
-    "paper_ids": [56],
-    "affiliation": "UIUC"
+    "affiliation": "UIUC",
+    "paper_ids": [56]
   },
   {
     "author_id": 277,
     "author": "Giwoong Lee",
-    "paper_ids": [135],
-    "affiliation": "UNIST"
+    "affiliation": "UNIST",
+    "paper_ids": [135]
   },
   {
     "author_id": 278,
     "author": "Gleb Gusev",
-    "paper_ids": [1206],
-    "affiliation": "Yandex"
+    "affiliation": "Yandex",
+    "paper_ids": [1206]
   },
   {
     "author_id": 279,
     "author": "Gourav Roy",
-    "paper_ids": [1210],
-    "affiliation": "Amazon"
+    "affiliation": "Amazon",
+    "paper_ids": [1210]
   },
   {
     "author_id": 280,
     "author": "Govinda Kamath",
-    "paper_ids": [328],
-    "affiliation": "Stanford University"
+    "affiliation": "Stanford University",
+    "paper_ids": [328]
   },
   {
     "author_id": 281,
     "author": "Greg Diamos",
-    "paper_ids": [76, 945],
-    "affiliation": "Baidu USA, Inc."
+    "affiliation": "Baidu USA, Inc.",
+    "paper_ids": [76, 945]
   },
   {
     "author_id": 282,
     "author": "Gregor Urban",
-    "paper_ids": [335],
-    "affiliation": "UC Irvine"
+    "affiliation": "UC Irvine",
+    "paper_ids": [335]
   },
   {
     "author_id": 283,
     "author": "Gregory Puleo",
-    "paper_ids": [409],
-    "affiliation": "UIUC"
+    "affiliation": "UIUC",
+    "paper_ids": [409]
   },
   {
     "author_id": 284,
     "author": "Greg Ver Steeg",
-    "paper_ids": [66],
-    "affiliation": "Information Sciences Institute"
+    "affiliation": "Information Sciences Institute",
+    "paper_ids": [66]
   },
   {
     "author_id": 285,
     "author": "Greg Wayne",
-    "paper_ids": [920],
-    "affiliation": "Google DeepMind"
+    "affiliation": "Google DeepMind",
+    "paper_ids": [920]
   },
   {
     "author_id": 286,
     "author": "Guang Yang",
-    "paper_ids": [1030],
-    "affiliation": "ICT, Beijing"
+    "affiliation": "ICT, Beijing",
+    "paper_ids": [1030]
   },
   {
     "author_id": 287,
@@ -1632,26 +1632,26 @@
   {
     "author_id": 288,
     "author": "Hadi Daneshmand",
-    "paper_ids": [705],
-    "affiliation": "ETH Zurich"
+    "affiliation": "ETH Zurich",
+    "paper_ids": [705]
   },
   {
     "author_id": 289,
     "author": "Hado van Hasselt",
-    "paper_ids": [927],
-    "affiliation": "Google DeepMind"
+    "affiliation": "Google DeepMind",
+    "paper_ids": [927]
   },
   {
     "author_id": 290,
     "author": "Hadrien Glaude",
-    "paper_ids": [384],
-    "affiliation": "University of Lille"
+    "affiliation": "University of Lille",
+    "paper_ids": [384]
   },
   {
     "author_id": 291,
     "author": "Hafiz Tiomoko Ali",
-    "paper_ids": [258],
-    "affiliation": "CentraleSupelec, Gif-sur-Yvette, France"
+    "affiliation": "CentraleSupelec, Gif-sur-Yvette, France",
+    "paper_ids": [258]
   },
   {
     "author_id": 292,
@@ -1661,14 +1661,14 @@
   {
     "author_id": 293,
     "author": "Hal Daumé III",
-    "paper_ids": [829],
-    "affiliation": "Maryland"
+    "affiliation": "Maryland",
+    "paper_ids": [829]
   },
   {
     "author_id": 294,
     "author": "Hanjun Dai",
-    "paper_ids": [1208],
-    "affiliation": "Georgia Tech"
+    "affiliation": "Georgia Tech",
+    "paper_ids": [1208]
   },
   {
     "author_id": 295,
@@ -1678,20 +1678,20 @@
   {
     "author_id": 296,
     "author": "Hanna Wallach",
-    "paper_ids": [1264],
-    "affiliation": "Microsoft"
+    "affiliation": "Microsoft",
+    "paper_ids": [1264]
   },
   {
     "author_id": 297,
     "author": "Hanning Zhou",
-    "paper_ids": [351],
-    "affiliation": "Hulu"
+    "affiliation": "Hulu",
+    "paper_ids": [351]
   },
   {
     "author_id": 298,
     "author": "Hanxiao Liu",
-    "paper_ids": [1019],
-    "affiliation": "Carnegie Mellon University"
+    "affiliation": "Carnegie Mellon University",
+    "paper_ids": [1019]
   },
   {
     "author_id": 299,
@@ -1701,14 +1701,14 @@
   {
     "author_id": 300,
     "author": "Han Zhao",
-    "paper_ids": [616],
-    "affiliation": "Carnegie Mellon University"
+    "affiliation": "Carnegie Mellon University",
+    "paper_ids": [616]
   },
   {
     "author_id": 301,
     "author": "Hao Peng",
-    "paper_ids": [971],
-    "affiliation": "Peking University, China"
+    "affiliation": "Peking University, China",
+    "paper_ids": [971]
   },
   {
     "author_id": 302,
@@ -1718,14 +1718,14 @@
   {
     "author_id": 303,
     "author": "Harry Sevi",
-    "paper_ids": [258],
-    "affiliation": "ENS Lyon, Lyon, Paris"
+    "affiliation": "ENS Lyon, Lyon, Paris",
+    "paper_ids": [258]
   },
   {
     "author_id": 304,
     "author": "Hayato Kobayashi",
-    "paper_ids": [766],
-    "affiliation": "Yahoo Japan Corporation"
+    "affiliation": "Yahoo Japan Corporation",
+    "paper_ids": [766]
   },
   {
     "author_id": 305,
@@ -1735,20 +1735,20 @@
   {
     "author_id": 306,
     "author": "Heiko Strathmann",
-    "paper_ids": [1177],
-    "affiliation": "University College London"
+    "affiliation": "University College London",
+    "paper_ids": [1177]
   },
   {
     "author_id": 307,
     "author": "Heishiro Kanagawa",
-    "paper_ids": [766],
-    "affiliation": "Tokyo Institute of Technology"
+    "affiliation": "Tokyo Institute of Technology",
+    "paper_ids": [766]
   },
   {
     "author_id": 308,
     "author": "Helmut Boelcskei",
-    "paper_ids": [992],
-    "affiliation": "ETH Zurich"
+    "affiliation": "ETH Zurich",
+    "paper_ids": [992]
   },
   {
     "author_id": 309,
@@ -1758,20 +1758,20 @@
   {
     "author_id": 310,
     "author": "Hiroshi Nakagawa",
-    "paper_ids": [579],
-    "affiliation": "The University of Tokyo"
+    "affiliation": "The University of Tokyo",
+    "paper_ids": [579]
   },
   {
     "author_id": 311,
     "author": "Hiroyuki Kasai",
-    "paper_ids": [468],
-    "affiliation": "The University of Electro-Comm"
+    "affiliation": "The University of Electro-Comm",
+    "paper_ids": [468]
   },
   {
     "author_id": 312,
     "author": "Hoang Le",
-    "paper_ids": [327],
-    "affiliation": "Caltech"
+    "affiliation": "Caltech",
+    "paper_ids": [327]
   },
   {
     "author_id": 313,
@@ -1781,26 +1781,26 @@
   {
     "author_id": 314,
     "author": "Honglak Lee",
-    "paper_ids": [1242, 485, 1016, 303],
-    "affiliation": "University of Michigan"
+    "affiliation": "University of Michigan",
+    "paper_ids": [1242, 485, 1016, 303]
   },
   {
     "author_id": 315,
     "author": "Hongteng Xu",
-    "paper_ids": [801],
-    "affiliation": "Georgia Tech"
+    "affiliation": "Georgia Tech",
+    "paper_ids": [801]
   },
   {
     "author_id": 316,
     "author": "Hongxia Jin",
-    "paper_ids": [238],
-    "affiliation": "Samsung Research America"
+    "affiliation": "Samsung Research America",
+    "paper_ids": [238]
   },
   {
     "author_id": 317,
     "author": "Hongyang Li",
-    "paper_ids": [129],
-    "affiliation": "The Chinese Univ. of HK"
+    "affiliation": "The Chinese Univ. of HK",
+    "paper_ids": [129]
   },
   {
     "author_id": 318,
@@ -1810,68 +1810,68 @@
   {
     "author_id": 319,
     "author": "Hrag Ohannessian",
-    "paper_ids": [58],
-    "affiliation": "University of Wisconsin-Madison"
+    "affiliation": "University of Wisconsin-Madison",
+    "paper_ids": [58]
   },
   {
     "author_id": 320,
     "author": "Huan Gui",
-    "paper_ids": [1036],
-    "affiliation": "University of Illinois at Urba"
+    "affiliation": "University of Illinois at Urba",
+    "paper_ids": [1036]
   },
   {
     "author_id": 321,
     "author": "Huan Xu",
-    "paper_ids": [315, 304],
-    "affiliation": "National University of Singapore"
+    "affiliation": "National University of Singapore",
+    "paper_ids": [315, 304]
   },
   {
     "author_id": 322,
     "author": "Hu Ding",
-    "paper_ids": [631],
-    "affiliation": "State University of New York at Buffalo"
+    "affiliation": "State University of New York at Buffalo",
+    "paper_ids": [631]
   },
   {
     "author_id": 323,
     "author": "Hugo Larochelle",
-    "paper_ids": [1149, 732],
-    "affiliation": "Twitter"
+    "affiliation": "Twitter",
+    "paper_ids": [1149, 732]
   },
   {
     "author_id": 324,
     "author": "Huikang Liu",
-    "paper_ids": [543],
-    "affiliation": "CUHK"
+    "affiliation": "CUHK",
+    "paper_ids": [543]
   },
   {
     "author_id": 325,
     "author": "Huishuai Zhang",
-    "paper_ids": [469],
-    "affiliation": "Syracuse University"
+    "affiliation": "Syracuse University",
+    "paper_ids": [469]
   },
   {
     "author_id": 326,
     "author": "Hung Ngo",
-    "paper_ids": [62],
-    "affiliation": "SUNY Buffalo"
+    "affiliation": "SUNY Buffalo",
+    "paper_ids": [62]
   },
   {
     "author_id": 327,
     "author": "Hyun Lim",
-    "paper_ids": [980],
-    "affiliation": "Harvard University"
+    "affiliation": "Harvard University",
+    "paper_ids": [980]
   },
   {
     "author_id": 328,
     "author": "Ian En-Hsu Yen",
-    "paper_ids": [1031, 1375],
-    "affiliation": "University of Texas at Austin"
+    "affiliation": "University of Texas at Austin",
+    "paper_ids": [1031, 1375]
   },
   {
     "author_id": 329,
     "author": "Ian Osband",
-    "paper_ids": [1055],
-    "affiliation": "Stanford"
+    "affiliation": "Stanford",
+    "paper_ids": [1055]
   },
   {
     "author_id": 330,
@@ -1886,8 +1886,8 @@
   {
     "author_id": 332,
     "author": "Igor Melnyk",
-    "paper_ids": [385],
-    "affiliation": "University of Minnesota"
+    "affiliation": "University of Minnesota",
+    "paper_ids": [385]
   },
   {
     "author_id": 333,
@@ -1897,8 +1897,8 @@
   {
     "author_id": 334,
     "author": "Ilya Sutskever",
-    "paper_ids": [1274],
-    "affiliation": "OpenAI"
+    "affiliation": "OpenAI",
+    "paper_ids": [1274]
   },
   {
     "author_id": 335,
@@ -1908,74 +1908,74 @@
   {
     "author_id": 336,
     "author": "Ioannis Caragiannis",
-    "paper_ids": [59],
-    "affiliation": "University of Patras"
+    "affiliation": "University of Patras",
+    "paper_ids": [59]
   },
   {
     "author_id": 337,
     "author": "Isabella Lukasewitz",
-    "paper_ids": [296],
-    "affiliation": "INRIA"
+    "affiliation": "INRIA",
+    "paper_ids": [296]
   },
   {
     "author_id": 338,
     "author": "Ishaan Gulrajani",
-    "paper_ids": [665],
-    "affiliation": "MetaMind"
+    "affiliation": "MetaMind",
+    "paper_ids": [665]
   },
   {
     "author_id": 339,
     "author": "Itay Safran",
-    "paper_ids": [363],
-    "affiliation": "Weizmann Institute of Science"
+    "affiliation": "Weizmann Institute of Science",
+    "paper_ids": [363]
   },
   {
     "author_id": 340,
     "author": "Ivo Danihelka",
-    "paper_ids": [920, 720],
-    "affiliation": "Google DeepMind"
+    "affiliation": "Google DeepMind",
+    "paper_ids": [920, 720]
   },
   {
     "author_id": 341,
     "author": "Jacob Abernethy",
-    "paper_ids": [1125],
-    "affiliation": "U. of Michigan"
+    "affiliation": "U. of Michigan",
+    "paper_ids": [1125]
   },
   {
     "author_id": 342,
     "author": "Jaesik Choi",
-    "paper_ids": [1349],
-    "affiliation": "UNIST"
+    "affiliation": "UNIST",
+    "paper_ids": [1349]
   },
   {
     "author_id": 343,
     "author": "Jagdeep Pani",
-    "paper_ids": [692],
-    "affiliation": "Indian Institute of Science"
+    "affiliation": "Indian Institute of Science",
+    "paper_ids": [692]
   },
   {
     "author_id": 344,
     "author": "James Bradbury",
-    "paper_ids": [665],
-    "affiliation": "MetaMind"
+    "affiliation": "MetaMind",
+    "paper_ids": [665]
   },
   {
     "author_id": 345,
     "author": "James Kwok",
-    "paper_ids": [1190],
-    "affiliation": "Hong Kong University Science Technology"
+    "affiliation": "Hong Kong University Science Technology",
+    "paper_ids": [1190]
   },
   {
     "author_id": 346,
     "author": "James Martens",
-    "paper_ids": [281],
-    "affiliation": "University of Toronto"
+    "affiliation": "University of Toronto",
+    "paper_ids": [281]
   },
   {
     "author_id": 347,
     "author": "James Newling",
-    "paper_ids": [437],
-    "affiliation": "Idiap Research Institute"
+    "affiliation": "Idiap Research Institute",
+    "paper_ids": [437]
   },
   {
     "author_id": 348,
@@ -1985,14 +1985,14 @@
   {
     "author_id": 349,
     "author": "J.Andrew Bagnell",
-    "paper_ids": [558],
-    "affiliation": "Carnegie Mellon University"
+    "affiliation": "Carnegie Mellon University",
+    "paper_ids": [558]
   },
   {
     "author_id": 350,
     "author": "Jan Hendrik Metzen",
-    "paper_ids": [103],
-    "affiliation": "University Bremen"
+    "affiliation": "University Bremen",
+    "paper_ids": [103]
   },
   {
     "author_id": 351,
@@ -2017,8 +2017,8 @@
   {
     "author_id": 355,
     "author": "Jason Altschuler",
-    "paper_ids": [1130],
-    "affiliation": "Princeton University"
+    "affiliation": "Princeton University",
+    "paper_ids": [1130]
   },
   {
     "author_id": 356,
@@ -2028,92 +2028,92 @@
   {
     "author_id": 357,
     "author": "Jason Lee",
-    "paper_ids": [142],
-    "affiliation": "UC Berkeley"
+    "affiliation": "UC Berkeley",
+    "paper_ids": [142]
   },
   {
     "author_id": 358,
     "author": "Javed Aslam",
-    "paper_ids": [1114],
-    "affiliation": "Northeastern University"
+    "affiliation": "Northeastern University",
+    "paper_ids": [1114]
   },
   {
     "author_id": 359,
     "author": "Jayadev Acharya",
-    "paper_ids": [1287],
-    "affiliation": "MIT"
+    "affiliation": "MIT",
+    "paper_ids": [1287]
   },
   {
     "author_id": 360,
     "author": "Jayesh Gupta",
-    "paper_ids": [1228],
-    "affiliation": "Stanford University"
+    "affiliation": "Stanford University",
+    "paper_ids": [1228]
   },
   {
     "author_id": 361,
     "author": "J. D. Tygar",
-    "paper_ids": [1062],
-    "affiliation": "UC Berkeley"
+    "affiliation": "UC Berkeley",
+    "paper_ids": [1062]
   },
   {
     "author_id": 362,
     "author": "Jean-Baptiste Alayrac",
-    "paper_ids": [296],
-    "affiliation": "ENS"
+    "affiliation": "ENS",
+    "paper_ids": [296]
   },
   {
     "author_id": 363,
     "author": "Jeff Bilmes",
-    "paper_ids": [1225, 335],
-    "affiliation": "U. of Washington"
+    "affiliation": "U. of Washington",
+    "paper_ids": [1225, 335]
   },
   {
     "author_id": 364,
     "author": "Jeffrey De Fauw",
-    "paper_ids": [871],
-    "affiliation": "Google DeepMind"
+    "affiliation": "Google DeepMind",
+    "paper_ids": [871]
   },
   {
     "author_id": 365,
     "author": "Jeff Schneider",
-    "paper_ids": [1078],
-    "affiliation": "Carnegie Mellon Unitversity"
+    "affiliation": "Carnegie Mellon Unitversity",
+    "paper_ids": [1078]
   },
   {
     "author_id": 366,
     "author": "Jelena Luketina",
-    "paper_ids": [1319],
-    "affiliation": "Aalto University"
+    "affiliation": "Aalto University",
+    "paper_ids": [1319]
   },
   {
     "author_id": 367,
     "author": "Jerome Gauthier",
-    "paper_ids": [1040],
-    "affiliation": "CEA"
+    "affiliation": "CEA",
+    "paper_ids": [1040]
   },
   {
     "author_id": 368,
     "author": "Jerry Li",
-    "paper_ids": [1287],
-    "affiliation": "MIT"
+    "affiliation": "MIT",
+    "paper_ids": [1287]
   },
   {
     "author_id": 369,
     "author": "Jesse Engel",
-    "paper_ids": [945, 76],
-    "affiliation": "Baidu USA, Inc."
+    "affiliation": "Baidu USA, Inc.",
+    "paper_ids": [945, 76]
   },
   {
     "author_id": 370,
     "author": "Jiaming Song",
-    "paper_ids": [599],
-    "affiliation": "Tsinghua University"
+    "affiliation": "Tsinghua University",
+    "paper_ids": [599]
   },
   {
     "author_id": 371,
     "author": "Jiangwei Pan",
-    "paper_ids": [1023],
-    "affiliation": "Duke University"
+    "affiliation": "Duke University",
+    "paper_ids": [1023]
   },
   {
     "author_id": 372,
@@ -2128,32 +2128,32 @@
   {
     "author_id": 374,
     "author": "Jianwen Xie",
-    "paper_ids": [1188],
-    "affiliation": "UCLA"
+    "affiliation": "UCLA",
+    "paper_ids": [1188]
   },
   {
     "author_id": 375,
     "author": "Jiawei Han",
-    "paper_ids": [1036],
-    "affiliation": "university of illinois at urbana-champaign"
+    "affiliation": "university of illinois at urbana-champaign",
+    "paper_ids": [1036]
   },
   {
     "author_id": 376,
     "author": "Jia Xu",
-    "paper_ids": [1030],
-    "affiliation": "Chinese Academy of Sciences"
+    "affiliation": "Chinese Academy of Sciences",
+    "paper_ids": [1030]
   },
   {
     "author_id": 377,
     "author": "Jiechao Xiong",
-    "paper_ids": [600],
-    "affiliation": "Peking University"
+    "affiliation": "Peking University",
+    "paper_ids": [600]
   },
   {
     "author_id": 378,
     "author": "Jie Shen",
-    "paper_ids": [304],
-    "affiliation": "Rutgers University"
+    "affiliation": "Rutgers University",
+    "paper_ids": [304]
   },
   {
     "author_id": 379,
@@ -2163,26 +2163,26 @@
   {
     "author_id": 380,
     "author": "Ji Liu",
-    "paper_ids": [58],
-    "affiliation": "University of Rochester"
+    "affiliation": "University of Rochester",
+    "paper_ids": [58]
   },
   {
     "author_id": 381,
     "author": "Jim Huang",
-    "paper_ids": [199],
-    "affiliation": "Amazon"
+    "affiliation": "Amazon",
+    "paper_ids": [199]
   },
   {
     "author_id": 382,
     "author": "Jina Suh",
-    "paper_ids": [1246],
-    "affiliation": "Microsoft"
+    "affiliation": "Microsoft",
+    "paper_ids": [1246]
   },
   {
     "author_id": 383,
     "author": "Jinfeng Yi",
-    "paper_ids": [212],
-    "affiliation": "IBM Research"
+    "affiliation": "IBM Research",
+    "paper_ids": [212]
   },
   {
     "author_id": 384,
@@ -2192,20 +2192,20 @@
   {
     "author_id": 385,
     "author": "Jinsung Yoon",
-    "paper_ids": [785],
-    "affiliation": "University of California, Los "
+    "affiliation": "University of California, Los ",
+    "paper_ids": [785]
   },
   {
     "author_id": 386,
     "author": "Jinwoo Shin",
-    "paper_ids": [272],
-    "affiliation": "KAIST"
+    "affiliation": "KAIST",
+    "paper_ids": [272]
   },
   {
     "author_id": 387,
     "author": "Jiong Zhang",
-    "paper_ids": [1031],
-    "affiliation": "University of Texas at Austin"
+    "affiliation": "University of Texas at Austin",
+    "paper_ids": [1031]
   },
   {
     "author_id": 388,
@@ -2220,8 +2220,8 @@
   {
     "author_id": 390,
     "author": "John Cunningham",
-    "paper_ids": [1359, 1129],
-    "affiliation": "Columbia University"
+    "affiliation": "Columbia University",
+    "paper_ids": [1359, 1129]
   },
   {
     "author_id": 391,
@@ -2236,14 +2236,14 @@
   {
     "author_id": 393,
     "author": "John Schulman",
-    "paper_ids": [629],
-    "affiliation": "University of California, Berkeley"
+    "affiliation": "University of California, Berkeley",
+    "paper_ids": [629]
   },
   {
     "author_id": 394,
     "author": "John Wernsing",
-    "paper_ids": [113],
-    "affiliation": "Microsoft Research"
+    "affiliation": "Microsoft Research",
+    "paper_ids": [113]
   },
   {
     "author_id": 395,
@@ -2253,8 +2253,8 @@
   {
     "author_id": 396,
     "author": "Jonathan Ho",
-    "paper_ids": [1228],
-    "affiliation": "Stanford"
+    "affiliation": "Stanford",
+    "paper_ids": [1228]
   },
   {
     "author_id": 397,
@@ -2264,8 +2264,8 @@
   {
     "author_id": 398,
     "author": "Jonathan Rosenski",
-    "paper_ids": [65],
-    "affiliation": "Weizmann Institute of Science"
+    "affiliation": "Weizmann Institute of Science",
+    "paper_ids": [65]
   },
   {
     "author_id": 399,
@@ -2275,8 +2275,8 @@
   {
     "author_id": 400,
     "author": "Jorg Bornschein",
-    "paper_ids": [1122],
-    "affiliation": "University of Montreal"
+    "affiliation": "University of Montreal",
+    "paper_ids": [1122]
   },
   {
     "author_id": 401,
@@ -2296,8 +2296,8 @@
   {
     "author_id": 404,
     "author": "Jovana Mitrovic",
-    "paper_ids": [707],
-    "affiliation": "University of Oxford"
+    "affiliation": "University of Oxford",
+    "paper_ids": [707]
   },
   {
     "author_id": 405,
@@ -2307,8 +2307,8 @@
   {
     "author_id": 406,
     "author": "Julia Vinogradska",
-    "paper_ids": [273],
-    "affiliation": "Robert Bosch GmBH"
+    "affiliation": "Robert Bosch GmBH",
+    "paper_ids": [273]
   },
   {
     "author_id": 407,
@@ -2318,8 +2318,8 @@
   {
     "author_id": 408,
     "author": "Julien Pérolat",
-    "paper_ids": [854],
-    "affiliation": "Univ. Lille"
+    "affiliation": "Univ. Lille",
+    "paper_ids": [854]
   },
   {
     "author_id": 409,
@@ -2329,50 +2329,50 @@
   {
     "author_id": 410,
     "author": "Jungseul Ok",
-    "paper_ids": [272],
-    "affiliation": "KAIST"
+    "affiliation": "KAIST",
+    "paper_ids": [272]
   },
   {
     "author_id": 411,
     "author": "Junhong Lin",
-    "paper_ids": [1049],
-    "affiliation": "Istituto Italiano di Tecnologi"
+    "affiliation": "Istituto Italiano di Tecnologi",
+    "paper_ids": [1049]
   },
   {
     "author_id": 412,
     "author": "Junhyuk Oh",
-    "paper_ids": [1242],
-    "affiliation": "University of Michigan"
+    "affiliation": "University of Michigan",
+    "paper_ids": [1242]
   },
   {
     "author_id": 413,
     "author": "Jun’ichi Takeuchi",
-    "paper_ids": [898],
-    "affiliation": "Kyushu University"
+    "affiliation": "Kyushu University",
+    "paper_ids": [898]
   },
   {
     "author_id": 414,
     "author": "Junier Oliva",
-    "paper_ids": [1078],
-    "affiliation": "CMU"
+    "affiliation": "CMU",
+    "paper_ids": [1078]
   },
   {
     "author_id": 415,
     "author": "Junpei Komiyama",
-    "paper_ids": [579],
-    "affiliation": "The University of Tokyo"
+    "affiliation": "The University of Tokyo",
+    "paper_ids": [579]
   },
   {
     "author_id": 416,
     "author": "Junya Honda",
-    "paper_ids": [579],
-    "affiliation": "The University of Tokyo"
+    "affiliation": "The University of Tokyo",
+    "paper_ids": [579]
   },
   {
     "author_id": 417,
     "author": "Junyuan Xie",
-    "paper_ids": [231],
-    "affiliation": "University of Washington"
+    "affiliation": "University of Washington",
+    "paper_ids": [231]
   },
   {
     "author_id": 418,
@@ -2382,8 +2382,8 @@
   {
     "author_id": 419,
     "author": "Jun Zhu",
-    "paper_ids": [551, 34],
-    "affiliation": "Tsinghua"
+    "affiliation": "Tsinghua",
+    "paper_ids": [551, 34]
   },
   {
     "author_id": 420,
@@ -2393,8 +2393,8 @@
   {
     "author_id": 421,
     "author": "Kacper Chwialkowski",
-    "paper_ids": [1177],
-    "affiliation": "Ucl"
+    "affiliation": "Ucl",
+    "paper_ids": [1177]
   },
   {
     "author_id": 422,
@@ -2404,14 +2404,14 @@
   {
     "author_id": 423,
     "author": "Kai-Yang Chiang",
-    "paper_ids": [1033],
-    "affiliation": "UT Austin"
+    "affiliation": "UT Austin",
+    "paper_ids": [1033]
   },
   {
     "author_id": 424,
     "author": "Kai Zhong",
-    "paper_ids": [1375],
-    "affiliation": "ICES department, University of Texas at Austin"
+    "affiliation": "ICES department, University of Texas at Austin",
+    "paper_ids": [1375]
   },
   {
     "author_id": 425,
@@ -2421,14 +2421,14 @@
   {
     "author_id": 426,
     "author": "Kannan Ramchandran",
-    "paper_ids": [56],
-    "affiliation": "UC Berkeley"
+    "affiliation": "UC Berkeley",
+    "paper_ids": [56]
   },
   {
     "author_id": 427,
     "author": "Karen Livescu",
-    "paper_ids": [903],
-    "affiliation": "TTI Chicago"
+    "affiliation": "TTI Chicago",
+    "paper_ids": [903]
   },
   {
     "author_id": 428,
@@ -2438,134 +2438,134 @@
   {
     "author_id": 429,
     "author": "Karol Gregor",
-    "paper_ids": [720],
-    "affiliation": "DeepMind"
+    "affiliation": "DeepMind",
+    "paper_ids": [720]
   },
   {
     "author_id": 430,
     "author": "Karthik Sridharan",
-    "paper_ids": [917],
-    "affiliation": "Cornell"
+    "affiliation": "Cornell",
+    "paper_ids": [917]
   },
   {
     "author_id": 431,
     "author": "Kar Wai Lim",
-    "paper_ids": [45],
-    "affiliation": "ANU"
+    "affiliation": "ANU",
+    "paper_ids": [45]
   },
   {
     "author_id": 432,
     "author": "Katharina Morik",
-    "paper_ids": [1342],
-    "affiliation": "TU Dortmund"
+    "affiliation": "TU Dortmund",
+    "paper_ids": [1342]
   },
   {
     "author_id": 433,
     "author": "Keith Bonawitz",
-    "paper_ids": [1101],
-    "affiliation": "Google"
+    "affiliation": "Google",
+    "paper_ids": [1101]
   },
   {
     "author_id": 434,
     "author": "Ke Li",
-    "paper_ids": [322],
-    "affiliation": "UC Berkeley"
+    "affiliation": "UC Berkeley",
+    "paper_ids": [322]
   },
   {
     "author_id": 435,
     "author": "Kenji Fukumizu",
-    "paper_ids": [942, 210],
-    "affiliation": "The Institute of Statistical Mathematics"
+    "affiliation": "The Institute of Statistical Mathematics",
+    "paper_ids": [942, 210]
   },
   {
     "author_id": 436,
     "author": "Kevin Kwok",
-    "paper_ids": [829],
-    "affiliation": "Massachusetts Institute of Technology"
+    "affiliation": "Massachusetts Institute of Technology",
+    "paper_ids": [829]
   },
   {
     "author_id": 437,
     "author": "Kevin Lang",
-    "paper_ids": [1043],
-    "affiliation": "Yahoo Labs"
+    "affiliation": "Yahoo Labs",
+    "paper_ids": [1043]
   },
   {
     "author_id": 438,
     "author": "Kfir Yehuda Levy",
-    "paper_ids": [834],
-    "affiliation": "Technion"
+    "affiliation": "Technion",
+    "paper_ids": [834]
   },
   {
     "author_id": 439,
     "author": "Kibok Lee",
-    "paper_ids": [303],
-    "affiliation": "University of Michigan"
+    "affiliation": "University of Michigan",
+    "paper_ids": [303]
   },
   {
     "author_id": 440,
     "author": "Kihyuk Sohn",
-    "paper_ids": [1016],
-    "affiliation": "NEC Laboratories America"
+    "affiliation": "NEC Laboratories America",
+    "paper_ids": [1016]
   },
   {
     "author_id": 441,
     "author": "Kim Laine",
-    "paper_ids": [113],
-    "affiliation": "Microsoft Research"
+    "affiliation": "Microsoft Research",
+    "paper_ids": [113]
   },
   {
     "author_id": 442,
     "author": "Kirthevasan Kandasamy",
-    "paper_ids": [44],
-    "affiliation": "Carnegie Mellon University"
+    "affiliation": "Carnegie Mellon University",
+    "paper_ids": [44]
   },
   {
     "author_id": 443,
     "author": "Klaus Greff",
-    "paper_ids": [1319],
-    "affiliation": "IDSIA"
+    "affiliation": "IDSIA",
+    "paper_ids": [1319]
   },
   {
     "author_id": 444,
     "author": "Kohei Hatano",
-    "paper_ids": [744],
-    "affiliation": "Kyushu University"
+    "affiliation": "Kyushu University",
+    "paper_ids": [744]
   },
   {
     "author_id": 445,
     "author": "Kohei Hayashi",
-    "paper_ids": [336],
-    "affiliation": "NII"
+    "affiliation": "NII",
+    "paper_ids": [336]
   },
   {
     "author_id": 446,
     "author": "Konstantin Kutzkov",
-    "paper_ids": [943],
-    "affiliation": "NEC Laboratories Europe"
+    "affiliation": "NEC Laboratories Europe",
+    "paper_ids": [943]
   },
   {
     "author_id": 447,
     "author": "Konstantin Shmakov",
-    "paper_ids": [1043],
-    "affiliation": "Yahoo Labs"
+    "affiliation": "Yahoo Labs",
+    "paper_ids": [1043]
   },
   {
     "author_id": 448,
     "author": "Koray Kavukcuoglu",
-    "paper_ids": [871, 885, 806],
-    "affiliation": "Google Deepmind"
+    "affiliation": "Google Deepmind",
+    "paper_ids": [871, 885, 806]
   },
   {
     "author_id": 449,
     "author": "Kristin Lauter",
-    "paper_ids": [113],
-    "affiliation": "Microsoft Research"
+    "affiliation": "Microsoft Research",
+    "paper_ids": [113]
   },
   {
     "author_id": 450,
     "author": "Krzysztof Choromanski",
-    "paper_ids": [175, 1120],
-    "affiliation": "Google Research NYC"
+    "affiliation": "Google Research NYC",
+    "paper_ids": [175, 1120]
   },
   {
     "author_id": 451,
@@ -2580,44 +2580,44 @@
   {
     "author_id": 453,
     "author": "Kunle Olukotun",
-    "paper_ids": [733],
-    "affiliation": "Stanford"
+    "affiliation": "Stanford",
+    "paper_ids": [733]
   },
   {
     "author_id": 454,
     "author": "Kun Zhang",
-    "paper_ids": [1275],
-    "affiliation": "Carnegie Mellon University"
+    "affiliation": "Carnegie Mellon University",
+    "paper_ids": [1275]
   },
   {
     "author_id": 455,
     "author": "Kurt Cutajar",
-    "paper_ids": [1129],
-    "affiliation": "EURECOM"
+    "affiliation": "EURECOM",
+    "paper_ids": [1129]
   },
   {
     "author_id": 456,
     "author": "Kwang-Sung Jun",
-    "paper_ids": [443],
-    "affiliation": "UW-Madison"
+    "affiliation": "UW-Madison",
+    "paper_ids": [443]
   },
   {
     "author_id": 457,
     "author": "Kyuyeon Hwang",
-    "paper_ids": [998],
-    "affiliation": "Seoul National University"
+    "affiliation": "Seoul National University",
+    "paper_ids": [998]
   },
   {
     "author_id": 458,
     "author": "Lajanugen Logeswaran",
-    "paper_ids": [485],
-    "affiliation": "University of Michigan – Ann Arbor"
+    "affiliation": "University of Michigan – Ann Arbor",
+    "paper_ids": [485]
   },
   {
     "author_id": 459,
     "author": "Lars Maaløe",
-    "paper_ids": [699],
-    "affiliation": "Technical University Denmark"
+    "affiliation": "Technical University Denmark",
+    "paper_ids": [699]
   },
   {
     "author_id": 460,
@@ -2627,20 +2627,20 @@
   {
     "author_id": 461,
     "author": "Layne Price",
-    "paper_ids": [1078],
-    "affiliation": "Carnegie Mellon Unitversity"
+    "affiliation": "Carnegie Mellon Unitversity",
+    "paper_ids": [1078]
   },
   {
     "author_id": 462,
     "author": "Lei Yu",
-    "paper_ids": [804],
-    "affiliation": "University of Oxford"
+    "affiliation": "University of Oxford",
+    "paper_ids": [804]
   },
   {
     "author_id": 463,
     "author": "Le Song",
-    "paper_ids": [1208, 1017],
-    "affiliation": "Gatech"
+    "affiliation": "Gatech",
+    "paper_ids": [1208, 1017]
   },
   {
     "author_id": 464,
@@ -2655,20 +2655,20 @@
   {
     "author_id": 466,
     "author": "Lihong Li",
-    "paper_ids": [312],
-    "affiliation": "Microsoft"
+    "affiliation": "Microsoft",
+    "paper_ids": [312]
   },
   {
     "author_id": 467,
     "author": "Lihua Lei",
-    "paper_ids": [1308],
-    "affiliation": "Lihua"
+    "affiliation": "Lihua",
+    "paper_ids": [1308]
   },
   {
     "author_id": 468,
     "author": "Lijun Zhang",
-    "paper_ids": [212, 198],
-    "affiliation": "Nanjing University"
+    "affiliation": "Nanjing University",
+    "paper_ids": [212, 198]
   },
   {
     "author_id": 469,
@@ -2683,14 +2683,14 @@
   {
     "author_id": 471,
     "author": "Liran Szlak",
-    "paper_ids": [65],
-    "affiliation": "Weizmann Institute of Science"
+    "affiliation": "Weizmann Institute of Science",
+    "paper_ids": [65]
   },
   {
     "author_id": 472,
     "author": "Lirong Xia",
-    "paper_ids": [1306],
-    "affiliation": "RPI"
+    "affiliation": "RPI",
+    "paper_ids": [1306]
   },
   {
     "author_id": 473,
@@ -2700,20 +2700,20 @@
   {
     "author_id": 474,
     "author": "Lixin Fan",
-    "paper_ids": [138],
-    "affiliation": "Nokia Technologies"
+    "affiliation": "Nokia Technologies",
+    "paper_ids": [138]
   },
   {
     "author_id": 475,
     "author": "Lorenzo Porzi",
-    "paper_ids": [52],
-    "affiliation": "FBK"
+    "affiliation": "FBK",
+    "paper_ids": [52]
   },
   {
     "author_id": 476,
     "author": "Lorenzo Rosasco",
-    "paper_ids": [1049],
-    "affiliation": "Istituto Italiano di Tecnologia,  Università degli Studi di Genova and MIT"
+    "affiliation": "Istituto Italiano di Tecnologia,  Università degli Studi di Genova and MIT",
+    "paper_ids": [1049]
   },
   {
     "author_id": 477,
@@ -2728,14 +2728,14 @@
   {
     "author_id": 479,
     "author": "Marcello Carioni",
-    "paper_ids": [330],
-    "affiliation": "Max Planck Institute"
+    "affiliation": "Max Planck Institute",
+    "paper_ids": [330]
   },
   {
     "author_id": 480,
     "author": "Marcello Restelli",
-    "paper_ids": [470],
-    "affiliation": "Politecnico di Milano"
+    "affiliation": "Politecnico di Milano",
+    "paper_ids": [470]
   },
   {
     "author_id": 481,
@@ -2745,50 +2745,50 @@
   {
     "author_id": 482,
     "author": "Marc Lanctot",
-    "paper_ids": [927],
-    "affiliation": "Google Deepmind"
+    "affiliation": "Google Deepmind",
+    "paper_ids": [927]
   },
   {
     "author_id": 483,
     "author": "Marco Cuturi",
-    "paper_ids": [1197],
-    "affiliation": "Kyoto"
+    "affiliation": "Kyoto",
+    "paper_ids": [1197]
   },
   {
     "author_id": 484,
     "author": "Marco Gaboardi",
-    "paper_ids": [980],
-    "affiliation": "University of Pennsylvania"
+    "affiliation": "University of Pennsylvania",
+    "paper_ids": [980]
   },
   {
     "author_id": 485,
     "author": "Mario Lucic",
-    "paper_ids": [1332],
-    "affiliation": "ETH Zurich"
+    "affiliation": "ETH Zurich",
+    "paper_ids": [1332]
   },
   {
     "author_id": 486,
     "author": "Mariusz Bojarski",
-    "paper_ids": [175],
-    "affiliation": "NVIDIA"
+    "affiliation": "NVIDIA",
+    "paper_ids": [175]
   },
   {
     "author_id": 487,
     "author": "Mark Rowland",
-    "paper_ids": [719],
-    "affiliation": "University of Cambridge"
+    "affiliation": "University of Cambridge",
+    "paper_ids": [719]
   },
   {
     "author_id": 488,
     "author": "Markus Kächele",
-    "paper_ids": [1164],
-    "affiliation": "Ulm University"
+    "affiliation": "Ulm University",
+    "paper_ids": [1164]
   },
   {
     "author_id": 489,
     "author": "Martin Arjovsky",
-    "paper_ids": [516],
-    "affiliation": "University of Buenos Aires"
+    "affiliation": "University of Buenos Aires",
+    "paper_ids": [516]
   },
   {
     "author_id": 490,
@@ -2803,74 +2803,74 @@
   {
     "author_id": 492,
     "author": "Martin Vechev",
-    "paper_ids": [1316],
-    "affiliation": "ETH Zurich"
+    "affiliation": "ETH Zurich",
+    "paper_ids": [1316]
   },
   {
     "author_id": 493,
     "author": "Martin Wainwright",
-    "paper_ids": [3],
-    "affiliation": "UC Berkeley"
+    "affiliation": "UC Berkeley",
+    "paper_ids": [3]
   },
   {
     "author_id": 494,
     "author": "Maruan Al-Shedivat",
-    "paper_ids": [1229],
-    "affiliation": "CMU"
+    "affiliation": "CMU",
+    "paper_ids": [1229]
   },
   {
     "author_id": 495,
     "author": "Masaaki Imaizumi",
-    "paper_ids": [336],
-    "affiliation": "University of Tokyo"
+    "affiliation": "University of Tokyo",
+    "paper_ids": [336]
   },
   {
     "author_id": 496,
     "author": "Masakazu Ishihata",
-    "paper_ids": [400],
-    "affiliation": "NTT Communication Science Labo"
+    "affiliation": "NTT Communication Science Labo",
+    "paper_ids": [400]
   },
   {
     "author_id": 497,
     "author": "Masanori Kawakita",
-    "paper_ids": [898],
-    "affiliation": "Kyushu University"
+    "affiliation": "Kyushu University",
+    "paper_ids": [898]
   },
   {
     "author_id": 498,
     "author": "Masashi Sugiyama",
-    "paper_ids": [210],
-    "affiliation": "University of Tokyo"
+    "affiliation": "University of Tokyo",
+    "paper_ids": [210]
   },
   {
     "author_id": 499,
     "author": "Masayuki Karasuyama",
-    "paper_ids": [744],
-    "affiliation": "Nagoya Institute of Technology"
+    "affiliation": "Nagoya Institute of Technology",
+    "paper_ids": [744]
   },
   {
     "author_id": 500,
     "author": "Mathias Berglund",
-    "paper_ids": [1319],
-    "affiliation": "Aalto University"
+    "affiliation": "Aalto University",
+    "paper_ids": [1319]
   },
   {
     "author_id": 501,
     "author": "Mathias Niepert",
-    "paper_ids": [943],
-    "affiliation": "NEC Laboratories Europe"
+    "affiliation": "NEC Laboratories Europe",
+    "paper_ids": [943]
   },
   {
     "author_id": 502,
     "author": "Mathieu Blondel",
-    "paper_ids": [400],
-    "affiliation": "NTT"
+    "affiliation": "NTT",
+    "paper_ids": [400]
   },
   {
     "author_id": 503,
     "author": "Matteo Hessel",
-    "paper_ids": [927],
-    "affiliation": "Google Deepmind"
+    "affiliation": "Google Deepmind",
+    "paper_ids": [927]
   },
   {
     "author_id": 504,
@@ -2885,8 +2885,8 @@
   {
     "author_id": 506,
     "author": "Matthew Hoffman",
-    "paper_ids": [178, 1205],
-    "affiliation": "Adobe Research"
+    "affiliation": "Adobe Research",
+    "paper_ids": [178, 1205]
   },
   {
     "author_id": 507,
@@ -2906,8 +2906,8 @@
   {
     "author_id": 510,
     "author": "Matthew Riemer",
-    "paper_ids": [1345],
-    "affiliation": "IBM"
+    "affiliation": "IBM",
+    "paper_ids": [1345]
   },
   {
     "author_id": 511,
@@ -2922,50 +2922,50 @@
   {
     "author_id": 513,
     "author": "Maurilio Gutzeit",
-    "paper_ids": [788],
-    "affiliation": "Universität Potsdam"
+    "affiliation": "Universität Potsdam",
+    "paper_ids": [788]
   },
   {
     "author_id": 514,
     "author": "Maurizio Filippone",
-    "paper_ids": [1129, 789],
-    "affiliation": "EURECOM"
+    "affiliation": "EURECOM",
+    "paper_ids": [1129, 789]
   },
   {
     "author_id": 515,
     "author": "Maxime Sangnier",
-    "paper_ids": [1040],
-    "affiliation": "LTCI, CNRS, Télécom ParisTech"
+    "affiliation": "LTCI, CNRS, Télécom ParisTech",
+    "paper_ids": [1040]
   },
   {
     "author_id": 516,
     "author": "Max Simchowitz",
-    "paper_ids": [440],
-    "affiliation": "UC Berkeley"
+    "affiliation": "UC Berkeley",
+    "paper_ids": [440]
   },
   {
     "author_id": 517,
     "author": "Max Vladymyrov",
-    "paper_ids": [128],
-    "affiliation": "Yahoo Labs"
+    "affiliation": "Yahoo Labs",
+    "paper_ids": [128]
   },
   {
     "author_id": 518,
     "author": "Max Welling",
-    "paper_ids": [1335, 793],
-    "affiliation": "University of Amsterdam / CIFAR"
+    "affiliation": "University of Amsterdam / CIFAR",
+    "paper_ids": [1335, 793]
   },
   {
     "author_id": 519,
     "author": "Maziar Gomrokchi",
-    "paper_ids": [984],
-    "affiliation": "McGill University"
+    "affiliation": "McGill University",
+    "paper_ids": [984]
   },
   {
     "author_id": 520,
     "author": "Megasthenis Asteris",
-    "paper_ids": [533],
-    "affiliation": "University of Texas at Austin"
+    "affiliation": "University of Texas at Austin",
+    "paper_ids": [533]
   },
   {
     "author_id": 521,
@@ -2975,8 +2975,8 @@
   {
     "author_id": 522,
     "author": "Mehmet Basbug",
-    "paper_ids": [825],
-    "affiliation": "Princeton University"
+    "affiliation": "Princeton University",
+    "paper_ids": [825]
   },
   {
     "author_id": 523,
@@ -2991,14 +2991,14 @@
   {
     "author_id": 525,
     "author": "Meng Yang",
-    "paper_ids": [257],
-    "affiliation": "Shenzhen University"
+    "affiliation": "Shenzhen University",
+    "paper_ids": [257]
   },
   {
     "author_id": 526,
     "author": "Michael Fu",
-    "paper_ids": [680],
-    "affiliation": "University of Maryland – College Park"
+    "affiliation": "University of Maryland – College Park",
+    "paper_ids": [680]
   },
   {
     "author_id": 527,
@@ -3028,8 +3028,8 @@
   {
     "author_id": 532,
     "author": "Michael Naehrig",
-    "paper_ids": [113],
-    "affiliation": "Microsoft Research"
+    "affiliation": "Microsoft Research",
+    "paper_ids": [113]
   },
   {
     "author_id": 533,
@@ -3039,20 +3039,20 @@
   {
     "author_id": 534,
     "author": "Michael Tschannen",
-    "paper_ids": [992],
-    "affiliation": "ETH Zurich"
+    "affiliation": "ETH Zurich",
+    "paper_ids": [992]
   },
   {
     "author_id": 535,
     "author": "Michal Valko",
-    "paper_ids": [981],
-    "affiliation": "Inria Lille – Nord Europe"
+    "affiliation": "Inria Lille – Nord Europe",
+    "paper_ids": [981]
   },
   {
     "author_id": 536,
     "author": "Miguel Carreira-Perpinan",
-    "paper_ids": [128],
-    "affiliation": "UC Merced"
+    "affiliation": "UC Merced",
+    "paper_ids": [128]
   },
   {
     "author_id": 537,
@@ -3062,14 +3062,14 @@
   {
     "author_id": 538,
     "author": "Mikael Henaff",
-    "paper_ids": [951],
-    "affiliation": "NYU, Facebook"
+    "affiliation": "NYU, Facebook",
+    "paper_ids": [951]
   },
   {
     "author_id": 539,
     "author": "Mike Chrzanowski",
-    "paper_ids": [76, 945],
-    "affiliation": "Baidu USA, Inc."
+    "affiliation": "Baidu USA, Inc.",
+    "paper_ids": [76, 945]
   },
   {
     "author_id": 540,
@@ -3079,20 +3079,20 @@
   {
     "author_id": 541,
     "author": "Milan Vojnovic",
-    "paper_ids": [253],
-    "affiliation": "Microsoft"
+    "affiliation": "Microsoft",
+    "paper_ids": [253]
   },
   {
     "author_id": 542,
     "author": "Miltiadis Allamanis",
-    "paper_ids": [971],
-    "affiliation": "University of Edinburgh, UK"
+    "affiliation": "University of Edinburgh, UK",
+    "paper_ids": [971]
   },
   {
     "author_id": 543,
     "author": "Mingming Gong",
-    "paper_ids": [1275],
-    "affiliation": "University of Technology Sydne"
+    "affiliation": "University of Technology Sydne",
+    "paper_ids": [1275]
   },
   {
     "author_id": 544,
@@ -3107,50 +3107,50 @@
   {
     "author_id": 546,
     "author": "Mohamed Ahmed",
-    "paper_ids": [943],
-    "affiliation": "NEC Laboratories Europe"
+    "affiliation": "NEC Laboratories Europe",
+    "paper_ids": [943]
   },
   {
     "author_id": 547,
     "author": "Mohamed Elhoseiny",
-    "paper_ids": [413],
-    "affiliation": "Rutgers University"
+    "affiliation": "Rutgers University",
+    "paper_ids": [413]
   },
   {
     "author_id": 548,
     "author": "Mohammad Mahdian",
-    "paper_ids": [1154],
-    "affiliation": "Google"
+    "affiliation": "Google",
+    "paper_ids": [1154]
   },
   {
     "author_id": 549,
     "author": "Mohammad Pezeshki",
-    "paper_ids": [1054],
-    "affiliation": "Universite de Montreal"
+    "affiliation": "Universite de Montreal",
+    "paper_ids": [1054]
   },
   {
     "author_id": 550,
     "author": "Mohit Iyyer",
-    "paper_ids": [665],
-    "affiliation": "MetaMind"
+    "affiliation": "MetaMind",
+    "paper_ids": [665]
   },
   {
     "author_id": 551,
     "author": "Moritz Hardt",
-    "paper_ids": [573],
-    "affiliation": "Google"
+    "affiliation": "Google",
+    "paper_ids": [573]
   },
   {
     "author_id": 552,
     "author": "Morteza Zadimoghaddam",
-    "paper_ids": [1130, 1332],
-    "affiliation": "Google Research"
+    "affiliation": "Google Research",
+    "paper_ids": [1130, 1332]
   },
   {
     "author_id": 553,
     "author": "Mostafa Rahmani",
-    "paper_ids": [563],
-    "affiliation": "University of Central Florida"
+    "affiliation": "University of Central Florida",
+    "paper_ids": [563]
   },
   {
     "author_id": 554,
@@ -3160,44 +3160,44 @@
   {
     "author_id": 555,
     "author": "Muhammad Ghifary",
-    "paper_ids": [608],
-    "affiliation": "Victoria University Wellington,  Weta Digital"
+    "affiliation": "Victoria University Wellington,  Weta Digital",
+    "paper_ids": [608]
   },
   {
     "author_id": 556,
     "author": "Mu Niu",
-    "paper_ids": [789],
-    "affiliation": "University of Glasgow"
+    "affiliation": "University of Glasgow",
+    "paper_ids": [789]
   },
   {
     "author_id": 557,
     "author": "Nadav Cohen",
-    "paper_ids": [439],
-    "affiliation": "Hebrew University of Jerusalem"
+    "affiliation": "Hebrew University of Jerusalem",
+    "paper_ids": [439]
   },
   {
     "author_id": 558,
     "author": "Nagarajan Natarajan",
-    "paper_ids": [725],
-    "affiliation": "Microsoft Research India"
+    "affiliation": "Microsoft Research India",
+    "paper_ids": [725]
   },
   {
     "author_id": 559,
     "author": "Nahum Shimkin",
-    "paper_ids": [410],
-    "affiliation": "Technion"
+    "affiliation": "Technion",
+    "paper_ids": [410]
   },
   {
     "author_id": 560,
     "author": "Nal Kalchbrenner",
-    "paper_ids": [920, 806],
-    "affiliation": "Google Deepmind"
+    "affiliation": "Google Deepmind",
+    "paper_ids": [920, 806]
   },
   {
     "author_id": 561,
     "author": "Nando de Freitas",
-    "paper_ids": [927],
-    "affiliation": "University of Oxford"
+    "affiliation": "University of Oxford",
+    "paper_ids": [927]
   },
   {
     "author_id": 562,
@@ -3207,8 +3207,8 @@
   {
     "author_id": 563,
     "author": "Nan Jiang",
-    "paper_ids": [312],
-    "affiliation": "University of Michigan"
+    "affiliation": "University of Michigan",
+    "paper_ids": [312]
   },
   {
     "author_id": 564,
@@ -3218,32 +3218,32 @@
   {
     "author_id": 565,
     "author": "Nate Veldt",
-    "paper_ids": [887],
-    "affiliation": "Purdue Unversity"
+    "affiliation": "Purdue Unversity",
+    "paper_ids": [887]
   },
   {
     "author_id": 566,
     "author": "Nathan Dowlin",
-    "paper_ids": [113],
-    "affiliation": "Princeton"
+    "affiliation": "Princeton",
+    "paper_ids": [113]
   },
   {
     "author_id": 567,
     "author": "Nathan Korda",
-    "paper_ids": [612],
-    "affiliation": "University of Oxford"
+    "affiliation": "University of Oxford",
+    "paper_ids": [612]
   },
   {
     "author_id": 568,
     "author": "Navin Chandak",
-    "paper_ids": [784],
-    "affiliation": "Google"
+    "affiliation": "Google",
+    "paper_ids": [784]
   },
   {
     "author_id": 569,
     "author": "Navin Goyal",
-    "paper_ids": [692],
-    "affiliation": "Microsoft Research India"
+    "affiliation": "Microsoft Research India",
+    "paper_ids": [692]
   },
   {
     "author_id": 570,
@@ -3258,38 +3258,38 @@
   {
     "author_id": 572,
     "author": "Nicolas Tremblay",
-    "paper_ids": [462],
-    "affiliation": "INRIA Rennes"
+    "affiliation": "INRIA Rennes",
+    "paper_ids": [462]
   },
   {
     "author_id": 573,
     "author": "Nicolas Vayatis",
-    "paper_ids": [727],
-    "affiliation": "ENS Cachan"
+    "affiliation": "ENS Cachan",
+    "paper_ids": [727]
   },
   {
     "author_id": 574,
     "author": "Nicolo Colombo",
-    "paper_ids": [1269],
-    "affiliation": "Univ of Luxembourg"
+    "affiliation": "Univ of Luxembourg",
+    "paper_ids": [1269]
   },
   {
     "author_id": 575,
     "author": "Nico Piatkowski",
-    "paper_ids": [1342],
-    "affiliation": "TU Dortmund"
+    "affiliation": "TU Dortmund",
+    "paper_ids": [1342]
   },
   {
     "author_id": 576,
     "author": "Nihar Shah",
-    "paper_ids": [1, 3],
-    "affiliation": "UC Berkeley"
+    "affiliation": "UC Berkeley",
+    "paper_ids": [1, 3]
   },
   {
     "author_id": 577,
     "author": "Nikos Vlassis",
-    "paper_ids": [1269],
-    "affiliation": "Adobe"
+    "affiliation": "Adobe",
+    "paper_ids": [1269]
   },
   {
     "author_id": 578,
@@ -3304,8 +3304,8 @@
   {
     "author_id": 580,
     "author": "Nisarg Shah",
-    "paper_ids": [59],
-    "affiliation": "Carnegie Mellon University"
+    "affiliation": "Carnegie Mellon University",
+    "paper_ids": [59]
   },
   {
     "author_id": 581,
@@ -3315,14 +3315,14 @@
   {
     "author_id": 582,
     "author": "Novi Quadrianto",
-    "paper_ids": [1221],
-    "affiliation": "University of Sussex"
+    "affiliation": "University of Sussex",
+    "paper_ids": [1221]
   },
   {
     "author_id": 583,
     "author": "Odalric Maillard",
-    "paper_ids": [981],
-    "affiliation": "Inria"
+    "affiliation": "Inria",
+    "paper_ids": [981]
   },
   {
     "author_id": 584,
@@ -3332,56 +3332,56 @@
   {
     "author_id": 585,
     "author": "Ohad Shamir",
-    "paper_ids": [421, 65, 363, 139, 140],
-    "affiliation": "Weizmann Institute of Science"
+    "affiliation": "Weizmann Institute of Science",
+    "paper_ids": [421, 65, 363, 139, 140]
   },
   {
     "author_id": 586,
     "author": "Okke Schrijvers",
-    "paper_ids": [1210],
-    "affiliation": "Stanford University"
+    "affiliation": "Stanford University",
+    "paper_ids": [1210]
   },
   {
     "author_id": 587,
     "author": "Ole Winther",
-    "paper_ids": [732, 699],
-    "affiliation": "Technical University of Denmark"
+    "affiliation": "Technical University of Denmark",
+    "paper_ids": [732, 699]
   },
   {
     "author_id": 588,
     "author": "Olgica Milenkovic",
-    "paper_ids": [409],
-    "affiliation": "UIUC"
+    "affiliation": "UIUC",
+    "paper_ids": [409]
   },
   {
     "author_id": 589,
     "author": "Olivier Bachem",
-    "paper_ids": [1332],
-    "affiliation": "ETH Zurich"
+    "affiliation": "ETH Zurich",
+    "paper_ids": [1332]
   },
   {
     "author_id": 590,
     "author": "Olivier Canevet",
-    "paper_ids": [703],
-    "affiliation": "Idiap Research Institut"
+    "affiliation": "Idiap Research Institut",
+    "paper_ids": [703]
   },
   {
     "author_id": 591,
     "author": "Olivier Fercoq",
-    "paper_ids": [832],
-    "affiliation": "LTCI, CNRS, Télécom ParisTech, Université Paris-Saclay, 75013, Paris, France"
+    "affiliation": "LTCI, CNRS, Télécom ParisTech, Université Paris-Saclay, 75013, Paris, France",
+    "paper_ids": [832]
   },
   {
     "author_id": 592,
     "author": "Olivier Pietquin",
-    "paper_ids": [384, 854],
-    "affiliation": "Univ. Lille, CRIStAL, UMR 9189, SequeL Team, Villeneuve d’Ascq, 59650, FRANCE"
+    "affiliation": "Univ. Lille, CRIStAL, UMR 9189, SequeL Team, Villeneuve d’Ascq, 59650, FRANCE",
+    "paper_ids": [384, 854]
   },
   {
     "author_id": 593,
     "author": "Oluwasanmi Koyejo",
-    "paper_ids": [533, 499, 725],
-    "affiliation": "Stanford University & University of Illinois at Urbana Champaign"
+    "affiliation": "Stanford University & University of Illinois at Urbana Champaign",
+    "paper_ids": [533, 499, 725]
   },
   {
     "author_id": 594,
@@ -3396,8 +3396,8 @@
   {
     "author_id": 596,
     "author": "Ozan Irsoy",
-    "paper_ids": [665],
-    "affiliation": "MetaMind"
+    "affiliation": "MetaMind",
+    "paper_ids": [665]
   },
   {
     "author_id": 597,
@@ -3412,14 +3412,14 @@
   {
     "author_id": 599,
     "author": "Pankaj Agarwal",
-    "paper_ids": [1023],
-    "affiliation": "Duke Univeristy"
+    "affiliation": "Duke Univeristy",
+    "paper_ids": [1023]
   },
   {
     "author_id": 600,
     "author": "Pascal Germain",
-    "paper_ids": [405],
-    "affiliation": "INRIA"
+    "affiliation": "INRIA",
+    "paper_ids": [405]
   },
   {
     "author_id": 601,
@@ -3429,20 +3429,20 @@
   {
     "author_id": 602,
     "author": "Patrick Stinson",
-    "paper_ids": [1299],
-    "affiliation": "Columbia University"
+    "affiliation": "Columbia University",
+    "paper_ids": [1299]
   },
   {
     "author_id": 603,
     "author": "Pavel Serdyukov",
-    "paper_ids": [1206],
-    "affiliation": "Yandex"
+    "affiliation": "Yandex",
+    "paper_ids": [1206]
   },
   {
     "author_id": 604,
     "author": "Pavol Bielik",
-    "paper_ids": [1316],
-    "affiliation": "ETH Zurich"
+    "affiliation": "ETH Zurich",
+    "paper_ids": [1316]
   },
   {
     "author_id": 605,
@@ -3452,26 +3452,26 @@
   {
     "author_id": 606,
     "author": "Peilin Zhao",
-    "paper_ids": [783],
-    "affiliation": "I2R, ASTAR"
+    "affiliation": "I2R, ASTAR",
+    "paper_ids": [783]
   },
   {
     "author_id": 607,
     "author": "Pengtao Xie",
-    "paper_ids": [34],
-    "affiliation": "Carnegie Mellon University"
+    "affiliation": "Carnegie Mellon University",
+    "paper_ids": [34]
   },
   {
     "author_id": 608,
     "author": "Percy Liang",
-    "paper_ids": [1155],
-    "affiliation": "Stanford"
+    "affiliation": "Stanford",
+    "paper_ids": [1155]
   },
   {
     "author_id": 609,
     "author": "Periklis Papakonstantinou",
-    "paper_ids": [1030],
-    "affiliation": "Rutgers University "
+    "affiliation": "Rutgers University ",
+    "paper_ids": [1030]
   },
   {
     "author_id": 610,
@@ -3481,14 +3481,14 @@
   {
     "author_id": 611,
     "author": "Peter Kairouz",
-    "paper_ids": [56, 1101],
-    "affiliation": "UIUC"
+    "affiliation": "UIUC",
+    "paper_ids": [56, 1101]
   },
   {
     "author_id": 612,
     "author": "Peter Kontschieder",
-    "paper_ids": [52],
-    "affiliation": "Microsoft Research Cambridge"
+    "affiliation": "Microsoft Research Cambridge",
+    "paper_ids": [52]
   },
   {
     "author_id": 613,
@@ -3498,8 +3498,8 @@
   {
     "author_id": 614,
     "author": "Peter Piech",
-    "paper_ids": [1306],
-    "affiliation": "RPI"
+    "affiliation": "RPI",
+    "paper_ids": [1306]
   },
   {
     "author_id": 615,
@@ -3509,8 +3509,8 @@
   {
     "author_id": 616,
     "author": "Peter Stone",
-    "paper_ids": [628],
-    "affiliation": "U. of Texas"
+    "affiliation": "U. of Texas",
+    "paper_ids": [628]
   },
   {
     "author_id": 617,
@@ -3525,86 +3525,86 @@
   {
     "author_id": 619,
     "author": "Philipp Grohs",
-    "paper_ids": [992],
-    "affiliation": "University of Vienna"
+    "affiliation": "University of Vienna",
+    "paper_ids": [992]
   },
   {
     "author_id": 620,
     "author": "Philip Thomas",
-    "paper_ids": [985, 1293],
-    "affiliation": "CMU"
+    "affiliation": "CMU",
+    "paper_ids": [985, 1293]
   },
   {
     "author_id": 621,
     "author": "Pierre Vandergheynst",
-    "paper_ids": [462],
-    "affiliation": "EPFL"
+    "affiliation": "EPFL",
+    "paper_ids": [462]
   },
   {
     "author_id": 622,
     "author": "Pieter Abbeel",
-    "paper_ids": [629, 30],
-    "affiliation": "Berkeley"
+    "affiliation": "Berkeley",
+    "paper_ids": [629, 30]
   },
   {
     "author_id": 623,
     "author": "Ping Li",
-    "paper_ids": [304],
-    "affiliation": "Rutgers"
+    "affiliation": "Rutgers",
+    "paper_ids": [304]
   },
   {
     "author_id": 624,
     "author": "Piyush Khandelwal",
-    "paper_ids": [628],
-    "affiliation": "University of Texas at Austin"
+    "affiliation": "University of Texas at Austin",
+    "paper_ids": [628]
   },
   {
     "author_id": 625,
     "author": "Poorya Mianjy",
-    "paper_ids": [823],
-    "affiliation": "Johns Hopkins University"
+    "affiliation": "Johns Hopkins University",
+    "paper_ids": [823]
   },
   {
     "author_id": 626,
     "author": "Pourya Zadeh",
-    "paper_ids": [1107],
-    "affiliation": "Tehran university"
+    "affiliation": "Tehran university",
+    "paper_ids": [1107]
   },
   {
     "author_id": 627,
     "author": "Po-Wei Wang",
-    "paper_ids": [1286],
-    "affiliation": "Carnegie Mellon University"
+    "affiliation": "Carnegie Mellon University",
+    "paper_ids": [1286]
   },
   {
     "author_id": 628,
     "author": "Pradeep Ravikumar",
-    "paper_ids": [1103, 725, 1031, 1375],
-    "affiliation": "UT Austin"
+    "affiliation": "UT Austin",
+    "paper_ids": [1103, 725, 1031, 1375]
   },
   {
     "author_id": 629,
     "author": "Pramod Viswanath",
-    "paper_ids": [56, 1237],
-    "affiliation": "UIUC"
+    "affiliation": "UIUC",
+    "paper_ids": [56, 1237]
   },
   {
     "author_id": 630,
     "author": "Praneeth Netrapalli",
-    "paper_ids": [1184, 1224],
-    "affiliation": "Microsoft Research"
+    "affiliation": "Microsoft Research",
+    "paper_ids": [1184, 1224]
   },
   {
     "author_id": 631,
     "author": "Prashanth L.A.",
-    "paper_ids": [680],
-    "affiliation": "University of Maryland "
+    "affiliation": "University of Maryland ",
+    "paper_ids": [680]
   },
   {
     "author_id": 632,
     "author": "Puneet Dokania",
-    "paper_ids": [296],
-    "affiliation": "INRIA and Ecole Centrale Paris"
+    "affiliation": "INRIA and Ecole Centrale Paris",
+    "paper_ids": [296]
   },
   {
     "author_id": 633,
@@ -3614,14 +3614,14 @@
   {
     "author_id": 634,
     "author": "QianQian Xu",
-    "paper_ids": [600],
-    "affiliation": "IIE, CAS"
+    "affiliation": "IIE, CAS",
+    "paper_ids": [600]
   },
   {
     "author_id": 635,
     "author": "Qinliang Su",
-    "paper_ids": [891],
-    "affiliation": "Duke University"
+    "affiliation": "Duke University",
+    "paper_ids": [891]
   },
   {
     "author_id": 636,
@@ -3631,20 +3631,20 @@
   {
     "author_id": 637,
     "author": "Qinxun Bai",
-    "paper_ids": [866],
-    "affiliation": "Boston University"
+    "affiliation": "Boston University",
+    "paper_ids": [866]
   },
   {
     "author_id": 638,
     "author": "Quang Minh Hoang",
-    "paper_ids": [188],
-    "affiliation": "NUS"
+    "affiliation": "NUS",
+    "paper_ids": [188]
   },
   {
     "author_id": 639,
     "author": "Quanming Yao",
-    "paper_ids": [1190],
-    "affiliation": "HKUST"
+    "affiliation": "HKUST",
+    "paper_ids": [1190]
   },
   {
     "author_id": 640,
@@ -3654,8 +3654,8 @@
   {
     "author_id": 641,
     "author": "Raffaello Camoriano",
-    "paper_ids": [1049],
-    "affiliation": "IIT Italy and UNIGE Italy"
+    "affiliation": "IIT Italy and UNIGE Italy",
+    "paper_ids": [1049]
   },
   {
     "author_id": 642,
@@ -3665,68 +3665,68 @@
   {
     "author_id": 643,
     "author": "Raman Arora",
-    "paper_ids": [823, 423],
-    "affiliation": "Johns Hopkins University"
+    "affiliation": "Johns Hopkins University",
+    "paper_ids": [823, 423]
   },
   {
     "author_id": 644,
     "author": "Ramon Astudillo",
-    "paper_ids": [755],
-    "affiliation": "Unbabel"
+    "affiliation": "Unbabel",
+    "paper_ids": [755]
   },
   {
     "author_id": 645,
     "author": "Ran Dai",
-    "paper_ids": [845],
-    "affiliation": "The University of Chicago"
+    "affiliation": "The University of Chicago",
+    "paper_ids": [845]
   },
   {
     "author_id": 646,
     "author": "Ran Gilad-Bachrach",
-    "paper_ids": [113],
-    "affiliation": "Microsoft Research"
+    "affiliation": "Microsoft Research",
+    "paper_ids": [113]
   },
   {
     "author_id": 647,
     "author": "Raphael Canyasse",
-    "paper_ids": [64],
-    "affiliation": "Ecole Polytechnique and The Technion"
+    "affiliation": "Ecole Polytechnique and The Technion",
+    "paper_ids": [64]
   },
   {
     "author_id": 648,
     "author": "Raquel Urtasun",
-    "paper_ids": [997],
-    "affiliation": "U. of Toronto"
+    "affiliation": "U. of Toronto",
+    "paper_ids": [997]
   },
   {
     "author_id": 649,
     "author": "Ravindran Kannan",
-    "paper_ids": [692],
-    "affiliation": "Microsoft Reseach India"
+    "affiliation": "Microsoft Reseach India",
+    "paper_ids": [692]
   },
   {
     "author_id": 650,
     "author": "Raviv Raich",
-    "paper_ids": [1047],
-    "affiliation": "Oregon State University"
+    "affiliation": "Oregon State University",
+    "paper_ids": [1047]
   },
   {
     "author_id": 651,
     "author": "Rein Houthooft",
-    "paper_ids": [629],
-    "affiliation": "Ghent University"
+    "affiliation": "Ghent University",
+    "paper_ids": [629]
   },
   {
     "author_id": 652,
     "author": "Remi Gribonval",
-    "paper_ids": [462],
-    "affiliation": "INRIA"
+    "affiliation": "INRIA",
+    "paper_ids": [462]
   },
   {
     "author_id": 653,
     "author": "Rémy Degenne",
-    "paper_ids": [746],
-    "affiliation": "Université Paris Diderot"
+    "affiliation": "Université Paris Diderot",
+    "paper_ids": [746]
   },
   {
     "author_id": 654,
@@ -3736,8 +3736,8 @@
   {
     "author_id": 655,
     "author": "Riad Akrour",
-    "paper_ids": [1322],
-    "affiliation": "TU Darmstadt"
+    "affiliation": "TU Darmstadt",
+    "paper_ids": [1322]
   },
   {
     "author_id": 656,
@@ -3747,20 +3747,20 @@
   {
     "author_id": 657,
     "author": "Richard Baraniuk",
-    "paper_ids": [141],
-    "affiliation": "Rice University"
+    "affiliation": "Rice University",
+    "paper_ids": [141]
   },
   {
     "author_id": 658,
     "author": "Richard Hull",
-    "paper_ids": [1345],
-    "affiliation": "IBM"
+    "affiliation": "IBM",
+    "paper_ids": [1345]
   },
   {
     "author_id": 659,
     "author": "Richard Nock",
-    "paper_ids": [64, 330],
-    "affiliation": "Nicta & ANU"
+    "affiliation": "Nicta & ANU",
+    "paper_ids": [64, 330]
   },
   {
     "author_id": 660,
@@ -3770,26 +3770,26 @@
   {
     "author_id": 661,
     "author": "Richard Turner",
-    "paper_ids": [706, 719],
-    "affiliation": "University of Cambridge"
+    "affiliation": "University of Cambridge",
+    "paper_ids": [706, 719]
   },
   {
     "author_id": 662,
     "author": "Rich Caruana",
-    "paper_ids": [335],
-    "affiliation": "Microsoft"
+    "affiliation": "Microsoft",
+    "paper_ids": [335]
   },
   {
     "author_id": 663,
     "author": "Rie Johnson",
-    "paper_ids": [270],
-    "affiliation": "RJ Research Consulting"
+    "affiliation": "RJ Research Consulting",
+    "paper_ids": [270]
   },
   {
     "author_id": 664,
     "author": "Rina Barber",
-    "paper_ids": [845],
-    "affiliation": "The University of Chicago"
+    "affiliation": "The University of Chicago",
+    "paper_ids": [845]
   },
   {
     "author_id": 665,
@@ -3809,26 +3809,26 @@
   {
     "author_id": 668,
     "author": "Robert Gower",
-    "paper_ids": [865],
-    "affiliation": "University of Edinburgh"
+    "affiliation": "University of Edinburgh",
+    "paper_ids": [865]
   },
   {
     "author_id": 669,
     "author": "Robert Nowak",
-    "paper_ids": [380, 443, 478],
-    "affiliation": "UW Madison"
+    "affiliation": "UW Madison",
+    "paper_ids": [380, 443, 478]
   },
   {
     "author_id": 670,
     "author": "Robert Schapire",
-    "paper_ids": [995],
-    "affiliation": "Microsoft Research"
+    "affiliation": "Microsoft Research",
+    "paper_ids": [995]
   },
   {
     "author_id": 671,
     "author": "Rob Fergus",
-    "paper_ids": [209, 208],
-    "affiliation": "Facebook AI Research"
+    "affiliation": "Facebook AI Research",
+    "paper_ids": [209, 208]
   },
   {
     "author_id": 672,
@@ -3843,8 +3843,8 @@
   {
     "author_id": 674,
     "author": "Roksana Boreli",
-    "paper_ids": [64],
-    "affiliation": "Data61"
+    "affiliation": "Data61",
+    "paper_ids": [64]
   },
   {
     "author_id": 675,
@@ -3854,26 +3854,26 @@
   {
     "author_id": 676,
     "author": "Romain Couillet",
-    "paper_ids": [258],
-    "affiliation": "CentraleSupelec"
+    "affiliation": "CentraleSupelec",
+    "paper_ids": [258]
   },
   {
     "author_id": 677,
     "author": "Romain Paulus",
-    "paper_ids": [665],
-    "affiliation": "MetaMind"
+    "affiliation": "MetaMind",
+    "paper_ids": [665]
   },
   {
     "author_id": 678,
     "author": "Roman Garnett",
-    "paper_ids": [419],
-    "affiliation": "Wustl"
+    "affiliation": "Wustl",
+    "paper_ids": [419]
   },
   {
     "author_id": 679,
     "author": "Ronan Le Bras",
-    "paper_ids": [146],
-    "affiliation": "Cornell University"
+    "affiliation": "Cornell University",
+    "paper_ids": [146]
   },
   {
     "author_id": 680,
@@ -3883,74 +3883,74 @@
   {
     "author_id": 681,
     "author": "Rong Jin",
-    "paper_ids": [198, 212],
-    "affiliation": "Alibaba Group"
+    "affiliation": "Alibaba Group",
+    "paper_ids": [198, 212]
   },
   {
     "author_id": 682,
     "author": "Rose Yu",
-    "paper_ids": [182],
-    "affiliation": "University of Southern Cal"
+    "affiliation": "University of Southern Cal",
+    "paper_ids": [182]
   },
   {
     "author_id": 683,
     "author": "Roshan Shariff",
-    "paper_ids": [582],
-    "affiliation": "University of Alberta"
+    "affiliation": "University of Alberta",
+    "paper_ids": [582]
   },
   {
     "author_id": 684,
     "author": "Ross Boczar",
-    "paper_ids": [440],
-    "affiliation": "UC Berkeley"
+    "affiliation": "UC Berkeley",
+    "paper_ids": [440]
   },
   {
     "author_id": 685,
     "author": "Ross Girshick",
-    "paper_ids": [231],
-    "affiliation": "Facebook"
+    "affiliation": "Facebook",
+    "paper_ids": [231]
   },
   {
     "author_id": 686,
     "author": "Roy Adams",
-    "paper_ids": [174],
-    "affiliation": "Univ. of Massachusetts-Amherst"
+    "affiliation": "Univ. of Massachusetts-Amherst",
+    "paper_ids": [174]
   },
   {
     "author_id": 687,
     "author": "Roy Frostig",
-    "paper_ids": [1051, 1155],
-    "affiliation": "Stanford University"
+    "affiliation": "Stanford University",
+    "paper_ids": [1051, 1155]
   },
   {
     "author_id": 688,
     "author": "Ruslan Salakhudinov",
-    "paper_ids": [23],
-    "affiliation": "U. of Toronto"
+    "affiliation": "U. of Toronto",
+    "paper_ids": [23]
   },
   {
     "author_id": 689,
     "author": "Russell Greiner",
-    "paper_ids": [438],
-    "affiliation": "University of Alberta"
+    "affiliation": "University of Alberta",
+    "paper_ids": [438]
   },
   {
     "author_id": 690,
     "author": "Russell Poldrack",
-    "paper_ids": [533],
-    "affiliation": "Stanford University"
+    "affiliation": "Stanford University",
+    "paper_ids": [533]
   },
   {
     "author_id": 691,
     "author": "Ryan Adams",
-    "paper_ids": [714, 1205],
-    "affiliation": "Harvard"
+    "affiliation": "Harvard",
+    "paper_ids": [714, 1205]
   },
   {
     "author_id": 692,
     "author": "Ryan Burmeister",
-    "paper_ids": [1215],
-    "affiliation": "US Naval Academy"
+    "affiliation": "US Naval Academy",
+    "paper_ids": [1215]
   },
   {
     "author_id": 693,
@@ -3960,80 +3960,80 @@
   {
     "author_id": 694,
     "author": "Ryan Rogers",
-    "paper_ids": [980],
-    "affiliation": "UCLA"
+    "affiliation": "UCLA",
+    "paper_ids": [980]
   },
   {
     "author_id": 695,
     "author": "Sachin Talathi",
-    "paper_ids": [1278],
-    "affiliation": "Qualcomm Research"
+    "affiliation": "Qualcomm Research",
+    "paper_ids": [1278]
   },
   {
     "author_id": 696,
     "author": "Sadra Yazdanbod",
-    "paper_ids": [1154],
-    "affiliation": "Georgia Institute of Technology"
+    "affiliation": "Georgia Institute of Technology",
+    "paper_ids": [1154]
   },
   {
     "author_id": 697,
     "author": "Saleema Amershi",
-    "paper_ids": [1246],
-    "affiliation": "Microsoft"
+    "affiliation": "Microsoft",
+    "paper_ids": [1246]
   },
   {
     "author_id": 698,
     "author": "Salil Vadhan",
-    "paper_ids": [980],
-    "affiliation": "University at Buffalo"
+    "affiliation": "University at Buffalo",
+    "paper_ids": [980]
   },
   {
     "author_id": 699,
     "author": "Sam Gross",
-    "paper_ids": [209],
-    "affiliation": "Facebook AI Research"
+    "affiliation": "Facebook AI Research",
+    "paper_ids": [209]
   },
   {
     "author_id": 700,
     "author": "Samira Shabanian",
-    "paper_ids": [1122],
-    "affiliation": "University of Montreal"
+    "affiliation": "University of Montreal",
+    "paper_ids": [1122]
   },
   {
     "author_id": 701,
     "author": "Samuel Rota Bulò",
-    "paper_ids": [52],
-    "affiliation": "FBK"
+    "affiliation": "FBK",
+    "paper_ids": [52]
   },
   {
     "author_id": 702,
     "author": "Samy Bengio",
-    "paper_ids": [1229],
-    "affiliation": "Google"
+    "affiliation": "Google",
+    "paper_ids": [1229]
   },
   {
     "author_id": 703,
     "author": "Sander Dieleman",
-    "paper_ids": [871],
-    "affiliation": "Google DeepMind"
+    "affiliation": "Google DeepMind",
+    "paper_ids": [871]
   },
   {
     "author_id": 704,
     "author": "Sandhya Prabhakaran",
-    "paper_ids": [487],
-    "affiliation": "Columbia University"
+    "affiliation": "Columbia University",
+    "paper_ids": [487]
   },
   {
     "author_id": 705,
     "author": "Sanjeev Arora",
-    "paper_ids": [1279],
-    "affiliation": "Princeton University"
+    "affiliation": "Princeton University",
+    "paper_ids": [1279]
   },
   {
     "author_id": 706,
     "author": "Sanjeev Satheesh",
-    "paper_ids": [76, 945],
-    "affiliation": "Baidu USA, Inc."
+    "affiliation": "Baidu USA, Inc.",
+    "paper_ids": [76, 945]
   },
   {
     "author_id": 707,
@@ -4043,8 +4043,8 @@
   {
     "author_id": 708,
     "author": "Sanjoy Dasgupta",
-    "paper_ids": [969],
-    "affiliation": "UCSD"
+    "affiliation": "UCSD",
+    "paper_ids": [969]
   },
   {
     "author_id": 709,
@@ -4054,14 +4054,14 @@
   {
     "author_id": 710,
     "author": "Sashank J. Reddi",
-    "paper_ids": [153],
-    "affiliation": "Carnegie Mellon University"
+    "affiliation": "Carnegie Mellon University",
+    "paper_ids": [153]
   },
   {
     "author_id": 711,
     "author": "Sathya Narayanan Ravi",
-    "paper_ids": [292],
-    "affiliation": "UW Madison"
+    "affiliation": "UW Madison",
+    "paper_ids": [292]
   },
   {
     "author_id": 712,
@@ -4071,8 +4071,8 @@
   {
     "author_id": 713,
     "author": "Scott Hu",
-    "paper_ids": [785],
-    "affiliation": "University of California, Los Angeles"
+    "affiliation": "University of California, Los Angeles",
+    "paper_ids": [785]
   },
   {
     "author_id": 714,
@@ -4092,8 +4092,8 @@
   {
     "author_id": 717,
     "author": "Sebastian Fromenteau",
-    "paper_ids": [1078],
-    "affiliation": "Carnegie Mellon Unitversity"
+    "affiliation": "Carnegie Mellon Unitversity",
+    "paper_ids": [1078]
   },
   {
     "author_id": 718,
@@ -4103,14 +4103,14 @@
   {
     "author_id": 719,
     "author": "Sebastian Tschiatschek",
-    "paper_ids": [203],
-    "affiliation": "ETH Zurich"
+    "affiliation": "ETH Zurich",
+    "paper_ids": [203]
   },
   {
     "author_id": 720,
     "author": "Sebastien Bubeck",
-    "paper_ids": [759],
-    "affiliation": "Microsoft"
+    "affiliation": "Microsoft",
+    "paper_ids": [759]
   },
   {
     "author_id": 721,
@@ -4120,32 +4120,32 @@
   {
     "author_id": 722,
     "author": "Sergey Bartunov",
-    "paper_ids": [839],
-    "affiliation": "Higher School of Economics"
+    "affiliation": "Higher School of Economics",
+    "paper_ids": [839]
   },
   {
     "author_id": 723,
     "author": "Sergey Levine",
-    "paper_ids": [1274, 30],
-    "affiliation": "Google"
+    "affiliation": "Google",
+    "paper_ids": [1274, 30]
   },
   {
     "author_id": 724,
     "author": "Sewoong Oh",
-    "paper_ids": [56, 1237, 50, 272],
-    "affiliation": "UIUC"
+    "affiliation": "UIUC",
+    "paper_ids": [56, 1237, 50, 272]
   },
   {
     "author_id": 725,
     "author": "Seyoung Yun",
-    "paper_ids": [253],
-    "affiliation": "Microsoft"
+    "affiliation": "Microsoft",
+    "paper_ids": [253]
   },
   {
     "author_id": 726,
     "author": "Shai Shalev-Shwartz",
-    "paper_ids": [678, 834, 341, 371],
-    "affiliation": "Hebrew University of Jerusalem"
+    "affiliation": "Hebrew University of Jerusalem",
+    "paper_ids": [678, 834, 341, 371]
   },
   {
     "author_id": 727,
@@ -4160,14 +4160,14 @@
   {
     "author_id": 729,
     "author": "Shane Carr",
-    "paper_ids": [419],
-    "affiliation": "Washington University in St. L"
+    "affiliation": "Washington University in St. L",
+    "paper_ids": [419]
   },
   {
     "author_id": 730,
     "author": "Sharad Vikram",
-    "paper_ids": [969],
-    "affiliation": "UCSD"
+    "affiliation": "UCSD",
+    "paper_ids": [969]
   },
   {
     "author_id": 731,
@@ -4177,20 +4177,20 @@
   {
     "author_id": 732,
     "author": "Shashanka Ubaru",
-    "paper_ids": [224],
-    "affiliation": "University of Minnesota"
+    "affiliation": "University of Minnesota",
+    "paper_ids": [224]
   },
   {
     "author_id": 733,
     "author": "Shengjie Wang",
-    "paper_ids": [335],
-    "affiliation": "University of Washington"
+    "affiliation": "University of Washington",
+    "paper_ids": [335]
   },
   {
     "author_id": 734,
     "author": "Sheng Qian",
-    "paper_ids": [76],
-    "affiliation": "Baidu"
+    "affiliation": "Baidu",
+    "paper_ids": [76]
   },
   {
     "author_id": 735,
@@ -4205,56 +4205,56 @@
   {
     "author_id": 737,
     "author": "Shie Mannor",
-    "paper_ids": [344, 1003, 880],
-    "affiliation": "Technion"
+    "affiliation": "Technion",
+    "paper_ids": [344, 1003, 880]
   },
   {
     "author_id": 738,
     "author": "Shirley Ho",
-    "paper_ids": [1078],
-    "affiliation": "Carnegie Mellon Unitversity"
+    "affiliation": "Carnegie Mellon Unitversity",
+    "paper_ids": [1078]
   },
   {
     "author_id": 739,
     "author": "Shiva Prasad Kasiviswanathan",
-    "paper_ids": [238],
-    "affiliation": "Samsung Research America"
+    "affiliation": "Samsung Research America",
+    "paper_ids": [238]
   },
   {
     "author_id": 740,
     "author": "Shixiang Gu",
-    "paper_ids": [1274],
-    "affiliation": "University of Cambridge"
+    "affiliation": "University of Cambridge",
+    "paper_ids": [1274]
   },
   {
     "author_id": 741,
     "author": "Shuai Li",
-    "paper_ids": [581],
-    "affiliation": "CUHK"
+    "affiliation": "CUHK",
+    "paper_ids": [581]
   },
   {
     "author_id": 742,
     "author": "Shuai Li",
-    "paper_ids": [612],
-    "affiliation": "University of Insubria"
+    "affiliation": "University of Insubria",
+    "paper_ids": [612]
   },
   {
     "author_id": 743,
     "author": "Shuangfei Zhai",
-    "paper_ids": [500],
-    "affiliation": "Binghamton University"
+    "affiliation": "Binghamton University",
+    "paper_ids": [500]
   },
   {
     "author_id": 744,
     "author": "Shubho Sengupta",
-    "paper_ids": [945, 76],
-    "affiliation": "Baidu USA, Inc."
+    "affiliation": "Baidu USA, Inc.",
+    "paper_ids": [945, 76]
   },
   {
     "author_id": 745,
     "author": "Siamak Ravanbakhsh",
-    "paper_ids": [438, 1078],
-    "affiliation": "CMU"
+    "affiliation": "CMU",
+    "paper_ids": [438, 1078]
   },
   {
     "author_id": 746,
@@ -4269,20 +4269,20 @@
   {
     "author_id": 748,
     "author": "Simone Forte",
-    "paper_ids": [370],
-    "affiliation": "Google"
+    "affiliation": "Google",
+    "paper_ids": [370]
   },
   {
     "author_id": 749,
     "author": "Simon Lacoste-Julien",
-    "paper_ids": [296, 220],
-    "affiliation": "INRIA"
+    "affiliation": "INRIA",
+    "paper_ids": [296, 220]
   },
   {
     "author_id": 750,
     "author": "Simon Rogers",
-    "paper_ids": [789],
-    "affiliation": "University of Glasgow"
+    "affiliation": "University of Glasgow",
+    "paper_ids": [789]
   },
   {
     "author_id": 751,
@@ -4292,26 +4292,26 @@
   {
     "author_id": 752,
     "author": "Sivaraman Balakrishnan",
-    "paper_ids": [3],
-    "affiliation": "CMU"
+    "affiliation": "CMU",
+    "paper_ids": [3]
   },
   {
     "author_id": 753,
     "author": "Song-Chun Zhu",
-    "paper_ids": [1188],
-    "affiliation": "UCLA"
+    "affiliation": "UCLA",
+    "paper_ids": [1188]
   },
   {
     "author_id": 754,
     "author": "Song Liu",
-    "paper_ids": [210],
-    "affiliation": "The Inst. of Stats. Math."
+    "affiliation": "The Inst. of Stats. Math.",
+    "paper_ids": [210]
   },
   {
     "author_id": 755,
     "author": "Søren Kaae Sønderby",
-    "paper_ids": [732, 699],
-    "affiliation": "University of Copenagen"
+    "affiliation": "University of Copenagen",
+    "paper_ids": [732, 699]
   },
   {
     "author_id": 756,
@@ -4321,14 +4321,14 @@
   {
     "author_id": 757,
     "author": "Sreekanth Annapureddy",
-    "paper_ids": [1278],
-    "affiliation": "NetraDyne Inc."
+    "affiliation": "NetraDyne Inc.",
+    "paper_ids": [1278]
   },
   {
     "author_id": 758,
     "author": "Sreeram Kannan",
-    "paper_ids": [1237],
-    "affiliation": "UW Seattle"
+    "affiliation": "UW Seattle",
+    "paper_ids": [1237]
   },
   {
     "author_id": 759,
@@ -4338,20 +4338,20 @@
   {
     "author_id": 760,
     "author": "Stan Sclaroff",
-    "paper_ids": [866],
-    "affiliation": "Boston University"
+    "affiliation": "Boston University",
+    "paper_ids": [866]
   },
   {
     "author_id": 761,
     "author": "Stefan Bauer",
-    "paper_ids": [959],
-    "affiliation": "ETH Zurich"
+    "affiliation": "ETH Zurich",
+    "paper_ids": [959]
   },
   {
     "author_id": 762,
     "author": "Stefanie Jegelka",
-    "paper_ids": [811, 964],
-    "affiliation": "MIT"
+    "affiliation": "MIT",
+    "paper_ids": [811, 964]
   },
   {
     "author_id": 763,
@@ -4366,8 +4366,8 @@
   {
     "author_id": 765,
     "author": "Stephan Mandt",
-    "paper_ids": [178],
-    "affiliation": "Columbia University"
+    "affiliation": "Columbia University",
+    "paper_ids": [178]
   },
   {
     "author_id": 766,
@@ -4377,68 +4377,68 @@
   {
     "author_id": 767,
     "author": "Stephen Gould",
-    "paper_ids": [554],
-    "affiliation": "Australian National University"
+    "affiliation": "Australian National University",
+    "paper_ids": [554]
   },
   {
     "author_id": 768,
     "author": "Stephen Merity",
-    "paper_ids": [1067],
-    "affiliation": "MetaMind"
+    "affiliation": "MetaMind",
+    "paper_ids": [1067]
   },
   {
     "author_id": 769,
     "author": "Stephen Mussmann",
-    "paper_ids": [1167],
-    "affiliation": "Stanford University"
+    "affiliation": "Stanford University",
+    "paper_ids": [1167]
   },
   {
     "author_id": 770,
     "author": "Stephen Tu",
-    "paper_ids": [440],
-    "affiliation": "UC Berkeley"
+    "affiliation": "UC Berkeley",
+    "paper_ids": [440]
   },
   {
     "author_id": 771,
     "author": "Sterling Johnson",
-    "paper_ids": [292],
-    "affiliation": "UW Madison"
+    "affiliation": "UW Madison",
+    "paper_ids": [292]
   },
   {
     "author_id": 772,
     "author": "Steve Marcus",
-    "paper_ids": [680],
-    "affiliation": "University of Maryland – College Park"
+    "affiliation": "University of Maryland – College Park",
+    "paper_ids": [680]
   },
   {
     "author_id": 773,
     "author": "Steven Rosenberg",
-    "paper_ids": [866],
-    "affiliation": "Boston University"
+    "affiliation": "Boston University",
+    "paper_ids": [866]
   },
   {
     "author_id": 774,
     "author": "Steve Wright",
-    "paper_ids": [1104],
-    "affiliation": "University of Wisconsin-Madison"
+    "affiliation": "University of Wisconsin-Madison",
+    "paper_ids": [1104]
   },
   {
     "author_id": 775,
     "author": "Sudipto Guha",
-    "paper_ids": [1210],
-    "affiliation": "University of Pennsylvania"
+    "affiliation": "University of Pennsylvania",
+    "paper_ids": [1210]
   },
   {
     "author_id": 776,
     "author": "Sumeet Katariya",
-    "paper_ids": [566],
-    "affiliation": "University of Wisconsin Madiso"
+    "affiliation": "University of Wisconsin Madiso",
+    "paper_ids": [566]
   },
   {
     "author_id": 777,
     "author": "Sung ju Hwang",
-    "paper_ids": [135],
-    "affiliation": "UNIST"
+    "affiliation": "UNIST",
+    "paper_ids": [135]
   },
   {
     "author_id": 778,
@@ -4448,8 +4448,8 @@
   {
     "author_id": 779,
     "author": "Taco Cohen",
-    "paper_ids": [1335],
-    "affiliation": "University of Amsterdam"
+    "affiliation": "University of Amsterdam",
+    "paper_ids": [1335]
   },
   {
     "author_id": 780,
@@ -4459,8 +4459,8 @@
   {
     "author_id": 781,
     "author": "Tameem Adel",
-    "paper_ids": [616],
-    "affiliation": "University of Amsterdam"
+    "affiliation": "University of Amsterdam",
+    "paper_ids": [616]
   },
   {
     "author_id": 782,
@@ -4470,8 +4470,8 @@
   {
     "author_id": 783,
     "author": "Tao Wei",
-    "paper_ids": [279],
-    "affiliation": "University at Buffalo"
+    "affiliation": "University at Buffalo",
+    "paper_ids": [279]
   },
   {
     "author_id": 784,
@@ -4481,14 +4481,14 @@
   {
     "author_id": 785,
     "author": "Tarek El-Gaaly",
-    "paper_ids": [413],
-    "affiliation": "Rutgers University"
+    "affiliation": "Rutgers University",
+    "paper_ids": [413]
   },
   {
     "author_id": 786,
     "author": "Tatsunori Hashimoto",
-    "paper_ids": [1093],
-    "affiliation": "MIT"
+    "affiliation": "MIT",
+    "paper_ids": [1093]
   },
   {
     "author_id": 787,
@@ -4498,8 +4498,8 @@
   {
     "author_id": 788,
     "author": "Tengyu Ma",
-    "paper_ids": [1279],
-    "affiliation": "Princeton University"
+    "affiliation": "Princeton University",
+    "paper_ids": [1279]
   },
   {
     "author_id": 789,
@@ -4509,26 +4509,26 @@
   {
     "author_id": 790,
     "author": "Thang Bui",
-    "paper_ids": [706, 719],
-    "affiliation": "University of Cambridge"
+    "affiliation": "University of Cambridge",
+    "paper_ids": [706, 719]
   },
   {
     "author_id": 791,
     "author": "Théo Trouillon",
-    "paper_ids": [966],
-    "affiliation": "Xerox"
+    "affiliation": "Xerox",
+    "paper_ids": [966]
   },
   {
     "author_id": 792,
     "author": "Thomas Bottesch",
-    "paper_ids": [1164],
-    "affiliation": "Ulm University"
+    "affiliation": "Ulm University",
+    "paper_ids": [1164]
   },
   {
     "author_id": 793,
     "author": "Thomas Bühler",
-    "paper_ids": [1164],
-    "affiliation": "Avira"
+    "affiliation": "Avira",
+    "paper_ids": [1164]
   },
   {
     "author_id": 794,
@@ -4538,32 +4538,32 @@
   {
     "author_id": 795,
     "author": "Thomas Wiatowski",
-    "paper_ids": [992],
-    "affiliation": "ETH Zurich"
+    "affiliation": "ETH Zurich",
+    "paper_ids": [992]
   },
   {
     "author_id": 796,
     "author": "Thorsten Joachims",
-    "paper_ids": [784],
-    "affiliation": "Cornell"
+    "affiliation": "Cornell",
+    "paper_ids": [784]
   },
   {
     "author_id": 797,
     "author": "Tianbao Yang",
-    "paper_ids": [212, 198],
-    "affiliation": "University of Iowa"
+    "affiliation": "University of Iowa",
+    "paper_ids": [212, 198]
   },
   {
     "author_id": 798,
     "author": "Tim Cooijmans",
-    "paper_ids": [1149],
-    "affiliation": "University of Montreal"
+    "affiliation": "University of Montreal",
+    "paper_ids": [1149]
   },
   {
     "author_id": 799,
     "author": "Tim Harley",
-    "paper_ids": [885],
-    "affiliation": "Google DeepMind"
+    "affiliation": "Google DeepMind",
+    "paper_ids": [885]
   },
   {
     "author_id": 800,
@@ -4573,20 +4573,20 @@
   {
     "author_id": 801,
     "author": "Timothy Lillicrap",
-    "paper_ids": [1274, 885, 839],
-    "affiliation": "Google DeepMind"
+    "affiliation": "Google DeepMind",
+    "paper_ids": [1274, 885, 839]
   },
   {
     "author_id": 802,
     "author": "Timothy Rogers",
-    "paper_ids": [478],
-    "affiliation": "University of Wisconsin"
+    "affiliation": "University of Wisconsin",
+    "paper_ids": [478]
   },
   {
     "author_id": 803,
     "author": "Tobias Schnabel",
-    "paper_ids": [784],
-    "affiliation": "Cornell University"
+    "affiliation": "Cornell University",
+    "paper_ids": [784]
   },
   {
     "author_id": 804,
@@ -4601,50 +4601,50 @@
   {
     "author_id": 806,
     "author": "Tomer Michaeli",
-    "paper_ids": [903],
-    "affiliation": "Technion"
+    "affiliation": "Technion",
+    "paper_ids": [903]
   },
   {
     "author_id": 807,
     "author": "Tom Goldstein",
-    "paper_ids": [141, 1215],
-    "affiliation": "University of Maryland"
+    "affiliation": "University of Maryland",
+    "paper_ids": [141, 1215]
   },
   {
     "author_id": 808,
     "author": "Tommi Jaakkola",
-    "paper_ids": [1093],
-    "affiliation": "MIT"
+    "affiliation": "MIT",
+    "paper_ids": [1093]
   },
   {
     "author_id": 809,
     "author": "Tom Mitchell",
-    "paper_ids": [691],
-    "affiliation": "Carnegie Mellon University"
+    "affiliation": "Carnegie Mellon University",
+    "paper_ids": [691]
   },
   {
     "author_id": 810,
     "author": "Tom Rainforth",
-    "paper_ids": [1180],
-    "affiliation": "University of Oxford"
+    "affiliation": "University of Oxford",
+    "paper_ids": [1180]
   },
   {
     "author_id": 811,
     "author": "Tom Schaul",
-    "paper_ids": [927],
-    "affiliation": "Google Inc."
+    "affiliation": "Google Inc.",
+    "paper_ids": [927]
   },
   {
     "author_id": 812,
     "author": "Tom Zahavy",
-    "paper_ids": [880],
-    "affiliation": "Technion"
+    "affiliation": "Technion",
+    "paper_ids": [880]
   },
   {
     "author_id": 813,
     "author": "Tongliang Liu",
-    "paper_ids": [1275],
-    "affiliation": "MPI Tuebingen"
+    "affiliation": "MPI Tuebingen",
+    "paper_ids": [1275]
   },
   {
     "author_id": 814,
@@ -4659,8 +4659,8 @@
   {
     "author_id": 816,
     "author": "Tony Jebara",
-    "paper_ids": [175],
-    "affiliation": "Columbia"
+    "affiliation": "Columbia",
+    "paper_ids": [175]
   },
   {
     "author_id": 817,
@@ -4670,14 +4670,14 @@
   {
     "author_id": 818,
     "author": "Trong Nghia Hoang",
-    "paper_ids": [188],
-    "affiliation": "NUS"
+    "affiliation": "NUS",
+    "paper_ids": [188]
   },
   {
     "author_id": 819,
     "author": "Tudor Achim",
-    "paper_ids": [1028],
-    "affiliation": "Stanford University"
+    "affiliation": "Stanford University",
+    "paper_ids": [1028]
   },
   {
     "author_id": 820,
@@ -4692,14 +4692,14 @@
   {
     "author_id": 822,
     "author": "Umut Simsekli",
-    "paper_ids": [306],
-    "affiliation": "Telecom ParisTech"
+    "affiliation": "Telecom ParisTech",
+    "paper_ids": [306]
   },
   {
     "author_id": 823,
     "author": "Uri Shaham",
-    "paper_ids": [22],
-    "affiliation": "Yale University"
+    "affiliation": "Yale University",
+    "paper_ids": [22]
   },
   {
     "author_id": 824,
@@ -4709,8 +4709,8 @@
   {
     "author_id": 825,
     "author": "Urvashi Oswal",
-    "paper_ids": [478],
-    "affiliation": "University of Wisconsin"
+    "affiliation": "University of Wisconsin",
+    "paper_ids": [478]
   },
   {
     "author_id": 826,
@@ -4720,38 +4720,38 @@
   {
     "author_id": 827,
     "author": "Vahab Mirrokni",
-    "paper_ids": [1130],
-    "affiliation": "Google Research"
+    "affiliation": "Google Research",
+    "paper_ids": [1130]
   },
   {
     "author_id": 828,
     "author": "Valentina Fedorova",
-    "paper_ids": [1206],
-    "affiliation": "Yandex"
+    "affiliation": "Yandex",
+    "paper_ids": [1206]
   },
   {
     "author_id": 829,
     "author": "Valliappa Chockalingam",
-    "paper_ids": [1242],
-    "affiliation": "University of Michigan"
+    "affiliation": "University of Michigan",
+    "paper_ids": [1242]
   },
   {
     "author_id": 830,
     "author": "Vamsi Ithapu",
-    "paper_ids": [292],
-    "affiliation": "UW Madison"
+    "affiliation": "UW Madison",
+    "paper_ids": [292]
   },
   {
     "author_id": 831,
     "author": "Vamsi Potluru",
-    "paper_ids": [974],
-    "affiliation": "Comcast Cable"
+    "affiliation": "Comcast Cable",
+    "paper_ids": [974]
   },
   {
     "author_id": 832,
     "author": "Vasilis Syrgkanis",
-    "paper_ids": [995],
-    "affiliation": "Microsoft Research"
+    "affiliation": "Microsoft Research",
+    "paper_ids": [995]
   },
   {
     "author_id": 833,
@@ -4761,14 +4761,14 @@
   {
     "author_id": 834,
     "author": "Venu Govindaraju",
-    "paper_ids": [62, 544],
-    "affiliation": "SUNY Buffalo"
+    "affiliation": "SUNY Buffalo",
+    "paper_ids": [62, 544]
   },
   {
     "author_id": 835,
     "author": "Veselin Raychev",
-    "paper_ids": [1316],
-    "affiliation": "ETH Zurich"
+    "affiliation": "ETH Zurich",
+    "paper_ids": [1316]
   },
   {
     "author_id": 836,
@@ -4778,20 +4778,20 @@
   {
     "author_id": 837,
     "author": "Victor Lempitsky",
-    "paper_ids": [639],
-    "affiliation": "Skolkovo Institute of Sci&Tech"
+    "affiliation": "Skolkovo Institute of Sci&Tech",
+    "paper_ids": [639]
   },
   {
     "author_id": 838,
     "author": "Victor Zhong",
-    "paper_ids": [665],
-    "affiliation": "MetaMind"
+    "affiliation": "MetaMind",
+    "paper_ids": [665]
   },
   {
     "author_id": 839,
     "author": "Vikas Sindhwani",
-    "paper_ids": [1120],
-    "affiliation": "Google Research"
+    "affiliation": "Google Research",
+    "paper_ids": [1120]
   },
   {
     "author_id": 840,
@@ -4801,26 +4801,26 @@
   {
     "author_id": 841,
     "author": "Vinayak Rao",
-    "paper_ids": [1023],
-    "affiliation": "Purdue University"
+    "affiliation": "Purdue University",
+    "paper_ids": [1023]
   },
   {
     "author_id": 842,
     "author": "Virgil Pavlu",
-    "paper_ids": [1114],
-    "affiliation": "Northeastern University"
+    "affiliation": "Northeastern University",
+    "paper_ids": [1114]
   },
   {
     "author_id": 843,
     "author": "Vivek Srikumar",
-    "paper_ids": [1096],
-    "affiliation": "University of Utah"
+    "affiliation": "University of Utah",
+    "paper_ids": [1096]
   },
   {
     "author_id": 844,
     "author": "Volodymyr Mnih",
-    "paper_ids": [885],
-    "affiliation": "Google DeepMind"
+    "affiliation": "Google DeepMind",
+    "paper_ids": [885]
   },
   {
     "author_id": 845,
@@ -4840,32 +4840,32 @@
   {
     "author_id": 848,
     "author": "Wei Dai",
-    "paper_ids": [731],
-    "affiliation": "Carnegie Mellon University"
+    "affiliation": "Carnegie Mellon University",
+    "paper_ids": [731]
   },
   {
     "author_id": 849,
     "author": "Weihao Gao",
-    "paper_ids": [1237],
-    "affiliation": "UIUC"
+    "affiliation": "UIUC",
+    "paper_ids": [1237]
   },
   {
     "author_id": 850,
     "author": "Weihong Guo",
-    "paper_ids": [93],
-    "affiliation": "Case Western Reserve University"
+    "affiliation": "Case Western Reserve University",
+    "paper_ids": [93]
   },
   {
     "author_id": 851,
     "author": "Weijie Wu",
-    "paper_ids": [543],
-    "affiliation": "CUHK"
+    "affiliation": "CUHK",
+    "paper_ids": [543]
   },
   {
     "author_id": 852,
     "author": "Weining Lu",
-    "paper_ids": [500],
-    "affiliation": "Tsinghua Univerisity"
+    "affiliation": "Tsinghua Univerisity",
+    "paper_ids": [500]
   },
   {
     "author_id": 853,
@@ -4875,8 +4875,8 @@
   {
     "author_id": 854,
     "author": "Weiyang Liu",
-    "paper_ids": [257],
-    "affiliation": "Peking University"
+    "affiliation": "Peking University",
+    "paper_ids": [257]
   },
   {
     "author_id": 855,
@@ -4886,8 +4886,8 @@
   {
     "author_id": 856,
     "author": "Wenkui Ding",
-    "paper_ids": [351],
-    "affiliation": "Hulu LLC."
+    "affiliation": "Hulu LLC.",
+    "paper_ids": [351]
   },
   {
     "author_id": 857,
@@ -4897,32 +4897,32 @@
   {
     "author_id": 858,
     "author": "Wenruo Bai",
-    "paper_ids": [1225],
-    "affiliation": "University of Washington"
+    "affiliation": "University of Washington",
+    "paper_ids": [1225]
   },
   {
     "author_id": 859,
     "author": "Wen Sun",
-    "paper_ids": [558],
-    "affiliation": "Carnegie Mellon University"
+    "affiliation": "Carnegie Mellon University",
+    "paper_ids": [558]
   },
   {
     "author_id": 860,
     "author": "William Cohen",
-    "paper_ids": [23],
-    "affiliation": "CMU"
+    "affiliation": "CMU",
+    "paper_ids": [23]
   },
   {
     "author_id": 861,
     "author": "William Fithian",
-    "paper_ids": [1308],
-    "affiliation": "UC Berkeley, Department of Statistics"
+    "affiliation": "UC Berkeley, Department of Statistics",
+    "paper_ids": [1308]
   },
   {
     "author_id": 862,
     "author": "William Hoiles",
-    "paper_ids": [750],
-    "affiliation": "UCLA"
+    "affiliation": "UCLA",
+    "paper_ids": [750]
   },
   {
     "author_id": 863,
@@ -4937,32 +4937,32 @@
   {
     "author_id": 865,
     "author": "Wonyong Sung",
-    "paper_ids": [998],
-    "affiliation": "Seoul National University"
+    "affiliation": "Seoul National University",
+    "paper_ids": [998]
   },
   {
     "author_id": 866,
     "author": "Xiangang Li",
-    "paper_ids": [76],
-    "affiliation": "Baidu"
+    "affiliation": "Baidu",
+    "paper_ids": [76]
   },
   {
     "author_id": 867,
     "author": "Xiangru Huang",
-    "paper_ids": [1375],
-    "affiliation": "UTaustin"
+    "affiliation": "UTaustin",
+    "paper_ids": [1375]
   },
   {
     "author_id": 868,
     "author": "Xiangyu Wang",
-    "paper_ids": [831],
-    "affiliation": "Duke University"
+    "affiliation": "Duke University",
+    "paper_ids": [831]
   },
   {
     "author_id": 869,
     "author": "Xiaochun Cao",
-    "paper_ids": [600],
-    "affiliation": "Institute of information engineering, CAS"
+    "affiliation": "Institute of information engineering, CAS",
+    "paper_ids": [600]
   },
   {
     "author_id": 870,
@@ -4972,8 +4972,8 @@
   {
     "author_id": 871,
     "author": "Xiaojin Zhu",
-    "paper_ids": [58, 1246],
-    "affiliation": "University of Wisconsin"
+    "affiliation": "University of Wisconsin",
+    "paper_ids": [58, 1246]
   },
   {
     "author_id": 872,
@@ -4983,38 +4983,38 @@
   {
     "author_id": 873,
     "author": "Xi Chen",
-    "paper_ids": [629],
-    "affiliation": "University of California, Berkeley"
+    "affiliation": "University of California, Berkeley",
+    "paper_ids": [629]
   },
   {
     "author_id": 874,
     "author": "Xinchen Yan",
-    "paper_ids": [485],
-    "affiliation": "University of Michigan"
+    "affiliation": "University of Michigan",
+    "paper_ids": [485]
   },
   {
     "author_id": 875,
     "author": "Xingguo Li",
-    "paper_ids": [423],
-    "affiliation": "University of Minnesota"
+    "affiliation": "University of Minnesota",
+    "paper_ids": [423]
   },
   {
     "author_id": 876,
     "author": "Xingyuan Pan",
-    "paper_ids": [1096],
-    "affiliation": "University of Utah"
+    "affiliation": "University of Utah",
+    "paper_ids": [1096]
   },
   {
     "author_id": 877,
     "author": "Xin Lin",
-    "paper_ids": [1031],
-    "affiliation": "University of Texas at Austin"
+    "affiliation": "University of Texas at Austin",
+    "paper_ids": [1031]
   },
   {
     "author_id": 878,
     "author": "Xinze Guan",
-    "paper_ids": [1047],
-    "affiliation": "Oregon State University"
+    "affiliation": "Oregon State University",
+    "paper_ids": [1047]
   },
   {
     "author_id": 879,
@@ -5029,38 +5029,38 @@
   {
     "author_id": 881,
     "author": "Yahel David",
-    "paper_ids": [410],
-    "affiliation": "Technion"
+    "affiliation": "Technion",
+    "paper_ids": [410]
   },
   {
     "author_id": 882,
     "author": "Yandong Wen",
-    "paper_ids": [257],
-    "affiliation": "South China University of Technology"
+    "affiliation": "South China University of Technology",
+    "paper_ids": [257]
   },
   {
     "author_id": 883,
     "author": "Yan Duan",
-    "paper_ids": [629],
-    "affiliation": "University of California, Berk"
+    "affiliation": "University of California, Berk",
+    "paper_ids": [629]
   },
   {
     "author_id": 884,
     "author": "Yang Lu",
-    "paper_ids": [1188],
-    "affiliation": "UCLA"
+    "affiliation": "UCLA",
+    "paper_ids": [1188]
   },
   {
     "author_id": 885,
     "author": "Yang Song",
-    "paper_ids": [997],
-    "affiliation": "Tsinghua University"
+    "affiliation": "Tsinghua University",
+    "paper_ids": [997]
   },
   {
     "author_id": 886,
     "author": "Yang Yuan",
-    "paper_ids": [496, 507],
-    "affiliation": "Cornell"
+    "affiliation": "Cornell",
+    "paper_ids": [496, 507]
   },
   {
     "author_id": 887,
@@ -5075,8 +5075,8 @@
   {
     "author_id": 889,
     "author": "Yan Xie",
-    "paper_ids": [76],
-    "affiliation": "Baidu"
+    "affiliation": "Baidu",
+    "paper_ids": [76]
   },
   {
     "author_id": 890,
@@ -5086,8 +5086,8 @@
   {
     "author_id": 891,
     "author": "Yarin Gal",
-    "paper_ids": [479],
-    "affiliation": "University of Cambridge"
+    "affiliation": "University of Cambridge",
+    "paper_ids": [479]
   },
   {
     "author_id": 892,
@@ -5102,26 +5102,26 @@
   {
     "author_id": 894,
     "author": "Yee-Whye Teh",
-    "paper_ids": [707],
-    "affiliation": "Oxford"
+    "affiliation": "Oxford",
+    "paper_ids": [707]
   },
   {
     "author_id": 895,
     "author": "Yexiang Xue",
-    "paper_ids": [146],
-    "affiliation": "Cornell University"
+    "affiliation": "Cornell University",
+    "paper_ids": [146]
   },
   {
     "author_id": 896,
     "author": "Yichen Wang",
-    "paper_ids": [1017],
-    "affiliation": "Georgia Tech"
+    "affiliation": "Georgia Tech",
+    "paper_ids": [1017]
   },
   {
     "author_id": 897,
     "author": "Yichi Xiao",
-    "paper_ids": [198],
-    "affiliation": "Nanjing University"
+    "affiliation": "Nanjing University",
+    "paper_ids": [198]
   },
   {
     "author_id": 898,
@@ -5136,68 +5136,68 @@
   {
     "author_id": 900,
     "author": "Yingbin Liang",
-    "paper_ids": [469],
-    "affiliation": "Syracuse University"
+    "affiliation": "Syracuse University",
+    "paper_ids": [469]
   },
   {
     "author_id": 901,
     "author": "Yingbo Zhou",
-    "paper_ids": [62, 544],
-    "affiliation": "SUNY Buffalo"
+    "affiliation": "SUNY Buffalo",
+    "paper_ids": [62, 544]
   },
   {
     "author_id": 902,
     "author": "Yingfei Wang",
-    "paper_ids": [529],
-    "affiliation": "Princeton University"
+    "affiliation": "Princeton University",
+    "paper_ids": [529]
   },
   {
     "author_id": 903,
     "author": "Yingjun Cao",
-    "paper_ids": [278],
-    "affiliation": "UC-San Diego"
+    "affiliation": "UC-San Diego",
+    "paper_ids": [278]
   },
   {
     "author_id": 904,
     "author": "Yingnian Wu",
-    "paper_ids": [1188],
-    "affiliation": "UCLA"
+    "affiliation": "UCLA",
+    "paper_ids": [1188]
   },
   {
     "author_id": 905,
     "author": "Yingyu Liang",
-    "paper_ids": [1052],
-    "affiliation": "Princeton"
+    "affiliation": "Princeton",
+    "paper_ids": [1052]
   },
   {
     "author_id": 906,
     "author": "Yingzhen Li",
-    "paper_ids": [706, 719],
-    "affiliation": "University of Cambridge"
+    "affiliation": "University of Cambridge",
+    "paper_ids": [706, 719]
   },
   {
     "author_id": 907,
     "author": "Yin Tat Lee",
-    "paper_ids": [759],
-    "affiliation": "MIT"
+    "affiliation": "MIT",
+    "paper_ids": [759]
   },
   {
     "author_id": 908,
     "author": "Yin Zheng",
-    "paper_ids": [1149, 351],
-    "affiliation": "Hulu LLC."
+    "affiliation": "Hulu LLC.",
+    "paper_ids": [1149, 351]
   },
   {
     "author_id": 909,
     "author": "Yishu Miao",
-    "paper_ids": [804],
-    "affiliation": "University of Oxford"
+    "affiliation": "University of Oxford",
+    "paper_ids": [804]
   },
   {
     "author_id": 910,
     "author": "Yisong Yue",
-    "paper_ids": [327],
-    "affiliation": "Caltech"
+    "affiliation": "Caltech",
+    "paper_ids": [327]
   },
   {
     "author_id": 911,
@@ -5207,20 +5207,20 @@
   {
     "author_id": 912,
     "author": "Yonatan Wexler",
-    "paper_ids": [371],
-    "affiliation": "Orcam"
+    "affiliation": "Orcam",
+    "paper_ids": [371]
   },
   {
     "author_id": 913,
     "author": "Yong Rui",
-    "paper_ids": [279],
-    "affiliation": "Microsoft Research"
+    "affiliation": "Microsoft Research",
+    "paper_ids": [279]
   },
   {
     "author_id": 914,
     "author": "Yonina Eldar",
-    "paper_ids": [1113],
-    "affiliation": "Technion"
+    "affiliation": "Technion",
+    "paper_ids": [1113]
   },
   {
     "author_id": 915,
@@ -5230,44 +5230,44 @@
   {
     "author_id": 916,
     "author": "Yoshua Bengio",
-    "paper_ids": [1122, 1361, 1054, 516],
-    "affiliation": "U. of Montreal"
+    "affiliation": "U. of Montreal",
+    "paper_ids": [1122, 1361, 1054, 516]
   },
   {
     "author_id": 917,
     "author": "Yossi Arjevani",
-    "paper_ids": [421],
-    "affiliation": "Weizmann Institute of Science"
+    "affiliation": "Weizmann Institute of Science",
+    "paper_ids": [421]
   },
   {
     "author_id": 918,
     "author": "Young Lee",
-    "paper_ids": [45],
-    "affiliation": "NICTA"
+    "affiliation": "NICTA",
+    "paper_ids": [45]
   },
   {
     "author_id": 919,
     "author": "Yousef Saad",
-    "paper_ids": [224],
-    "affiliation": "University of Minnesota"
+    "affiliation": "University of Minnesota",
+    "paper_ids": [224]
   },
   {
     "author_id": 920,
     "author": "Yuan Yao",
-    "paper_ids": [600],
-    "affiliation": "Peking University"
+    "affiliation": "Peking University",
+    "paper_ids": [600]
   },
   {
     "author_id": 921,
     "author": "Yuanzhi Li",
-    "paper_ids": [1052],
-    "affiliation": "Princeton University"
+    "affiliation": "Princeton University",
+    "paper_ids": [1052]
   },
   {
     "author_id": 922,
     "author": "Yu Cheng",
-    "paper_ids": [500],
-    "affiliation": "IBM Research"
+    "affiliation": "IBM Research",
+    "paper_ids": [500]
   },
   {
     "author_id": 923,
@@ -5277,68 +5277,68 @@
   {
     "author_id": 924,
     "author": "Yuejie Chi",
-    "paper_ids": [469],
-    "affiliation": "Ohio State University"
+    "affiliation": "Ohio State University",
+    "paper_ids": [469]
   },
   {
     "author_id": 925,
     "author": "Yue Zhang",
-    "paper_ids": [93],
-    "affiliation": "Case Western Reserve University"
+    "affiliation": "Case Western Reserve University",
+    "paper_ids": [93]
   },
   {
     "author_id": 926,
     "author": "Yukihiro Tagami",
-    "paper_ids": [766],
-    "affiliation": "Yahoo Japan Corporation"
+    "affiliation": "Yahoo Japan Corporation",
+    "paper_ids": [766]
   },
   {
     "author_id": 927,
     "author": "Yu Liu",
-    "paper_ids": [631],
-    "affiliation": "Tsinghua University, IIIS"
+    "affiliation": "Tsinghua University, IIIS",
+    "paper_ids": [631]
   },
   {
     "author_id": 928,
     "author": "Yu Lu",
-    "paper_ids": [299],
-    "affiliation": "Yale University"
+    "affiliation": "Yale University",
+    "paper_ids": [299]
   },
   {
     "author_id": 929,
     "author": "Yung Yi",
-    "paper_ids": [272],
-    "affiliation": "KAIST"
+    "affiliation": "KAIST",
+    "paper_ids": [272]
   },
   {
     "author_id": 930,
     "author": "Yunlong Jiao",
-    "paper_ids": [1327],
-    "affiliation": "Telecom Paris Tech"
+    "affiliation": "Telecom Paris Tech",
+    "paper_ids": [1327]
   },
   {
     "author_id": 931,
     "author": "Yunseong Hwang",
-    "paper_ids": [1349],
-    "affiliation": "UNIST"
+    "affiliation": "UNIST",
+    "paper_ids": [1349]
   },
   {
     "author_id": 932,
     "author": "Yury Ustinovskiy",
-    "paper_ids": [1206],
-    "affiliation": "Yandex"
+    "affiliation": "Yandex",
+    "paper_ids": [1206]
   },
   {
     "author_id": 933,
     "author": "Yutian Chen",
-    "paper_ids": [1115],
-    "affiliation": "University of Cambridge"
+    "affiliation": "University of Cambridge",
+    "paper_ids": [1115]
   },
   {
     "author_id": 934,
     "author": "Yuting Zhang",
-    "paper_ids": [303],
-    "affiliation": "University of Michigan"
+    "affiliation": "University of Michigan",
+    "paper_ids": [303]
   },
   {
     "author_id": 935,
@@ -5353,56 +5353,56 @@
   {
     "author_id": 937,
     "author": "Yuxin Chen",
-    "paper_ids": [328],
-    "affiliation": "Stanford University"
+    "affiliation": "Stanford University",
+    "paper_ids": [328]
   },
   {
     "author_id": 938,
     "author": "Zeynep Akata",
-    "paper_ids": [485],
-    "affiliation": "Max Planck Institute for Informatics"
+    "affiliation": "Max Planck Institute for Informatics",
+    "paper_ids": [485]
   },
   {
     "author_id": 939,
     "author": "Zeyuan Allen-Zhu",
-    "paper_ids": [329, 496, 507],
-    "affiliation": "Princeton University"
+    "affiliation": "Princeton University",
+    "paper_ids": [329, 496, 507]
   },
   {
     "author_id": 940,
     "author": "Zhaoran Wang",
-    "paper_ids": [654, 1113],
-    "affiliation": "Princeton University"
+    "affiliation": "Princeton University",
+    "paper_ids": [654, 1113]
   },
   {
     "author_id": 941,
     "author": "Zhe Gan",
-    "paper_ids": [599],
-    "affiliation": "Duke University"
+    "affiliation": "Duke University",
+    "paper_ids": [599]
   },
   {
     "author_id": 942,
     "author": "Zheng Qu",
-    "paper_ids": [507, 832],
-    "affiliation": "University of Hong Kong"
+    "affiliation": "University of Hong Kong",
+    "paper_ids": [507, 832]
   },
   {
     "author_id": 943,
     "author": "Zheng Wen",
-    "paper_ids": [1055, 566],
-    "affiliation": "Adobe Research"
+    "affiliation": "Adobe Research",
+    "paper_ids": [1055, 566]
   },
   {
     "author_id": 944,
     "author": "Zheng Wu",
-    "paper_ids": [866],
-    "affiliation": "The Mathwork Inc."
+    "affiliation": "The Mathwork Inc.",
+    "paper_ids": [866]
   },
   {
     "author_id": 945,
     "author": "Zheng Xu",
-    "paper_ids": [1215],
-    "affiliation": "University of Maryland"
+    "affiliation": "University of Maryland",
+    "paper_ids": [1215]
   },
   {
     "author_id": 946,
@@ -5412,14 +5412,14 @@
   {
     "author_id": 947,
     "author": "Zhibing Zhao",
-    "paper_ids": [1306],
-    "affiliation": "RPI"
+    "affiliation": "RPI",
+    "paper_ids": [1306]
   },
   {
     "author_id": 948,
     "author": "Zhiding Yu",
-    "paper_ids": [257],
-    "affiliation": "Carnegie Mellon University"
+    "affiliation": "Carnegie Mellon University",
+    "paper_ids": [257]
   },
   {
     "author_id": 949,
@@ -5429,14 +5429,14 @@
   {
     "author_id": 950,
     "author": "Zhilin Yang",
-    "paper_ids": [23],
-    "affiliation": "Carnegie Mellon University"
+    "affiliation": "Carnegie Mellon University",
+    "paper_ids": [23]
   },
   {
     "author_id": 951,
     "author": "Zhiqiang Xu",
-    "paper_ids": [783],
-    "affiliation": "Institute of Infocomm Research"
+    "affiliation": "Institute of Infocomm Research",
+    "paper_ids": [783]
   },
   {
     "author_id": 952,
@@ -5446,14 +5446,14 @@
   {
     "author_id": 953,
     "author": "Zhongfei Zhang",
-    "paper_ids": [500],
-    "affiliation": "Binghamton University"
+    "affiliation": "Binghamton University",
+    "paper_ids": [500]
   },
   {
     "author_id": 954,
     "author": "Zhuoran Yang",
-    "paper_ids": [1113],
-    "affiliation": "Princeton University"
+    "affiliation": "Princeton University",
+    "paper_ids": [1113]
   },
   {
     "author_id": 955,
@@ -5463,8 +5463,8 @@
   {
     "author_id": 956,
     "author": "Ziyu Wang",
-    "paper_ids": [927],
-    "affiliation": "Google Inc."
+    "affiliation": "Google Inc.",
+    "paper_ids": [927]
   },
   {
     "author_id": 957,

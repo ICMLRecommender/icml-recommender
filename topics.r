@@ -113,18 +113,16 @@ topics %>%
 
 papers %>% 
   toJSON(pretty=TRUE) %>% 
-  write(file.path(data_path, "papers.json"))
+  write(file.path(data_path, "papers_topics.json"))
 
 
-# write topics.txt
+# write topics.md
 #===================
 
 print_topic = function(df) {
   out = c(paste("# topic", df$topic_id))
-  out = c(out, knitr::kable(df$words[[1]][1:10,]))
-  out = c(out, "\n")
-  out = c(out, knitr::kable(df$papers[[1]][1:5,]))
-  out = c(out, "\n")
+  out = c(out, knitr::kable(df$words[[1]][1:10,]), "\n")
+  out = c(out, knitr::kable(df$papers[[1]][1:5,]), "\n")
 }
 
 topics %>% 

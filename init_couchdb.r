@@ -8,7 +8,7 @@ require(sofa)
 #====================
 data_path = "data/icml2016"
 
-papers = file(file.path(data_path, "papers.json")) %>% 
+papers = file(file.path(data_path, "papers_topics.json")) %>% 
   fromJSON() %>% 
   tbl_df()
 
@@ -27,14 +27,16 @@ topics = file(file.path(data_path, "topics.json")) %>%
 
 # write to couchDB
 #=============================
-cdb = Cushion$new()
+# cdb = Cushion$new()
 
-# cdb = Cushion$new(host = "icml.papro.org.uk",
-#                   path = "couchdb",
-#                   port = NULL,
-#                   transport = "https")
+cdb = Cushion$new(host = "icml.papro.org.uk",
+                  path = "couchdb",
+                  port = NULL,
+                  transport = "https",
+                  user = "adrien",
+                  pwd = "secretpassword123")
 
-ping(cdb)
+# ping(cdb)
 db_list(cdb)
 
 if ("items" %in% db_list(cdb)) 
