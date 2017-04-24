@@ -22,7 +22,7 @@ py_require:
 	pip install -r icml-pdf-conversion/requirements.txt
 	
 r_require: 
-	apt install r-base libssl-dev libcurl4-openssl-dev
+	apt install r-base libssl-dev libcurl4-openssl-dev libxml2-dev
 	Rscript requirements.r
 	
 lda-c/lda: lda-c/lda
