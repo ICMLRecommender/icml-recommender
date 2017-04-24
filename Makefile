@@ -11,18 +11,18 @@ lambda_v := 0.01
 
 all: clean_db write_db
 
-init: c_init py_init r_init lda-c ctr2
+require: ctr_require py_require r_require
 
-c_init:
+ctr_require:
 	apt install libgsl-dev
 
-py_init:
+py_require:
 	apt install python-pip
 	pip install --upgrade pip
-	make pip install -r icml-pdf-conversion/requirements.txt
+	pip install -r icml-pdf-conversion/requirements.txt
 	
-r_init: 
-	apt install r-base
+r_require: 
+	apt install r-base libssl-dev libcurl4-openssl-dev
 	Rscript requirements.r
 	
 lda-c/lda: lda-c/lda
@@ -91,5 +91,5 @@ write_db: write_couchdb.r run_ctr
 
 clean: clean_scrape clean_pdfconversion clean_run_lda clean_topics clean_db clean_run_ctr
 
-.PHONY: init c_init py_init r_init lda-c ctr2 scrape clean_scrape pdfconversion clean_pdfconversion run_lda clean_run_lda topics clean_topics init_db read_db clean_db run_ctr clean_run_ctr write_db clean
+.PHONY: require ctr_require py_require r_require lda-c ctr2 scrape clean_scrape pdfconversion clean_pdfconversion run_lda clean_run_lda topics clean_topics init_db read_db clean_db run_ctr clean_run_ctr write_db clean
 
