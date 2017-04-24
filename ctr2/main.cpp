@@ -25,6 +25,7 @@ void print_usage_and_exit() {
   printf("      --lambda_v:       item vector regularizer, default 100\n");
   printf("      --alpha_u_smooth: alpha_u smooth, default [0.0]\n");
   printf("      --alpha_v_smooth: alpha_v smooth, default [0.0]\n");
+  printf("      --beta_smooth: beta smooth, default [0.0]\n");
   printf("\n");
 
   printf("      --random_seed:    the random seed, default from the current time\n");
@@ -55,7 +56,7 @@ int main(int argc, char* argv[]) {
   int theta_u_opt = 0;
   int lda_regression = 0;
 
-  const char* const short_options = "hd:x:i:a:b:u:v:r:s:m:k:t:T:e:E:y:w:W:";
+  const char* const short_options = "hd:x:i:a:b:u:v:r:s:m:k:t:T:e:E:y:w:W:z:";
   const struct option long_options[] = {
     {"help",          no_argument,       NULL, 'h'},
     {"directory",     required_argument, NULL, 'd'},
@@ -69,13 +70,14 @@ int main(int argc, char* argv[]) {
     {"save_lag",      required_argument, NULL, 's'},
     {"max_iter",      required_argument, NULL, 'm'},
     {"num_factors",   required_argument, NULL, 'k'},
-    {"mult_v",        required_argument, NULL, 't'},
-    {"mult_u",        required_argument, NULL, 'T'},
+    {"mult_v",        optional_argument, NULL, 't'},
+    {"mult_u",        optional_argument, NULL, 'T'},
     {"theta_v_init",  required_argument, NULL, 'e'},
     {"theta_u_init",  required_argument, NULL, 'E'},
-    {"beta_init",     required_argument, NULL, 'y'},
+    {"beta_init",     optional_argument, NULL, 'y'},
     {"alpha_v_smooth", required_argument, NULL, 'w'},
     {"alpha_u_smooth", required_argument, NULL, 'W'},
+    {"beta_smooth", required_argument, NULL, 'z'},
     {"theta_v_opt",   no_argument, &theta_v_opt, 1},
     {"theta_u_opt",   no_argument, &theta_u_opt, 1},
     {"lda_regression",no_argument, &lda_regression, 1},
@@ -87,10 +89,11 @@ int main(int argc, char* argv[]) {
   char*  item_path = NULL;
   double a = 1.0;
   double b = 0.01;
-  double lambda_u = 100;
-  double lambda_v = 100;
+  double lambda_u = 0.01;
+  double lambda_v = 0.01;
   double alpha_v_smooth = 0.0;
   double alpha_u_smooth = 0.0;
+  double beta_smooth = 0.01;
 
   time_t t; time(&t);
   long   random_seed = (long) t;
@@ -137,6 +140,9 @@ int main(int argc, char* argv[]) {
         break;
       case 'W':
         alpha_u_smooth = atof(optarg);
+        break;
+      case 'z':
+        beta_smooth = atof(optarg);
         break;
       case 'r':
         random_seed = atoi(optarg);
@@ -199,8 +205,8 @@ int main(int argc, char* argv[]) {
   printf("b: %.4f\n", b);
   printf("lambda_u: %.4f\n", lambda_u);
   printf("lambda_v: %.4f\n", lambda_v);
-  printf("alpha_v_smooth: %.5f\n", alpha_v_smooth);
   printf("alpha_u_smooth: %.5f\n", alpha_u_smooth);
+  printf("alpha_v_smooth: %.5f\n", alpha_v_smooth);
   printf("random seed: %d\n", (int)random_seed);
   printf("save lag: %d\n", save_lag);
   printf("max iter: %d\n", max_iter);
@@ -259,15 +265,17 @@ int main(int argc, char* argv[]) {
   }
 
   if (mult_v_path != NULL || mult_u_path != NULL) {
-	if (beta_init_path == NULL) {
-	  printf("topic distributions file must be provided ...\n");
-	  exit(-1);
-	}
-	if (!file_exists(beta_init_path)) {
-	  printf("topic distributions file %s doesn't exist! quit ...\n", beta_init_path);
-	  exit(-1);
-	}
-	printf("topic distributions file: %s\n", beta_init_path);
+	  if (theta_u_opt || theta_v_opt) {
+			if (beta_init_path == NULL) {
+			  printf("topic distributions file must be provided ...\n");
+			  exit(-1);
+			}
+			if (!file_exists(beta_init_path)) {
+			  printf("topic distributions file %s doesn't exist! quit ...\n", beta_init_path);
+			  exit(-1);
+			}
+			printf("topic distributions file: %s\n", beta_init_path);
+	  }
   }
 
   printf("\n");
@@ -276,7 +284,7 @@ int main(int argc, char* argv[]) {
   int ctr_run = 1;
   if (mult_v_path == NULL) ctr_run = 0; // TODO check mult_user_path?
   ctr_hyperparameter ctr_param;
-  ctr_param.set(a, b, lambda_u, lambda_v, alpha_u_smooth, alpha_v_smooth,
+  ctr_param.set(a, b, lambda_u, lambda_v, alpha_u_smooth, alpha_v_smooth, beta_smooth,
       random_seed, max_iter, save_lag, theta_u_opt, theta_v_opt, ctr_run, lda_regression);
   sprintf(filename, "%s/settings.txt", directory); 
   ctr_param.save(filename);
@@ -305,16 +313,16 @@ int main(int argc, char* argv[]) {
     // read word data
     c_u = new c_corpus();
     c_u->read_data(mult_u_path);
-    ctr->read_init_information_u(theta_u_init_path, c_u, alpha_u_smooth);
   }
+  ctr->read_init_information_u(theta_u_init_path, alpha_u_smooth);
 
   c_corpus* c_v = NULL;
   if (mult_v_path != NULL) {
     // read word data
     c_v = new c_corpus();
     c_v->read_data(mult_v_path);
-    ctr->read_init_information_v(theta_v_init_path, beta_init_path, c_v, alpha_v_smooth);
   }
+  ctr->read_init_information_v(theta_v_init_path, beta_init_path, c_v, alpha_v_smooth, beta_smooth);
 
   ctr->learn_map_estimate(users, items, c_u, c_v, &ctr_param, directory);
 

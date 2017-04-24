@@ -1,13 +1,24 @@
+#!/usr/bin/Rscript --slave
+
 require(rvest)
 require(tidyr)
 require(dplyr)
 require(jsonlite)
+require(yaml)
 
-data_path = "data/icml2016"
+args = commandArgs(TRUE)
+
+cfg_file = "config.yml"
+if (length(args>0))
+  cfg_file = args[1]
+
+cfg = yaml.load_file(cfg_file)
+
+data_path = cfg$data$path
 
 dir.create(data_path, showWarnings = FALSE)
 
-papers_url = "http://jmlr.org/proceedings/papers/v48/"
+papers_url = "http://proceedings.mlr.press/v48/"
 schedule_url = "http://icml.cc/2016/?page_id=1839"
 reviews_url = "http://icml.cc/2016/reviews/"
 rebuttals_url = "http://icml.cc/2016/rebuttals/"
@@ -34,9 +45,9 @@ parse_paper = function(url) {
   
   out = list(url = url)
   
-  out$key = out$url %>% 
-    basename() %>% 
-    tools::file_path_sans_ext()
+  out$mlr_paper_id = out$url %>% 
+    tools::file_path_sans_ext() %>% 
+    basename()
   
   out$title = html %>% 
     html_nodes("h1") %>% 
@@ -58,18 +69,14 @@ parse_paper = function(url) {
   
   out$pdf_url = html %>% 
     html_nodes("#extras ul li:nth-child(1) a") %>% 
-    html_attr("href") %>% 
-    paste0(papers_url, .)
+    html_attr("href")
   
   out$supp_pdf_url = html %>% 
     html_nodes("#extras ul li:nth-child(2) a") %>% 
     html_attr("href")
   
-  
   if (length(out$supp_pdf_url)==0)
     out$supp_pdf_url = NA
-  else
-    out$supp_pdf_url = paste0(papers_url, out$supp_pdf_url)
   
   if (dl_pdf)
     download.file(out$pdf_url, file.path(data_path, "papers", out$pdf_url))
@@ -88,7 +95,6 @@ urls = html %>%
 
 papers = data_frame(url = urls) %>% 
   filter(grepl("^.*\\.html$", url)) %>% 
-  mutate(url = paste0(papers_url, url)) %>% 
   group_by(url) %>% 
   do(parse_paper(.$url)) %>% 
   ungroup()
@@ -139,6 +145,10 @@ parse_talk = function(html) {
     html_node(".lnks a") %>% 
     html_attr("href")
   
+  out$mlr_paper_id = out$pdf_url %>% 
+    tools::file_path_sans_ext() %>% 
+    basename()
+  
   out$review_url = paste0(reviews_url, out$paper_id,".txt")
   
   out$rebuttal_url = paste0(rebuttals_url, out$paper_id,".txt")
@@ -174,6 +184,7 @@ for (i in seq_along(html)) {
   
   if (nm == "h3") {
     spl = strsplit(txt, " – ")[[1]]
+    session_id = id
     session_day = spl[1]
     session_title = spl[2] %>% 
       gsub("[[:blank:]]", " ", .)
@@ -193,6 +204,7 @@ for (i in seq_along(html)) {
   }
   if (nm == "li") {
     out = parse_talk(html[i])
+    out$session_id = session_id
     out$session_title = session_title
     out$session_chair = session_chair
     out$session_day = session_day
@@ -212,9 +224,11 @@ for (i in seq_along(html)) {
 #=============
 
 joined = papers %>% 
-  left_join(schedule, by = "pdf_url") %>% 
-  select(-title.y, -authors.y) %>% 
-  rename(title = title.x, authors = authors.x)
+  left_join(schedule %>% 
+              select(-pdf_url), 
+            by = "mlr_paper_id") %>% 
+  select(-title.y, -authors.x) %>% 
+  rename(title = title.x, authors = authors.y)
 
 authors = joined %>% 
   select(authors, affiliations, paper_id) %>% 
@@ -225,8 +239,9 @@ authors = joined %>%
   fill(affiliation) %>% 
   group_by(author, affiliation) %>% 
   summarise(paper_ids = list(paper_id)) %>% 
+  group_by(author) %>% 
+  mutate(author_id = paste(gsub(" ", "-", tolower(author)), seq_len(n()), sep="-")) %>% 
   ungroup() %>% 
-  mutate(author_id = seq_len(n())) %>% 
   select(author_id, everything())
   
 paper_authors = authors %>% 
@@ -246,19 +261,17 @@ todate = function(session_day, session_time) {
 }
 
 sessions = joined %>% 
-  select(session_day, session_title, session_chair, session_location, session_time, paper_id) %>% 
+  select(session_id, session_day, session_title, session_chair, session_location, session_time, paper_id) %>% 
   mutate(session_time = todate(session_day, session_time)) %>% 
   arrange(session_time, session_title) %>% 
-  group_by(session_day, session_title, session_chair, session_location) %>% 
+  group_by(session_id, session_day, session_title, session_chair, session_location) %>% 
   nest(.key = "talks") %>% 
-  ungroup() %>% 
-  mutate(session_id = seq_len(n())) %>% 
-  select(session_id, everything())
+  ungroup()
 
 papers = joined %>% 
-  left_join(sessions, by = c("session_title", "session_chair", "session_day", "session_location")) %>% 
+  left_join(sessions, by = c("session_id", "session_title", "session_chair", "session_day", "session_location")) %>% 
   left_join(paper_authors, by="paper_id") %>% 
-  select(paper_id, title, abstract, author_ids, key, url, pdf_url, supp_pdf_url, 
+  select(paper_id, title, abstract, author_ids, mlr_paper_id, url, pdf_url, supp_pdf_url, 
        review_url, rebuttal_url, session_id, session_time, poster_session)
 
 # Write json

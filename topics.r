@@ -1,13 +1,26 @@
-require(dplyr)
-require(tidyr)
-require(readr)
+#!/usr/bin/Rscript --slave
 
-data_path = "data/icml2016"
+require(tidyr)
+require(dplyr)
+require(readr)
+require(yaml)
+
+args = commandArgs(TRUE)
+
+cfg_file = "config.yml"
+if (length(args>0))
+  cfg_file = args[1]
+
+cfg = yaml.load_file(cfg_file)
+
+data_path = cfg$data$path
+txt_path = cfg$pdfconversion$txt_path
+lda_output_path = cfg$lda$output_path
 
 # topics
-words = readLines(file.path(data_path, "vocab.dat"))
+words = readLines(file.path(txt_path, "vocab.dat"))
 
-beta = read_delim(file.path(data_path, "lda_output/final.beta"), 
+beta = read_delim(file.path(lda_output_path, "final.beta"), 
                       delim=" ", 
                       col_types = cols(X1 = col_skip(), .default = "d"), 
                       col_names = c("X1", words)) %>%
@@ -24,15 +37,21 @@ topics = beta %>%
   group_by(topic_id) %>% 
   arrange(desc(weight)) %>% 
   nest(.key = "words") %>% 
-  mutate(top_words = sapply(words, function(x) paste(x$word[1:3], collapse=" ")))
+  arrange(topic_id) %>% 
+  mutate(topic_id = paste(sprintf("%03d", topic_id), 
+                          sapply(words, function(x) paste(x$word[1:3], collapse="-")), sep = "-")) 
+
+topic_ids = topics$topic_id
 
 # papers topic proportions
 # =============================
-file_keys = readLines(file.path(data_path, "papers_txt/files.dat")) %>% 
-  basename() %>% tools::file_path_sans_ext()
+mlr_paper_ids = readLines(file.path(txt_path, "files.dat")) %>%
+  tools::file_path_sans_ext() %>% 
+  basename() 
 
-gamma = read_delim(file.path(data_path, "lda_output/final.gamma"), 
-                          delim=" ", col_names = as.character(seq_len(n_topics))) %>% 
+gamma = read_delim(file.path(lda_output_path, "final.gamma"), 
+                          delim=" ", col_names = topic_ids,
+                   col_types = cols(.default = "d")) %>% 
   sweep(., 1, rowSums(.), "/")
 
 papers = fromJSON(file(file.path(data_path, "papers.json"))) %>% tbl_df() 
@@ -40,25 +59,24 @@ papers = fromJSON(file(file.path(data_path, "papers.json"))) %>% tbl_df()
 # add topic proportions to papers
 weight_thres = .1
 paper_topics = gamma %>% 
-  mutate(key = file_keys) %>% 
-  mutate_at(vars(-key), funs(ifelse(.>weight_thres, ., NA))) %>% 
-  gather(topic_id, weight, -key, na.rm = TRUE) %>% 
-  arrange(key, desc(weight)) %>% 
-  group_by(key) %>% 
+  mutate(mlr_paper_id = mlr_paper_ids) %>% 
+  mutate_at(vars(-mlr_paper_id), funs(ifelse(.>weight_thres, ., NA))) %>% 
+  gather(topic_id, weight, -mlr_paper_id, na.rm = TRUE) %>% 
+  arrange(mlr_paper_id, desc(weight)) %>% 
+  group_by(mlr_paper_id) %>% 
   nest(.key = "topics")
 
 papers = papers %>% 
-  left_join(paper_topics, by = "key")
+  left_join(paper_topics, by = "mlr_paper_id")
 
 # add top papers to topics
 weight_thres = .1
 topic_papers = gamma %>% 
-  mutate(key = file_keys) %>% 
-  mutate_at(vars(-key), funs(ifelse(.>weight_thres, ., NA))) %>% 
-  gather(topic_id, weight, -key, na.rm = TRUE) %>% 
-  mutate(topic_id = as.integer(topic_id)) %>% 
+  mutate(mlr_paper_id = mlr_paper_ids) %>% 
+  mutate_at(vars(-mlr_paper_id), funs(ifelse(.>weight_thres, ., NA))) %>% 
+  gather(topic_id, weight, -mlr_paper_id, na.rm = TRUE) %>% 
   arrange(topic_id, desc(weight)) %>% 
-  left_join(select(papers, key, title), by="key") %>% 
+  left_join(select(papers, mlr_paper_id, title), by="mlr_paper_id") %>% 
   group_by(topic_id) %>% 
   nest(.key = "papers")
 

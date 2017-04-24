@@ -4,7 +4,6 @@
 extern gsl_rng * RANDOM_NUMBER;
 //int min_iter = 15;
 int min_iter = 2;
-double beta_smooth = 0.01;
 
 c_ctr::c_ctr() {
   m_beta = NULL;
@@ -30,10 +29,10 @@ c_ctr::~c_ctr() {
 void c_ctr::read_init_information_v(const char* theta_v_init_path,
                                   const char* beta_init_path,
                                   const c_corpus* c_v,
-                                  double alpha_v_smooth) {
-  int num_topics = m_num_factors;
-  m_theta_v = gsl_matrix_alloc(c_v->m_num_docs, num_topics);
-  printf("\nreading theta initialization from %s\n", theta_v_init_path);
+                                  double alpha_v_smooth,
+								  double beta_smooth) {
+  m_theta_v = gsl_matrix_alloc(m_num_items, m_num_factors);
+  printf("\nreading theta_v initialization from %s\n", theta_v_init_path);
   FILE * f = fopen(theta_v_init_path, "r");
   mtx_fscanf(f, m_theta_v);
   fclose(f);
@@ -47,30 +46,30 @@ void c_ctr::read_init_information_v(const char* theta_v_init_path,
     vnormalize(&theta_v.vector);
   }
 
-  m_beta = gsl_matrix_alloc(num_topics, c_v->m_size_vocab);
-  printf("reading beta initialization from %s\n", beta_init_path);
-  f = fopen(beta_init_path, "r");
-  mtx_fscanf(f, m_beta);
-  fclose(f);
+  if (beta_init_path != NULL) {
+	  m_beta = gsl_matrix_alloc(m_num_factors, c_v->m_size_vocab);
+	  printf("reading beta initialization from %s\n", beta_init_path);
+	  f = fopen(beta_init_path, "r");
+	  mtx_fscanf(f, m_beta);
+	  fclose(f);
+	  // exponentiate if it's not
+	  if (mget(m_beta, 0, 0) < 0) {
+	    mtx_exp(m_beta);
+	  }
+	  else {
+	    gsl_matrix_add_constant(m_beta, beta_smooth);
+	    for (size_t j = 0; j < m_beta->size1; j ++) {
+	      gsl_vector_view beta_v = gsl_matrix_row(m_beta, j);
+	      vnormalize(&beta_v.vector);
+	    }
+	  }
+  }
 
-  // exponentiate if it's not
-  if (mget(m_beta, 0, 0) < 0) {
-    mtx_exp(m_beta);
-  }
-  else {
-    gsl_matrix_add_constant(m_beta, beta_smooth);
-    for (size_t j = 0; j < m_beta->size1; j ++) {
-      gsl_vector_view beta_v = gsl_matrix_row(m_beta, j);
-      vnormalize(&beta_v.vector);
-    }
-  }
 }
 
 void c_ctr::read_init_information_u(const char* theta_u_init_path,
-                                  const c_corpus* c_u,
                                   double alpha_u_smooth) {
-  int num_topics = m_num_factors;
-  m_theta_u = gsl_matrix_alloc(c_u->m_num_docs, num_topics);
+  m_theta_u = gsl_matrix_alloc(m_num_users, m_num_factors);
   printf("\nreading theta_u initialization from %s\n", theta_u_init_path);
   FILE * f = fopen(theta_u_init_path, "r");
   mtx_fscanf(f, m_theta_u);

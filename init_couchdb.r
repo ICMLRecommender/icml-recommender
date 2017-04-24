@@ -1,12 +1,23 @@
-require(jsonlite)
-require(dplyr)
+#!/usr/bin/Rscript --slave
+
 require(tidyr)
-require(readr)
+require(dplyr)
+require(jsonlite)
 require(sofa)
+require(yaml)
+
+args = commandArgs(TRUE)
+
+cfg_file = "config.yml"
+if (length(args>0))
+  cfg_file = args[1]
+
+cfg = yaml.load_file(cfg_file)
+
+data_path = cfg$data$path
 
 # read data
 #====================
-data_path = "data/icml2016"
 
 papers = file(file.path(data_path, "papers_topics.json")) %>% 
   fromJSON() %>% 
@@ -27,34 +38,28 @@ topics = file(file.path(data_path, "topics.json")) %>%
 
 # write to couchDB
 #=============================
-# cdb = Cushion$new()
-
-cdb = Cushion$new(host = "icml.papro.org.uk",
-                  path = "couchdb",
-                  port = NULL,
-                  transport = "https",
-                  user = "adrien",
-                  pwd = "secretpassword123")
+cdb = do.call(Cushion$new, cfg$couchdb)
 
 # ping(cdb)
 db_list(cdb)
 
-if ("items" %in% db_list(cdb)) 
-  cdb %>% db_delete("items")
-cdb %>% db_create("items")
+cdb %>% db_create("items", delifexists=TRUE)
+papers = papers %>% 
+  mutate(`_id` = mlr_paper_id)
 cdb %>% db_bulk_create("items", apply(papers, 1, function(x) toJSON(x, auto_unbox=TRUE)))
 
-if ("authors" %in% db_list(cdb)) 
-  cdb %>% db_delete("authors")
-cdb %>% db_create("authors")
+cdb %>% db_create("authors", delifexists=TRUE)
+authors = authors %>% 
+  mutate(`_id` = author_id)
 cdb %>% db_bulk_create("authors", apply(authors, 1, function(x) toJSON(x, auto_unbox=TRUE)))
 
-if ("sessions" %in% db_list(cdb)) 
-  cdb %>% db_delete("sessions")
-cdb %>% db_create("sessions")
+
+cdb %>% db_create("sessions", delifexists=TRUE)
+sessions = sessions %>% 
+  mutate(`_id` = session_id)
 cdb %>% db_bulk_create("sessions", apply(sessions, 1, function(x) toJSON(x, auto_unbox=TRUE)))
 
-if ("topics" %in% db_list(cdb)) 
-  cdb %>% db_delete("topics")
-cdb %>% db_create("topics")
+cdb %>% db_create("topics", delifexists=TRUE)
+topics = topics %>% 
+  mutate(`_id` = topic_id)
 cdb %>% db_bulk_create("topics", apply(topics, 1, function(x) toJSON(x, auto_unbox=TRUE)))

@@ -1,0 +1,46 @@
+
+data: 
+  path: "data/icml2016"
+
+scrape:
+  dl_pdf: FALSE
+  dl_supp_pdf: FALSE
+  dl_review: FALSE
+  dl_rebuttal: FALSE
+
+pdfconversion:
+  exe: "python icml-pdf-conversion/pdfconversion.py"
+  pdf_path: "data/icml2016/papers"
+  txt_path: "data/icml2016/papers_txt"
+
+lda:
+  exe: "lda-c/lda"
+  alpha: 0.005
+  n_topics: 50
+  output_path: "data/icml2016/lda_output"
+
+couchdb:
+  host: "icml.papro.org.uk"
+  path: "couchdb"
+  port: NULL
+  transport: "https"
+  user: "adrien"
+  pwd: "secretpassword123"
+
+ctr:
+  exe: "ctr2/ctr"
+  output_path: "output/icml2016"
+  lambda_u: 0.01
+  lambda_v: 0.01
+  a: 1
+  b: 0.01
+  alpha_u_smooth: 1
+  alpha_v_smooth: 0
+  max_iter: 200
+  
+simu:
+  seed: 2017
+  n_likes: 100
+  
+reco:
+  n_top: 20

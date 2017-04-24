@@ -14,6 +14,7 @@ struct ctr_hyperparameter {
   double lambda_v;
   double alpha_u_smooth;
   double alpha_v_smooth;
+  double beta_smooth;
   int    random_seed;
   int    max_iter;
   int    save_lag;
@@ -25,12 +26,14 @@ struct ctr_hyperparameter {
   void set(double aa, double bb, 
            double lu, double lv, 
            double aus, double avs,
+		   double bs,
            int rs, int mi, int sl,    
 		   int tuo, int tvo,
 		   int cr, int lda_r) {
     a = aa; b = bb; 
     lambda_u = lu; lambda_v = lv; 
     alpha_u_smooth = aus; alpha_v_smooth = avs;
+    beta_smooth = bs;
     random_seed = rs; max_iter = mi;
     save_lag = sl;
     theta_u_opt = tuo; theta_v_opt = tvo;
@@ -45,6 +48,7 @@ struct ctr_hyperparameter {
     fprintf(file, "lambda_v = %.4f\n", lambda_v);
     fprintf(file, "alpha_u_smooth = %.6f\n", alpha_u_smooth);
     fprintf(file, "alpha_v_smooth = %.6f\n", alpha_v_smooth);
+    fprintf(file, "beta_smooth = %.6f\n", beta_smooth);
     fprintf(file, "random seed = %d\n", (int)random_seed);
     fprintf(file, "max iter = %d\n", max_iter);
     fprintf(file, "save lag = %d\n", save_lag);
@@ -62,10 +66,11 @@ public:
   ~c_ctr();
   void read_init_information_v(const char* theta_v_init_path, 
                              const char* beta_init_path, 
-                             const c_corpus* c_v, double alpha_v_smooth);
+                             const c_corpus* c_v, double alpha_v_smooth,
+							 double beta_smooth);
 
   void read_init_information_u(const char* theta_u_init_path,
-                             const c_corpus* c_u, double alpha_u_smooth);
+                               double alpha_u_smooth);
 
   void set_model_parameters(int num_factors, 
                             int num_users, 
