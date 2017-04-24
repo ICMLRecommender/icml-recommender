@@ -20,6 +20,23 @@ output/final-U.dat
 output/final-V.dat   
 ```
 
+# Install
+
+Requirements:
+- git
+- g++
+- libgsl-dev libssl-dev libcurl4-openssl-dev libxml2-dev
+- python + pip + some modules
+- R + some packages
+
+Install everything with
+
+```sh
+git clone --recursive git@github.com:ICMLRecommender/icml-recommender.git
+cd icml-recommender
+make require
+``
+
 # Usage
 
 1. Compile ctr2 using the make file in the ctr2 directory:     

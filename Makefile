@@ -1,13 +1,13 @@
-export data_path = data/icml2016
-export pdf_path = data/icml2016/papers
-export txt_path = data/icml2016/papers_txt
-export lda_output_path = data/icml2016/lda_output
-export ctr_output_path = output/icml2016
-export n_topics = 50
-export lda_alpha = 0.005
-export alpha_u_smooth = 1
-export lambda_u = 0.01
-export lambda_v = 0.01
+export DATA_PATH = data/icml2016
+export PDF_PATH = data/icml2016/papers
+export TXT_PATH = data/icml2016/papers_txt
+export LDA_OUTPUT_PATH = data/icml2016/lda_output
+export CTR_OUTPUT_PATH = output/icml2016
+export N_TOPICS = 50
+export LDA_ALPHA = 0.005
+export ALPHA_U_SMOOTH = 1
+export LAMBDA_U = 0.01
+export LAMBDA_V = 0.01
 
 all: clean_db write_db
 
@@ -38,58 +38,58 @@ ctr2: ctr2/ctr
 config.yml: config.yml.in
 	envsubst < config.yml.in > config.yml
 		
-$(data_path)/papers.json $(data_path)/authors.json $(data_path)/sessions.json: scrape_icml.r config.yml
+$(DATA_PATH)/papers.json $(DATA_PATH)/authors.json $(DATA_PATH)/sessions.json: scrape_icml.r config.yml
 	./scrape_icml.r
 	
-scrape: $(data_path)/papers.json $(data_path)/authors.json $(data_path)/sessions.json
+scrape: $(DATA_PATH)/papers.json $(DATA_PATH)/authors.json $(DATA_PATH)/sessions.json
 
 clean_scrape:
-	rm -f $(data_path)/papers.json $(data_path)/authors.json $(data_path)/sessions.json
+	rm -f $(DATA_PATH)/papers.json $(DATA_PATH)/authors.json $(DATA_PATH)/sessions.json
 		
-$(txt_path)/mult.dat $(txt_path)/files.dat $(txt_path)/vocab.dat: scrape icml-pdf-conversion/pdfconversion.py
-	python icml-pdf-conversion/pdfconversion.py -p '$(pdf_path)/*.pdf' -t $(txt_path) -m full
+$(TXT_PATH)/mult.dat $(TXT_PATH)/files.dat $(TXT_PATH)/vocab.dat: scrape icml-pdf-conversion/pdfconversion.py
+	python icml-pdf-conversion/pdfconversion.py -p '$(PDF_PATH)/*.pdf' -t $(TXT_PATH) -m full
 	
-pdfconversion: $(txt_path)/mult.dat $(txt_path)/files.dat $(txt_path)/vocab.dat
+pdfconversion: $(TXT_PATH)/mult.dat $(TXT_PATH)/files.dat $(TXT_PATH)/vocab.dat
 
 clean_pdfconversion:
-	rm -rf $(txt_path)
+	rm -rf $(TXT_PATH)
 
-$(lda_output_path)/final.gamma $(lda_output_path)/final.beta: lda-c $(txt_path)/mult.dat
-	lda-c/lda est $(lda_alpha) $(n_topics) lda-c/settings.txt $(txt_path)/mult.dat random $(lda_output_path)
+$(LDA_OUTPUT_PATH)/final.gamma $(LDA_OUTPUT_PATH)/final.beta: lda-c $(TXT_PATH)/mult.dat
+	lda-c/lda est $(LDA_ALPHA) $(N_TOPICS) lda-c/settings.txt $(TXT_PATH)/mult.dat random $(LDA_OUTPUT_PATH)
 	
-run_lda: $(lda_output_path)/final.gamma $(lda_output_path)/final.beta
+run_lda: $(LDA_OUTPUT_PATH)/final.gamma $(LDA_OUTPUT_PATH)/final.beta
 
 clean_run_lda:
-	rm -rf $(lda_output_path)
+	rm -rf $(LDA_OUTPUT_PATH)
 
-$(data_path)/topics.json $(data_path)/papers_topics.json: topics.r config.yml $(txt_path)/files.dat $(txt_path)/vocab.dat run_lda $(data_path)/papers.json 
+$(DATA_PATH)/topics.json $(DATA_PATH)/papers_topics.json: topics.r config.yml $(TXT_PATH)/files.dat $(TXT_PATH)/vocab.dat run_lda $(DATA_PATH)/papers.json 
 	./topics.r
 
-topics: $(data_path)/topics.json $(data_path)/papers_topics.json
+topics: $(DATA_PATH)/topics.json $(DATA_PATH)/papers_topics.json
 
 clean_topics: 
-	rm -f $(data_path)/topics.json $(data_path)/papers_topics.json
+	rm -f $(DATA_PATH)/topics.json $(DATA_PATH)/papers_topics.json
     
-init_db: init_couchdb.r config.yml $(data_path)/papers_topics.json $(data_path)/authors.json $(data_path)/sessions.json $(data_path)/topics.json 
+init_db: init_couchdb.r config.yml $(DATA_PATH)/papers_topics.json $(DATA_PATH)/authors.json $(DATA_PATH)/sessions.json $(DATA_PATH)/topics.json 
 	./init_couchdb.r
 		
-$(data_path)/userids.dat $(data_path)/users.dat $(data_path)/items.dat $(data_path)/theta_u.dat: read_couchdb.r config.yml $(txt_path)/files.dat
+$(DATA_PATH)/userids.dat $(DATA_PATH)/users.dat $(DATA_PATH)/items.dat $(DATA_PATH)/theta_u.dat: read_couchdb.r config.yml $(TXT_PATH)/files.dat
 	./read_couchdb.r
 	
-read_db: $(data_path)/users.dat $(data_path)/items.dat $(data_path)/theta_u.dat
+read_db: $(DATA_PATH)/users.dat $(DATA_PATH)/items.dat $(DATA_PATH)/theta_u.dat
 
 clean_db: 
-	rm -f $(data_path)/users.dat $(data_path)/items.dat $(data_path)/theta_u.dat
+	rm -f $(DATA_PATH)/users.dat $(DATA_PATH)/items.dat $(DATA_PATH)/theta_u.dat
 		
-$(ctr_output_path)/final-U.dat $(ctr_output_path)/final-V.dat: ctr2 read_db $(lda_output_path)/final.gamma
-	ctr2/ctr --directory $(ctr_output_path) --user $(data_path)/users.dat --item $(data_path)/items.dat --theta_v_init $(lda_output_path)/final.gamma --theta_u_init $(data_path)/theta_u.dat --num_factors $(n_topics) --alpha_u_smooth $(alpha_u_smooth) --lambda_u $(lambda_u) --lambda_v $(lambda_v)
+$(CTR_OUTPUT_PATH)/final-U.dat $(CTR_OUTPUT_PATH)/final-V.dat: ctr2 read_db $(LDA_OUTPUT_PATH)/final.gamma
+	ctr2/ctr --directory $(CTR_OUTPUT_PATH) --user $(DATA_PATH)/users.dat --item $(DATA_PATH)/items.dat --theta_v_init $(LDA_OUTPUT_PATH)/final.gamma --theta_u_init $(DATA_PATH)/theta_u.dat --num_factors $(N_TOPICS) --ALPHA_U_SMOOTH $(ALPHA_U_SMOOTH) --LAMBDA_U $(LAMBDA_U) --LAMBDA_V $(LAMBDA_V)
 	
-run_ctr: $(ctr_output_path)/final-U.dat $(ctr_output_path)/final-V.dat
+run_ctr: $(CTR_OUTPUT_PATH)/final-U.dat $(CTR_OUTPUT_PATH)/final-V.dat
 
 clean_run_ctr:
-	rm -rf $(ctr_output_path)
+	rm -rf $(CTR_OUTPUT_PATH)
 
-write_db: write_couchdb.r config.yml $(data_path)/userids.dat $(txt_path)/files.dat run_ctr
+write_db: write_couchdb.r config.yml $(DATA_PATH)/userids.dat $(TXT_PATH)/files.dat run_ctr
 	./write_couchdb.r
 
 clean: clean_scrape clean_pdfconversion clean_run_lda clean_topics clean_db clean_run_ctr
