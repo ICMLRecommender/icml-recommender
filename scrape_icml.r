@@ -24,10 +24,10 @@ reviews_url = "http://icml.cc/2016/reviews/"
 rebuttals_url = "http://icml.cc/2016/rebuttals/"
 
 # enable file downloads
-dl_pdf = FALSE
-dl_supp_pdf = FALSE
-dl_review = FALSE
-dl_rebuttal = FALSE
+dl_pdf = cfg$scrape$dl_pdf
+dl_supp_pdf = cfg$scrape$dl_supp_pdf
+dl_review = cfg$scrape$dl_review
+dl_rebuttal = cfg$scrape$dl_rebuttal
 
 if (dl_pdf || dl_supp_pdf)
   dir.create(file.path(data_path, "papers"), showWarnings = FALSE)
@@ -78,10 +78,12 @@ parse_paper = function(url) {
   if (length(out$supp_pdf_url)==0)
     out$supp_pdf_url = NA
   
-  if (dl_pdf)
-    download.file(out$pdf_url, file.path(data_path, "papers", out$pdf_url))
+  fn = file.path(data_path, "papers", out$pdf_url)
+  if (dl_pdf && !file.exists(fn))
+    download.file(out$pdf_url, fn)
   
-  if (dl_supp_pdf && nchar(out$supp_pdf_url)>0)
+  fn = file.path(data_path, "papers", out$supp_pdf_url)
+  if (dl_supp_pdf && nchar(out$supp_pdf_url)>0 && !file.exists(fn))
     download.file(out$supp_pdf_url, file.path(data_path, "papers", out$supp_pdf_url))
   
   return(tbl_df(out))
@@ -157,11 +159,13 @@ parse_talk = function(html) {
     html_nodes(".pos_ses") %>% 
     html_text()
   
-  if (dl_review)
-    download.file(out$review_url, file.path(data_path, "reviews", paste0(out$id,".txt")))
+  fn = file.path(data_path, "reviews", paste0(out$id,".txt"))
+  if (dl_review && !file.exists(fn))
+    download.file(out$review_url, fn)
   
-  if (dl_rebuttal)
-    download.file(out$rebuttal_url, file.path(data_path, "rebuttals", paste0(out$id,".txt")))
+  fn = file.path(data_path, "rebuttals", paste0(out$id,".txt"))
+  if (dl_rebuttal && !file.exists(fn))
+    download.file(out$rebuttal_url, fn)
   
   return(out)
 }

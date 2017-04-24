@@ -3,7 +3,7 @@ data:
   path: "${DATA_PATH}"
 
 scrape:
-  dl_pdf: FALSE
+  dl_pdf: TRUE
   dl_supp_pdf: FALSE
   dl_review: FALSE
   dl_rebuttal: FALSE
