@@ -1,13 +1,13 @@
-data_path := data/icml2016
-pdf_path := data/icml2016/papers
-txt_path := data/icml2016/papers_txt
-lda_output_path := data/icml2016/lda_output
-ctr_output_path := output/icml2016
-n_topics := 50
-lda_alpha := 0.005
-alpha_u_smooth := 1
-lambda_u := 0.01
-lambda_v := 0.01
+export data_path = data/icml2016
+export pdf_path = data/icml2016/papers
+export txt_path = data/icml2016/papers_txt
+export lda_output_path = data/icml2016/lda_output
+export ctr_output_path = output/icml2016
+export n_topics = 50
+export lda_alpha = 0.005
+export alpha_u_smooth = 1
+export lambda_u = 0.01
+export lambda_v = 0.01
 
 all: clean_db write_db
 
@@ -34,8 +34,11 @@ ctr2/ctr:
 	cd ctr2; make; cd ..
 	
 ctr2: ctr2/ctr
+
+config.yml: config.yml.in
+	envsubst < config.yml.in > config.yml
 		
-$(data_path)/papers.json $(data_path)/authors.json $(data_path)/sessions.json: scrape_icml.r
+$(data_path)/papers.json $(data_path)/authors.json $(data_path)/sessions.json: scrape_icml.r config.yml
 	./scrape_icml.r
 	
 scrape: $(data_path)/papers.json $(data_path)/authors.json $(data_path)/sessions.json
@@ -51,7 +54,7 @@ pdfconversion: $(txt_path)/mult.dat $(txt_path)/files.dat $(txt_path)/vocab.dat
 clean_pdfconversion:
 	rm -rf $(txt_path)
 
-$(lda_output_path)/final.gamma $(lda_output_path)/final.beta: pdfconversion lda-c
+$(lda_output_path)/final.gamma $(lda_output_path)/final.beta: lda-c $(txt_path)/mult.dat
 	lda-c/lda est $(lda_alpha) $(n_topics) lda-c/settings.txt $(txt_path)/mult.dat random $(lda_output_path)
 	
 run_lda: $(lda_output_path)/final.gamma $(lda_output_path)/final.beta
@@ -59,7 +62,7 @@ run_lda: $(lda_output_path)/final.gamma $(lda_output_path)/final.beta
 clean_run_lda:
 	rm -rf $(lda_output_path)
 
-$(data_path)/topics.json $(data_path)/papers_topics.json: topics.r run_lda
+$(data_path)/topics.json $(data_path)/papers_topics.json: topics.r config.yml $(txt_path)/files.dat $(txt_path)/vocab.dat run_lda $(data_path)/papers.json 
 	./topics.r
 
 topics: $(data_path)/topics.json $(data_path)/papers_topics.json
@@ -67,10 +70,10 @@ topics: $(data_path)/topics.json $(data_path)/papers_topics.json
 clean_topics: 
 	rm -f $(data_path)/topics.json $(data_path)/papers_topics.json
     
-init_db: init_couchdb.r topics
+init_db: init_couchdb.r config.yml $(data_path)/papers_topics.json $(data_path)/authors.json $(data_path)/sessions.json $(data_path)/topics.json 
 	./init_couchdb.r
 		
-$(data_path)/users.dat $(data_path)/items.dat $(data_path)/theta_u.dat:
+$(data_path)/userids.dat $(data_path)/users.dat $(data_path)/items.dat $(data_path)/theta_u.dat: read_couchdb.r config.yml $(txt_path)/files.dat
 	./read_couchdb.r
 	
 read_db: $(data_path)/users.dat $(data_path)/items.dat $(data_path)/theta_u.dat
@@ -86,7 +89,7 @@ run_ctr: $(ctr_output_path)/final-U.dat $(ctr_output_path)/final-V.dat
 clean_run_ctr:
 	rm -rf $(ctr_output_path)
 
-write_db: write_couchdb.r run_ctr
+write_db: write_couchdb.r config.yml $(data_path)/userids.dat $(txt_path)/files.dat run_ctr
 	./write_couchdb.r
 
 clean: clean_scrape clean_pdfconversion clean_run_lda clean_topics clean_db clean_run_ctr

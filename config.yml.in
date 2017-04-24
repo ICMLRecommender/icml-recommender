@@ -1,6 +1,6 @@
 
 data: 
-  path: "data/icml2016"
+  path: "${data_path}"
 
 scrape:
   dl_pdf: FALSE
@@ -10,14 +10,14 @@ scrape:
 
 pdfconversion:
   exe: "python icml-pdf-conversion/pdfconversion.py"
-  pdf_path: "data/icml2016/papers"
-  txt_path: "data/icml2016/papers_txt"
+  pdf_path: "${pdf_path}"
+  txt_path: "${txt_path}"
 
 lda:
   exe: "lda-c/lda"
-  alpha: 0.005
-  n_topics: 50
-  output_path: "data/icml2016/lda_output"
+  alpha: ${lda_alpha}
+  n_topics: ${n_topics}
+  output_path: "${lda_output_path}"
 
 couchdb:
   host: "icml.papro.org.uk"
@@ -29,12 +29,12 @@ couchdb:
 
 ctr:
   exe: "ctr2/ctr"
-  output_path: "output/icml2016"
-  lambda_u: 0.01
-  lambda_v: 0.01
+  output_path: "${ctr_output_path}"
+  lambda_u: ${lambda_u}
+  lambda_v: ${lambda_v}
   a: 1
   b: 0.01
-  alpha_u_smooth: 1
+  alpha_u_smooth: ${alpha_u_smooth}
   alpha_v_smooth: 0
   max_iter: 200
   
