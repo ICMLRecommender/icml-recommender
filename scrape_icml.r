@@ -82,7 +82,7 @@ parse_paper = function(url) {
   if (dl_pdf && !file.exists(fn))
     download.file(out$pdf_url, fn)
   
-  if (!is.null(out$supp_pdf_url) && nchar(out$supp_pdf_url)>0) {
+  if (!is.na(out$supp_pdf_url) && nchar(out$supp_pdf_url)>0) {
     fn = file.path(data_path, "papers", basename(out$supp_pdf_url))
     if (dl_supp_pdf && !file.exists(fn))
       download.file(out$supp_pdf_url, fn)
