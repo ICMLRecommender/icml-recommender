@@ -35,7 +35,7 @@ ctr2/ctr:
 	
 ctr2: ctr2/ctr
 
-config.yml: config.yml.in
+config.yml: config.yml.in Makefile
 	envsubst < config.yml.in > config.yml
 		
 $(DATA_PATH)/papers.json $(DATA_PATH)/authors.json $(DATA_PATH)/sessions.json: scrape_icml.r config.yml
