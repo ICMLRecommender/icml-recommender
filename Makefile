@@ -41,7 +41,7 @@ $(data_path)/papers.json $(data_path)/authors.json $(data_path)/sessions.json: s
 scrape: $(data_path)/papers.json $(data_path)/authors.json $(data_path)/sessions.json
 
 clean_scrape:
-	rm $(data_path)/papers.json $(data_path)/authors.json $(data_path)/sessions.json
+	rm -f $(data_path)/papers.json $(data_path)/authors.json $(data_path)/sessions.json
 		
 $(txt_path)/mult.dat $(txt_path)/files.dat $(txt_path)/vocab.dat: scrape icml-pdf-conversion/pdfconversion.py
 	python icml-pdf-conversion/pdfconversion.py -p '$(pdf_path)/*.pdf' -t $(txt_path) -m full
@@ -65,7 +65,7 @@ $(data_path)/topics.json $(data_path)/papers_topics.json: topics.r run_lda
 topics: $(data_path)/topics.json $(data_path)/papers_topics.json
 
 clean_topics: 
-	rm $(data_path)/topics.json $(data_path)/papers_topics.json
+	rm -f $(data_path)/topics.json $(data_path)/papers_topics.json
     
 init_db: init_couchdb.r topics
 	./init_couchdb.r
@@ -76,7 +76,7 @@ $(data_path)/users.dat $(data_path)/items.dat $(data_path)/theta_u.dat:
 read_db: $(data_path)/users.dat $(data_path)/items.dat $(data_path)/theta_u.dat
 
 clean_db: 
-	rm $(data_path)/users.dat $(data_path)/items.dat $(data_path)/theta_u.dat
+	rm -f $(data_path)/users.dat $(data_path)/items.dat $(data_path)/theta_u.dat
 		
 $(ctr_output_path)/final-U.dat $(ctr_output_path)/final-V.dat: ctr2 read_db $(lda_output_path)/final.gamma
 	ctr2/ctr --directory $(ctr_output_path) --user $(data_path)/users.dat --item $(data_path)/items.dat --theta_v_init $(lda_output_path)/final.gamma --theta_u_init $(data_path)/theta_u.dat --num_factors $(n_topics) --alpha_u_smooth $(alpha_u_smooth) --lambda_u $(lambda_u) --lambda_v $(lambda_v)
