@@ -11,11 +11,31 @@ lambda_v := 0.01
 
 all: clean_db write_db
 
-lda-c: lda-c/lda
-	cd lda-c; make; cd ..
+init: c_init py_init r_init
 
-ctr2: ctr2/ctr
+c_init:
+	apt install libgsl-dev
+
+py_init:
+	apt install python-pip
+	pip install --upgrade pip
+	make pip install -r icml-pdf-conversion/requirements.txt
+	
+r_init: 
+	apt install r-base
+	Rscript requirements.r
+	
+lda-c/lda: lda-c/lda
+	cd lda-c; make; cd ..
+	
+lda-c: lda-c/lda
+	
+ctr2/ctr:
 	cd ctr2; make; cd ..
+	
+ctr2: ctr2/ctr
+	
+init: py_init r_init lda-c ctr2
 		
 $(data_path)/papers.json $(data_path)/authors.json $(data_path)/sessions.json: scrape_icml.r
 	./scrape_icml.r
@@ -73,5 +93,5 @@ write_db: write_couchdb.r run_ctr
 
 clean: clean_scrape clean_pdfconversion clean_run_lda clean_topics clean_db clean_run_ctr
 
-.PHONY: scrape clean_scrape pdfconversion clean_pdfconversion run_lda clean_run_lda topics clean_topics init_db read_db clean_db run_ctr clean_run_ctr write_db clean
+.PHONY: init c_init py_init r_init lda-c ctr2 scrape clean_scrape pdfconversion clean_pdfconversion run_lda clean_run_lda topics clean_topics init_db read_db clean_db run_ctr clean_run_ctr write_db clean
 
