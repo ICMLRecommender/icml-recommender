@@ -85,7 +85,7 @@ parse_paper = function(url) {
   if (nchar(out$supp_pdf_url)>0) {
     fn = file.path(data_path, "papers", basename(out$supp_pdf_url))
     if (dl_supp_pdf && !file.exists(fn))
-      download.file(out$supp_pdf_url, file.path(data_path, "papers", out$supp_pdf_url))
+      download.file(out$supp_pdf_url, fn)
   }
   
   return(tbl_df(out))
