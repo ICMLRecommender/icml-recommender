@@ -11,7 +11,7 @@ lambda_v := 0.01
 
 all: clean_db write_db
 
-init: c_init py_init r_init
+init: c_init py_init r_init lda-c ctr2
 
 c_init:
 	apt install libgsl-dev
@@ -34,8 +34,6 @@ ctr2/ctr:
 	cd ctr2; make; cd ..
 	
 ctr2: ctr2/ctr
-	
-init: py_init r_init lda-c ctr2
 		
 $(data_path)/papers.json $(data_path)/authors.json $(data_path)/sessions.json: scrape_icml.r
 	./scrape_icml.r
