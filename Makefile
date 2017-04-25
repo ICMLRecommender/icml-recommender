@@ -82,7 +82,7 @@ clean_db:
 	rm -f $(DATA_PATH)/users.dat $(DATA_PATH)/items.dat $(DATA_PATH)/theta_u.dat
 		
 $(CTR_OUTPUT_PATH)/final-U.dat $(CTR_OUTPUT_PATH)/final-V.dat: ctr2 read_db $(LDA_OUTPUT_PATH)/final.gamma
-	ctr2/ctr --directory $(CTR_OUTPUT_PATH) --user $(DATA_PATH)/users.dat --item $(DATA_PATH)/items.dat --theta_v_init $(LDA_OUTPUT_PATH)/final.gamma --theta_u_init $(DATA_PATH)/theta_u.dat --num_factors $(N_TOPICS) --ALPHA_U_SMOOTH $(ALPHA_U_SMOOTH) --LAMBDA_U $(LAMBDA_U) --LAMBDA_V $(LAMBDA_V)
+	ctr2/ctr --directory $(CTR_OUTPUT_PATH) --user $(DATA_PATH)/users.dat --item $(DATA_PATH)/items.dat --theta_v_init $(LDA_OUTPUT_PATH)/final.gamma --theta_u_init $(DATA_PATH)/theta_u.dat --num_factors $(N_TOPICS) --alpha_u_smooth $(ALPHA_U_SMOOTH) --lambda_u $(LAMBDA_U) --lambda_v $(LAMBDA_V)
 	
 run_ctr: $(CTR_OUTPUT_PATH)/final-U.dat $(CTR_OUTPUT_PATH)/final-V.dat
 
