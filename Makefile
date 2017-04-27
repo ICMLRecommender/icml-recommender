@@ -27,7 +27,7 @@ r_require:
 	Rscript requirements.r
 	
 # make lda-c
-lda-c/lda: lda-c/lda
+lda-c/lda: 
 	cd lda-c; make; cd ..
 	
 lda-c: lda-c/lda

@@ -1,15 +1,21 @@
-# ctr
+# ctr2
 
-Collaborative modeling for recommendation. Implements variational inference for a collaborative topic models. These models recommend items to users based on item content and other users' ratings. Written by [Chong Wang](http://www.cs.princeton.edu/~chongw/index.html). Fun fact: this inspired the New York Times' engine ([blog post](http://open.blogs.nytimes.com/2015/08/11/building-the-next-new-york-times-recommendation-engine/))!
+This is the CTR code from https://github.com/blei-lab/ctr. 
+To be extended to take as input `mult_user.dat` and `final_user.gamma`.
 
-## Demo
+Input:
 
-http://www.cs.cmu.edu/~chongw/data/citeulike/
+```
+data/users.dat   
+data/items.dat   
+data/mult.dat    
+lda_output/final.gamma    
+lda_output/final.beta   
+```
 
-## Sample data
+Output:
 
-http://www.cs.cmu.edu/~chongw/data/citeulike/
-
-## Reference
-
-Chong Wang and David M. Blei. Collaborative topic modeling for recommending scientific articles. In KDD 2011. [PDF](http://www.cs.princeton.edu/~chongw/papers/WangBlei2011.pdf)
+```
+output/final-U.dat  
+output/final-V.dat   
+```
