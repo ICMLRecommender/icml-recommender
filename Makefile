@@ -11,6 +11,7 @@ export LAMBDA_V = 0.01
 
 all: clean_db write_db
 
+# install requirements
 require: ctr_require py_require r_require
 
 ctr_require:
@@ -25,11 +26,13 @@ r_require:
 	apt install r-base libssl-dev libcurl4-openssl-dev libxml2-dev
 	Rscript requirements.r
 	
+# make lda-c
 lda-c/lda: lda-c/lda
 	cd lda-c; make; cd ..
 	
 lda-c: lda-c/lda
 	
+# make ctr2
 ctr2/ctr:
 	cd ctr2; make; cd ..
 	
@@ -37,7 +40,8 @@ ctr2: ctr2/ctr
 
 config.yml: config.yml.in Makefile
 	envsubst < config.yml.in > config.yml
-		
+	
+# scrape icml 2016 website
 $(DATA_PATH)/papers.json $(DATA_PATH)/authors.json $(DATA_PATH)/sessions.json: scrape_icml.r config.yml
 	./scrape_icml.r
 	

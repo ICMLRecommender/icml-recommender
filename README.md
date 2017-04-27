@@ -15,7 +15,7 @@ Install everything with
 ```sh
 git clone --recursive git@github.com:ICMLRecommender/icml-recommender.git
 cd icml-recommender
-make require
+sudo make require
 ```
 
 # Usage with icml2016
