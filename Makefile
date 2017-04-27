@@ -12,18 +12,22 @@ export LAMBDA_V = 0.01
 all: clean_db write_db
 
 # install requirements
-require: ctr_require py_require r_require
+su_require: su_ctr_require su_py_require su_r_require
 
-ctr_require:
+require: r_require
+
+su_ctr_require:
 	apt install libgsl-dev
 
-py_require:
+su_py_require:
 	apt install python-pip
 	pip install --upgrade pip
 	pip install -r icml-pdf-conversion/requirements.txt
 	
-r_require: 
+su_r_require: 
 	apt install r-base libssl-dev libcurl4-openssl-dev libxml2-dev
+	
+r_require: 
 	Rscript requirements.r
 	
 # make lda-c
@@ -98,5 +102,5 @@ write_db: write_couchdb.r config.yml $(DATA_PATH)/userids.dat $(TXT_PATH)/files.
 
 clean: clean_scrape clean_pdfconversion clean_run_lda clean_topics clean_db clean_run_ctr
 
-.PHONY: require ctr_require py_require r_require lda-c ctr2 scrape clean_scrape pdfconversion clean_pdfconversion run_lda clean_run_lda topics clean_topics init_db read_db clean_db run_ctr clean_run_ctr write_db clean
+.PHONY: require su_require su_ctr_require su_py_require su_r_require r_require lda-c ctr2 scrape clean_scrape pdfconversion clean_pdfconversion run_lda clean_run_lda topics clean_topics init_db read_db clean_db run_ctr clean_run_ctr write_db clean
 
