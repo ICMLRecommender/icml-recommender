@@ -42,7 +42,7 @@ ctr2/ctr:
 	
 ctr2: ctr2/ctr
 
-config.yml: config.yml.in Makefile
+config.yml: config.yml.in
 	envsubst < config.yml.in > config.yml
 	
 # scrape icml 2016 website
