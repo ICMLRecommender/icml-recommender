@@ -46,7 +46,7 @@ config.yml: config.yml.in
 	envsubst < config.yml.in > config.yml
 	
 # scrape icml 2016 website
-$(DATA_PATH)/papers.json $(DATA_PATH)/authors.json $(DATA_PATH)/sessions.json: scrape_icml.r config.yml
+$(DATA_PATH)/papers.json $(DATA_PATH)/authors.json $(DATA_PATH)/sessions.json: scrape_icml.r
 	./scrape_icml.r
 	
 scrape: $(DATA_PATH)/papers.json $(DATA_PATH)/authors.json $(DATA_PATH)/sessions.json
@@ -70,7 +70,7 @@ run_lda: $(LDA_OUTPUT_PATH)/final.gamma $(LDA_OUTPUT_PATH)/final.beta
 clean_run_lda:
 	rm -rf $(LDA_OUTPUT_PATH)
 
-$(DATA_PATH)/topics.json $(DATA_PATH)/papers_topics.json: topics.r config.yml $(TXT_PATH)/files.dat $(TXT_PATH)/vocab.dat run_lda $(DATA_PATH)/papers.json 
+$(DATA_PATH)/topics.json $(DATA_PATH)/papers_topics.json: topics.r $(TXT_PATH)/files.dat $(TXT_PATH)/vocab.dat run_lda $(DATA_PATH)/papers.json 
 	./topics.r
 
 topics: $(DATA_PATH)/topics.json $(DATA_PATH)/papers_topics.json
@@ -78,10 +78,10 @@ topics: $(DATA_PATH)/topics.json $(DATA_PATH)/papers_topics.json
 clean_topics: 
 	rm -f $(DATA_PATH)/topics.json $(DATA_PATH)/papers_topics.json
     
-init_db: init_couchdb.r config.yml $(DATA_PATH)/papers_topics.json $(DATA_PATH)/authors.json $(DATA_PATH)/sessions.json $(DATA_PATH)/topics.json 
+init_db: init_couchdb.r $(DATA_PATH)/papers_topics.json $(DATA_PATH)/authors.json $(DATA_PATH)/sessions.json $(DATA_PATH)/topics.json 
 	./init_couchdb.r
 		
-$(DATA_PATH)/userids.dat $(DATA_PATH)/users.dat $(DATA_PATH)/items.dat $(DATA_PATH)/theta_u.dat: read_couchdb.r config.yml $(TXT_PATH)/files.dat
+$(DATA_PATH)/userids.dat $(DATA_PATH)/users.dat $(DATA_PATH)/items.dat $(DATA_PATH)/theta_u.dat: read_couchdb.r $(TXT_PATH)/files.dat
 	./read_couchdb.r
 	
 read_db: $(DATA_PATH)/users.dat $(DATA_PATH)/items.dat $(DATA_PATH)/theta_u.dat
@@ -97,7 +97,7 @@ run_ctr: $(CTR_OUTPUT_PATH)/final-U.dat $(CTR_OUTPUT_PATH)/final-V.dat
 clean_run_ctr:
 	rm -rf $(CTR_OUTPUT_PATH)
 
-write_db: write_couchdb.r config.yml $(DATA_PATH)/userids.dat $(TXT_PATH)/files.dat run_ctr
+write_db: write_couchdb.r $(DATA_PATH)/userids.dat $(TXT_PATH)/files.dat run_ctr
 	./write_couchdb.r
 
 clean: clean_scrape clean_pdfconversion clean_run_lda clean_topics clean_db clean_run_ctr
