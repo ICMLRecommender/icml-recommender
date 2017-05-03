@@ -15,7 +15,7 @@ if (length(args>0))
 cfg = yaml.load_file(cfg_file)
 
 data_path = cfg$data$path
-txt_path = cfg$pdfconversion$txt_path
+txt_path = cfg$data$txt_path
 lda_output_path = cfg$lda$output_path
 
 # topics

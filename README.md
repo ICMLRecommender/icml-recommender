@@ -19,6 +19,69 @@ sudo make su_require
 make require
 ```
 
+# Configuration
+
+Edit the following variables in the `Makefile`.
+
+```make
+export DATA_PATH = data/icml2016
+export PDF_PATH = $(DATA_PATH)/papers
+export TXT_PATH = $(DATA_PATH)/papers_txt
+export LDA_OUTPUT_PATH = $(DATA_PATH)/lda_output
+export CTR_OUTPUT_PATH = output/icml2016
+export N_TOPICS = 50
+export LDA_ALPHA = 0.005
+export ALPHA_U_SMOOTH = 1
+export LAMBDA_U = 0.01
+export LAMBDA_V = 0.01
+```
+
+Create a `config.yml.in` file with the following content and edit the `couchdb:user` and `couchdb:pwd` fields.
+
+```yaml
+data: 
+  path: "${DATA_PATH}"
+  pdf_path: "${PDF_PATH}"
+  txt_path: "${TXT_PATH}"
+
+scrape:
+  dl_pdf: TRUE
+  dl_supp_pdf: FALSE
+  dl_review: FALSE
+  dl_rebuttal: FALSE
+
+lda:
+  alpha: ${LDA_ALPHA}
+  n_topics: ${N_TOPICS}
+  output_path: "${LDA_OUTPUT_PATH}"
+
+couchdb:
+  # transport: http
+  host: localhost
+  # port: NULL
+  # path: NULL
+  user: <COUCHDB_USER>
+  pwd: <COUCHDB_PASSWORD>
+
+ctr:
+  output_path: "${CTR_OUTPUT_PATH}"
+  lambda_u: ${LAMBDA_U}
+  lambda_v: ${LAMBDA_V}
+  a: 1
+  b: 0.01
+  alpha_u_smooth: ${ALPHA_U_SMOOTH}
+  alpha_v_smooth: 0
+  max_iter: 200
+
+# # Uncomment for simulating random likes
+# simu:
+#   seed: 2017
+#   n_likes: 100
+  
+reco:
+  n_top: 20
+```
+
 # Usage with icml2016
 
 1. scrape icml2016
@@ -62,24 +125,4 @@ make require
 
     ```sh
     make
-    ```
-
-# Usage (deprecated)
-
-1. Compile ctr2 using the make file in the ctr2 directory:     
-    
-    ```sh
-    make  
-    ```
-
-2. Run ctr2:     
-    
-    ```sh
-    ctr2/ctr --directory output/ --user data/users_like.dat --item data/items_like.dat  --mult_v data/mult_v_like.dat --mult_u data/mult_u_library.dat --theta_v_init lda_output/final_like.gamma_v --theta_u_init lda_output/final_library.gamma_u --beta_init lda_output/final.beta   
-    ```
-
-3. Given final-U.dat, final-V.dat, user.dat, saves in output/ up to (e.g.) 20 recommendations for each user. This example is for K = 200.    
-    
-    ```sh
-    ./rating.R  output/  200 20
     ```
