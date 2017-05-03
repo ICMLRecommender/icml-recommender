@@ -109,7 +109,7 @@ reco = scores %>%
   group_by(user) %>% 
   arrange(desc(score)) %>% 
   slice(seq_len(n_top)) %>% 
-  filter( !(mlr_paper_id %in% userlikes_split[[user[1]]]$mlr_paper_id) ) %>%  # remove liked items
+  filter( !(mlr_paper_id %in% userlikes_split[[user[1]]][["mlr_paper_id"]]) ) %>%  # remove liked items
   nest(mlr_paper_id, .key = recommendations) %>% 
   mutate(recommendations = lapply(recommendations, function(x) unlist(x, use.names = FALSE)))
 
@@ -132,6 +132,6 @@ for (i in seq_along(users)) {
   if (is.null(rev))
     cdb %>% doc_create(user, reco[[user]], "recommendations")
   else
-    cdb %>% doc_update(user, reco[[user]], "recommendations", rev)
+    cdb %>% doc_update(user, reco[[user]], "recommendations", rev[1])
   
 }

@@ -4,6 +4,7 @@ require(tidyr)
 require(dplyr)
 require(readr)
 require(yaml)
+require(jsonlite)
 
 args = commandArgs(TRUE)
 

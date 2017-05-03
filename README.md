@@ -24,55 +24,44 @@ make require
 1. scrape icml2016
 
     ```sh
-    ./scrape_icml.r
+    make scrape
     ```
 
 2. convert pdf to mult.dat
     
     ```sh
-    cd icml-pdf-conversion
-    sudo pip install -r requirements.txt
-    python pdfconversion.py -p '../data/icml2016/papers/*.pdf' -t ../data/icml2016/papers_txt/ -m full
-    cd ..
+    make pdf2txt
+    make txt2dat
     ```
 
 3. compile lda
     
     ```sh
-    cd lda-c
-    make  
-    cd ..
+    make lda-c
     ```
     
 4. run lda
 
     ```sh
-    lda-c/lda  est 0.005 50 lda-c/settings.txt   data/icml2016/mult.dat   random  data/icml2016/lda_output/
-    ./topics.r
+    make run_lda
     ```
 
 5. init couchdb
 
     ```sh
-    ./init_couchdb.r
+    make init_couchdb
     ```
 
 6. compile ctr2
     
     ```sh
-    cd ctr2
-    make  
-    cd ..
+    make ctr2
     ```
 
-7. run ctr2 (every 5 min)
+7. read likes, run ctr2 and write recommendations (every 5 min)
 
     ```sh
-    ./read_couchdb.r
-    
-    ctr2/ctr --directory output/icml2016 --user data/icml2016/users.dat --item data/icml2016/items.dat --theta_v_init data/icml2016/lda_output/final.gamma --theta_u_init data/icml2016/theta_u.dat --num_factors 50
-    
-    ./write_couchdb.r
+    make
     ```
 
 # Usage (deprecated)

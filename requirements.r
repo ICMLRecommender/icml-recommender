@@ -1,3 +1,5 @@
+#!/usr/bin/Rscript --slave
+
 # install required packages
 pkgs = c("tidyr", 
          "dplyr", 
