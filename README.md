@@ -129,7 +129,7 @@ reco:
 
 ### Automate recommendations updates every 5 minutes
 
-Edit your crontab with `contab -e` and add the fillowing line:
+Edit your crontab with `contab -e` and add the following line:
 
 ```
 */5 * * * * cd icml-recommender; make > cron.log; cd -
