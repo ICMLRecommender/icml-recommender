@@ -121,8 +121,16 @@ reco:
     make ctr2
     ```
 
-7. read likes, run ctr2 and write recommendations (every 5 min)
+7. update recommendations: read likes from couchdb, run ctr2 and write recommendations to couchdb
 
     ```sh
     make
     ```
+
+### Automate recommendations updates every 5 minutes
+
+Edit your crontab with `contab -e` and add the fillowing line:
+
+```
+*/5 * * * * cd icml-recommender; make > cron.log; cd -
+```
