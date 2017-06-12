@@ -51,7 +51,7 @@ config.yml: config.yml.in
 	
 # scrape icml 2016 website
 $(DATA_PATH)/papers.json $(DATA_PATH)/authors.json $(DATA_PATH)/sessions.json: config.yml
-	./scrape_icml.r
+	./scrape_icml2016.r
 	
 scrape: $(DATA_PATH)/papers.json $(DATA_PATH)/authors.json $(DATA_PATH)/sessions.json
 	

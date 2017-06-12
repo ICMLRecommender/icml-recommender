@@ -5,6 +5,7 @@ require(tidyr)
 require(dplyr)
 require(jsonlite)
 require(yaml)
+require(stringr)
 
 args = commandArgs(TRUE)
 
@@ -22,6 +23,9 @@ papers_url = "http://proceedings.mlr.press/v48/"
 schedule_url = "http://icml.cc/2016/?page_id=1839"
 reviews_url = "http://icml.cc/2016/reviews/"
 rebuttals_url = "http://icml.cc/2016/rebuttals/"
+invited_talks_url = "http://icml.cc/2016/?page_id=93"
+root_url = "http://icml.cc"
+conf_url = "http://icml.cc/2016/"
 
 # enable file downloads
 dl_pdf = cfg$scrape$dl_pdf
@@ -103,8 +107,131 @@ papers = data_frame(url = urls) %>%
   do(parse_paper(.$url)) %>% 
   ungroup()
 
-# Schedule
+# Invited speakers
 #===============================
+html = read_html(invited_talks_url) %>% 
+  html_nodes("#main #content")
+
+ids = html %>% 
+  html_nodes("h2") %>% 
+  html_attr("id")
+
+invited_talks = NULL
+for (i in seq_along(ids)) {
+  talk = list(talk_id = ids[i])
+  
+  txt = html %>% 
+    html_node(paste0("#", ids[i])) %>% 
+    html_text() %>% 
+    strsplit("–") %>% .[[1]] %>% 
+    str_trim()
+  talk$speaker = txt[1]
+  talk$title = txt[2]
+  
+  talk$url = paste0(invited_talks_url, "#", ids[i])
+  
+  talk$affiliation = html %>% 
+    html_node(paste0("#", ids[i], " + h3")) %>% 
+    html_text()
+  
+  talk$portrait_url = html %>% 
+    html_node(paste0("#", ids[i], " ~ .medaillon .circle")) %>% 
+    html_attr("src")
+  
+  talk$bio = html %>% 
+    html_node(paste0("#", ids[i], " ~ p")) %>% 
+    html_text()
+  
+  talk$abstract = html %>% 
+    html_node(paste0("#", ids[i], " ~ p em")) %>% 
+    html_text()
+  
+  talk$slides_url = html %>% 
+    html_node(paste0("#", ids[i], " ~ p em span.slides a")) %>% 
+    html_attr("href") %>% 
+    paste0(root_url, .)
+  
+  invited_talks = invited_talks %>% 
+    bind_rows(tbl_df(talk))
+}
+
+# Schedule Table
+#===============================
+
+html = read_html(schedule_url) %>% 
+  html_nodes("#schedule > table[border] > tbody > tr")
+
+schedule = NULL
+for (i in seq_along(html)) {
+  cl = html[i] %>% html_attr("class") %>% 
+    strsplit(" ") %>% 
+    .[[1]]
+  
+  sch = list()
+  
+  if (any(cl == "sep")) {
+    txt = html[i] %>% 
+      html_children() %>% 
+      html_text() %>% 
+      str_trim()
+    day = txt[1]
+    rooms = txt[-1]
+    next()
+  } else {
+    cells = html[i] %>% 
+      html_children()
+    time = cells[1] %>% 
+      html_text() %>% 
+      strsplit(" – ") %>% 
+      .[[1]]
+    cells = cells[-1]
+    
+    if (length(time) == 0)
+      time = c(last_time_end, "02:00") # fix for Lunch
+    
+    sch$day = day
+    sch$time_start = time[1]
+    sch$time_end = time[2]
+    sch$title = cells %>% html_text()
+    sch$location = NA
+    sch$type = NA
+    sch$talk_id = NA
+    sch$session_id = NA
+    if (any(cl %in% c("allcols", "allcolsg"))) {
+      if (grepl("Invited", sch$title)) {
+        sch$type = "Invited talk"
+        sch$talk_id = cells %>% html_node("a") %>% 
+          html_attr("href") %>% 
+          strsplit("#") %>% 
+          .[[1]] %>% .[2]
+      } else if (grepl("Break", sch$title)) {
+        sch$type = "Break"
+      } else if (grepl("Lunch", sch$title)) {
+        sch$type = "Lunch"
+      } else if (grepl("Award", sch$title)) {
+        sch$type = "Award"
+      }
+      sch$schedule_id = paste0(day, "-", time[1], "-", time[2])
+    } else {
+      sch$type = "Oral"
+      sch$location = rooms
+      sch$session_id = cells %>% 
+        html_nodes("a") %>% 
+        html_attr("href") %>% 
+        sub("#", "", .)
+      sch$schedule_id = paste0(day, "-", time[1], "-", time[2], "-", gsub("[ \\+]", "-", rooms))
+    }
+  }
+  
+  schedule = schedule %>% 
+    bind_rows(tbl_df(sch))
+  
+  last_time_end = sch$time_end
+}
+
+# Detailed Schedule
+#===============================
+
 fix_affiliations  = function(x) {
   x[x == "The University of Hong Kong"] = "University of Hong Kong"
   x[x == "Baidu SVAIL"] = "Baidu USA, Inc."
@@ -123,6 +250,10 @@ parse_talk = function(html) {
     html_node(".titlepaper") %>% 
     html_attr("id") %>% 
     as.integer()
+  
+  out$award = html %>% 
+    html_node("b") %>% 
+    html_text()
   
   out$session_time = html %>% 
     html_node(xpath = "text()") %>% 
@@ -173,18 +304,13 @@ parse_talk = function(html) {
 }
 
 html = read_html(schedule_url) %>% 
-  html_node("#schedule") %>% 
-  html_children()
-
-schedule = NULL
-start = FALSE
+  html_nodes('h2:not([id~="main"]) ~ h3, h2:not([id~="main"]) ~ h4, h2:not([id~="main"]) ~ div, h2:not([id~="main"]) ~ li')
+  
+sessions_schedule = NULL
 p = progress_estimated(length(html))
+
 for (i in seq_along(html)) {
   id = html[i] %>% html_attr("id")
-  
-  if (!is.na(id) && id == "main") start = TRUE
-  if (!start) next()
-  
   nm = html[i] %>% html_name()
   txt = html[i] %>% html_text()
   
@@ -194,32 +320,30 @@ for (i in seq_along(html)) {
     session_day = spl[1]
     session_title = spl[2] %>% 
       gsub("[[:blank:]]", " ", .)
-  }
-  if (nm == "h4") {
+  } else if (nm == "h4") {
     session_chair = txt %>% 
       strsplit(":") %>% 
       .[[1]] %>% 
       .[2] %>% 
       trimws()
-  }
-  if (nm == "div") {
+  } else if (nm == "div") {
     session_location = html[i] %>% 
       html_node("b") %>% 
       html_text() %>% 
       trimws()
-  }
-  if (nm == "li") {
+  } else if (nm == "li") {
     out = parse_talk(html[i])
     out$session_id = session_id
+    out$session_url = paste0(schedule_url, "#", session_id)
     out$session_title = session_title
     out$session_chair = session_chair
     out$session_day = session_day
     out$session_location = session_location
     
-    if (is.null(schedule))
-      schedule = tbl_df(out)
+    if (is.null(sessions_schedule))
+      sessions_schedule = tbl_df(out)
     else {
-      schedule = schedule %>% 
+      sessions_schedule = sessions_schedule %>% 
         bind_rows(tbl_df(out))
     }
   }
@@ -230,7 +354,7 @@ for (i in seq_along(html)) {
 #=============
 
 joined = papers %>% 
-  left_join(schedule %>% 
+  left_join(sessions_schedule %>% 
               select(-pdf_url), 
             by = "mlr_paper_id") %>% 
   select(-title.y, -authors.x) %>% 
@@ -267,15 +391,15 @@ todate = function(session_day, session_time) {
 }
 
 sessions = joined %>% 
-  select(session_id, session_day, session_title, session_chair, session_location, session_time, paper_id) %>% 
+  select(session_id, session_day, session_title, session_chair, session_location, session_time, paper_id, session_url) %>% 
   mutate(session_time = todate(session_day, session_time)) %>% 
   arrange(session_time, session_title) %>% 
-  group_by(session_id, session_day, session_title, session_chair, session_location) %>% 
+  group_by(session_id, session_day, session_title, session_chair, session_location, session_url) %>% 
   nest(.key = "talks") %>% 
   ungroup()
 
 papers = joined %>% 
-  left_join(sessions, by = c("session_id", "session_title", "session_chair", "session_day", "session_location")) %>% 
+  left_join(sessions, by = c("session_id", "session_title", "session_chair", "session_day", "session_location", "session_url")) %>% 
   left_join(paper_authors, by="paper_id") %>% 
   select(paper_id, title, abstract, author_ids, mlr_paper_id, url, pdf_url, supp_pdf_url, 
        review_url, rebuttal_url, session_id, session_time, poster_session)
@@ -290,7 +414,10 @@ authors %>%
   toJSON(pretty=TRUE) %>% 
   write(file.path(data_path, "authors.json"))
 
+schedule %>% 
+  toJSON(pretty=TRUE) %>% 
+  write(file.path(data_path, "schedule.json"))
+
 sessions %>% 
   toJSON(pretty=TRUE) %>% 
   write(file.path(data_path, "sessions.json"))
-

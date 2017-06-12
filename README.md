@@ -39,16 +39,17 @@ export LAMBDA_V = 0.01
 Create a `config.yml.in` file with the following content and edit the `couchdb:user` and `couchdb:pwd` fields.
 
 ```yaml
-data: 
-  path: "${DATA_PATH}"
-  pdf_path: "${PDF_PATH}"
-  txt_path: "${TXT_PATH}"
-
 scrape:
   dl_pdf: TRUE
   dl_supp_pdf: FALSE
   dl_review: FALSE
   dl_rebuttal: FALSE
+
+data: 
+  path: "${DATA_PATH}"
+  suffix: "_2016"
+  pdf_path: "${PDF_PATH}"
+  txt_path: "${TXT_PATH}"
 
 lda:
   alpha: ${LDA_ALPHA}
