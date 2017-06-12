@@ -16,6 +16,7 @@ if (length(args>0))
 cfg = yaml.load_file(cfg_file)
 
 data_path = cfg$data$path
+suffix = cfg$data$suffix
 txt_path = cfg$data$txt_path
 
 # read couchDB
@@ -35,7 +36,7 @@ users = cdb %>%
 
 # Read topics
 topics = cdb %>% 
-  db_alldocs("topics", include_docs=TRUE, as = "json") %>% 
+  db_alldocs(paste0("topics", suffix), include_docs=TRUE, as = "json") %>% 
   fromJSON() %>% 
   .$rows %>% 
   .$doc %>% 
@@ -129,7 +130,7 @@ userlikes %>%
   nest(ctr_paper_id, .key = "ctr_paper_ids") %>% 
   mutate(n = sapply(ctr_paper_ids, nrow),
          ctr_paper_ids = sapply(ctr_paper_ids, function(x) paste(x$ctr_paper_id, collapse=" "))) %>% 
-  complete(ctr_user_id = seq(0, max(userlikes$ctr_user_id)), 
+  complete(ctr_user_id = seq_along(users)-1, 
            fill=list(ctr_paper_ids = "", n=0)) %>% 
   transmute(out = paste(n, ctr_paper_ids)) %>% 
   .$out %>% 
