@@ -1,8 +1,7 @@
 #!/usr/bin/Rscript --slave
 
 require(rvest)
-require(tidyr)
-require(dplyr)
+require(tidyverse)
 require(jsonlite)
 require(yaml)
 require(stringr)
@@ -421,3 +420,7 @@ schedule %>%
 sessions %>% 
   toJSON(pretty=TRUE) %>% 
   write(file.path(data_path, "sessions.json"))
+
+invited_talks %>% 
+  toJSON(pretty=TRUE) %>% 
+  write(file.path(data_path, "invited_talks.json"))

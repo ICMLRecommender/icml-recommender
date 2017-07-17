@@ -66,7 +66,10 @@ topic_papers = gamma %>%
   gather(topic_id, weight, -mlr_paper_id, na.rm = TRUE) %>% 
   mutate(topic_id = as.integer(topic_id)) %>% 
   arrange(topic_id, desc(weight)) %>% 
-  left_join(select(papers, mlr_paper_id, title), by="mlr_paper_id") %>% 
+  left_join(papers %>% 
+              select(paper_id, mlr_paper_id, title), 
+            by="mlr_paper_id") %>% 
+  select(topic_id, paper_id, mlr_paper_id, weight) %>% 
   group_by(topic_id) %>% 
   nest(.key = "papers")
 
@@ -79,13 +82,14 @@ beta = read_delim(file.path(lda_output_path, "final.beta"),
                   delim=" ", 
                   col_types = cols(X1 = col_skip(), .default = "d"), 
                   col_names = c("X1", words)) %>%
-  mutate_all(funs(exp))
+  exp()
 
 thres_weight_word = 5e-3
 
+beta[beta>thres_weight_word] = NA
+
 topics = beta %>% 
   mutate(topic_id = topic_ids) %>% 
-  mutate_at(vars(-topic_id), funs(ifelse(.>thres_weight_word, ., NA))) %>% 
   gather(word, weight, -topic_id, na.rm = TRUE) %>% 
   group_by(topic_id) %>% 
   arrange(desc(weight)) %>% 
