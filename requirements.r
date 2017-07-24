@@ -1,9 +1,7 @@
 #!/usr/bin/Rscript --slave
 
 # install required packages
-pkgs = c("tidyr", 
-         "dplyr", 
-         "readr", 
+pkgs = c("tidyverse", 
          "rvest",
          "jsonlite",
          "yaml",

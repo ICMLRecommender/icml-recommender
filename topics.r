@@ -5,7 +5,6 @@ library(yaml)
 library(jsonlite)
 library(magrittr)
 library(stringr)
-library(knitr)
 
 args = commandArgs(TRUE)
 
@@ -105,25 +104,6 @@ topics = topics %>%
 topics = topics %>% 
   left_join(topic_papers, by="topic_id")
 
-# write topics.md
-#===================
-
-print_topic = function(df) {
-  out = c(str_c("# [", format(df$weight*100, digit=3), "%] topic ", df$topic_id))
-  out = c(out, kable(df$words[[1]][1:10,]), "\n")
-  out = c(out, kable(df$papers[[1]][1:5,]), "\n")
-}
-
-fc = file(file.path(data_path, "topics.md"))
-
-topics %>%
-  arrange(desc(weight)) %>% 
-  split(., seq_len(nrow(.))) %>% 
-  sapply(print_topic) %>% 
-  writeLines(fc)
-
-close(fc)
-
 # Topic clusters
 #================
 
@@ -145,45 +125,6 @@ topics = topics %>%
               rename(topic_id = topic_ids), 
             by = "topic_id")
 
-# # clustering of topics
-# #========================
-# n_clust = 20
-# 
-# km_fit = kmeans(beta, n_clust)
-# 
-# # require(tsne)
-# # require(ggplot2)
-# # 
-# # tsne_fit = tsne(beta, perplexity = 5)
-# # 
-# # tsne_fit %>% as_tibble() %>%
-# #   ggplot(aes(V1, V2)) +
-# #   geom_text(aes(label=topics$top_words,
-# #                 col = as.factor(km_fit$cluster)),
-# #             lineheight=.5,
-# #             fontface = "bold")
-# 
-# topics = topics %>%
-#   mutate(topic_cluster_id = km_fit$cluster)
-# 
-# subtopics = topics %>%
-#   group_by(topic_cluster_id) %>%
-#   summarise(topic_ids = list(topic_id))
-# 
-# weight_thres = 5e-3
-# topic_clusters = beta %>%
-#   mutate(topic_cluster_id = km_fit[["cluster"]]) %>%
-#   group_by(topic_cluster_id) %>%
-#   summarise_all(funs(mean)) %>%
-#   mutate_at(vars(-topic_cluster_id), funs(if_else(.>weight_thres, ., NA_character_))) %>%
-#   gather(word, weight, -topic_cluster_id, na.rm = TRUE) %>%
-#   group_by(topic_cluster_id) %>%
-#   arrange(desc(weight)) %>%
-#   nest(.key = "words") %>%
-#   mutate(label = map_chr(words, ~paste(.x$word[1:3], collapse=" "))) %>%
-#   left_join(subtopics, by="topic_cluster_id")
-
-
 # write json
 #============
 
@@ -198,3 +139,24 @@ topic_clusters %>%
 papers %>% 
   toJSON(pretty=TRUE) %>% 
   write(file.path(data_path, "papers_topics.json"))
+
+
+# write topics.md
+#===================
+require(knitr)
+
+print_topic = function(df) {
+  out = c(str_c("# [", format(df$weight*100, digit=3), "%] topic ", df$topic_id))
+  out = c(out, knitr::kable(df$words[[1]][1:10,]), "\n")
+  out = c(out, knitr::kable(df$papers[[1]][1:5,]), "\n")
+}
+
+fc = file(file.path(data_path, "topics.md"))
+
+topics %>%
+  arrange(desc(weight)) %>% 
+  split(., seq_len(nrow(.))) %>% 
+  sapply(print_topic) %>% 
+  writeLines(fc)
+
+close(fc)
