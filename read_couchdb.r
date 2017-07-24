@@ -1,11 +1,10 @@
 #!/usr/bin/Rscript --slave
 
-require(tidyr)
-require(dplyr)
-require(jsonlite)
-require(readr)
-require(sofa)
-require(yaml)
+library(tidyverse)
+library(jsonlite)
+library(sofa)
+library(yaml)
+library(stringr)
 
 args = commandArgs(TRUE)
 
@@ -18,6 +17,7 @@ cfg = yaml.load_file(cfg_file)
 data_path = cfg$data$path
 suffix = cfg$data$suffix
 txt_path = cfg$data$txt_path
+files_path = cfg$data$files_path
 
 # read couchDB
 #=============================
@@ -26,7 +26,7 @@ cdb = do.call(Cushion$new, cfg$couchdb)
 db_list(cdb)
 
 # read users
-users = cdb %>% 
+userids = cdb %>% 
   db_alldocs("_users", include_docs=TRUE, as = "json") %>% 
   fromJSON() %>% 
   .$rows %>% 
@@ -34,44 +34,57 @@ users = cdb %>%
   filter(name != "root", !is.na(name)) %>% 
   .$name
 
-# Read topics
-topics = cdb %>% 
-  db_alldocs(paste0("topics", suffix), include_docs=TRUE, as = "json") %>% 
+# read papers
+papers = cdb %>% 
+  db_alldocs(str_c("papers", suffix), include_docs=TRUE, as = "json") %>% 
   fromJSON() %>% 
   .$rows %>% 
-  .$doc %>% 
-  tbl_df() %>% 
-  .$topic_id %>% 
+  .$doc %>%
+  as_tibble() %>% 
+  select(paper_id, filename)
+
+# Read topics
+topics = cdb %>%
+  db_alldocs(str_c("topics", suffix), include_docs=TRUE, as = "json") %>%
+  fromJSON() %>%
+  .$rows %>%
+  .$doc %>%
+  as_tibble() %>% 
+  select(topic_id, topic_cluster_id)
+
+topic_ids = topics$topic_id %>% 
   sort()
 
 # Read user topics
 user_topics = NULL
-for (i in seq_along(users)) {
-  user = users[[i]]
+for (i in seq_along(userids)) {
+  user = userids[[i]]
   if (user %in% db_list(cdb)) {
     
-    usertop = tryCatch({
+    tc_ids = tryCatch({
       cdb %>% 
         doc_get(user, 
                 "data") %>% 
-        .$topics %>% 
+        .$topic_cluster_ids %>% 
         unlist()
       }, 
         error = function(err) NULL
     )
-    if (length(usertop)>0) {
+    if (length(tc_ids)>0) {
       user_topics = user_topics %>% 
-        bind_rows(data_frame(user = user, topic = usertop))
+        bind_rows(data_frame(user = user, topic_cluster_id = tc_ids))
     }
   }
 }
 
 user_topics = user_topics %>% 
+  left_join(topics, by = "topic_cluster_id") %>% 
+  select(-topic_cluster_id) %>% 
   mutate(point = 1) %>% 
-  complete(user = users, topic = topics, fill = list(point=0))
+  complete(user = userids, topic_id = topic_ids, fill = list(point=0))
 
-# read paper ids
-mlr_paper_ids = readLines(file.path(txt_path, "files.dat")) %>% 
+# read paper filenames
+filenames = readLines(files_path) %>% 
   tools::file_path_sans_ext() %>% 
   basename()
 
@@ -80,12 +93,13 @@ if ("simu" %in% names(cfg)) {
   set.seed(cfg$simu$seed)
   n_likes = cfg$simu$n_likes
   
-  users_ = sample(users, n_likes, replace = TRUE)
-  papers_ = sample(mlr_paper_ids, n_likes, replace = TRUE)
+  users_ = sample(userids, n_likes, replace = TRUE)
+  papers_ = sample(filenames, n_likes, replace = TRUE)
   userlikes = data_frame(user = users_, 
-                         mlr_paper_id = papers_,
-                         ctr_user_id = match(users_, users)-1, 
-                         ctr_paper_id = match(papers_, mlr_paper_ids)-1) # NOTE: ctr ids start at 0
+                         filename = papers_,
+                         ctr_user_id = match(users_, userids)-1, 
+                         ctr_paper_id = match(papers_, filenames)-1) %>%  # NOTE: ctr ids start at 0
+    left_join(papers, by = "filename")
 } else {
   # Read user likes
   userlikes = cdb %>% 
@@ -102,22 +116,23 @@ if ("simu" %in% names(cfg)) {
   
   userlikes = userlikes %>% 
     unnest() %>% 
-    select(user, mlr_paper_id = `_id`, time) %>% 
+    select(user, paper_id = `_id`, time) %>% 
     mutate(time = as.POSIXct(time, format = "%Y-%m-%dT%H:%M:%S")) %>% 
     arrange(desc(time)) %>% 
-    distinct()
+    distinct() %>% 
+    left_join(papers, by = "paper_id")
   
   # join with ctr ids
   userlikes = userlikes %>% 
-    mutate(ctr_user_id = match(user, users)-1,
-           ctr_paper_id = match(mlr_paper_id, mlr_paper_ids)-1) # NOTE: ctr ids start at 0
+    mutate(ctr_user_id = match(user, userids)-1,
+           ctr_paper_id = match(filename, filenames)-1) # NOTE: ctr ids start at 0
 }
 
 # save userids file
 fn = file.path(data_path, 'userids.dat')
 cat("writing", fn, "\n")
 
-users %>% 
+userids %>% 
   writeLines(fn)
 
 # save users file
@@ -128,11 +143,11 @@ userlikes %>%
   filter(!is.na(ctr_paper_id)) %>% 
   group_by(ctr_user_id) %>% 
   nest(ctr_paper_id, .key = "ctr_paper_ids") %>% 
-  mutate(n = sapply(ctr_paper_ids, nrow),
-         ctr_paper_ids = sapply(ctr_paper_ids, function(x) paste(x$ctr_paper_id, collapse=" "))) %>% 
-  complete(ctr_user_id = seq_along(users)-1, 
+  mutate(n = map_int(ctr_paper_ids, nrow),
+         ctr_paper_ids = map_chr(ctr_paper_ids, ~str_c(.x$ctr_paper_id, collapse=" "))) %>% 
+  complete(ctr_user_id = seq_along(userids)-1, 
            fill=list(ctr_paper_ids = "", n=0)) %>% 
-  transmute(out = paste(n, ctr_paper_ids)) %>% 
+  transmute(out = str_c(n, ctr_paper_ids, sep=" ")) %>% 
   .$out %>% 
   writeLines(fn)
 
@@ -143,11 +158,11 @@ cat("writing", fn, "\n")
 userlikes %>% 
   group_by(ctr_paper_id) %>% 
   nest(ctr_user_id, .key = "ctr_user_ids") %>% 
-  mutate(n = sapply(ctr_user_ids, nrow),
-         ctr_user_ids = sapply(ctr_user_ids, function(x) paste(x$ctr_user_id, collapse=" "))) %>% 
-  complete(ctr_paper_id = seq_along(mlr_paper_ids)-1, 
+  mutate(n = map_int(ctr_user_ids, nrow),
+         ctr_user_ids = map_chr(ctr_user_ids, ~str_c(.x$ctr_user_id, collapse=" "))) %>% 
+  complete(ctr_paper_id = seq_along(filenames)-1, 
            fill=list(ctr_user_ids = "", n=0)) %>% 
-  transmute(out = paste(n, ctr_user_ids)) %>% 
+  transmute(out = str_c(n, ctr_user_ids, sep=" ")) %>% 
   .$out %>% 
   writeLines(fn)
 
@@ -158,10 +173,10 @@ fn = file.path(data_path, 'theta_u.dat')
 cat("writing", fn, "\n")
 
 theta_u = user_topics %>% 
-  spread(topic, point) %>%
-  slice(match(users, user)) %>% 
+  spread(topic_id, point) %>%
+  slice(match(userids, user)) %>% 
   select(-user) %>% 
-  tbl_df()
+  as_tibble()
 
 theta_u %>% 
   write_delim(fn, delim =" ", col_names = FALSE)

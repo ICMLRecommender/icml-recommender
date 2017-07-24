@@ -1,11 +1,11 @@
 #!/usr/bin/Rscript --slave
 
-require(tidyr)
-require(dplyr)
-require(readr)
-require(yaml)
-require(jsonlite)
-require(magrittr)
+library(tidyverse)
+library(yaml)
+library(jsonlite)
+library(magrittr)
+library(stringr)
+library(knitr)
 
 args = commandArgs(TRUE)
 
@@ -17,8 +17,12 @@ cfg = yaml.load_file(cfg_file)
 
 data_path = cfg$data$path
 txt_path = cfg$data$txt_path
+files_path = cfg$data$files_path
+vocab_path = cfg$data$vocab_path
 lda_output_path = cfg$lda$output_path
 
+thres_weight_topic = as.numeric(cfg$topics$thres_topic)
+thres_weight_word = as.numeric(cfg$topics$thres_word)
 
 # papers topic proportions
 # =============================
@@ -38,45 +42,44 @@ topic_ids = seq_len(n_topics)
 
 colnames(gamma) = topic_ids
 
-papers = fromJSON(file(file.path(data_path, "papers.json"))) %>% tbl_df() 
+papers = fromJSON(file(file.path(data_path, "papers.json"))) %>% 
+  as_tibble()
 
-mlr_paper_ids = readLines(file.path(txt_path, "files.dat")) %>%
+filenames = readLines(files_path) %>%
   tools::file_path_sans_ext() %>% 
   basename()
 
 # add topic proportions to papers
-thres_weight_topic = .1
-
 paper_topics = gamma %>% 
-  mutate(mlr_paper_id = mlr_paper_ids) %>% 
-  mutate_at(vars(-mlr_paper_id), funs(ifelse(.>thres_weight_topic, ., NA))) %>% 
-  gather(topic_id, weight, -mlr_paper_id, na.rm = TRUE) %>% 
+  mutate(filename = filenames) %>% 
+  mutate_at(vars(-filename), funs(if_else(.>thres_weight_topic, ., NA_character_))) %>% 
+  gather(topic_id, weight, -filename, na.rm = TRUE) %>% 
   mutate(topic_id = as.integer(topic_id)) %>% 
-  arrange(mlr_paper_id, desc(weight)) %>% 
-  group_by(mlr_paper_id) %>% 
+  arrange(filename, desc(weight)) %>% 
+  group_by(filename) %>% 
   nest(.key = "topics")
 
 papers = papers %>% 
-  left_join(paper_topics, by = "mlr_paper_id")
+  left_join(paper_topics, by = "filename")
 
 # add top papers to topics
 topic_papers = gamma %>% 
-  mutate(mlr_paper_id = mlr_paper_ids) %>% 
-  mutate_at(vars(-mlr_paper_id), funs(ifelse(.>thres_weight_topic, ., NA))) %>% 
-  gather(topic_id, weight, -mlr_paper_id, na.rm = TRUE) %>% 
+  mutate(filename = filenames) %>% 
+  mutate_at(vars(-filename), funs(if_else(.>thres_weight_topic, ., NA_character_))) %>% 
+  gather(topic_id, weight, -filename, na.rm = TRUE) %>% 
   mutate(topic_id = as.integer(topic_id)) %>% 
   arrange(topic_id, desc(weight)) %>% 
   left_join(papers %>% 
-              select(paper_id, mlr_paper_id, title), 
-            by="mlr_paper_id") %>% 
-  select(topic_id, paper_id, mlr_paper_id, weight) %>% 
+              select(paper_id, title, filename), 
+            by="filename") %>% 
+  select(topic_id, paper_id, weight) %>% 
   group_by(topic_id) %>% 
   nest(.key = "papers")
 
 
 # topics word proportions
 # =======================
-words = readLines(file.path(txt_path, "vocab.dat"))
+words = readLines(vocab_path)
 
 beta = read_delim(file.path(lda_output_path, "final.beta"), 
                   delim=" ", 
@@ -84,9 +87,7 @@ beta = read_delim(file.path(lda_output_path, "final.beta"),
                   col_names = c("X1", words)) %>%
   exp()
 
-thres_weight_word = 5e-3
-
-beta[beta>thres_weight_word] = NA
+beta[beta<thres_weight_word] = NA
 
 topics = beta %>% 
   mutate(topic_id = topic_ids) %>% 
@@ -95,8 +96,7 @@ topics = beta %>%
   arrange(desc(weight)) %>% 
   nest(.key = "words") %>% 
   arrange(topic_id) %>% 
-  mutate(label = sapply(words, function(x) paste(x$word[1:3], collapse="-"))) %>% 
-  select(topic_id, label, words)
+  select(topic_id, words)
 
 topics = topics %>% 
   mutate(weight = topic_weights) %>% 
@@ -104,6 +104,46 @@ topics = topics %>%
 
 topics = topics %>% 
   left_join(topic_papers, by="topic_id")
+
+# write topics.md
+#===================
+
+print_topic = function(df) {
+  out = c(str_c("# [", format(df$weight*100, digit=3), "%] topic ", df$topic_id))
+  out = c(out, kable(df$words[[1]][1:10,]), "\n")
+  out = c(out, kable(df$papers[[1]][1:5,]), "\n")
+}
+
+fc = file(file.path(data_path, "topics.md"))
+
+topics %>%
+  arrange(desc(weight)) %>% 
+  split(., seq_len(nrow(.))) %>% 
+  sapply(print_topic) %>% 
+  writeLines(fc)
+
+close(fc)
+
+# Topic clusters
+#================
+
+topic_clusters = topics %>% 
+  mutate(label = map_chr(words, ~str_c(.x$word[1:3], collapse="-"))) %>% 
+  group_by(label) %>% 
+  summarise(topic_ids = list(unique(topic_id)),
+            weight = sum(weight),
+            words = list(bind_rows(words)),
+            papers = list(bind_rows(papers))) %>% 
+  arrange(desc(weight)) %>% 
+  mutate(topic_cluster_id = seq_len(n())) %>% 
+  select(topic_cluster_id, everything())
+
+topics = topics %>% 
+  left_join(topic_clusters %>% 
+              select(topic_cluster_id, topic_ids) %>% 
+              unnest() %>% 
+              rename(topic_id = topic_ids), 
+            by = "topic_id")
 
 # # clustering of topics
 # #========================
@@ -116,7 +156,7 @@ topics = topics %>%
 # # 
 # # tsne_fit = tsne(beta, perplexity = 5)
 # # 
-# # tsne_fit %>% tbl_df() %>%
+# # tsne_fit %>% as_tibble() %>%
 # #   ggplot(aes(V1, V2)) +
 # #   geom_text(aes(label=topics$top_words,
 # #                 col = as.factor(km_fit$cluster)),
@@ -124,24 +164,24 @@ topics = topics %>%
 # #             fontface = "bold")
 # 
 # topics = topics %>%
-#   mutate(parent_topic_id = km_fit$cluster)
+#   mutate(topic_cluster_id = km_fit$cluster)
 # 
-# children_topics = topics %>%
-#   group_by(parent_topic_id) %>%
+# subtopics = topics %>%
+#   group_by(topic_cluster_id) %>%
 #   summarise(topic_ids = list(topic_id))
 # 
 # weight_thres = 5e-3
-# parent_topics = beta %>%
-#   mutate(parent_topic_id = km_fit[["cluster"]]) %>%
-#   group_by(parent_topic_id) %>%
+# topic_clusters = beta %>%
+#   mutate(topic_cluster_id = km_fit[["cluster"]]) %>%
+#   group_by(topic_cluster_id) %>%
 #   summarise_all(funs(mean)) %>%
-#   mutate_at(vars(-parent_topic_id), funs(ifelse(.>weight_thres, ., NA))) %>%
-#   gather(word, weight, -parent_topic_id, na.rm = TRUE) %>%
-#   group_by(parent_topic_id) %>%
+#   mutate_at(vars(-topic_cluster_id), funs(if_else(.>weight_thres, ., NA_character_))) %>%
+#   gather(word, weight, -topic_cluster_id, na.rm = TRUE) %>%
+#   group_by(topic_cluster_id) %>%
 #   arrange(desc(weight)) %>%
 #   nest(.key = "words") %>%
-#   mutate(top_words = sapply(words, function(x) paste(x$word[1:3], collapse=" "))) %>%
-#   left_join(children_topics, by="parent_topic_id")
+#   mutate(label = map_chr(words, ~paste(.x$word[1:3], collapse=" "))) %>%
+#   left_join(subtopics, by="topic_cluster_id")
 
 
 # write json
@@ -151,22 +191,10 @@ topics %>%
   toJSON(pretty=TRUE) %>% 
   write(file.path(data_path, "topics.json"))
 
+topic_clusters %>% 
+  toJSON(pretty=TRUE) %>% 
+  write(file.path(data_path, "topic_clusters.json"))
+
 papers %>% 
   toJSON(pretty=TRUE) %>% 
   write(file.path(data_path, "papers_topics.json"))
-
-
-# write topics.md
-#===================
-
-print_topic = function(df) {
-  out = c(paste0("# [",format(df$weight*100, digit=3), "%] topic ", df$topic_id, ": ", df$label))
-  out = c(out, knitr::kable(df$words[[1]][1:10,]), "\n")
-  out = c(out, knitr::kable(df$papers[[1]][1:5,]), "\n")
-}
-
-topics %>%
-  arrange(desc(weight)) %>% 
-  split(., seq_len(nrow(.))) %>% 
-  sapply(print_topic) %>% 
-  writeLines(file(file.path(data_path, "topics.md")))
