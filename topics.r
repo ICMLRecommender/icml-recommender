@@ -15,7 +15,6 @@ if (length(args>0))
 cfg = yaml.load_file(cfg_file)
 
 data_path = cfg$data$path
-txt_path = cfg$data$txt_path
 files_path = cfg$data$files_path
 vocab_path = cfg$data$vocab_path
 lda_output_path = cfg$lda$output_path
@@ -34,7 +33,8 @@ topic_weights = gamma %>%
   divide_by(sum(.))
 
 gamma = gamma %>% 
-  sweep(1, rowSums(.), "/")
+  sweep(1, rowSums(.), "/") %>% 
+  as_tibble()
 
 n_topics = ncol(gamma)
 topic_ids = seq_len(n_topics)
@@ -51,7 +51,7 @@ filenames = readLines(files_path) %>%
 # add topic proportions to papers
 paper_topics = gamma %>% 
   mutate(filename = filenames) %>% 
-  mutate_at(vars(-filename), funs(if_else(.>thres_weight_topic, ., NA_character_))) %>% 
+  mutate_at(vars(-filename), funs(if_else(.>thres_weight_topic, ., NA_real_))) %>% 
   gather(topic_id, weight, -filename, na.rm = TRUE) %>% 
   mutate(topic_id = as.integer(topic_id)) %>% 
   arrange(filename, desc(weight)) %>% 
@@ -64,7 +64,7 @@ papers = papers %>%
 # add top papers to topics
 topic_papers = gamma %>% 
   mutate(filename = filenames) %>% 
-  mutate_at(vars(-filename), funs(if_else(.>thres_weight_topic, ., NA_character_))) %>% 
+  mutate_at(vars(-filename), funs(if_else(.>thres_weight_topic, ., NA_real_))) %>% 
   gather(topic_id, weight, -filename, na.rm = TRUE) %>% 
   mutate(topic_id = as.integer(topic_id)) %>% 
   arrange(topic_id, desc(weight)) %>% 

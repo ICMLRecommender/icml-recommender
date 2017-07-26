@@ -1,23 +1,30 @@
 export LABEL := icml2017
 export DATA_PATH := data/$(LABEL)
-export PDF_PATH := $(DATA_PATH)/papers
-export TXT_PATH := $(DATA_PATH)/papers_txt
-export LDA_OUTPUT_PATH := $(DATA_PATH)/lda_output
 export CTR_OUTPUT_PATH := output/$(LABEL)
 ifeq ($(LABEL), icml2016)
+  export PDF_PATH := $(DATA_PATH)/papers
+  export TXT_PATH := $(DATA_PATH)/papers_txt
 	export PDF_CONVERSION_PATH := icml-pdf-conversion/pdfconversion.py
   export N_TOPICS := 50
   export LDA_ALPHA := 0.005
   export LDA_SETTINGS_PATH := lda-c/settings.txt
+	export LDA_OUTPUT_PATH := $(DATA_PATH)/lda_output
   export ALPHA_U_SMOOTH := 1
   export LAMBDA_U := 0.01
   export LAMBDA_V := 0.01
 else ifeq ($(LABEL), icml2017)
+  #export PDF_PATH := $(DATA_PATH)/papers
+  #export TXT_PATH := $(DATA_PATH)/abstracts_txt
+  export TXT_PATH := $(DATA_PATH)/papers_txt
 	export PDF_CONVERSION_PATH := icml-pdf-conversion/pdfconversion_stopwords_2grams.py
-	export PDF_CONVERSION_SUFFIX := _stop
-  export N_TOPICS := 15
-  export LDA_ALPHA := 0.5
+	#export PDF_CONVERSION_SUFFIX := _stop
+  #export N_TOPICS := 15
+  #export LDA_ALPHA := 0.5
+  export N_TOPICS := 30
+  export LDA_ALPHA := 1
   export LDA_SETTINGS_PATH := lda_settings_fixed.txt
+	#export LDA_OUTPUT_PATH := $(DATA_PATH)/lda_output
+	export LDA_OUTPUT_PATH := $(DATA_PATH)/resultsFULL2017_2gram_alpha1_K30
   export ALPHA_U_SMOOTH := 1
   export LAMBDA_U := 0.01
   export LAMBDA_V := 0.01

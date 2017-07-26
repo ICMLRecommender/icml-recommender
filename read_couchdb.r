@@ -64,8 +64,8 @@ for (i in seq_along(userids)) {
     tc_ids = tryCatch({
       cdb %>% 
         doc_get(user, 
-                "data") %>% 
-        .$topic_cluster_ids %>% 
+                "preferred_topics") %>% 
+        .$topicids %>% 
         unlist()
       }, 
         error = function(err) NULL

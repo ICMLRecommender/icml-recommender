@@ -1,6 +1,7 @@
 #!/usr/bin/Rscript --slave
 
 library(tidyverse)
+library(stringr)
 library(jsonlite)
 library(sofa)
 library(yaml)
@@ -14,12 +15,14 @@ if (length(args>0))
 cfg = yaml.load_file(cfg_file)
 
 data_path = cfg$data$path
+suffix = cfg$data$suffix
 txt_path = cfg$data$txt_path
 files_path = cfg$data$files_path
 output_path = cfg$ctr$output_path
 
 # read couchDB
 #=============================
+
 cdb = do.call(Cushion$new, cfg$couchdb)
 
 # read papers
