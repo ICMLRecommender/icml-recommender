@@ -5,7 +5,8 @@ pkgs = c("tidyverse",
          "rvest",
          "jsonlite",
          "yaml",
-         "sofa")
+         "sofa",
+         "rjson")
 
 for (i in seq_along(pkgs)) {
   if (!require(pkgs[i], character.only = TRUE))

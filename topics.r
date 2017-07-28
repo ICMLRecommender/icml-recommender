@@ -146,15 +146,21 @@ papers %>%
 if (require(knitr)) {
   print_topic = function(df) {
     out = c(str_c("# [", format(df$weight*100, digit=3), "%] topic ", df$topic_id))
-    out = c(out, knitr::kable(df$words[[1]][1:10,]), "\n")
-    out = c(out, knitr::kable(df$papers[[1]][1:5,]), "\n")
+    out = c(out, knitr::kable(df$words[[1]][1:10, c("weight", "word")]), "\n")
+    out = c(out, knitr::kable(df$papers[[1]][1:5, c("weight", "title")]), "\n")
   }
   
   fc = file(file.path(data_path, "topics.md"))
   
+  paper_titles = papers %>% 
+    select(paper_id, title)
+  
   topics %>%
+    group_by(topic_id) %>% 
+    do(mutate(., papers = map(papers, ~left_join(.x, paper_titles, by = "paper_id")))
+    ) %>% 
     arrange(desc(weight)) %>% 
-    split(., seq_len(nrow(.))) %>% 
+    split(seq_len(nrow(.))) %>% 
     sapply(print_topic) %>% 
     writeLines(fc)
   
