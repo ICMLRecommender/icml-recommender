@@ -20,7 +20,7 @@ txt_path = cfg$data$txt_path
 
 dir.create(data_path, showWarnings = FALSE)
 
-if (cfg$scrape$dl_zip) {
+if (!is.null(cfg$scrape$zip_url)) {
   # download zip file with all the data
   
   zip_file = ".data.zip"
@@ -31,185 +31,284 @@ if (cfg$scrape$dl_zip) {
 } else {
   # scrape from website or other files
   
+  papers_url = "http://proceedings.mlr.press/v70/"
   schedule_url = "https://2017.icml.cc/Conferences/2017/Schedule"
-  xl_schedule_url = "https://docs.google.com/spreadsheets/d/15jcUEnFTwtpvzgS4Hxl2EePNT6tZsnOq8JP3pMGwdYg/export?format=xlsx&id=15jcUEnFTwtpvzgS4Hxl2EePNT6tZsnOq8JP3pMGwdYg"
   keynotes_url = "https://2017.icml.cc/Conferences/2017/InvitedSpeakers"
   
   # enable file downloads
+  dl_pdf = cfg$scrape$dl_pdf
+  dl_supp_pdf = cfg$scrape$dl_supp_pdf
   dl_schedule = cfg$scrape$dl_schedule
-  write_txt = cfg$scrape$write_txt
   
-  # Papers and authors
+  if (dl_pdf || dl_supp_pdf)
+    dir.create(file.path(data_path, "papers"), showWarnings = FALSE)
+  
+  # Papers
   #======================
-  papers_file = file.path(data_path, "accepted papers -- Camera_ReadyPapers_test_removed.xlsx")
-  
-  fix_affiliation = function(affiliation, email) {
-    ok = (affiliation == "CMU")
-    affiliation[ok] = "Carnegie Mellon University"
+  parse_paper = function(url, .pb=NULL) {
+    if ((!is.null(.pb)) && inherits(.pb, "Progress") && (.pb$i < .pb$n)) .pb$tick()$print()
     
-    ok = (str_length(affiliation)==0)
-    domains = email[ok] %>% 
-      str_extract("\\w+\\.\\w+$")
-    fix = list("cmu.edu" = "Carnegie Mellon University",
-               "fb.com" = "Facebook AI Research",
-               "syr.edu" = "Syracuse University",
-               "gatech.edu" = "Georgia Tech",
-               "google.com" = "Google Research",
-               "lip6.fr" = "University of Paris 6 (UPMC)")
-    affiliation[ok] = unlist(fix)[match(domains, names(fix))]
-    return(affiliation)
-  }
-  
-  author_duplicates = c("Alex Gittens", "Christopher Pal", "Frank Nielsen", "Ian Osband",
-                        "Jiecao Chen")
-  
-  paper_authors = read_xlsx(papers_file) %>% 
-    select(filename = "ID", title = "Title", abstract = "Abstract", authors = "Name (Org) <Email>") %>% 
-    mutate(paper_id = as.integer(filename)) %>% 
-    mutate(authors = strsplit(authors, ";")) %>% 
-    mutate(authors = map(authors, ~set_names(as_tibble(str_match(gsub("*", "", .x, fixed = TRUE), 
-                                                                 "(.*?)\\s\\((.*?)\\)\\s<(.*?)>")[,2:4,drop=FALSE]), 
-                                             c("author", "affiliation", "email")))) %>% 
-    unnest() %>% 
-    mutate(affiliation = fix_affiliation(affiliation, email)) %>% 
-    group_by(author) %>% 
-    arrange(affiliation) %>% 
-    fill(affiliation) %>% 
-    group_by(author, affiliation) %>%
-    { mutate(ungroup(.), author_id = group_indices(.)) } %>%
-    ungroup() %>% 
-    group_by(author) %>% 
-    mutate(author_id = if_else(author %in% author_duplicates,
-                               first(author_id), author_id))
-  
-  authors = paper_authors %>% 
-    group_by(author_id, author) %>% 
-    summarize(affiliations = list(unique(affiliation)),
-              emails = list(unique(email)),
-              paper_ids = list(unique(paper_id))) %>% 
-    ungroup()
-  
-  papers = paper_authors %>% 
-    group_by(paper_id, title, abstract, filename) %>% 
-    summarize(author_ids = list(unique(author_id))) %>% 
-    ungroup()
-  
-  # Write abstracts txt files
-  #===============================
-  if (write_txt) {
-    dir.create(txt_path, showWarnings = FALSE)
-    papers %>% 
-      split(.$paper_id) %>% 
-      walk(function(x){
-        fn = file.path(txt_path, str_c(x$filename, ".txt"))
-        fc = file(fn)
-        writeLines(x$abstract, fc)
-        close(fc)
-        fn
-      })
-  }
-  
-  # Schedule
-  #==============
-  schedule_file = file.path(data_path, "schedule.xlsx")
-  
-  if (dl_schedule)
-    download.file(xl_schedule_url, schedule_file)
-  
-  locations =  read_xlsx(schedule_file, n_max = 0) %>% 
-    colnames()
-  
-  locations = locations[grepl("^[^(X__)]", locations)][-1]
-  
-  times = read_xlsx(schedule_file, range = "A3:D83",
-                    col_names = c("date", "time_start", "time_end", "session_or_sub")) %>% 
-    mutate(time_start = format(time_start, "%H:%M"),
-           time_end = format(time_end, "%H:%M"))
-  
-  cols = c(LETTERS, str_c("A", LETTERS))
-  schedule = list()
-  for (i in seq_along(locations)) {
-    c1 = cols[5+(i-1)*3]
-    c2 = cols[7+(i-1)*3]
-    df = read_xlsx(schedule_file, range = str_c(c1, "3:", c2, "83"),
-                   col_names = c("paper_id", "title", "poster_date"))
-    schedule[[locations[i]]] = times %>% 
-      bind_cols(df)
-  }
-  
-  schedule = schedule %>% 
-    bind_rows(.id = "location") %>% 
-    drop_na(date) %>% 
-    mutate(session_title = if_else(session_or_sub == "Session", title, NA_character_)) %>% 
-    fill(session_title)
-  
-  schedule = schedule %>% 
-    filter(session_or_sub == "Session") %>% 
-    select(-session_or_sub, -paper_id, -session_title, -poster_date) %>% 
-    left_join(schedule %>% 
-                filter(session_or_sub == "Sub") %>% 
-                select(-session_or_sub) %>% 
-                drop_na(paper_id) %>% 
-                group_by(session_title) %>% 
-                nest(time_start, time_end, paper_id, poster_date, .key = "talks"),
-              by = c("title"="session_title")) %>% 
-    mutate(schedule_id = seq_len(n())) %>% 
-    mutate(type = if_else(map_lgl(talks, is.null), "Break", "Talk")) %>% 
-    mutate(type = if_else(str_detect(title, "Keynote: "), "Keynote", type)) %>% 
-    mutate(keynote_speaker = str_match(title, "Keynote: (.*)")[,2])
-  
-  # Invited talks
-  #===============================
-  html = read_html(keynotes_url) %>% 
-    html_nodes("div.col-xs-12:nth-child(5) > div:nth-child(1) > div:nth-child(1)") %>% 
-    html_children()
-  
-  i_talk = 0
-  keynotes = NULL
-  for (i in seq_along(html)) {
-    nm = html[[i]] %>% html_name()
-    txt = html[[i]] %>% html_text() %>% str_trim()
-    if (nm == "h3") {
-      if (i_talk>0) {
-        keynotes = keynotes %>% 
-          bind_rows(as_tibble(talk))
-      }
-      i_talk = i_talk+1
-      talk = list(title = txt)
+    html = read_html(url)
+    
+    out = list(url = url)
+    
+    out$filename = out$url %>% 
+      tools::file_path_sans_ext() %>% 
+      basename()
+    
+    out$title = html %>% 
+      html_nodes("h1") %>% 
+      html_text() %>% 
+      # str_replace_all("\\\\[()]", "$") %>% 
+      str_trim()
+    
+    out$authors = html %>% 
+      html_nodes("#authors") %>% 
+      html_text() %>% 
+      str_replace(";", "") %>% 
+      str_split(",") %>% 
+      map(str_trim)
+    
+    out$abstract = html %>% 
+      html_nodes("#abstract") %>% 
+      html_text() %>% 
+      # str_replace_all("\\\\[()]", "$") %>% 
+      str_trim()
+    
+    out$pdf_url = html %>% 
+      html_nodes("#extras ul li:nth-child(1) a") %>% 
+      html_attr("href")
+    
+    out$supp_pdf_url = html %>% 
+      html_nodes("#extras ul li:nth-child(2) a") %>% 
+      html_attr("href")
+    
+    if (length(out$supp_pdf_url)==0)
+      out$supp_pdf_url = NA
+    
+    fn = file.path(data_path, "papers", basename(out$pdf_url))
+    if (dl_pdf && !file.exists(fn))
+      download.file(out$pdf_url, fn)
+    
+    if (!is.na(out$supp_pdf_url) && nchar(out$supp_pdf_url)>0) {
+      fn = file.path(data_path, "papers", basename(out$supp_pdf_url))
+      if (dl_supp_pdf && !file.exists(fn))
+        download.file(out$supp_pdf_url, fn)
     }
-    if (nm == "h4") {
-      m = str_match(txt, "(.*?)\\s\\((.*?)\\)")
-      talk$speaker = m[2]
-      talk$affiliation = m[3]
-    }
-    if (nm == "p" && str_length(txt)>0) {
-      if (str_detect(txt, "^Abstract:"))
-        talk$abstract = txt
-      if (is.null(talk$bio))
-        talk$bio = txt
-      else
-        talk$bio = talk$bio %>% str_c(txt, sep = "\n")
-    }
+    
+    return(out)
   }
   
-  keynotes = keynotes %>% 
-    bind_rows(as_tibble(talk)) %>% 
-    mutate(keynote_speaker = speaker) %>% 
-    group_by(keynote_speaker) %>% 
-    nest(.key = "keynote")
+  urls = read_html(papers_url) %>% 
+    html_nodes("div.paper p.links a") %>% 
+    html_attr("href") %>% 
+    keep(~str_detect(.x, "^.*\\.html$"))
   
-  schedule = schedule %>% 
-    left_join(keynotes, by = "keynote_speaker") %>% 
-    mutate(talks = if_else(type == "Keynote", keynote, talks)) %>% 
-    select(-keynote_speaker, -keynote)
-  
-  papers_schedule = schedule %>% 
-    filter(type == "Talk") %>% 
-    select(talks, schedule_id) %>% 
-    unnest()
+  papers = urls %>% 
+    map_df(parse_paper, .pb = progress_estimated(length(urls)))
   
   papers = papers %>% 
-    left_join(papers_schedule, by = "paper_id")
+    mutate(paper_id = seq_len(n()))
+  
+  # Authors
+  # ================
+  authors = data_frame(author_id = numeric(0))
+  
+  # authors = papers %>% 
+  #   select(paper_id, authors) %>% 
+  #   unnest() %>% 
+  #   rename(author = authors) %>% 
+  #   group_by(author) %>% 
+  #   nest(.key = paper_ids) %>% 
+  #   mutate(paper_ids = paper_ids %>% map("paper_id"))
+  
+  # stem_fun = function(...) {
+  #   str_c(..., sep=" ") %>% 
+  #   str_to_lower() %>% 
+  #     iconv(to='ASCII//TRANSLIT') %>% 
+  #     str_replace_all("[^\\w]", "")
+  # }
+  # 
+  # papers %>% 
+  #   select(paper_id, title, authors) %>% 
+  #   mutate(title_stem = stem_fun(title)) %>% 
+  #   left_join(paper_authors %>% 
+  #               ungroup() %>% 
+  #               select(title, author_id, author) %>% 
+  #               mutate(title_stem = stem_fun(title)) %>% 
+  #               select(-title) %>% 
+  #               nest(author_id, author, .key = "authors_"),
+  #             by = "title_stem") %>% 
+  #   filter(map_lgl(authors_, is.null)) %>% 
+  #   View()
+  
+  # Schedule (website)
+  # ====================
+  parse_schedule = function(html, .pb = NULL) {
+    if ((!is.null(.pb)) && inherits(.pb, "Progress") && (.pb$i < .pb$n)) .pb$tick()$print()
+    
+    out = list()
+    # out$schedule_id = html %>% 
+    #   html_attr("id") %>% 
+    #   str_extract("\\d+")
+    
+    pull_right = html %>% 
+      html_nodes(".pull-right")
+    
+    out$type = pull_right[[1]] %>% 
+      html_text()
+    
+    if (length(pull_right)>1) {
+      a = pull_right[[2]] %>% 
+        html_node("a")
+      
+      out$session = a %>% 
+        html_text() %>% 
+        str_trim()
+      
+      out$session_id = a %>%
+        html_attr("href") %>%
+        str_split("=") %>%
+        {.[[1]][2]}
+    }
+    
+    time_location = html %>% 
+      html_node(".maincardHeader:not(.pull-right)") %>% 
+      html_text() %>%
+      str_match("(.*?) +(.*?) +(.*?) +(.*?) +-- +(.*?) +(.*?) +@ +(.*+)")
+    
+    out$day = str_c(time_location[2:4], collapse=" ")
+    if (str_length(time_location[5]) < 6)
+      out$time_start = str_c(time_location[5], time_location[7], sep=" ")
+    else
+      out$time_start = time_location[5]
+    out$time_end = str_c(time_location[6], time_location[7], sep=" ")
+    out$location = time_location[8]
+    
+    if (out$type == "Poster") {
+      out$poster_location = time_location[8]
+      out$location = str_extract(time_location[8], "[^#]") %>% str_trim()
+    }
+    
+    out$title = html %>% 
+      html_node(".maincardBody") %>% 
+      html_text()
+    out$authors = html %>% 
+      html_node(".maincardFooter") %>% 
+      html_text() %>% 
+      str_split(" · ")
+    out$paper_url = html %>% 
+      html_node(".href_PDF") %>% 
+      html_attr("href")
+    return(out)
+  }
+  
+  html = read_html(schedule_url) %>% 
+    html_nodes("div.col-xs-12:nth-child(5) > div[onclick] > div[id]")
+  
+  schedule = html %>% 
+    map_df(parse_schedule, .pb = progress_estimated(length(html)))
+  
+  locale = Sys.getlocale("LC_TIME")
+  Sys.setlocale("LC_TIME", "en_US.utf8")
+  
+  schedule = schedule %>% 
+    mutate(session = if_else(is.na(session), title, session)) %>% 
+    group_by(type, day, location, session, session_id) %>% 
+    mutate(break_id = if_else(type == "Break", seq_len(n()), NA_integer_)) %>% 
+    group_by(type, day, location, session, session_id, break_id) %>% 
+    { mutate(ungroup(.), schedule_id = group_indices(.)) } %>% 
+    ungroup() %>% 
+    select(-session_id, -break_id) %>% 
+    left_join(group_by(., schedule_id) %>% 
+                summarize(session_time_start = first(time_start),
+                          session_time_end = last(time_end)),
+              by = "schedule_id") %>% 
+    mutate(session_time = as.POSIXct(str_c(day, session_time_start), format = "%a %b %dth %I:%M %p"))
+  
+  Sys.setlocale(locale)
+  
+  # # Invited talks
+  # #===============================
+  # html = read_html(keynotes_url) %>% 
+  #   html_nodes("div.col-xs-12:nth-child(5) > div:nth-child(1) > div:nth-child(1)") %>% 
+  #   html_children()
+  # 
+  # i_talk = 0
+  # keynotes = NULL
+  # for (i in seq_along(html)) {
+  #   nm = html[[i]] %>% html_name()
+  #   txt = html[[i]] %>% html_text() %>% str_trim()
+  #   if (nm == "h3") {
+  #     if (i_talk>0) {
+  #       keynotes = keynotes %>% 
+  #         bind_rows(as_tibble(talk))
+  #     }
+  #     i_talk = i_talk+1
+  #     talk = list(title = txt)
+  #   }
+  #   if (nm == "h4") {
+  #     m = str_match(txt, "(.*?)\\s\\((.*?)\\)")
+  #     talk$speaker = m[2]
+  #     talk$affiliation = m[3]
+  #   }
+  #   if (nm == "p" && str_length(txt)>0) {
+  #     if (str_detect(txt, "^Abstract:"))
+  #       talk$abstract = txt
+  #     if (is.null(talk$bio))
+  #       talk$bio = txt
+  #     else
+  #       talk$bio = talk$bio %>% str_c(txt, sep = "\n")
+  #   }
+  # }
+  # 
+  # keynotes = keynotes %>% 
+  #   bind_rows(as_tibble(talk)) %>% 
+  #   mutate(keynote_speaker = speaker) %>% 
+  #   group_by(keynote_speaker) %>% 
+  #   nest(.key = "keynote")
+  
+  # Join tables
+  # ===================
+  
+  talks_schedule = schedule %>% 
+    filter(type %in% c("Talk")) %>% 
+    select(schedule_id, time_start, time_end, paper_url) %>% 
+    left_join(papers %>% 
+                select(paper_id, url), 
+              by = c("paper_url" = "url")) %>% 
+    select(-paper_url)
+  
+  posters_schedule = schedule %>% 
+    filter(type %in% c("Poster")) %>% 
+    select(schedule_id, time_start, time_end, paper_url, poster_location) %>% 
+    left_join(papers %>% 
+                select(paper_id, url), 
+              by = c("paper_url" = "url")) %>% 
+    select(-paper_url)
+  
+  papers = papers %>%
+    left_join(talks_schedule %>% 
+                group_by(paper_id) %>% 
+                nest(.key = "talk_schedule"),
+              by = "paper_id") %>% 
+    left_join(posters_schedule %>% 
+                group_by(paper_id) %>% 
+                nest(.key = "poster_schedule"),
+              by = "paper_id")
+  
+  schedule = schedule %>% 
+    left_join(bind_rows(talks_schedule, posters_schedule), 
+              by = c("schedule_id", "time_start", "time_end", "poster_location")) %>% 
+    select(-paper_url) %>% 
+    group_by(schedule_id, type, day, location, session, session_time, session_time_start, session_time_end) %>% 
+    nest(.key = "content") %>% 
+    mutate(content = content %>% map_if(type %in% c("Talk", "Poster", "Break"), ~select(.x, -authors))) %>% 
+    mutate(content = content %>% map_if(type %in% c("Talk", "Poster"), ~select(.x, -title))) %>% 
+    mutate(content = content %>% map_if(!type %in% c("Talk", "Poster"), ~select(.x, -paper_id))) %>% 
+    mutate(content = content %>% map_if(type != "Poster", ~select(.x, -poster_location))) %>% 
+    mutate(content = content %>% map_if(type == "Talk" & map_int(content, nrow)==1, ~NA)) %>% 
+    mutate(content = content %>% map_if(type == "Break", ~NA))
   
   # Write json
   #============
@@ -217,13 +316,12 @@ if (cfg$scrape$dl_zip) {
     toJSON(pretty=TRUE) %>% 
     write(file.path(data_path, "papers.json"))
   
-  authors %>% 
-    toJSON(pretty=TRUE) %>% 
+  authors %>%
+    toJSON(pretty=TRUE) %>%
     write(file.path(data_path, "authors.json"))
   
   schedule %>% 
     toJSON(pretty=TRUE) %>% 
     write(file.path(data_path, "schedule.json"))
-  
   
 }

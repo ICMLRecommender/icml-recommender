@@ -45,13 +45,17 @@ topic_clusters = file(file.path(data_path, "topic_clusters.json")) %>%
 cdb = do.call(Cushion$new, cfg$couchdb)
 
 # ping(cdb)
-db_list(cdb)
+# db_list(cdb)
 
 db_write = function(cdb, dbname, data, id) {
   id = enquo(id)
   if (dbname %in% db_list(cdb))
     cdb %>% db_delete(dbname=dbname)
   cdb %>% db_create(dbname)
+  if (!quo_name(id) %in% names(data)) {
+    warning("missing ", quo_name(id), " in data")
+    return(NULL)
+  }
   docs = data %>%
     mutate(`_id` = str_replace_all(!!id, "[\\s\\+]" , "-")) %>% 
     split(.$`_id`) %>% 
