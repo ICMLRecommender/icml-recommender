@@ -23,7 +23,7 @@ files_path = cfg$data$files_path
 #=============================
 cdb = do.call(Cushion$new, cfg$couchdb)
 
-db_list(cdb)
+# db_list(cdb)
 
 # read users
 userids = cdb %>% 
@@ -65,7 +65,7 @@ for (i in seq_along(userids)) {
       cdb %>% 
         doc_get(user, 
                 "preferred_topics") %>% 
-        .$topicids %>% 
+        .$topic_cluster_ids %>% 
         unlist()
       }, 
         error = function(err) NULL
@@ -102,25 +102,26 @@ if ("simu" %in% names(cfg)) {
     left_join(papers, by = "filename")
 } else {
   # Read user likes
+  parse_likes = function(x) {
+    data_frame(user = x$`_id`,
+               paper_id = names(x$likes),
+               time = map_chr(x$likes, "time"))
+  }
+  
   userlikes = cdb %>% 
-    db_alldocs("userlikes", include_docs=TRUE, as = "json") %>% 
-    fromJSON() %>% 
+    db_alldocs("userlikes_reversed", include_docs=TRUE, as = "json") %>% 
+    rjson::fromJSON() %>% 
     .$rows %>% 
-    .$doc
-  
-  userlikes$likes = userlikes$likes %>% 
-    gather(user, time)
-  userlikes$likes$time = userlikes$likes$time[[1]]
-  userlikes$likes = userlikes$likes %>% 
-    split(f=seq_len(nrow(userlikes$likes)))
-  
-  userlikes = userlikes %>% 
-    unnest() %>% 
-    select(user, paper_id = `_id`, time) %>% 
+    map("doc") %>% 
+    keep(~has_name(.x, "likes")) %>% 
+    keep(~length(.x$likes)>0) %>% 
+    map_df(parse_likes) %>% 
+    inner_join(papers %>% 
+                 mutate(paper_id = as.character(paper_id)), 
+               by = "paper_id") %>% 
     mutate(time = as.POSIXct(time, format = "%Y-%m-%dT%H:%M:%S")) %>% 
     arrange(desc(time)) %>% 
-    distinct() %>% 
-    left_join(papers, by = "paper_id")
+    distinct(user, filename)
   
   # join with ctr ids
   userlikes = userlikes %>% 

@@ -86,7 +86,7 @@ beta = read_delim(file.path(lda_output_path, "final.beta"),
                   col_names = c("X1", words)) %>%
   exp()
 
-beta[beta<thres_weight_word] = NA
+beta[beta<thres_weight_word] = NA_real_
 
 topics = beta %>% 
   mutate(topic_id = topic_ids) %>% 
@@ -143,20 +143,20 @@ papers %>%
 
 # write topics.md
 #===================
-require(knitr)
-
-print_topic = function(df) {
-  out = c(str_c("# [", format(df$weight*100, digit=3), "%] topic ", df$topic_id))
-  out = c(out, knitr::kable(df$words[[1]][1:10,]), "\n")
-  out = c(out, knitr::kable(df$papers[[1]][1:5,]), "\n")
+if (require(knitr)) {
+  print_topic = function(df) {
+    out = c(str_c("# [", format(df$weight*100, digit=3), "%] topic ", df$topic_id))
+    out = c(out, knitr::kable(df$words[[1]][1:10,]), "\n")
+    out = c(out, knitr::kable(df$papers[[1]][1:5,]), "\n")
+  }
+  
+  fc = file(file.path(data_path, "topics.md"))
+  
+  topics %>%
+    arrange(desc(weight)) %>% 
+    split(., seq_len(nrow(.))) %>% 
+    sapply(print_topic) %>% 
+    writeLines(fc)
+  
+  close(fc)
 }
-
-fc = file(file.path(data_path, "topics.md"))
-
-topics %>%
-  arrange(desc(weight)) %>% 
-  split(., seq_len(nrow(.))) %>% 
-  sapply(print_topic) %>% 
-  writeLines(fc)
-
-close(fc)
