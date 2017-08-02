@@ -65,6 +65,6 @@ db_write = function(cdb, dbname, data, id) {
 
 cdb %>% db_write(str_c("papers", suffix), papers, paper_id)
 cdb %>% db_write(str_c("authors", suffix), authors, author_id)
-cdb %>% db_write(str_c("schedule", suffix), schedule, schedule_id)
+cdb %>% db_write(str_c("schedule", suffix), schedule, session_id)
 cdb %>% db_write(str_c("topics", suffix), topics, topic_id)
 cdb %>% db_write(str_c("topic_clusters", suffix), topic_clusters, topic_cluster_id)

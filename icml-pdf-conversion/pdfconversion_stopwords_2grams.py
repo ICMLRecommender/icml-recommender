@@ -31,7 +31,7 @@ from pdfminer.layout import LAParams
 
 
 
-my_words = ["parameters","means","type","work","functions","sqrt","improve","setting","machine","efficient","input","world","general","develop","particular","value","significant","training","framework","simple","provide","number","method","experiments","proposed","strongly", "early","models","model","methods","propose","paper","problem","problems","algorithms","algorithm","real","based","function","approach","results","different","performance","extend","demonstrate","standard","data","large","existing","using","novel","analysis","introduce","techniques","using","achieve","synthetic"]
+my_words = ["parameters","means","type","work","functions","sqrt","improve","setting","machine","efficient","input","world","general","develop","particular","value","significant","training","framework","simple","provide","number","method","experiments","proposed","strongly", "early","models","model","methods","propose","paper","problem","problems","algorithms","algorithm","real","based","function","approach","results","different","performance","extend","demonstrate","standard","data","large","existing","using","novel","analysis","introduce","techniques","using","achieve","synthetic","arxiv"]
 my_stop_words = text.ENGLISH_STOP_WORDS.union(my_words)
 
 

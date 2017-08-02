@@ -107,13 +107,35 @@ topics = topics %>%
 # Topic clusters
 #================
 
+topic_labels_url = cfg$topics$topic_labels_url
+topic_labels_file = file.path(data_path, "topic_labels.csv")
+
+download.file(topic_labels_url, topic_labels_file)
+
+topic_labels = read_delim(topic_labels_file, delim = ",", trim_ws = TRUE) %>% 
+  select(topic_id, labels) %>% 
+  mutate(labels = str_split(labels, "/") %>% 
+           map(str_trim))
+
 topic_clusters = topics %>% 
-  mutate(label = map_chr(words, ~str_c(.x$word[1:3], collapse="-"))) %>% 
+  # mutate(label = map_chr(words, ~str_c(.x$word[1:3], collapse="-"))) %>% 
+  left_join(topic_labels, by = "topic_id") %>% 
+  unnest(labels, .drop = FALSE) %>%
+  rename(label = labels) %>%
+  filter(!is.na(label)) %>% 
   group_by(label) %>% 
   summarise(topic_ids = list(unique(topic_id)),
             weight = sum(weight),
-            words = list(bind_rows(words)),
-            papers = list(bind_rows(papers))) %>% 
+            words = list(map2(words, weight, ~mutate(.x, weight = weight * .y)) %>% 
+                           bind_rows() %>% 
+                           mutate(weight = weight / sum(weight)) %>% 
+                           group_by(word) %>% 
+                           summarise(weight = sum(weight)) %>% 
+                           arrange(desc(weight))),
+            papers = list(bind_rows(papers) %>% 
+                            group_by(paper_id) %>% 
+                            summarise(weight = sum(weight)) %>% 
+                            arrange(desc(weight)))) %>% 
   arrange(desc(weight)) %>% 
   mutate(topic_cluster_id = seq_len(n())) %>% 
   select(topic_cluster_id, everything())
@@ -122,7 +144,9 @@ topics = topics %>%
   left_join(topic_clusters %>% 
               select(topic_cluster_id, topic_ids) %>% 
               unnest() %>% 
-              rename(topic_id = topic_ids), 
+              rename(topic_id = topic_ids) %>% 
+              group_by(topic_id) %>% 
+              summarise(topic_cluster_ids = list(topic_cluster_id)), 
             by = "topic_id")
 
 # write json
@@ -147,7 +171,7 @@ if (require(knitr)) {
   print_topic = function(df) {
     out = c(str_c("# [", format(df$weight*100, digit=3), "%] topic ", df$topic_id))
     out = c(out, knitr::kable(df$words[[1]][1:10, c("weight", "word")]), "\n")
-    out = c(out, knitr::kable(df$papers[[1]][1:5, c("weight", "title")]), "\n")
+    out = c(out, knitr::kable(df$papers[[1]][1:10, c("weight", "title")]), "\n")
   }
   
   fc = file(file.path(data_path, "topics.md"))
@@ -166,3 +190,4 @@ if (require(knitr)) {
   
   close(fc)
 }
+
