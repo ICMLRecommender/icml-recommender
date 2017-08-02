@@ -1,10 +1,10 @@
 #!/usr/bin/Rscript --slave
 
-library(tidyverse)
-library(stringr)
-library(jsonlite)
-library(sofa)
-library(yaml)
+library(tidyverse, quietly=TRUE)
+library(stringr, quietly=TRUE)
+library(jsonlite, quietly=TRUE)
+library(sofa, quietly=TRUE)
+library(yaml, quietly=TRUE)
 
 args = commandArgs(TRUE)
 
