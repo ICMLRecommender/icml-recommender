@@ -23,7 +23,7 @@ files_path = cfg$data$files_path
 #=============================
 cdb = do.call(Cushion$new, cfg$couchdb)
 
-# db_list(cdb)
+dbs = db_list(cdb)
 
 # read users
 userids = cdb %>% 
@@ -32,7 +32,8 @@ userids = cdb %>%
   .$rows %>% 
   .$doc %>% 
   filter(name != "root", !is.na(name)) %>% 
-  .$name
+  .$name %>% 
+  keep(~.x %in% dbs)
 
 # read papers
 papers = cdb %>% 
@@ -50,10 +51,16 @@ topics = cdb %>%
   .$rows %>%
   .$doc %>%
   as_tibble() %>% 
-  select(topic_id, topic_cluster_id)
+  select(topic_id, topic_cluster_ids)
 
 topic_ids = topics$topic_id %>% 
   sort()
+
+topic_clusters = topics %>% 
+  filter(map_lgl(topic_cluster_ids, ~length(.x)>0)) %>% 
+  unnest() %>% 
+  rename(topic_cluster_id = topic_cluster_ids)
+
 
 # Read user topics
 user_topics = NULL
@@ -66,7 +73,8 @@ for (i in seq_along(userids)) {
         doc_get(user, 
                 "preferred_topics") %>% 
         .$topic_cluster_ids %>% 
-        unlist()
+        unlist() %>% 
+        unique()
       }, 
         error = function(err) NULL
     )
@@ -78,7 +86,7 @@ for (i in seq_along(userids)) {
 }
 
 user_topics = user_topics %>% 
-  left_join(topics, by = "topic_cluster_id") %>% 
+  left_join(topic_clusters, by = "topic_cluster_id") %>% 
   select(-topic_cluster_id) %>% 
   mutate(point = 1) %>% 
   complete(user = userids, topic_id = topic_ids, fill = list(point=0))
