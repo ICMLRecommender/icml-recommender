@@ -72,18 +72,34 @@ if ("simu" %in% names(cfg)) {
     keep(~has_name(.x, "likes")) %>% 
     keep(~length(.x$likes)>0) %>% 
     map_df(parse_likes) %>% 
-    inner_join(papers %>% 
-                 mutate(paper_id = as.character(paper_id)), 
-               by = "paper_id") %>% 
     mutate(time = as.POSIXct(time, format = "%Y-%m-%dT%H:%M:%S")) %>% 
     arrange(desc(time)) %>% 
-    distinct(user, filename)
-  
-  # join with ctr ids
-  userlikes = userlikes %>% 
-    mutate(ctr_user_id = match(user, userids)-1,
-           ctr_paper_id = match(filename, filenames)-1) # NOTE: ctr ids start at 0
+    distinct(user, paper_id)
 }
+
+# Read user dismissed
+dismissed = data_frame(user = character(0), paper_id = character(0))
+for (i in seq_along(userids)) {
+  user = userids[[i]]
+  if (user %in% db_list(cdb)) {
+    
+    pids = tryCatch({
+      cdb %>% 
+        doc_get(user, 
+                "recommendations") %>% 
+        .$dismissed %>% 
+        unlist() %>% 
+        unique()
+    }, 
+    error = function(err) NULL
+    )
+    if (length(pids)>0) {
+      dismissed = dismissed %>% 
+        bind_rows(data_frame(user = user, paper_id = pids))
+    }
+  }
+}
+
 
 # read CTR output
 #==================
@@ -119,15 +135,24 @@ scores = scores %>%
 userlikes_split = userlikes %>% 
   split(.$user)
 
+dismissed_split = dismissed %>% 
+  split(.$user)
+
 n_top = cfg$reco$n_top
 
 reco = scores %>% 
   group_by(user) %>% 
   arrange(desc(score)) %>% 
   slice(seq_len(n_top)) %>% 
-  filter( !(filename %in% userlikes_split[[user[1]]][["filename"]]) ) %>%  # remove liked items
+  filter( !(paper_id %in% c(userlikes_split[[user[1]]][["paper_id"]],
+                            dismissed_split[[user[1]]][["paper_id"]])) ) %>%  # remove liked and dismissed items
   nest(paper_id, score, .key = papers) %>% 
-  {split(select(., papers), .$user)}
+  left_join(dismissed %>% 
+              group_by(user) %>% 
+              summarize(dismissed = list(paper_id)) %>% 
+              mutate(dismissed = as.list(dismissed)),
+            by = "user") %>% # add dismissed papers
+  {split(select(., papers, dismissed), .$user)}
 
 for (i in seq_along(userids)) {
   user = userids[[i]]

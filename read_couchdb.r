@@ -63,7 +63,7 @@ topic_clusters = topics %>%
 
 
 # Read user topics
-user_topics = NULL
+user_topics = data_frame(user = character(0), topic_cluster_id = integer(0))
 for (i in seq_along(userids)) {
   user = userids[[i]]
   if (user %in% db_list(cdb)) {
@@ -94,7 +94,7 @@ user_topics = user_topics %>%
 
 
 # Read user bookmarks
-bookmarks = NULL
+bookmarks = data_frame(user = character(0), paper_id = character(0))
 for (i in seq_along(userids)) {
   user = userids[[i]]
   if (user %in% db_list(cdb)) {
