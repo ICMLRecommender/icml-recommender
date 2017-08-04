@@ -88,6 +88,7 @@ for (i in seq_along(userids)) {
 user_topics = user_topics %>% 
   left_join(topic_clusters, by = "topic_cluster_id") %>% 
   select(-topic_cluster_id) %>% 
+  distinct() %>% 
   mutate(point = 1) %>% 
   complete(user = userids, topic_id = topic_ids, fill = list(point=0))
 
