@@ -19,6 +19,7 @@ suffix = cfg$data$suffix
 txt_path = cfg$data$txt_path
 files_path = cfg$data$files_path
 output_path = cfg$ctr$output_path
+lda_output_path = cfg$lda$output_path
 
 # read couchDB
 #=============================

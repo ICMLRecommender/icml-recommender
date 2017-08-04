@@ -15,7 +15,7 @@ ifeq ($(LABEL), icml2016)
   export ALPHA_V_SMOOTH := 0
   export LAMBDA_U := 0.01
   export LAMBDA_V := 0.01
-  export MAXITER := 200
+  export MAX_ITER := 200
 else ifeq ($(LABEL), icml2017)
   #export PDF_PATH := $(DATA_PATH)/papers
   #export TXT_PATH := $(DATA_PATH)/abstracts_txt
@@ -35,7 +35,7 @@ else ifeq ($(LABEL), icml2017)
   export ALPHA_V_SMOOTH := 0
   export LAMBDA_U := 0.01
   export LAMBDA_V := 0.01
-  export MAXITER := 200
+  export MAX_ITER := 200
 endif
 
 # disable implicit suffix rules
@@ -79,7 +79,7 @@ config.yml: config_$(LABEL).yml.in
 	envsubst < config_$(LABEL).yml.in > config.yml
 	
 clean_config:
-  rm -f config.yml
+	rm -f config.yml
 	
 # scrape data
 $(DATA_PATH)/papers.json $(DATA_PATH)/authors.json $(DATA_PATH)/schedule.json: config.yml
@@ -137,7 +137,7 @@ clean_db:
 # compute ctr latent features
 $(CTR_OUTPUT_PATH)/final-U.dat $(CTR_OUTPUT_PATH)/final-V.dat: $(DATA_PATH)/users.dat $(DATA_PATH)/items.dat $(DATA_PATH)/theta_u.dat $(LDA_OUTPUT_PATH)/final.gamma
 	mkdir -p $(CTR_OUTPUT_PATH)
-	ctr2/ctr --directory $(CTR_OUTPUT_PATH) --user $(DATA_PATH)/users.dat --item $(DATA_PATH)/items.dat --theta_v_init $(LDA_OUTPUT_PATH)/final.gamma --theta_u_init $(DATA_PATH)/theta_u.dat --num_factors $(N_TOPICS) --a ${WEIGHT_POS} --b ${WEIGHT_NEG} --alpha_u_smooth $(ALPHA_U_SMOOTH) --alpha_v_smooth $(ALPHA_V_SMOOTH) --lambda_u $(LAMBDA_U) --lambda_v $(LAMBDA_V)
+	ctr2/ctr --directory $(CTR_OUTPUT_PATH) --user $(DATA_PATH)/users.dat --item $(DATA_PATH)/items.dat --theta_v_init $(LDA_OUTPUT_PATH)/final.gamma --theta_u_init $(DATA_PATH)/theta_u.dat --num_factors $(N_TOPICS) --a ${WEIGHT_POS} --b ${WEIGHT_NEG} --alpha_u_smooth $(ALPHA_U_SMOOTH) --alpha_v_smooth $(ALPHA_V_SMOOTH) --lambda_u $(LAMBDA_U) --lambda_v $(LAMBDA_V) --max_iter ${MAX_ITER}
 	
 run_ctr: $(CTR_OUTPUT_PATH)/final-U.dat $(CTR_OUTPUT_PATH)/final-V.dat
 
