@@ -92,13 +92,37 @@ user_topics = user_topics %>%
   mutate(point = 1) %>% 
   complete(user = userids, topic_id = topic_ids, fill = list(point=0))
 
+
+# Read user bookmarks
+bookmarks = NULL
+for (i in seq_along(userids)) {
+  user = userids[[i]]
+  if (user %in% db_list(cdb)) {
+    
+    pids = tryCatch({
+      cdb %>% 
+        doc_get(user, 
+                "data") %>% 
+        .$bookmarks %>% 
+        unlist() %>% 
+        unique()
+    }, 
+    error = function(err) NULL
+    )
+    if (length(pids)>0) {
+      bookmarks = bookmarks %>% 
+        bind_rows(data_frame(user = user, paper_id = pids))
+    }
+  }
+}
+
 # read paper filenames
 filenames = readLines(files_path) %>% 
   tools::file_path_sans_ext() %>% 
   basename()
 
-# generate random user likes
 if ("simu" %in% names(cfg)) {
+  # generate random user likes
   set.seed(cfg$simu$seed)
   n_likes = cfg$simu$n_likes
   
@@ -130,7 +154,7 @@ if ("simu" %in% names(cfg)) {
                by = "paper_id") %>% 
     mutate(time = as.POSIXct(time, format = "%Y-%m-%dT%H:%M:%S")) %>% 
     arrange(desc(time)) %>% 
-    distinct(user, filename)
+    distinct(user, paper_id, filename)
   
   # join with ctr ids
   userlikes = userlikes %>% 
@@ -150,6 +174,7 @@ fn = file.path(data_path, 'users.dat')
 cat("writing", fn, "\n")
 
 userlikes %>% 
+  select(ctr_user_id, ctr_paper_id) %>% 
   filter(!is.na(ctr_paper_id)) %>% 
   group_by(ctr_user_id) %>% 
   nest(ctr_paper_id, .key = "ctr_paper_ids") %>% 
@@ -166,6 +191,7 @@ fn = file.path(data_path, 'items.dat')
 cat("writing", fn, "\n")
 
 userlikes %>% 
+  select(ctr_user_id, ctr_paper_id) %>% 
   group_by(ctr_paper_id) %>% 
   nest(ctr_user_id, .key = "ctr_user_ids") %>% 
   mutate(n = map_int(ctr_user_ids, nrow),
@@ -190,3 +216,23 @@ theta_u = user_topics %>%
 
 theta_u %>% 
   write_delim(fn, delim =" ", col_names = FALSE)
+
+# Compute trending
+#=======================
+fn = file.path(data_path, 'trending.csv')
+cat("writing", fn, "\n")
+
+bookmark_points = cfg$trending$bookmark_points
+like_points = cfg$trending$like_points
+
+trending = bookmarks %>% 
+  mutate(points = bookmark_points) %>% 
+  bind_rows(userlikes %>% 
+              select(user, paper_id) %>% 
+              mutate(points = like_points)) %>% 
+  group_by(paper_id) %>% 
+  summarize(points = sum(points)) %>% 
+  ungroup() %>% 
+  arrange(desc(points)) %>% 
+  write_csv(fn)
+

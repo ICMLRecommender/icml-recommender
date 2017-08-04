@@ -144,8 +144,44 @@ for (i in seq_along(userids)) {
     toJSON() %>% 
     str_extract("\\{.+\\}")
   
-  if (is.null(rev))
+  if (is.null(rev)) {
     cdb %>% doc_create(user, doc, "recommendations")
-  else
+  } else {
     cdb %>% doc_update(user, doc, "recommendations", rev[1])
+  }
+}
+
+
+# Write trending
+#=============================
+
+trending_dbname = cfg$trending$dbname
+trending_docid = cfg$trending$docid
+trending_field = cfg$trending$field
+trending_n_top = cfg$trending$n_top
+
+trending_ids = read_csv(file.path(data_path, "trending.csv")) %>% 
+  arrange(desc(points)) %>% 
+  slice(seq_len(trending_n_top)) %>% 
+  .$paper_id
+
+trending = trending_ids %>% 
+  setNames(trending_ids) %>% 
+  list() %>% 
+  setNames(trending_field)
+ 
+rev = tryCatch(
+  cdb %>% 
+    db_revisions(trending_dbname, trending_docid), 
+  error = function(err) NULL
+)
+
+doc = trending %>% 
+  toJSON() %>% 
+  str_extract("\\{.+\\}")
+
+if (is.null(rev)) {
+  cdb %>% doc_create(trending_dbname, doc, trending_docid)
+} else {
+  cdb %>% doc_update(trending_dbname, doc, trending_docid, rev[1])
 }
