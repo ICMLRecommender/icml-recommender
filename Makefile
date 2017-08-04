@@ -9,7 +9,10 @@ ifeq ($(LABEL), icml2016)
   export LDA_ALPHA := 0.005
   export LDA_SETTINGS_PATH := lda-c/settings.txt
   export LDA_OUTPUT_PATH := $(DATA_PATH)/lda_output
+  export POS_WEIGHT := 1
+  export NEG_WEIGHT := 0.01
   export ALPHA_U_SMOOTH := 1
+  export ALPHA_V_SMOOTH := 0
   export LAMBDA_U := 0.01
   export LAMBDA_V := 0.01
 else ifeq ($(LABEL), icml2017)
@@ -25,7 +28,10 @@ else ifeq ($(LABEL), icml2017)
   export LDA_SETTINGS_PATH := lda_settings_fixed.txt
   export LDA_OUTPUT_PATH := $(DATA_PATH)/lda_output
   #export LDA_OUTPUT_PATH := $(DATA_PATH)/resultsFULL2017_2gram_alpha1_K30
+  export POS_WEIGHT := 1
+  export NEG_WEIGHT := 0.01
   export ALPHA_U_SMOOTH := 1
+  export ALPHA_V_SMOOTH := 0
   export LAMBDA_U := 0.01
   export LAMBDA_V := 0.01
 endif
@@ -126,7 +132,7 @@ clean_db:
 # compute ctr latent features
 $(CTR_OUTPUT_PATH)/final-U.dat $(CTR_OUTPUT_PATH)/final-V.dat: $(DATA_PATH)/users.dat $(DATA_PATH)/items.dat $(DATA_PATH)/theta_u.dat $(LDA_OUTPUT_PATH)/final.gamma
 	mkdir -p $(CTR_OUTPUT_PATH)
-	ctr2/ctr --directory $(CTR_OUTPUT_PATH) --user $(DATA_PATH)/users.dat --item $(DATA_PATH)/items.dat --theta_v_init $(LDA_OUTPUT_PATH)/final.gamma --theta_u_init $(DATA_PATH)/theta_u.dat --num_factors $(N_TOPICS) --alpha_u_smooth $(ALPHA_U_SMOOTH) --lambda_u $(LAMBDA_U) --lambda_v $(LAMBDA_V)
+	ctr2/ctr --directory $(CTR_OUTPUT_PATH) --user $(DATA_PATH)/users.dat --item $(DATA_PATH)/items.dat --theta_v_init $(LDA_OUTPUT_PATH)/final.gamma --theta_u_init $(DATA_PATH)/theta_u.dat --num_factors $(N_TOPICS) --a ${POS_WEIGHT} --b ${NEG_WEIGHT} --alpha_u_smooth $(ALPHA_U_SMOOTH) --alpha_v_smooth $(ALPHA_V_SMOOTH) --lambda_u $(LAMBDA_U) --lambda_v $(LAMBDA_V)
 	
 run_ctr: $(CTR_OUTPUT_PATH)/final-U.dat $(CTR_OUTPUT_PATH)/final-V.dat
 

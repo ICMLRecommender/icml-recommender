@@ -91,6 +91,38 @@ for (i in seq_along(userids)) {
   }
 }
 
+# Compute cold-start scores
+#====================================
+alpha_u_smooth = cfg$ctr$alpha_u_smooth
+alpha_v_smooth = cfg$ctr$alpha_v_smooth
+
+theta_u = read_delim(file.path(data_path, "theta_u.dat"), 
+                     delim=" ", col_names = FALSE,
+                     col_types = cols(.default = "d"))
+
+theta_u = (theta_u + alpha_u_smooth) %>% 
+  sweep(1, rowSums(.), "/") %>% 
+  as.matrix()
+
+theta_v = read_delim(file.path(lda_output_path, "final.gamma"), 
+                     delim=" ", col_names = FALSE,
+                     col_types = cols(.default = "d"))
+
+theta_v = (theta_v + alpha_v_smooth) %>% 
+  sweep(1, rowSums(.), "/") %>% 
+  as.matrix()
+
+scores_coldstart = (theta_u %*% t(theta_v)) %>% 
+  as_tibble()
+
+colnames(scores_coldstart) = filenames
+
+scores_coldstart = scores_coldstart %>% 
+  mutate(user = userids) %>% 
+  anti_join(userlikes, by = "user") %>% # only users without likes
+  gather(filename, score, -user) %>% 
+  left_join(papers, by = "filename")
+
 # read CTR output
 #==================
 
@@ -116,8 +148,11 @@ colnames(scores) = filenames
 
 scores = scores %>% 
   mutate(user = userids) %>% 
+  semi_join(userlikes, by="user") %>% # only users with at least one like
   gather(filename, score, -user) %>% 
-  left_join(papers, by = "filename")
+  left_join(papers, by = "filename") %>% 
+  bind_rows(scores_coldstart)
+
 
 # Write recommendations
 #=============================
@@ -130,8 +165,8 @@ n_top = cfg$reco$n_top
 reco_new = scores %>% 
   group_by(user) %>% 
   filter( !(paper_id %in% unique(c(userlikes_split[[user[1]]][["paper_id"]],
-                                   reco[[user[1]]][["dismissed"]],
-                                   reco[[user[1]]][["latestdismissed"]]))) ) %>%  # remove liked and dismissed items
+                                   unlist(reco[[user[1]]][["dismissed"]]),
+                                   unlist(reco[[user[1]]][["latestdismissed"]])))) ) %>%  # remove liked and dismissed items
   arrange(desc(score)) %>% 
   slice(seq_len(n_top)) %>% 
   nest(paper_id, score, .key = papers) %>% 
