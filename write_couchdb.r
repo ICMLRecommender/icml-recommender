@@ -1,5 +1,7 @@
 #!/usr/bin/Rscript --slave
 
+t_start = Sys.time()
+
 library(tidyverse, quietly=TRUE)
 library(stringr, quietly=TRUE)
 library(jsonlite, quietly=TRUE)
@@ -11,6 +13,8 @@ args = commandArgs(TRUE)
 cfg_file = "config.yml"
 if (length(args>0))
   cfg_file = args[1]
+
+cat("reading", cfg_file, "\n")
 
 cfg = yaml.load_file(cfg_file)
 
@@ -27,6 +31,8 @@ lda_output_path = cfg$lda$output_path
 cdb = do.call(Cushion$new, cfg$couchdb)
 
 # read papers
+cat("reading couchdb papers\n")
+
 papers = cdb %>% 
   db_alldocs(str_c("papers", suffix), include_docs=TRUE, as = "json") %>% 
   fromJSON() %>% 
@@ -38,13 +44,17 @@ papers = cdb %>%
 # read userids
 userids = readLines(file.path(data_path, "userids.dat"))
 
-# read paper ids
+# read filenames
 filenames = readLines(files_path) %>% 
   tools::file_path_sans_ext() %>% 
   basename()
 
-# generate random user likes
+cat("reading couchdb papers\n")
+
 if ("simu" %in% names(cfg)) {
+  # generate random user likes
+  cat("generating random user likes\n")
+  
   set.seed(cfg$simu$seed)
   n_likes = cfg$simu$n_likes
   set.seed(2017)
@@ -59,6 +69,8 @@ if ("simu" %in% names(cfg)) {
     left_join(papers, by = "filename")
 } else {
   # Read user likes
+  cat("reading couchdb user likes\n")
+  
   parse_likes = function(x) {
     data_frame(user = x$`_id`,
                paper_id = names(x$likes),
@@ -79,6 +91,8 @@ if ("simu" %in% names(cfg)) {
 }
 
 # Read user recommendations and dismissed
+cat("reading couchdb user recommendations and dismissed\n")
+
 reco = list()
 for (i in seq_along(userids)) {
   user = userids[[i]]
@@ -94,6 +108,8 @@ for (i in seq_along(userids)) {
 
 # Compute cold-start scores
 #====================================
+cat("computing cold-start user/paper scores\n")
+
 alpha_u_smooth = cfg$ctr$alpha_u_smooth
 alpha_v_smooth = cfg$ctr$alpha_v_smooth
 
@@ -143,6 +159,8 @@ V = read_delim(file.path(output_path, "final-V.dat"),
 
 # compute scores
 #==================
+cat("computing CTR user/paper scores\n")
+
 scores = as_tibble(U %*% t(V))
 
 colnames(scores) = filenames
@@ -157,6 +175,7 @@ scores = scores %>%
 
 # Write recommendations
 #=============================
+cat("writing recommendations to couchdb\n")
 
 userlikes_split = userlikes %>% 
   split(.$user)
@@ -205,6 +224,7 @@ for (user in names(reco_new)) {
 
 # Write trending
 #=============================
+cat("writing trending papers to couchdb\n")
 
 trending_dbname = cfg$trending$dbname
 trending_docid = cfg$trending$docid
@@ -236,3 +256,6 @@ if (is.null(rev)) {
 } else {
   cdb %>% doc_update(trending_dbname, doc, trending_docid, rev[1])
 }
+
+# elapsed time
+Sys.time()-t_start

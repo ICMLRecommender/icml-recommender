@@ -1,5 +1,7 @@
 #!/usr/bin/Rscript --slave
 
+t_start = Sys.time()
+
 library(tidyverse, quietly=TRUE)
 library(jsonlite, quietly=TRUE)
 library(sofa, quietly=TRUE)
@@ -11,6 +13,8 @@ args = commandArgs(TRUE)
 cfg_file = "config.yml"
 if (length(args>0))
   cfg_file = args[1]
+
+cat("reading", cfg_file, "\n")
 
 cfg = yaml.load_file(cfg_file)
 
@@ -26,6 +30,8 @@ cdb = do.call(Cushion$new, cfg$couchdb)
 dbs = db_list(cdb)
 
 # read users
+cat("reading couchdb users\n")
+
 userids = cdb %>% 
   db_alldocs("_users", include_docs=TRUE, as = "json") %>% 
   fromJSON() %>% 
@@ -36,6 +42,8 @@ userids = cdb %>%
   keep(~.x %in% dbs)
 
 # read papers
+cat("reading couchdb papers\n")
+
 papers = cdb %>% 
   db_alldocs(str_c("papers", suffix), include_docs=TRUE, as = "json") %>% 
   fromJSON() %>% 
@@ -45,6 +53,8 @@ papers = cdb %>%
   select(paper_id, filename)
 
 # Read topics
+cat("reading couchdb topics\n")
+
 topics = cdb %>%
   db_alldocs(str_c("topics", suffix), include_docs=TRUE, as = "json") %>%
   fromJSON() %>%
@@ -63,6 +73,8 @@ topic_clusters = topics %>%
 
 
 # Read user topics
+cat("reading couchdb user topics\n")
+
 user_topics = data_frame(user = character(0), topic_cluster_id = integer(0))
 for (i in seq_along(userids)) {
   user = userids[[i]]
@@ -94,6 +106,8 @@ user_topics = user_topics %>%
 
 
 # Read user bookmarks
+cat("reading couchdb user bookmarks\n")
+
 bookmarks = data_frame(user = character(0), paper_id = character(0))
 for (i in seq_along(userids)) {
   user = userids[[i]]
@@ -123,6 +137,8 @@ filenames = readLines(files_path) %>%
 
 if ("simu" %in% names(cfg)) {
   # generate random user likes
+  cat("generating random user likes\n")
+  
   set.seed(cfg$simu$seed)
   n_likes = cfg$simu$n_likes
   
@@ -135,6 +151,8 @@ if ("simu" %in% names(cfg)) {
     left_join(papers, by = "filename")
 } else {
   # Read user likes
+  cat("reading couchdb user likes\n")
+  
   parse_likes = function(x) {
     data_frame(user = x$`_id`,
                paper_id = names(x$likes),
@@ -236,3 +254,5 @@ trending = bookmarks %>%
   arrange(desc(points)) %>% 
   write_csv(fn)
 
+# elapsed time
+Sys.time()-t_start
