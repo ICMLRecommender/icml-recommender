@@ -77,29 +77,19 @@ if ("simu" %in% names(cfg)) {
     distinct(user, paper_id)
 }
 
-# Read user dismissed
-dismissed = data_frame(user = character(0), paper_id = character(0))
+# Read user recommendations and dismissed
+reco = list()
 for (i in seq_along(userids)) {
   user = userids[[i]]
   if (user %in% db_list(cdb)) {
     
-    pids = tryCatch({
-      cdb %>% 
-        doc_get(user, 
-                "recommendations") %>% 
-        .$dismissed %>% 
-        unlist() %>% 
-        unique()
-    }, 
-    error = function(err) NULL
-    )
-    if (length(pids)>0) {
-      dismissed = dismissed %>% 
-        bind_rows(data_frame(user = user, paper_id = pids))
-    }
+    doc = tryCatch(doc_get(cdb, user, "recommendations")[-(1:2)], 
+                   error = function(err) NULL)
+    
+    if (!is.null(doc)) 
+      reco[[user]] = doc
   }
 }
-
 
 # read CTR output
 #==================
@@ -135,27 +125,27 @@ scores = scores %>%
 userlikes_split = userlikes %>% 
   split(.$user)
 
-dismissed_split = dismissed %>% 
-  split(.$user)
-
 n_top = cfg$reco$n_top
 
-reco = scores %>% 
+reco_new = scores %>% 
   group_by(user) %>% 
+  filter( !(paper_id %in% c(userlikes_split[[user[1]]][["paper_id"]],
+                            reco[[user[1]]][["dismissed"]],
+                            reco[[user[1]]][["dismissedTrending"]])) ) %>%  # remove liked and dismissed items
   arrange(desc(score)) %>% 
   slice(seq_len(n_top)) %>% 
-  filter( !(paper_id %in% c(userlikes_split[[user[1]]][["paper_id"]],
-                            dismissed_split[[user[1]]][["paper_id"]])) ) %>%  # remove liked and dismissed items
   nest(paper_id, score, .key = papers) %>% 
-  left_join(dismissed %>% 
-              group_by(user) %>% 
-              summarize(dismissed = list(paper_id)) %>% 
-              mutate(dismissed = as.list(dismissed)),
-            by = "user") %>% # add dismissed papers
-  {split(select(., papers, dismissed), .$user)}
+  left_join(reco %>% 
+              { data_frame(user = names(.), doc = .) }, 
+            by = "user") %>% 
+  mutate(doc = map2(doc, papers, function(x,y) { 
+    x$papers = y 
+    return(x) 
+  })) %>% 
+  select(-papers) %>% 
+  { setNames(.$doc, .$user) }
 
-for (i in seq_along(userids)) {
-  user = userids[[i]]
+for (user in names(reco_new)) {
   if (!user %in% db_list(cdb))
     cdb %>% db_create(user)
   
@@ -165,7 +155,7 @@ for (i in seq_along(userids)) {
     error = function(err) NULL
   )
   
-  doc = reco[[user]] %>% 
+  doc = reco_new[[user]] %>% 
     toJSON() %>% 
     str_extract("\\{.+\\}")
   
