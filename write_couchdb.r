@@ -129,8 +129,9 @@ n_top = cfg$reco$n_top
 
 reco_new = scores %>% 
   group_by(user) %>% 
-  filter( !(paper_id %in% c(userlikes_split[[user[1]]][["paper_id"]],
-                            reco[[user[1]]][["dismissed"]])) ) %>%  # remove liked and dismissed items
+  filter( !(paper_id %in% unique(c(userlikes_split[[user[1]]][["paper_id"]],
+                                   reco[[user[1]]][["dismissed"]],
+                                   reco[[user[1]]][["latestdismissed"]]))) ) %>%  # remove liked and dismissed items
   arrange(desc(score)) %>% 
   slice(seq_len(n_top)) %>% 
   nest(paper_id, score, .key = papers) %>% 
