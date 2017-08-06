@@ -72,30 +72,31 @@ topic_clusters = topics %>%
   rename(topic_cluster_id = topic_cluster_ids)
 
 
-# Read user topics
-cat("reading couchdb user topics\n")
 
-user_topics = data_frame(user = character(0), topic_cluster_id = integer(0))
+# Read user tables
+cat("reading couchdb user tables\n")
+
+user_tables = list()
 for (i in seq_along(userids)) {
   user = userids[[i]]
-  if (user %in% db_list(cdb)) {
-    
-    tc_ids = tryCatch({
-      cdb %>% 
-        doc_get(user, 
-                "preferred_topics") %>% 
-        .$topic_cluster_ids %>% 
-        unlist() %>% 
-        unique()
-      }, 
-        error = function(err) NULL
-    )
-    if (length(tc_ids)>0) {
-      user_topics = user_topics %>% 
-        bind_rows(data_frame(user = user, topic_cluster_id = tc_ids))
-    }
-  }
+  user_tables[[user]] = cdb %>% 
+    db_alldocs(user, include_docs=TRUE, as = "json") %>% 
+    fromJSON(simplifyDataFrame = FALSE) %>% 
+    .$rows %>% 
+    map("doc")
 }
+
+user_tables = user_tables %>% 
+  map(~setNames(.x, map_chr(.x, "_id")))
+
+# user topics
+user_topics = user_tables %>% 
+  map("preferred_topics") %>% 
+  map(safely(function(x) x$topic_cluster_ids)) %>% 
+  map("result") %>% 
+  map(~list(topic_cluster_id = unlist(.x))) %>% 
+  keep(~length(.x$topic_cluster_id)>0) %>% 
+  bind_rows(.id = "user")
 
 user_topics = user_topics %>% 
   left_join(topic_clusters, by = "topic_cluster_id") %>% 
@@ -104,31 +105,14 @@ user_topics = user_topics %>%
   mutate(point = 1) %>% 
   complete(user = userids, topic_id = topic_ids, fill = list(point=0))
 
-
-# Read user bookmarks
-cat("reading couchdb user bookmarks\n")
-
-bookmarks = data_frame(user = character(0), paper_id = character(0))
-for (i in seq_along(userids)) {
-  user = userids[[i]]
-  if (user %in% db_list(cdb)) {
-    
-    pids = tryCatch({
-      cdb %>% 
-        doc_get(user, 
-                "data") %>% 
-        .$bookmarks %>% 
-        unlist() %>% 
-        unique()
-    }, 
-    error = function(err) NULL
-    )
-    if (length(pids)>0) {
-      bookmarks = bookmarks %>% 
-        bind_rows(data_frame(user = user, paper_id = pids))
-    }
-  }
-}
+# user bookmarks
+bookmarks = user_tables %>% 
+  map("data") %>% 
+  map(safely(function(x) x$bookmarks)) %>% 
+  map("result") %>% 
+  map(~list(paper_id = unlist(.x))) %>% 
+  keep(~length(.x$paper_id)>0) %>% 
+  bind_rows(.id = "user")
 
 # read paper filenames
 filenames = readLines(files_path) %>% 
