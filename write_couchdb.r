@@ -182,11 +182,14 @@ userlikes_split = userlikes %>%
 
 n_top = cfg$reco$n_top
 
+# # clear dismissed
+# reco = reco %>% map(~.x[c("papers")]) %>% 
+#   map(~keep(.x, ~length(.x)>0))
+
 reco_new = scores %>% 
   group_by(user) %>% 
   filter( !(paper_id %in% unique(c(userlikes_split[[user[1]]][["paper_id"]],
-                                   unlist(reco[[user[1]]][["dismissed"]]),
-                                   unlist(reco[[user[1]]][["latestdismissed"]])))) ) %>%  # remove liked and dismissed items
+                                   unlist(reco[[user[1]]][["dismissed"]]))) ) ) %>%  # remove liked and dismissed items
   arrange(desc(score)) %>% 
   slice(seq_len(n_top)) %>% 
   nest(paper_id, score, .key = papers) %>% 
@@ -201,7 +204,7 @@ reco_new = scores %>%
   { setNames(.$doc, .$user) }
 
 for (user in names(reco_new)) {
-  if (!user %in% db_list(cdb))
+  if (!(user %in% db_list(cdb)))
     cdb %>% db_create(user)
   
   rev = tryCatch(
@@ -211,7 +214,7 @@ for (user in names(reco_new)) {
   )
   
   doc = reco_new[[user]] %>% 
-    toJSON() %>% 
+    toJSON(auto_unbox=TRUE) %>% 
     str_extract("\\{.+\\}")
   
   if (is.null(rev)) {

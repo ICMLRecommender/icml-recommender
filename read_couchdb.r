@@ -71,8 +71,6 @@ topic_clusters = topics %>%
   unnest() %>% 
   rename(topic_cluster_id = topic_cluster_ids)
 
-
-
 # Read user tables
 cat("reading couchdb user tables\n")
 
