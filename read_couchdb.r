@@ -180,6 +180,9 @@ if ("simu" %in% names(cfg)) {
            ctr_paper_id = match(filename, filenames)-1) # NOTE: ctr ids start at 0
 }
 
+userlikes = userlikes %>% 
+  filter(!is.na(ctr_user_id), !is.na(ctr_paper_id))
+
 # save userids file
 fn = file.path(data_path, 'userids.dat')
 cat("writing", fn, "\n")
@@ -193,7 +196,6 @@ cat("writing", fn, "\n")
 
 userlikes %>% 
   select(ctr_user_id, ctr_paper_id) %>% 
-  filter(!is.na(ctr_paper_id)) %>% 
   group_by(ctr_user_id) %>% 
   nest(ctr_paper_id, .key = "ctr_paper_ids") %>% 
   mutate(n = map_int(ctr_paper_ids, nrow),
@@ -246,6 +248,7 @@ like_points = cfg$trending$like_points
 trending = bookmarks %>% 
   mutate(points = bookmark_points) %>% 
   bind_rows(userlikes %>% 
+              filter(!is.na(ctr_user_id), !is.na(ctr_paper_id)) %>% 
               select(user, paper_id) %>% 
               mutate(points = like_points)) %>% 
   group_by(paper_id) %>% 
