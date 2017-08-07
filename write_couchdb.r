@@ -136,7 +136,7 @@ colnames(scores_coldstart) = filenames
 
 scores_coldstart = scores_coldstart %>% 
   mutate(user = userids) %>% 
-  anti_join(userlikes, by = "user") %>% # only users without likes
+  # anti_join(userlikes, by = "user") %>% # only users without likes ### TEMP disabled
   gather(filename, score, -user) %>% 
   left_join(papers, by = "filename")
 
@@ -165,13 +165,15 @@ scores = as_tibble(U %*% t(V))
 
 colnames(scores) = filenames
 
-scores = scores %>% 
-  mutate(user = userids) %>% 
-  semi_join(userlikes, by="user") %>% # only users with at least one like
-  gather(filename, score, -user) %>% 
-  left_join(papers, by = "filename") %>% 
-  bind_rows(scores_coldstart)
+# scores = scores %>% 
+#   mutate(user = userids) %>% 
+#   semi_join(userlikes, by="user") %>% # only users with at least one like
+#   gather(filename, score, -user) %>% 
+#   left_join(papers, by = "filename") %>% 
+#   bind_rows(scores_coldstart)
 
+scores = scores_coldstart
+### TEMP disabled
 
 # Write recommendations
 #=============================
