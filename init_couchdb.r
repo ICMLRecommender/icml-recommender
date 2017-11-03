@@ -52,6 +52,10 @@ db_write = function(cdb, dbname, data, id) {
   if (dbname %in% db_list(cdb))
     cdb %>% db_delete(dbname=dbname)
   cdb %>% db_create(dbname)
+  if (!is.null(cfg$couchdb_revs_limit)) {
+    httr::PUT(paste(cdb$make_url(), dbname, "_revs_limit", sep="/"), 
+              cdb$get_headers(), body=as.character(cfg$couchdb_revs_limit))
+  }
   if (!quo_name(id) %in% names(data)) {
     warning("missing ", quo_name(id), " in data")
     return(NULL)

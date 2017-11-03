@@ -35,7 +35,7 @@ else ifeq ($(LABEL), icml2017)
   export ALPHA_V_SMOOTH := 0
   export LAMBDA_U := 0.01
   export LAMBDA_V := 0.01
-  export MAX_ITER := 200
+  export MAX_ITER := 1000
 endif
 
 # disable implicit suffix rules

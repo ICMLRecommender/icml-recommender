@@ -282,7 +282,7 @@ int main(int argc, char* argv[]) {
 
   /// save the settings
   int ctr_run = 1;
-  if (mult_v_path == NULL) ctr_run = 0; // TODO check mult_user_path?
+  //if (mult_v_path == NULL) ctr_run = 0; // TODO check mult_user_path?
   ctr_hyperparameter ctr_param;
   ctr_param.set(a, b, lambda_u, lambda_v, alpha_u_smooth, alpha_v_smooth, beta_smooth,
       random_seed, max_iter, save_lag, theta_u_opt, theta_v_opt, ctr_run, lda_regression);

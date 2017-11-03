@@ -106,40 +106,6 @@ for (i in seq_along(userids)) {
   }
 }
 
-# Compute cold-start scores
-#====================================
-cat("computing cold-start user/paper scores\n")
-
-alpha_u_smooth = cfg$ctr$alpha_u_smooth
-alpha_v_smooth = cfg$ctr$alpha_v_smooth
-
-theta_u = read_delim(file.path(data_path, "theta_u.dat"), 
-                     delim=" ", col_names = FALSE,
-                     col_types = cols(.default = "d"))
-
-theta_u = (theta_u + alpha_u_smooth) %>% 
-  sweep(1, rowSums(.), "/") %>% 
-  as.matrix()
-
-theta_v = read_delim(file.path(lda_output_path, "final.gamma"), 
-                     delim=" ", col_names = FALSE,
-                     col_types = cols(.default = "d"))
-
-theta_v = (theta_v + alpha_v_smooth) %>% 
-  sweep(1, rowSums(.), "/") %>% 
-  as.matrix()
-
-scores_coldstart = (theta_u %*% t(theta_v)) %>% 
-  as_tibble()
-
-colnames(scores_coldstart) = filenames
-
-scores_coldstart = scores_coldstart %>% 
-  mutate(user = userids) %>% 
-  # anti_join(userlikes, by = "user") %>% # only users without likes ### TEMP disabled
-  gather(filename, score, -user) %>% 
-  left_join(papers, by = "filename")
-
 # read CTR output
 #==================
 
@@ -165,15 +131,10 @@ scores = as_tibble(U %*% t(V))
 
 colnames(scores) = filenames
 
-# scores = scores %>% 
-#   mutate(user = userids) %>% 
-#   semi_join(userlikes, by="user") %>% # only users with at least one like
-#   gather(filename, score, -user) %>% 
-#   left_join(papers, by = "filename") %>% 
-#   bind_rows(scores_coldstart)
-
-scores = scores_coldstart
-### TEMP disabled
+scores = scores %>%
+  mutate(user = userids) %>%
+  gather(filename, score, -user) %>%
+  left_join(papers, by = "filename") 
 
 # Write recommendations
 #=============================
@@ -206,8 +167,13 @@ reco_new = scores %>%
   { setNames(.$doc, .$user) }
 
 for (user in names(reco_new)) {
-  if (!(user %in% db_list(cdb)))
+  if (!(user %in% db_list(cdb))) {
     cdb %>% db_create(user)
+  }
+  if (!is.null(cfg$couchdb_revs_limit)) {
+    httr::PUT(paste(cdb$make_url(), user, "_revs_limit", sep="/"), 
+              cdb$get_headers(), body=as.character(cfg$couchdb_revs_limit))
+  }
   
   rev = tryCatch(
     cdb %>% 
@@ -260,6 +226,11 @@ if (is.null(rev)) {
   cdb %>% doc_create(trending_dbname, doc, trending_docid)
 } else {
   cdb %>% doc_update(trending_dbname, doc, trending_docid, rev[1])
+}
+
+if (!is.null(cfg$couchdb_revs_limit)) {
+  httr::PUT(paste(cdb$make_url(), trending_dbname, "_revs_limit", sep="/"), 
+            cdb$get_headers(), body=as.character(cfg$couchdb_revs_limit))
 }
 
 # elapsed time

@@ -100,8 +100,9 @@ user_topics = user_topics %>%
   left_join(topic_clusters, by = "topic_cluster_id") %>% 
   select(-topic_cluster_id) %>% 
   distinct() %>% 
-  mutate(point = 1) %>% 
-  complete(user = userids, topic_id = topic_ids, fill = list(point=0))
+  mutate(weight = 1) %>% # each prefered topic gets the same weight
+  complete(user = userids, topic_id = topic_ids, fill = list(weight=0)) %>% 
+  mutate(ctr_user_id = match(user, userids)-1) # NOTE: ctr ids start at 0
 
 # user bookmarks
 bookmarks = user_tables %>% 
@@ -165,6 +166,9 @@ if ("simu" %in% names(cfg)) {
 userlikes = userlikes %>% 
   filter(!is.na(ctr_user_id), !is.na(ctr_paper_id))
 
+# Write .dat files
+#===================
+
 # save userids file
 fn = file.path(data_path, 'userids.dat')
 cat("writing", fn, "\n")
@@ -211,9 +215,9 @@ fn = file.path(data_path, 'theta_u.dat')
 cat("writing", fn, "\n")
 
 theta_u = user_topics %>% 
-  spread(topic_id, point) %>%
-  slice(match(userids, user)) %>% 
-  select(-user) %>% 
+  spread(topic_id, weight) %>%
+  arrange(ctr_user_id) %>% 
+  select(-user, -ctr_user_id) %>% 
   as_tibble()
 
 theta_u %>% 
