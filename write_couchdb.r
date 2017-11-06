@@ -171,9 +171,13 @@ for (user in names(reco_new)) {
     cdb %>% db_create(user)
   }
   if (!is.null(cfg$couchdb_revs_limit)) {
+    # set revisions limit
     httr::PUT(paste(cdb$make_url(), user, "_revs_limit", sep="/"), 
               cdb$get_headers(), body=as.character(cfg$couchdb_revs_limit))
   }
+  # request compaction
+  httr::POST(paste(cdb$make_url(), user, "_compact", sep="/"), 
+             cdb$get_headers(), httr::content_type_json())
   
   rev = tryCatch(
     cdb %>% 
@@ -228,10 +232,15 @@ if (is.null(rev)) {
   cdb %>% doc_update(trending_dbname, doc, trending_docid, rev[1])
 }
 
+
 if (!is.null(cfg$couchdb_revs_limit)) {
+  # set revisions limit
   httr::PUT(paste(cdb$make_url(), trending_dbname, "_revs_limit", sep="/"), 
             cdb$get_headers(), body=as.character(cfg$couchdb_revs_limit))
 }
+# request compaction
+httr::POST(paste(cdb$make_url(), trending_dbname, "_compact", sep="/"), 
+           cdb$get_headers(), httr::content_type_json())
 
 # elapsed time
 Sys.time()-t_start

@@ -31,7 +31,7 @@ else ifeq ($(LABEL), icml2017)
   #export LDA_OUTPUT_PATH := $(DATA_PATH)/resultsFULL2017_2gram_alpha1_K30
   export WEIGHT_POS := 1
   export WEIGHT_NEG := 0.01
-  export ALPHA_U_SMOOTH := 0.1
+  export ALPHA_U_SMOOTH := 0.01
   export ALPHA_V_SMOOTH := 0
   export LAMBDA_U := 0.01
   export LAMBDA_V := 0.01
