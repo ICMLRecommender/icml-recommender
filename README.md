@@ -131,7 +131,7 @@ Alternatively, download the data by setting the `DATA_ZIP_URL` environment varia
 
 -------------------------------------------------------------------
 
-** WIP: DO NOT RUN BELOW **
+**WIP: DO NOT RUN BELOW**
 
 6. make topics data
 
