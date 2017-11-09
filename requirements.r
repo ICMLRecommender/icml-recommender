@@ -4,7 +4,6 @@
 pkgs = c("tidyverse", 
          "rvest",
          "jsonlite",
-         "yaml",
          "sofa",
          "rjson")
 

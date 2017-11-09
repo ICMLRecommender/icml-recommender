@@ -1,46 +1,36 @@
-export LABEL := icml2017
-export DATA_PATH := data/$(LABEL)
-export CTR_OUTPUT_PATH := output/$(LABEL)
-ifeq ($(LABEL), icml2016)
-  export PDF_PATH := $(DATA_PATH)/papers
-  export TXT_PATH := $(DATA_PATH)/papers_txt
-  export PDF_CONVERSION_PATH := icml-pdf-conversion/pdfconversion.py
-  export N_TOPICS := 50
-  export LDA_ALPHA := 0.005
-  export LDA_SETTINGS_PATH := lda-c/settings.txt
-  export LDA_OUTPUT_PATH := $(DATA_PATH)/lda_output
-  export WEIGHT_POS := 1
-  export WEIGHT_NEG := 0.01
-  export ALPHA_U_SMOOTH := 1
-  export ALPHA_V_SMOOTH := 0
-  export LAMBDA_U := 0.01
-  export LAMBDA_V := 0.01
-  export MAX_ITER := 200
-else ifeq ($(LABEL), icml2017)
-  #export PDF_PATH := $(DATA_PATH)/papers
-  #export TXT_PATH := $(DATA_PATH)/abstracts_txt
-  export TXT_PATH := $(DATA_PATH)/papers_txt
-  export PDF_CONVERSION_PATH := icml-pdf-conversion/pdfconversion_stopwords_2grams.py
-  export PDF_CONVERSION_SUFFIX := _stop
-  #export N_TOPICS := 15
-  #export LDA_ALPHA := 0.5
-  export N_TOPICS := 30
-  export LDA_ALPHA := 1
-  export LDA_SETTINGS_PATH := lda_settings_fixed.txt
-  export LDA_OUTPUT_PATH := $(DATA_PATH)/lda_output
-  #export LDA_OUTPUT_PATH := $(DATA_PATH)/resultsFULL2017_2gram_alpha1_K30
-  export WEIGHT_POS := 1
-  export WEIGHT_NEG := 0.01
-  export ALPHA_U_SMOOTH := 0.01
-  export ALPHA_V_SMOOTH := 0
-  export LAMBDA_U := 0.01
-  export LAMBDA_V := 0.01
-  export MAX_ITER := 1000
-endif
+#!make
+SHELL:=/bin/bash
+include .env
+export $(shell sed 's/[=\#].*//' .env)
+
+HOSTNAME:=$(shell hostname)
+DATA_PATH:=$(DATA_ROOT)/$(DATA_DIR)
+RAW_PATH:=$(DATA_PATH)/raw
+PDF_PATH:=$(DATA_PATH)/$(PDF_DIR)
+PDF_TXT_PATH:=$(DATA_PATH)/$(PDF_TXT_DIR)
+ABSTRACTS_TXT_PATH:=$(DATA_PATH)/$(ABSTRACTS_TXT_DIR)
+TXT_PATH:=$(DATA_PATH)/$(TXT_DIR)
+LDA_OUTPUT_PATH:=$(DATA_PATH)/$(LDA_OUTPUT_DIR)
+CTR_OUTPUT_PATH:=$(DATA_PATH)/$(CTR_OUTPUT_DIR)
+
+# .env (environment variables)
+.env: 
+	if [ -f $(HOSTNAME).env ]; then cp -f $(HOSTNAME).env .env; fi
+	
+info:
+	@echo HOSTNAME=$(HOSTNAME)
+	@echo DATA_PATH=$(DATA_PATH)
+	@echo PDF_PATH=$(PDF_PATH)
+	@echo PDF_TXT_PATH=$(PDF_TXT_PATH)
+	@echo ABSTRACTS_TXT_PATH=$(ABSTRACTS_TXT_PATH)
+	@echo TXT_PATH=$(TXT_PATH)
+	@echo LDA_OUTPUT_PATH=$(LDA_OUTPUT_PATH)
+	@echo CTR_OUTPUT_PATH=$(CTR_OUTPUT_PATH)
 
 # disable implicit suffix rules
 .SUFFIXES:
 
+# default make target
 all: clean_db write_db
 
 # install requirements
@@ -68,87 +58,123 @@ lda-c/lda:
 	
 lda-c: lda-c/lda
 	
-# make ctr2c
+# make ctr2
 ctr2/ctr:
 	cd ctr2; $(MAKE); cd ..
 	
 ctr2: ctr2/ctr
 
-# configuration file
-config.yml: config_$(LABEL).yml.in
-	envsubst < config_$(LABEL).yml.in > config.yml
-	
-clean_config:
-	rm -f config.yml
-	
 # scrape data
-$(DATA_PATH)/papers.json $(DATA_PATH)/authors.json $(DATA_PATH)/schedule.json: config.yml
-	./scrape_$(LABEL).r
+SCRAPE_FILES = $(RAW_PATH)/schedule.json $(RAW_PATH)/events.json $(RAW_PATH)/authors.json
+
+$(SCRAPE_FILES):
+	./$(SCRAPE_R_FILE)
 	
-scrape: $(DATA_PATH)/papers.json $(DATA_PATH)/authors.json $(DATA_PATH)/schedule.json
+scrape: $(SCRAPE_FILES)
+
+clean_scrape:
+	rm -rf $(SCRAPE_FILES)
 	
+# process data
+PROCESS_FILES = $(DATA_PATH)/papers.json $(DATA_PATH)/authors.json $(DATA_PATH)/schedule.json
+
+$(PROCESS_FILES):
+	./$(PROCESS_R_FILE)
+	
+process: $(PROCESS_FILES)
+
+clean_process:
+	rm -rf $(PROCESS_FILES)
+		
 # convert papers pdf to txt
 pdf2txt: 
-	python $(PDF_CONVERSION_PATH) -p '$(PDF_PATH)/*.pdf' -t $(TXT_PATH) -m pdf2txt
+	python $(PDF_CONVERSION_PATH) -p '$(PDF_PATH)/*.pdf' -t $(PDF_TXT_PATH) -m pdf2txt
 	
-clean_txt:
-	rm -rf $(TXT_PATH)
+clean_pdf2txt:
+	rm -rf $(PDF_TXT_PATH)/*.txt
+	
+# write abstracts txt
+abstracts_txt: $(DATA_PATH)/papers.json
+	./abstracts_txt.r
+	
+clean_abstracts_txt:
+	rm -rf $(ABSTRACTS_TXT_PATH)/*.txt
 	
 # convert txt files to dat
-$(TXT_PATH)/mult$(PDF_CONVERSION_SUFFIX).dat $(TXT_PATH)/files$(PDF_CONVERSION_SUFFIX).dat $(TXT_PATH)/vocab$(PDF_CONVERSION_SUFFIX).dat:
+TXT2DAT_FILES = $(TXT_PATH)/$(MULT_FILE) $(TXT_PATH)/$(FILES_FILE) $(TXT_PATH)/$(VOCAB_FILE)
+
+$(TXT2DAT_FILES):
 	python $(PDF_CONVERSION_PATH) -t $(TXT_PATH) -m txt2dat
 	
-txt2dat: $(TXT_PATH)/mult$(PDF_CONVERSION_SUFFIX).dat $(TXT_PATH)/files$(PDF_CONVERSION_SUFFIX).dat $(TXT_PATH)/vocab$(PDF_CONVERSION_SUFFIX).dat
+txt2dat: $(TXT2DAT_FILES)
 
 clean_dat:
-	rm -f $(TXT_PATH)/mult$(PDF_CONVERSION_SUFFIX).dat $(TXT_PATH)/files$(PDF_CONVERSION_SUFFIX).dat $(TXT_PATH)/vocab$(PDF_CONVERSION_SUFFIX).dat
+	rm -f $(TXT2DAT_FILES)
 
 # compute lda word distributions and documents topic distributions
-$(LDA_OUTPUT_PATH)/final.gamma $(LDA_OUTPUT_PATH)/final.beta: $(TXT_PATH)/mult$(PDF_CONVERSION_SUFFIX).dat
-	lda-c/lda est $(LDA_ALPHA) $(N_TOPICS) $(LDA_SETTINGS_PATH) $(TXT_PATH)/mult$(PDF_CONVERSION_SUFFIX).dat random $(LDA_OUTPUT_PATH)
+LDA_FILES = $(LDA_OUTPUT_PATH)/final.gamma $(LDA_OUTPUT_PATH)/final.beta
+
+$(LDA_FILES): $(TXT_PATH)/$(MULT_FILE)
+	lda-c/lda est $(LDA_ALPHA) $(N_TOPICS) $(LDA_SETTINGS_PATH) $(TXT_PATH)/$(MULT_FILE) random $(LDA_OUTPUT_PATH)
 	
-run_lda: $(LDA_OUTPUT_PATH)/final.gamma $(LDA_OUTPUT_PATH)/final.beta
+run_lda: $(LDA_FILES)
 
 clean_run_lda:
 	rm -rf $(LDA_OUTPUT_PATH)
 
+# download data
+dl_data_zip: 
+	mkdir -p $(DATA_PATH)
+	cd $(DATA_PATH)
+	wget $(DATA_ZIP_URL) -O .data.zip
+	unzip .data.zip
+	rm -f .data.zip
+	cd -
+	
 # make topics json
-$(DATA_PATH)/topics.json $(DATA_PATH)/topic_clusters.json $(DATA_PATH)/papers_topics.json: config.yml $(TXT_PATH)/files$(PDF_CONVERSION_SUFFIX).dat $(TXT_PATH)/vocab$(PDF_CONVERSION_SUFFIX).dat $(LDA_OUTPUT_PATH)/final.gamma $(LDA_OUTPUT_PATH)/final.beta $(DATA_PATH)/papers.json 
+TOPICS_FILES = $(DATA_PATH)/topics.json $(DATA_PATH)/topic_clusters.json $(DATA_PATH)/papers_topics.json
+$(TOPICS_FILES): $(TXT_PATH)/$(FILES_FILE) $(TXT_PATH)/$(VOCAB_FILE) $(LDA_OUTPUT_PATH)/final.gamma $(LDA_OUTPUT_PATH)/final.beta $(DATA_PATH)/papers.json 
 	./topics.r
 
-topics: $(DATA_PATH)/topics.json $(DATA_PATH)/topic_clusters.json $(DATA_PATH)/papers_topics.json
+topics: $(TOPICS_FILES)
 
 clean_topics: 
-	rm -f $(DATA_PATH)/topics.json $(DATA_PATH)/topic_clusters.json $(DATA_PATH)/papers_topics.json
+	rm -f $(TOPICS_FILES)
    
 # initialize couchdb
-init_db: config.yml $(DATA_PATH)/papers_topics.json $(DATA_PATH)/authors.json $(DATA_PATH)/schedule.json $(DATA_PATH)/topics.json $(DATA_PATH)/topic_clusters.json
+init_db: $(DATA_PATH)/papers_topics.json $(DATA_PATH)/authors.json $(DATA_PATH)/schedule.json $(DATA_PATH)/topics.json $(DATA_PATH)/topic_clusters.json
 	./init_couchdb.r
 	
 # read user likes and topic preferences from couchdb	
-$(DATA_PATH)/userids.dat $(DATA_PATH)/users.dat $(DATA_PATH)/items.dat $(DATA_PATH)/theta_u.dat: $(TXT_PATH)/files$(PDF_CONVERSION_SUFFIX).dat
+READ_DB_FILES = $(DATA_PATH)/userids.dat $(DATA_PATH)/users.dat $(DATA_PATH)/items.dat $(DATA_PATH)/theta_u.dat
+
+$(READ_DB_FILES): $(TXT_PATH)/$(FILES_FILE)
 	./read_couchdb.r
 	
-read_db: $(DATA_PATH)/users.dat $(DATA_PATH)/items.dat $(DATA_PATH)/theta_u.dat
+read_db: $(READ_DB_FILES)
 
 clean_db: 
-	rm -f $(DATA_PATH)/users.dat $(DATA_PATH)/items.dat $(DATA_PATH)/theta_u.dat
+	rm -f $(READ_DB_FILES)
 		
 # compute ctr latent features
-$(CTR_OUTPUT_PATH)/final-U.dat $(CTR_OUTPUT_PATH)/final-V.dat: $(DATA_PATH)/users.dat $(DATA_PATH)/items.dat $(DATA_PATH)/theta_u.dat $(LDA_OUTPUT_PATH)/final.gamma
+CTR_FILES = $(CTR_OUTPUT_PATH)/final-U.dat $(CTR_OUTPUT_PATH)/final-V.dat
+
+$(CTR_FILES): $(DATA_PATH)/users.dat $(DATA_PATH)/items.dat $(DATA_PATH)/theta_u.dat $(LDA_OUTPUT_PATH)/final.gamma
 	mkdir -p $(CTR_OUTPUT_PATH)
-	ctr2/ctr --directory $(CTR_OUTPUT_PATH) --user $(DATA_PATH)/users.dat --item $(DATA_PATH)/items.dat --theta_v_init $(LDA_OUTPUT_PATH)/final.gamma --theta_u_init $(DATA_PATH)/theta_u.dat --num_factors $(N_TOPICS) --a ${WEIGHT_POS} --b ${WEIGHT_NEG} --alpha_u_smooth $(ALPHA_U_SMOOTH) --alpha_v_smooth $(ALPHA_V_SMOOTH) --lambda_u $(LAMBDA_U) --lambda_v $(LAMBDA_V) --max_iter ${MAX_ITER}
+	ctr2/ctr --directory $(CTR_OUTPUT_PATH) --user $(DATA_PATH)/users.dat --item $(DATA_PATH)/items.dat --theta_v_init $(LDA_OUTPUT_PATH)/final.gamma --theta_u_init $(DATA_PATH)/theta_u.dat --num_factors $(LDA_N_TOPICS) --a ${CTR_A} --b ${CTR_B} --alpha_u_smooth $(CTR_ALPHA_U_SMOOTH) --alpha_v_smooth $(CTR_ALPHA_V_SMOOTH) --lambda_u $(CTR_LAMBDA_U) --lambda_v $(CTR_LAMBDA_V) --max_iter ${CTR_MAX_ITER}
 	
-run_ctr: $(CTR_OUTPUT_PATH)/final-U.dat $(CTR_OUTPUT_PATH)/final-V.dat
+run_ctr: $(CTR_FILES)
 
 clean_run_ctr:
 	rm -rf $(CTR_OUTPUT_PATH)
 
 # write recommendations to couchdb
-write_db: config.yml $(DATA_PATH)/userids.dat $(TXT_PATH)/files$(PDF_CONVERSION_SUFFIX).dat $(CTR_OUTPUT_PATH)/final-U.dat $(CTR_OUTPUT_PATH)/final-V.dat
+write_db: $(DATA_PATH)/userids.dat $(TXT_PATH)/$(TXT_PATH)/$(FILES_FILE) $(CTR_OUTPUT_PATH)/final-U.dat $(CTR_OUTPUT_PATH)/final-V.dat
 	./write_couchdb.r
 
 # clean
-clean: clean_scrape clean_txt clean_dat clean_run_lda clean_topics clean_db clean_run_ctr
+CLEAN_TARGETS = clean_scrape clean_pdf2txt clean_abstracts_txt clean_dat clean_run_lda clean_topics clean_db clean_run_ctr
 
-.PHONY: clean
+clean: $(CLEAN_TARGETS)
+
+.PHONY: .env $(CLEAN_TARGETS) clean

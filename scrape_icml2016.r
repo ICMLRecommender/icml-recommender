@@ -1,22 +1,16 @@
 #!/usr/bin/Rscript --slave
 
-library(rvest)
 library(tidyverse)
-library(jsonlite)
-library(yaml)
 library(stringr)
+library(rvest)
+library(jsonlite)
 
-args = commandArgs(TRUE)
+readRenviron(".env")
 
-cfg_file = "config.yml"
-if (length(args>0))
-  cfg_file = args[1]
+data_path = file.path(Sys.getenv("DATA_ROOT"), Sys.getenv("DATA_NAME"))
+pdf_path = file.path(data_path, Sys.getenv("PDF_DIR"))
 
-cfg = yaml.load_file(cfg_file)
-
-data_path = cfg$data$path
-
-dir.create(data_path, showWarnings = FALSE)
+dir.create(data_path, showWarnings = FALSE, recursive = TRUE)
 
 papers_url = "http://proceedings.mlr.press/v48/"
 schedule_url = "http://icml.cc/2016/?page_id=1839"
@@ -27,19 +21,19 @@ root_url = "http://icml.cc"
 conf_url = "http://icml.cc/2016/"
 
 # enable file downloads
-dl_pdf = cfg$scrape$dl_pdf
-dl_supp_pdf = cfg$scrape$dl_supp_pdf
-dl_review = cfg$scrape$dl_review
-dl_rebuttal = cfg$scrape$dl_rebuttal
+dl_pdf = Sys.getenv("SCRAPE_DL_PDF") == "1"
+dl_supp_pdf = Sys.getenv("SCRAPE_DL_SUPP_PDF") == "1"
+dl_review = Sys.getenv("SCRAPE_DL_REVIEW") == "1"
+dl_rebuttal = Sys.getenv("SCRAPE_DL_REBUTTAL") == "1"
 
 if (dl_pdf || dl_supp_pdf)
-  dir.create(file.path(data_path, "papers"), showWarnings = FALSE)
+  dir.create(pdf_path, showWarnings = FALSE, recursive = TRUE)
 
 if (dl_review)
-  dir.create(file.path(data_path, "reviews"), showWarnings = FALSE)
+  dir.create(file.path(data_path, "reviews"), showWarnings = FALSE, recursive = TRUE)
 
 if (dl_rebuttal)
-  dir.create(file.path(data_path, "rebuttals"), showWarnings = FALSE)
+  dir.create(file.path(data_path, "rebuttals"), showWarnings = FALSE, recursive = TRUE)
 
 # Papers
 #======================
@@ -81,12 +75,12 @@ parse_paper = function(url) {
   if (length(out$supp_pdf_url)==0)
     out$supp_pdf_url = NA
   
-  fn = file.path(data_path, "papers", basename(out$pdf_url))
+  fn = file.path(pdf_path, basename(out$pdf_url))
   if (dl_pdf && !file.exists(fn))
     download.file(out$pdf_url, fn)
   
   if (!is.na(out$supp_pdf_url) && nchar(out$supp_pdf_url)>0) {
-    fn = file.path(data_path, "papers", basename(out$supp_pdf_url))
+    fn = file.path(pdf_path, basename(out$supp_pdf_url))
     if (dl_supp_pdf && !file.exists(fn))
       download.file(out$supp_pdf_url, fn)
   }

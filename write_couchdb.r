@@ -2,33 +2,12 @@
 
 t_start = Sys.time()
 
-library(tidyverse, quietly=TRUE)
-library(stringr, quietly=TRUE)
-library(jsonlite, quietly=TRUE)
-library(sofa, quietly=TRUE)
-library(yaml, quietly=TRUE)
-
-args = commandArgs(TRUE)
-
-cfg_file = "config.yml"
-if (length(args>0))
-  cfg_file = args[1]
-
-cat("reading", cfg_file, "\n")
-
-cfg = yaml.load_file(cfg_file)
-
-data_path = cfg$data$path
-suffix = cfg$data$suffix
-txt_path = cfg$data$txt_path
-files_path = cfg$data$files_path
-output_path = cfg$ctr$output_path
-lda_output_path = cfg$lda$output_path
+source("common.r")
 
 # read couchDB
 #=============================
 
-cdb = do.call(Cushion$new, cfg$couchdb)
+cdb = do.call(Cushion$new, couchdb_args)
 
 # read papers
 cat("reading couchdb papers\n")
@@ -51,21 +30,15 @@ filenames = readLines(files_path) %>%
 
 cat("reading couchdb papers\n")
 
-if ("simu" %in% names(cfg)) {
+if (!is.na(simu_seed)) {
   # generate random user likes
   cat("generating random user likes\n")
   
-  set.seed(cfg$simu$seed)
-  n_likes = cfg$simu$n_likes
-  set.seed(2017)
-  n_likes = 100
+  userlikes = sample_userlikes(userids, filenames,
+                               n_likes = simu_n_likes,
+                               seed = simu_seed)
   
-  users_ = sample(userids, n_likes, replace = TRUE)
-  papers_ = sample(filenames, n_likes, replace = TRUE)
-  userlikes = data_frame(user = users_, 
-                         filename = papers_,
-                         ctr_user_id = match(users_, userids)-1, 
-                         ctr_paper_id = match(papers_, filenames)-1) %>%  # NOTE: ctr ids start at 0
+  userlikes = userlikes %>% 
     left_join(papers, by = "filename")
 } else {
   # Read user likes
@@ -110,14 +83,14 @@ for (i in seq_along(userids)) {
 #==================
 
 # read U
-U = read_delim(file.path(output_path, "final-U.dat"), 
+U = read_delim(file.path(ctr_output_path, "final-U.dat"), 
                delim = " ", col_names = FALSE,
                col_types = cols(.default="d")) %>% 
   select(-ncol(.)) %>% 
   as.matrix()
 
 # read V
-V = read_delim(file.path(output_path, "final-V.dat"), 
+V = read_delim(file.path(ctr_output_path, "final-V.dat"), 
                delim = " ", col_names = FALSE,
                col_types = cols(.default="d")) %>% 
   select(-ncol(.)) %>% 
@@ -143,8 +116,6 @@ cat("writing recommendations to couchdb\n")
 userlikes_split = userlikes %>% 
   split(.$user)
 
-n_top = cfg$reco$n_top
-
 # # clear dismissed
 # reco = reco %>% map(~.x[c("papers")]) %>% 
 #   map(~keep(.x, ~length(.x)>0))
@@ -154,7 +125,7 @@ reco_new = scores %>%
   filter( !(paper_id %in% unique(c(userlikes_split[[user[1]]][["paper_id"]],
                                    unlist(reco[[user[1]]][["dismissed"]]))) ) ) %>%  # remove liked and dismissed items
   arrange(desc(score)) %>% 
-  slice(seq_len(n_top)) %>% 
+  slice(seq_len(reco_n_top)) %>% 
   nest(paper_id, score, .key = papers) %>% 
   left_join(reco %>% 
               { data_frame(user = names(.), doc = .) }, 
@@ -170,14 +141,12 @@ for (user in names(reco_new)) {
   if (!(user %in% db_list(cdb))) {
     cdb %>% db_create(user)
   }
-  if (!is.null(cfg$couchdb_revs_limit)) {
+  if (!is.na(couch_revs_limit)) {
     # set revisions limit
-    httr::PUT(paste(cdb$make_url(), user, "_revs_limit", sep="/"), 
-              cdb$get_headers(), body=as.character(cfg$couchdb_revs_limit))
+    cdb %>% db_revs_limit(user, couch_revs_limit)
   }
   # request compaction
-  httr::POST(paste(cdb$make_url(), user, "_compact", sep="/"), 
-             cdb$get_headers(), httr::content_type_json())
+  cdb %>% db_compact(user)
   
   rev = tryCatch(
     cdb %>% 
@@ -200,11 +169,6 @@ for (user in names(reco_new)) {
 # Write trending
 #=============================
 cat("writing trending papers to couchdb\n")
-
-trending_dbname = cfg$trending$dbname
-trending_docid = cfg$trending$docid
-trending_field = cfg$trending$field
-trending_n_top = cfg$trending$n_top
 
 trending_ids = read_csv(file.path(data_path, "trending.csv")) %>% 
   arrange(desc(points)) %>% 
@@ -232,15 +196,12 @@ if (is.null(rev)) {
   cdb %>% doc_update(trending_dbname, doc, trending_docid, rev[1])
 }
 
-
-if (!is.null(cfg$couchdb_revs_limit)) {
+if (!is.na(couch_revs_limit)) {
   # set revisions limit
-  httr::PUT(paste(cdb$make_url(), trending_dbname, "_revs_limit", sep="/"), 
-            cdb$get_headers(), body=as.character(cfg$couchdb_revs_limit))
+  cdb %>% db_revs_limit(trending_dbname, couch_revs_limit)
 }
 # request compaction
-httr::POST(paste(cdb$make_url(), trending_dbname, "_compact", sep="/"), 
-           cdb$get_headers(), httr::content_type_json())
+cdb %>% db_compact(trending_dbname)
 
 # elapsed time
 Sys.time()-t_start

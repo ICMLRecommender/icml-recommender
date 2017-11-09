@@ -21,117 +21,146 @@ make require
 
 # Configuration
 
-Edit the following variables in the `Makefile`.
+Create a `.env` file with the following content and edit the `COUCHDB_USER` and `COUCHDB_PWD` variables.
 
-```make
-export DATA_PATH = data/icml2016
-export PDF_PATH = $(DATA_PATH)/papers
-export TXT_PATH = $(DATA_PATH)/papers_txt
-export LDA_OUTPUT_PATH = $(DATA_PATH)/lda_output
-export CTR_OUTPUT_PATH = output/icml2016
-export N_TOPICS = 50
-export LDA_ALPHA = 0.005
-export ALPHA_U_SMOOTH = 1
-export LAMBDA_U = 0.01
-export LAMBDA_V = 0.01
-```
+```sh
+DATA_ROOT=data
+DATA_DIR=nips2017
 
-Create a `config.yml.in` file with the following content and edit the `couchdb:user` and `couchdb:pwd` fields.
+#PDF_DIR=papers
+#PDF_TXT_DIR=papers_txt
+ABSTRACTS_TXT_DIR=abstracts_txt
+TXT_DIR=abstracts_txt
+#PDF_CONVERSION_PATH=icml-pdf-conversion/pdfconversion.py
+#MULT_FILE=mult.dat
+#FILES_FILE=files.dat
+#VOCAB_FILE=vocab.dat
+PDF_CONVERSION_PATH=icml-pdf-conversion/pdfconversion_stopwords_2grams.py
+MULT_FILE=mult_stop.dat
+FILES_FILE=files_stop.dat
+VOCAB_FILE=vocab_stop.dat
 
-```yaml
-scrape:
-  dl_pdf: TRUE
-  dl_supp_pdf: FALSE
-  dl_review: FALSE
-  dl_rebuttal: FALSE
+# Uncomment to enable download of the data from url instead of scraping
+#DATA_ZIP_URL=https://www.dropbox.com/sh/l98rpjwrr4giove/AACRIDSlVJs1mFdDyOr5cVIda?dl=1
 
-data: 
-  path: "${DATA_PATH}"
-  suffix: "_2016"
-  pdf_path: "${PDF_PATH}"
-  txt_path: "${TXT_PATH}"
+SCRAPE_R_FILE=scrape_nips2017.r
+PROCESS_R_FILE=process_nips2017.r
+SCRAPE_DL_PDF=0
+SCRAPE_DL_SUPP_PDF=0
 
-lda:
-  alpha: ${LDA_ALPHA}
-  n_topics: ${N_TOPICS}
-  output_path: "${LDA_OUTPUT_PATH}"
+SESSION_LABELS_CSV_URL=https://docs.google.com/spreadsheets/d/1vwiSxPpaVcGfl-MtwUJEZm4nPkKp3IN7aHzSHkrIjFk/export?format=csv&id=1vwiSxPpaVcGfl-MtwUJEZm4nPkKp3IN7aHzSHkrIjFk&gid=7384290
 
-couchdb:
-  # transport: http
-  host: localhost
-  # port: NULL
-  # path: NULL
-  user: <COUCHDB_USER>
-  pwd: <COUCHDB_PASSWORD>
+LDA_SETTINGS_PATH=lda_settings_fixed.txt
+LDA_OUTPUT_DIR=lda_output
+LDA_N_TOPICS=30
+LDA_ALPHA=1
 
-ctr:
-  output_path: "${CTR_OUTPUT_PATH}"
-  lambda_u: ${LAMBDA_U}
-  lambda_v: ${LAMBDA_V}
-  a: 1
-  b: 0.01
-  alpha_u_smooth: ${ALPHA_U_SMOOTH}
-  alpha_v_smooth: 0
-  max_iter: 200
+TOPICS_THRES_TOPIC=0.05
+TOPICS_THRES_WORD=3e-3
+TOPICS_LABELS_CSV_URL=https://docs.google.com/spreadsheets/d/11EarYD7_y-j8wEl5oeLXHzPaADjq0v31IbOU5wY8UaI/export?format=csv&id=11EarYD7_y-j8wEl5oeLXHzPaADjq0v31IbOU5wY8UaI&gid=0
 
-# # Uncomment for simulating random likes
-# simu:
-#   seed: 2017
-#   n_likes: 100
+CTR_OUTPUT_DIR=ctr_output
+CTR_A=1 
+CTR_B=0.01
+CTR_ALPHA_U_SMOOTH=0.01
+CTR_ALPHA_V_SMOOTH=0
+CTR_LAMBDA_U=0.01
+CTR_LAMBDA_V=0.01
+CTR_MAX_ITER=1000
+
+COUCHDB_HOST=icml.papro.org.uk
+COUCHDB_PATH=couchdb
+COUCHDB_PORT=NULL
+COUCHDB_TRANSPORT=https
+COUCHDB_USER=<USER>
+COUCHDB_PWD=<PWD>
+COUCHDB_REVS_LIMIT=10
   
-reco:
-  n_top: 20
+# Uncomment for simulating random likes
+#SIMU_SEED=2017
+#SIMU_N_LIKE=100
+
+RECO_N_TOP=20
+
+TRENDING_DBNAME=schedule
+TRENDING_DOCID=trending_2017
+TRENDING_FIELD=trendingids
+TRENDING_BOOKMARK_WEIGHT=1
+TRENDING_LIKE_WEIGHT=2
+TRENDING_N_TOP=7
 ```
 
-# Usage with icml2016
+# Usage with nips2017
 
-1. scrape icml2016
+1. scrape nips2017
 
     ```sh
     make scrape
     ```
 
-2. convert pdf to mult.dat
-    
+Alternatively, download the data by setting the `DATA_ZIP_URL` environment variable and running
+
     ```sh
-    make pdf2txt
-    make txt2dat
+    make dl_data_zip
+    ```
+    
+2. process the data
+
+    ```sh
+    make process
     ```
 
-3. compile lda
+3. convert abstracts to mult.dat
+    
+    ```sh
+    make abstracts_txt
+    make txt2dat
+    ```
+    
+4. compile lda
     
     ```sh
     make lda-c
     ```
     
-4. run lda
+5. run lda
 
     ```sh
     make run_lda
     ```
 
-5. init couchdb
+-------------------------------------------------------------------
+
+** WIP: DO NOT RUN BELOW **
+
+6. make topics data
+
+    ```sh
+    make topics
+    ```
+
+7. init couchdb
 
     ```sh
     make init_couchdb
     ```
 
-6. compile ctr2
+8. compile ctr2
     
     ```sh
     make ctr2
     ```
 
-7. update recommendations: read likes from couchdb, run ctr2 and write recommendations to couchdb
+9. update recommendations: read likes from couchdb, run ctr2 and write recommendations to couchdb
 
     ```sh
     make
     ```
 
-### Automate recommendations updates every 5 minutes
+### Automate recommendations updates every 2 minutes
 
 Edit your crontab with `crontab -e` and add the following line:
 
 ```
-*/5 * * * * cd icml-recommender; make > cron.log; cd -
+*/2 * * * * cd icml-recommender; make > cron.log; cd -
 ```

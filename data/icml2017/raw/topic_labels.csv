@@ -1,0 +1,31 @@
+topic_id,Valerio,Yee Whye,labels
+1,bandits,Online learning,Bandits and Online learning
+2,matrix approximation?,Gaussian process?,Tensors and Matrices / Gaussian processes
+3,multi-label classification,Supervised learning,Classification
+4,GANs,Deep generative models,Images and Generative models
+5,neural networks,Deep learning,Deep learning
+6,reinforcement learning,reinforcement learning,Reinforcement learning
+7,convex optimization,Continuous optimization,Continuous optimization
+8,neural networks,Deep learning,Deep learning
+9,posterior inference / bayesian optimization,Bayesian learning,Bayesian learning
+10,clustering,Clustering,Clustering
+11,submodular maximization,Combinatorial optimization,Combinatorial optimization
+12,neural networks/circuits,ML and programming,ML and programming
+13,classification,Supervised learning,Classification
+14,?,?,
+15,time-series,Deep learning,Time-series
+16,neural networks,Deep learning,Deep learning
+17,ranking,Ranking and preferences,Ranking and Preferences
+18,transfer learning,Transfer and multi-task learning,Transfer and Multi-task learning
+19,continuous optimization,Continuous optimization,Continuous optimization
+20,online learning/convex optimization?,Online learning and continuous optimization,Bandits and Online learning / Continuous optimization
+21,neural networks,Deep learning,Deep learning
+22,mcmc,Monte Carlo methods,Stochastic processes / Monte Carlo methods
+23,RNNs,RNNs,RNNs
+24,graphical models,Networks and graphical models,Graphs and Graphical models
+25,estimation?,Statistical learning,Statistical inference
+26,high-dimensional learning?,High-dimensional estimation,Tensors and Matrices / Sparsity
+27,neural networks,Deep learning,Deep learning
+28,differential privacy,Differential privacy,Differential privacy
+29,point processes,Stochastic process,Stochastic processes
+30,tensors,Matrix factorization,Tensors and Matrices

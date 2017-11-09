@@ -2,30 +2,11 @@
 
 t_start = Sys.time()
 
-library(tidyverse, quietly=TRUE)
-library(jsonlite, quietly=TRUE)
-library(sofa, quietly=TRUE)
-library(yaml, quietly=TRUE)
-library(stringr, quietly=TRUE)
-
-args = commandArgs(TRUE)
-
-cfg_file = "config.yml"
-if (length(args>0))
-  cfg_file = args[1]
-
-cat("reading", cfg_file, "\n")
-
-cfg = yaml.load_file(cfg_file)
-
-data_path = cfg$data$path
-suffix = cfg$data$suffix
-txt_path = cfg$data$txt_path
-files_path = cfg$data$files_path
+source("common.r")
 
 # read couchDB
 #=============================
-cdb = do.call(Cushion$new, cfg$couchdb)
+cdb = do.call(Cushion$new, couchdb_args)
 
 dbs = db_list(cdb)
 
@@ -118,19 +99,17 @@ filenames = readLines(files_path) %>%
   tools::file_path_sans_ext() %>% 
   basename()
 
-if ("simu" %in% names(cfg)) {
+if (!is.na(simu_seed)) {
   # generate random user likes
   cat("generating random user likes\n")
   
-  set.seed(cfg$simu$seed)
-  n_likes = cfg$simu$n_likes
+  userlikes = sample_userlikes(userids, filenames,
+                               n_likes = simu_n_likes,
+                               seed = simu_seed)
   
-  users_ = sample(userids, n_likes, replace = TRUE)
-  papers_ = sample(filenames, n_likes, replace = TRUE)
-  userlikes = data_frame(user = users_, 
-                         filename = papers_,
-                         ctr_user_id = match(users_, userids)-1, 
-                         ctr_paper_id = match(papers_, filenames)-1) %>%  # NOTE: ctr ids start at 0
+  userlikes = userlikes %>% 
+    mutate(ctr_user_id = match(users_, userids)-1, 
+           ctr_paper_id = match(papers_, filenames)-1) %>% # NOTE: ctr ids start at 0
     left_join(papers, by = "filename")
 } else {
   # Read user likes
@@ -228,19 +207,16 @@ theta_u %>%
 fn = file.path(data_path, 'trending.csv')
 cat("writing", fn, "\n")
 
-bookmark_points = cfg$trending$bookmark_points
-like_points = cfg$trending$like_points
-
 trending = bookmarks %>% 
-  mutate(points = bookmark_points) %>% 
+  mutate(weight = trending_bookmark_weight) %>% 
   bind_rows(userlikes %>% 
               filter(!is.na(ctr_user_id), !is.na(ctr_paper_id)) %>% 
               select(user, paper_id) %>% 
-              mutate(points = like_points)) %>% 
+              mutate(weight = trending_like_weight)) %>% 
   group_by(paper_id) %>% 
-  summarize(points = sum(points)) %>% 
+  summarise(weight = sum(weight)) %>% 
   ungroup() %>% 
-  arrange(desc(points)) %>% 
+  arrange(desc(weight)) %>% 
   write_csv(fn)
 
 # elapsed time

@@ -1,0 +1,54 @@
+session_topic,session_labels
+Deep learning : backprop,Deep
+Deep generative models,Deep Generative
+Continuous optimization,Optim
+Reinforcement learning,RL
+Probabilistic learning,Prob
+Online learning,Online
+Latent feature models,LatentFeatures
+Deep learning theory,Deep
+Supervised learning,Supervised
+Deep learning : invariances,Deep
+Matrix factorization,MF
+Deep learning : metalearning,Deep
+Semisupervised and curriculum learning,Semisup Curriculum
+Deep learning : learning to learn,Deep
+Recurrent neural networks,Deep RNNs
+Bayesian Nonparametrics,Prob BNP
+Active learning,Active
+Transfer and multitask learning,Transfer
+Deep learning : Fisher approximations,Deep
+Probabilistic inference,Prob
+Networks and relational learning,Networks
+Spectral methods,Spectral
+Learning theory,LearnTheory
+Clustering,Clustering
+Deep learning,Deep
+Ensemble methods,Ensembles
+Ranking and preferences,Ranking
+Sparsity,Sparsity
+Deep learning : analysis,Deep
+Game theory and multiagents,GameTheory Multiagent
+ML and programming,Programming
+Infomation theory,InfoTheory
+Metric learning,Metric
+Deep learning : hardware,Deep
+Language,Language
+Distributed optimization,Distributed Optim
+Continuous control,RL
+Monte Carlo methods,MonteCarlo
+Bayesian Optimization,BayesOpt Prob
+High dimensional estimation,HighDim Stats
+Privacy and security,Privacy
+Healthcare,Healthcare
+Deep learning : probabilistic,Deep Prob
+Combinatorial optimization,Combinatorial Optim
+Deep reinforcement learning,Deep RL
+Causal Inference,Causal
+Robust Estimation,Robust Stats
+Time series,TimeSeries
+Applications,Applications
+Gaussian processes,GPs Prob
+Large scale learning,LargeScale
+Kernel methods,Kernels
+Structured prediction,Structured

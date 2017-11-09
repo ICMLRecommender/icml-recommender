@@ -1,26 +1,6 @@
 #!/usr/bin/Rscript --slave
 
-library(tidyverse)
-library(yaml)
-library(jsonlite)
-library(magrittr)
-library(stringr)
-
-args = commandArgs(TRUE)
-
-cfg_file = "config.yml"
-if (length(args>0))
-  cfg_file = args[1]
-
-cfg = yaml.load_file(cfg_file)
-
-data_path = cfg$data$path
-files_path = cfg$data$files_path
-vocab_path = cfg$data$vocab_path
-lda_output_path = cfg$lda$output_path
-
-thres_weight_topic = as.numeric(cfg$topics$thres_topic)
-thres_weight_word = as.numeric(cfg$topics$thres_word)
+source("common.r")
 
 # papers topic proportions
 # =============================
@@ -41,7 +21,7 @@ topic_ids = seq_len(n_topics)
 
 colnames(gamma) = topic_ids
 
-papers = fromJSON(file(file.path(data_path, "papers.json"))) %>% 
+papers = fromJSON(file.path(data_path, "papers.json")) %>% 
   as_tibble()
 
 filenames = readLines(files_path) %>%
@@ -107,8 +87,7 @@ topics = topics %>%
 # Topic clusters
 #================
 
-topic_labels_url = cfg$topics$topic_labels_url
-topic_labels_file = file.path(data_path, "topic_labels.csv")
+topic_labels_file = file.path(raw_path, "topic_labels.csv")
 
 download.file(topic_labels_url, topic_labels_file)
 
