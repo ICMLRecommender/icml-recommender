@@ -13,7 +13,7 @@ papers %>%
   walk(function(x){
     fn = file.path(abstracts_txt_path, str_c(x$filename, ".txt"))
     fc = file(fn)
-    writeLines(x$abstract, fc)
+    writeLines(c(x$title, x$abstract), fc) # write title and abstract
     close(fc)
     fn
   })

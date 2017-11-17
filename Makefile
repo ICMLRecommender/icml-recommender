@@ -39,15 +39,16 @@ su_require: su_ctr_require su_py_require su_r_require
 require: r_require
 
 su_ctr_require:
-	apt install libgsl-dev
+	apt-get install libgsl-dev 
 
 su_py_require:
-	apt install python-pip
+	apt-get install python-pip
 	pip install --upgrade pip
 	pip install -r icml-pdf-conversion/requirements.txt
 	
 su_r_require: 
-	apt install r-base libssl-dev libcurl4-openssl-dev libxml2-dev
+	apt-get install r-base libssl-dev libcurl4-openssl-dev libxml2-dev libv8-3.14-dev libudunits2-dev 
+
 	
 r_require: 
 	./requirements.r
@@ -108,14 +109,14 @@ $(TXT2DAT_FILES):
 	
 txt2dat: $(TXT2DAT_FILES)
 
-clean_dat:
+clean_txt2dat:
 	rm -f $(TXT2DAT_FILES)
 
 # compute lda word distributions and documents topic distributions
 LDA_FILES = $(LDA_OUTPUT_PATH)/final.gamma $(LDA_OUTPUT_PATH)/final.beta
 
 $(LDA_FILES): $(TXT_PATH)/$(MULT_FILE)
-	lda-c/lda est $(LDA_ALPHA) $(N_TOPICS) $(LDA_SETTINGS_PATH) $(TXT_PATH)/$(MULT_FILE) random $(LDA_OUTPUT_PATH)
+	lda-c/lda est $(LDA_ALPHA) $(LDA_N_TOPICS) $(LDA_SETTINGS_PATH) $(TXT_PATH)/$(MULT_FILE) random $(LDA_OUTPUT_PATH)
 	
 run_lda: $(LDA_FILES)
 
@@ -173,7 +174,7 @@ write_db: $(DATA_PATH)/userids.dat $(TXT_PATH)/$(TXT_PATH)/$(FILES_FILE) $(CTR_O
 	./write_couchdb.r
 
 # clean
-CLEAN_TARGETS = clean_scrape clean_pdf2txt clean_abstracts_txt clean_dat clean_run_lda clean_topics clean_db clean_run_ctr
+CLEAN_TARGETS = clean_scrape clean_pdf2txt clean_abstracts_txt clean_txt2dat clean_run_lda clean_topics clean_db clean_run_ctr
 
 clean: $(CLEAN_TARGETS)
 

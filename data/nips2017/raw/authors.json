@@ -4550,7 +4550,7 @@
   {
     "author_id": "23964",
     "author_url": "https://nips.cc/Conferences/2017/Schedule?showSpeaker=23964-10099",
-    "author": "Taylor Killian",
+    "author": "Taylor W Killian",
     "affiliation": "Harvard University",
     "bio": "Bio is unavailable."
   },
@@ -5425,7 +5425,7 @@
     "author_url": "https://nips.cc/Conferences/2017/Schedule?showSpeaker=2670-8733",
     "author": "Vikash K Mansinghka",
     "affiliation": "Massachusetts Institute of Technology",
-    "bio": "Bio is unavailable."
+    "bio": "Vikash Mansinghka is a research scientist at MIT, where he leads the Probabilistic Computing Project. Vikash holds S.B. degrees in Mathematics and in Computer Science from MIT, as well as an M.Eng. in Computer Science and a PhD in Computation. He also held graduate fellowships from the National Science Foundation and MIT’s Lincoln Laboratory. His PhD dissertation on natively probabilistic computation won the MIT George M. Sprowls dissertation award in computer science, and his research on the Picture probabilistic programming language won an award at CVPR. He served on DARPA’s Information Science and Technology advisory board from 2010-2012, and currently serves on the editorial boards for the Journal of Machine Learning Research and the journal Statistics and Computation. He was an advisor to Google DeepMind and has co-founded two AI-related startups, one acquired and one currently operational."
   },
   {
     "author_id": "26706",
@@ -5439,6 +5439,13 @@
     "author_url": "https://nips.cc/Conferences/2017/Schedule?showSpeaker=26923-10025",
     "author": "Wenkai Xu",
     "affiliation": "Gatsby Unit, UCL",
+    "bio": "Bio is unavailable."
+  },
+  {
+    "author_id": "2698",
+    "author_url": "https://nips.cc/Conferences/2017/Schedule?showSpeaker=2698-10045",
+    "author": "Chris Ding",
+    "affiliation": "University of Texas at Arlington",
     "bio": "Bio is unavailable."
   },
   {
@@ -6900,7 +6907,7 @@
   {
     "author_id": "31788",
     "author_url": "https://nips.cc/Conferences/2017/Schedule?showSpeaker=31788-8764",
-    "author": "rohan Paul",
+    "author": "Rohan Paul",
     "affiliation": "MIT",
     "bio": "Rohan Paul (MIT) is a Postdoctoral Associate at the Robust Robotics Group at CSAIL, MIT. His doctoral research contribute to appearance-based topological mapping and life-long learning. His recent work focuses on grounding natural language instructions and concept acquisition from language and vision; aimed towards capable service robots that interact seamlessly with humans. His work has received Best Paper awards/nominations at leading robotics conferences: RSS ’16, IROS ’13 and ICRA ’10.\nGoogle scholar:\nhttps://scholar.google.com/citations?user=Cgp-L2UAAAAJ&hl=en"
   },
@@ -7516,7 +7523,7 @@
     "author_id": "32873",
     "author_url": "https://nips.cc/Conferences/2017/Schedule?showSpeaker=32873-9757",
     "author": "Florian Schroff",
-    "affiliation": "Google Inc.",
+    "affiliation": "Google Inc., Venice, CA",
     "bio": "Bio is unavailable."
   },
   {
@@ -9451,7 +9458,7 @@
   {
     "author_id": "35728",
     "author_url": "https://nips.cc/Conferences/2017/Schedule?showSpeaker=35728-8821",
-    "author": "Nish Khandwala",
+    "author": "Nishith Khandwala",
     "affiliation": "Stanford University",
     "bio": "Bio is unavailable."
   },
@@ -13863,7 +13870,7 @@
     "author_url": "https://nips.cc/Conferences/2017/Schedule?showSpeaker=36368-9389",
     "author": "Tao Sun",
     "affiliation": "National university of defense technology",
-    "bio": "Bio is unavailable."
+    "bio": "Ph.D. candidate of Department of System Sciences and Mathematics, National University of Defense Technology, PRC."
   },
   {
     "author_id": "36369",
@@ -14750,6 +14757,13 @@
     "author_url": "https://nips.cc/Conferences/2017/Schedule?showSpeaker=4294-9999",
     "author": "Elad Hazan",
     "affiliation": "Princeton University",
+    "bio": "Bio is unavailable."
+  },
+  {
+    "author_id": "43194",
+    "author_url": "https://nips.cc/Conferences/2017/Schedule?showSpeaker=43194-9768",
+    "author": "Nicholas Fraser",
+    "affiliation": "Xilinx",
     "bio": "Bio is unavailable."
   },
   {
