@@ -16,24 +16,31 @@ authors = fromJSON(file.path(raw_path, "authors.json")) %>%
 event_subjects = fromJSON(file.path(raw_path, "event_subjects.json")) %>% 
   as_tibble()
 
+papers_tsv = read_tsv(file.path(raw_path, "Copy2 of NIPS2017 Accepted Papers - NIPS2017.tsv"), 
+                  col_types = "cc__c_",
+                  col_names = c("paper_id",
+                              "title",
+                              "subject_areas"),
+                  skip=1)
+
 # Schedule 
 # ====================
-# fill missing session and session_id for invited talks, symposium and workshops
-session_id_prefix = list("Invited Talk (Posner Lecture)" = "posn",
+# fill missing session and session_id for breaks, invited talks, symposium and workshops
+session_id_prefix = list("Break" ="brk",
+                         "Invited Talk (Posner Lecture)" = "posn",
                          "Invited Talk" = "invt",
                          "Invited Talk (Breiman Lecture)" = "brei",
                          "Symposium" = "symp",
-                         "Workshop" = "wksp")
+                         "Workshop" = "wksp",
+                         "Oral" = "oral")
 
 schedule = schedule %>% 
-  mutate(session = if_else(type %in% c("Workshop", "Invited Talk", "Symposium"), 
-                           str_c(type, str_extract(day, boundary("word")), time_start, sep=" "),
-                           session)) %>% 
-  mutate(session = if_else(type %in% c("Invited Talk (Posner Lecture)", "Invited Talk (Breiman Lecture)"), 
-                           type, session)) %>% 
-  mutate(room = str_extract(location, "[^#]+") %>% 
-           str_replace("Room", "") %>% 
+  mutate(session_location = str_extract(location, "[^#]+") %>% 
+           str_replace("Room-?", "") %>% 
            str_trim()) %>% 
+  mutate(session_labels = if_else(type %in% c("Oral", "Spotlight"), map(session, ~str_split(., ", ")), list(NA_character_))) %>% 
+  mutate(session = if_else(is.na(session) | (type %in% c("Oral", "Tutorial")), title, session),
+         session_id = if_else(type=="Oral", NA_character_, session_id)) %>% 
   group_by(type) %>% 
   mutate(session_id = if_else(is.na(session_id), 
                               str_c(session_id_prefix[type], seq_len(n())), # fill missing session_ids with fake unique ids
@@ -53,9 +60,25 @@ schedule = schedule %>%
 
 Sys.setlocale("LC_TIME", locale)
 
+# Papers
+# ====================
+papers_tsv = papers_tsv %>% 
+  mutate(subject_areas = str_split(subject_areas, "; ") %>% 
+           map(str_replace_all, "\\*", "") %>% 
+           map(str_replace_all, " +", " ") %>% 
+           map(str_trim) %>% 
+           map(str_split_fixed, fixed("\\"), 2) %>% 
+           map(as_tibble) %>% 
+           map(set_colnames, str_c("subject_area_", 1:2))) #%>% 
+  # mutate(authors = str_split(authors, "; ") %>% 
+  #          map(str_replace_all, " +", " ") %>% 
+  #          map(str_trim) %>% 
+  #          map(str_split_fixed, ", \\*", 2) %>% 
+  #          map(as_tibble) %>% 
+  #          map(set_colnames, c("author", "affiliation")))
+
 # Join tables
 # ===================
-
 
 # join schedule with events
 schedule = schedule %>% 
@@ -77,41 +100,37 @@ schedule_authors = schedule %>%
 authors = authors %>% 
   left_join(schedule_authors, by = c("author_id", "author"))
 
-# join schedule with papers_proc
-if (exists("papers_proc")) {
-  papers = schedule %>% 
-    filter(type %in% c("Oral", "Spotlight", "Poster")) %>% 
-    distinct(title, .keep_all = TRUE) %>% 
-    select(title, authors, abstract, paper_url) %>%
-    left_join(papers_proc %>%
-                select(paper_url, filename, pdf_url, supp_pdf_url),
-              by = "paper_url") %>%
-    arrange(filename) %>%
-    mutate(paper_id = seq_len(n()))
-  
-  schedule_papers = schedule %>% 
-    filter(type %in% c("Oral", "Spotlight", "Poster")) %>% 
-    select(type, session_id, event_id, paper_url, time_start, time_end, location) %>% 
-    left_join(papers %>% 
-                select(paper_id, paper_url), 
-              by = "paper_url") %>% 
-    select(-paper_url)
-} else {
-  papers = schedule %>% 
-    filter(type %in% c("Oral", "Spotlight", "Poster")) %>% 
-    distinct(title, .keep_all = TRUE) %>% 
-    select(title, authors, abstract) %>%
-    mutate(paper_id = seq_len(n())) %>% 
-    mutate(filename = as.character(paper_id))
-  
-  schedule_papers = schedule %>% 
-    filter(type %in% c("Oral", "Spotlight", "Poster")) %>% 
-    select(type, session_id, event_id, title, time_start, time_end, location) %>% 
-    left_join(papers %>% 
-                select(paper_id, title), 
-              by = "title") %>% 
-    select(-title)
-}
+
+# join schedule with papers
+papers = schedule %>% 
+  filter(type %in% c("Oral", "Spotlight", "Poster")) %>% 
+  distinct(title, .keep_all = TRUE) %>% 
+  select(title, abstract, authors, session_labels) %>%
+  left_join(papers_tsv, by = "title") %>% 
+  mutate(filename = str_c("paper_", paper_id))
+
+schedule_papers = schedule %>% 
+  filter(type %in% c("Oral", "Spotlight", "Poster")) %>% 
+  select(type, session_id, event_id, title, time_start, time_end, location) %>% 
+  left_join(papers %>% 
+              select(paper_id, title, subject_areas), by = "title") %>% 
+  select(-title)
+
+
+#   papers = schedule %>% 
+#     filter(type %in% c("Oral", "Spotlight", "Poster")) %>% 
+#     distinct(title, .keep_all = TRUE) %>% 
+#     select(title, authors, abstract, session_labels) %>%
+#     mutate(paper_id = seq_len(n())) %>% 
+#     mutate(filename = as.character(paper_id))
+#   
+#   schedule_papers = schedule %>% 
+#     filter(type %in% c("Oral", "Spotlight", "Poster")) %>% 
+#     select(type, session_id, event_id, title, time_start, time_end, location) %>% 
+#     left_join(papers %>% 
+#                 select(paper_id, title), 
+#               by = "title") %>% 
+#     select(-title)
 
 schedule = schedule %>% 
   left_join(schedule_papers, 
@@ -123,18 +142,18 @@ papers = papers %>%
               nest(.key = "schedule"),
             by = "paper_id")
 
-# join papers and schedule with event_subjects
-paper_subjects = event_subjects %>% 
-  left_join(schedule %>% 
-              select(event_id, paper_id), 
-            by="event_id") %>% 
-  select(-event_id)
-
-papers = papers %>%
-  left_join(paper_subjects, by="paper_id")
-
-schedule = schedule %>%
-  left_join(paper_subjects, by="paper_id")
+# # join papers and schedule with event_subjects
+# paper_subjects = event_subjects %>% 
+#   left_join(schedule %>% 
+#               select(event_id, paper_id), 
+#             by="event_id") %>% 
+#   select(-event_id)
+# 
+# papers = papers %>%
+#   left_join(paper_subjects, by="paper_id")
+# 
+# schedule = schedule %>%
+#   left_join(paper_subjects, by="paper_id")
             
 # join authors with papers
 author_papers = papers %>%
@@ -145,7 +164,8 @@ author_papers = papers %>%
   ungroup()
 
 authors = authors %>%
-  left_join(author_papers, by = c("author_id", "author"))
+  left_join(author_papers, by = c("author_id", "author")) %>% 
+  mutate(bio = if_else(bio=="Bio is unavailable.", NA_character_, bio))
 
 # simplification of schedule
 papers = papers %>%
@@ -154,16 +174,24 @@ papers = papers %>%
          poster_schedule = map(schedule, ~filter(., type == "Poster"))) %>% 
   select(-schedule)
 
+# save session_labels of orals because cannot be grouped by
+oral_session_labels = schedule %>% 
+  filter(type %in% c("Oral")) %>% 
+  select(session_id, session_labels) %>% 
+  filter(map_lgl(session_labels, negate(is.null))) %>% 
+  distinct()
+
 # group schedule by session and nest
 schedule = schedule %>% 
-  group_by(session_id, session, type, day, room, session_time, session_time_start, session_time_end) %>% 
+  group_by(session_id, session, type, day, session_location, session_time, session_time_start, session_time_end) %>%
   nest(.key = "content") %>% 
-  mutate(content = content %>% map_if(!(type %in% c("Invited Talk", "Invited Talk (Breiman Lecture)", "Invited Talk (Posner Lecture)", "Symposium")), 
+  mutate(content = content %>% map_if(type %in% c("Break", "Poster", "Spotlight"), 
                                       ~select(., -abstract))) %>% 
   mutate(content = content %>% map_if(!(type %in% c("Poster", "Demonstration")), 
                                       ~select(., -location))) %>% 
   mutate(content = content %>% map_if(!(type %in% c("Oral", "Spotlight", "Poster")), 
-                                      ~select(., -paper_id, -subjects)))
+                                      ~select(., -paper_id, -subject_areas))) %>% 
+  left_join(oral_session_labels, by="session_id") # join with oral_session_labels
 
 # Write json
 #============

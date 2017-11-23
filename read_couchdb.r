@@ -48,7 +48,7 @@ topic_ids = topics$topic_id %>%
   sort()
 
 topic_clusters = topics %>% 
-  filter(map_lgl(topic_cluster_ids, ~length(.x)>0)) %>% 
+  filter(map_lgl(topic_cluster_ids, ~length(.)>0)) %>% 
   unnest() %>% 
   rename(topic_cluster_id = topic_cluster_ids)
 

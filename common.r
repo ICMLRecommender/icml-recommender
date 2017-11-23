@@ -19,10 +19,14 @@ abstracts_txt_path = file.path(data_path, Sys.getenv("ABSTRACTS_TXT_DIR"))
 vocab_path = file.path(txt_path, Sys.getenv("VOCAB_FILE"))
 lda_output_path = file.path(data_path, Sys.getenv("LDA_OUTPUT_DIR"))
 files_path = file.path(txt_path, Sys.getenv("FILES_FILE"))
+mult_path = file.path(txt_path, Sys.getenv("MULT_FILE"))
 ctr_output_path = file.path(data_path, Sys.getenv("CTR_OUTPUT_DIR"))
 
 dl_pdf = Sys.getenv("SCRAPE_DL_PDF") == "1"
 dl_supp_pdf = Sys.getenv("SCRAPE_DL_SUPP_PDF") == "1"
+
+lda_n_topics = as.integer(Sys.getenv("LDA_N_TOPICS"))
+lda_alpha = as.numeric(Sys.getenv("LDA_ALPHA"))
 
 session_labels_url = Sys.getenv("SESSION_LABELS_CSV_URL")
 
@@ -121,6 +125,10 @@ parse_event = function(event_id, schedule_url, .pb = NULL) {
   
   html = read_html(url)
   
+  homepage_url = html %>% 
+    html_node("a.btn") %>% 
+    html_attr("href")
+  
   btns = html %>% 
     html_nodes("button.btn[onclick]:not(.invisible)")
   
@@ -141,7 +149,8 @@ parse_event = function(event_id, schedule_url, .pb = NULL) {
   }
   
   out = list(event_id = event_id,
-             event_url = url)
+             event_url = url,
+             homepage_url = homepage_url)
   
   out$author_details = list(author_details)
   
@@ -151,6 +160,17 @@ parse_event = function(event_id, schedule_url, .pb = NULL) {
   
   if(str_length(out$abstract)==0)
     out$abstract = NA_character_
+  
+  event_schedule = html %>% 
+    html_nodes("table td") %>% 
+    html_text(trim = TRUE) %>% 
+    matrix(ncol=2, byrow = TRUE) %>% 
+    as_tibble() %>% 
+    setNames(c("time", "title"))
+  
+  if (nrow(event_schedule)>0)
+    out$event_schedule = list(event_schedule)
+  
   
   return(as_tibble(out))
 }

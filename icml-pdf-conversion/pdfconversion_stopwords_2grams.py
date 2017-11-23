@@ -30,8 +30,8 @@ from pdfminer.layout import LAParams
 
 
 
-
 my_words = ["parameters","means","type","work","functions","sqrt","improve","setting","machine","efficient","input","world","general","develop","particular","value","significant","training","framework","simple","provide","number","method","experiments","proposed","strongly", "early","models","model","methods","propose","paper","problem","problems","algorithms","algorithm","real","based","function","approach","results","different","performance","extend","demonstrate","standard","data","large","existing","using","novel","analysis","introduce","techniques","using","achieve","synthetic","arxiv"]
+#my_words = ["known", "settings", "case", "used", "approaches", "outperforms", "studies", "better", "important","emph", "small","study", "applications", "dataset", "datasets", "learn", "learning","parameters","means","type","work","functions","sqrt","improve","setting","machine","efficient","input","world","general","develop","particular","value","significant","training","framework","simple","provide","number","method","experiments","proposed","strongly", "early","models","model","methods","propose","paper","problem","problems","algorithms","algorithm","real","based","function","approach","results","different","performance","extend","demonstrate","standard","data","large","existing","using","novel","analysis","introduce","techniques","using","achieve","synthetic","arxiv"]
 my_stop_words = text.ENGLISH_STOP_WORDS.union(my_words)
 
 
@@ -41,8 +41,12 @@ my_stop_words = text.ENGLISH_STOP_WORDS.union(my_words)
 from cStringIO import StringIO
 
 MAX_VOCAB = 20000
-MIN_DF=0.005
-MAX_DF=0.9
+#MAX_VOCAB = 100000
+#MIN_DF=0.005
+#MAX_DF=0.99
+#MAX_DF=0.9
+MIN_DF=0.05
+MAX_DF=0.95
 
 class CustomVectorizer(CountVectorizer):
     """
