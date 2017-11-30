@@ -21,6 +21,7 @@ lda_output_path = file.path(data_path, Sys.getenv("LDA_OUTPUT_DIR"))
 files_path = file.path(txt_path, Sys.getenv("FILES_FILE"))
 mult_path = file.path(txt_path, Sys.getenv("MULT_FILE"))
 ctr_output_path = file.path(data_path, Sys.getenv("CTR_OUTPUT_DIR"))
+stopwords_path = file.path(raw_path, Sys.getenv("STOPWORDS_FILE"))
 
 dl_pdf = Sys.getenv("SCRAPE_DL_PDF") == "1"
 dl_supp_pdf = Sys.getenv("SCRAPE_DL_SUPP_PDF") == "1"
@@ -29,6 +30,8 @@ lda_n_topics = as.integer(Sys.getenv("LDA_N_TOPICS"))
 lda_alpha = as.numeric(Sys.getenv("LDA_ALPHA"))
 
 session_labels_url = Sys.getenv("SESSION_LABELS_CSV_URL")
+
+subject_labels_url = Sys.getenv("SUBJECT_LABELS_CSV_URL")
 
 topic_labels_url = Sys.getenv("TOPICS_LABELS_CSV_URL")
 
@@ -111,8 +114,17 @@ parse_schedule = function(html, .pb = NULL) {
     html_node(".maincardFooter") %>% 
     html_text(trim = TRUE) %>% 
     str_split(" · ")
-  out$paper_url = html %>% 
-    html_node(".href_PDF") %>% 
+  out$paper_url = html %>%
+    html_node('.href_PDF[title="Paper"]') %>%
+    html_attr("href")
+  out$poster_url = html %>%
+    html_node('.href_PDF[title="Poster"]') %>%
+    html_attr("href")
+  out$code_url = html %>%
+    html_node('.href_Code[title="Code"]') %>%
+    html_attr("href")
+  out$video_url = html %>%
+    html_node('.href_Video[title="Video Presentation"]') %>%
     html_attr("href")
   return(out)
 }
@@ -124,9 +136,9 @@ parse_event = function(event_id, schedule_url, .pb = NULL) {
   url = str_c(schedule_url, "?showEvent=", event_id)
   
   html = read_html(url)
-  
+ 
   homepage_url = html %>% 
-    html_node("a.btn") %>% 
+    html_node('div[style="text-align:center"]>a.btn') %>% 
     html_attr("href")
   
   btns = html %>% 
@@ -150,6 +162,10 @@ parse_event = function(event_id, schedule_url, .pb = NULL) {
   
   out = list(event_id = event_id,
              event_url = url,
+             paper_url = paper_url,
+             poster_url = poster_url,
+             code_url = code_url,
+             video_url = video_url,
              homepage_url = homepage_url)
   
   out$author_details = list(author_details)
@@ -170,7 +186,6 @@ parse_event = function(event_id, schedule_url, .pb = NULL) {
   
   if (nrow(event_schedule)>0)
     out$event_schedule = list(event_schedule)
-  
   
   return(as_tibble(out))
 }

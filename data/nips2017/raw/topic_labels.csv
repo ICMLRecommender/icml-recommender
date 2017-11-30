@@ -1,0 +1,21 @@
+topic_id,Adrien,Valerio,YW,Laurent,labels
+1,Kernel methods / Gaussian Processes,Kernels/ Stochastic Pocesses,Kernels and GPs,Kernel methods / Stochastic Processes,Kernels and GPs
+2,"Data, Competitions, Implementations, and Software?",Reinforcement Learning,"Games, Reinforcement Learning",Games and Reinforcement Learning,Games / Reinforcement Learning
+3,Optimization / Gradient descent,Optimization,Optimization,Optimization,Optimization
+4,Matrices / Theory / Sparsity,Matrix estimation,"Matrices, Spectral methods",Matrix estimation,Matrices / Theory
+5,Optimization,Optimization ,Optimization,Optimization algorithms,Optimization 
+6,Online Learning / Bandit Algorithms,Bandits/ Online learning,"Bandits, Online Learning",Bandits / Online learning,Bandits and Online Learning
+7,Classification / Supervised Learning?,GANs/ deep learning?,Deep Learning,Supervised Deep learning,Supervised Learning / GANs / Deep Learning
+8,Reinforcement Learning,Reinforcement Learning,Reinforcement Learning,Reinforcement learning,Reinforcement Learning
+9,Classification / Supervised learning,Inference/ Application?,Supervised Learning,Application / Algorithms ? ,Supervised Learning
+10,Probabilistic Methods / Variational Inference,Probabilistic Methods / Variational inference,Probabilistic learning,Probabilistic Methods / Variational Inference,Probabilistic Methods / Variational Inference
+11,Learning Theory,Learning Theory,Probabilistic learning,Learning Theory and algorithms,Theory / Probabilistic Methods
+12,Dynamic systems / Latent variable methods,Dynamical systems,Dynamical systems,Dynamic systems,Dynamical Systems
+13,Matrices and Tensors / Optimization / Theory,Algorithms?,Matrices,?,Matrices / Optimization
+14,Time Series / Stochastic processes,Time series,?,Time Series modelling,Time Series and Stochastic Processes
+15,Theory,Learning Theory,Theory,Theory,Theory
+16,Deep learning,Deep learning,Deep learning,Deep Learning,Deep Learning
+17,Statistical Methods / Theory,Statistical modeling,Statistical methods,?,Statistical Methods / Theory
+18,Graphs,Graphs,Graphs,Graph algorithms,Graphs
+19,Recurrent Networks,RNNs,RNNs,Recurrent neural networks,RNNs
+20,GANs / Computer vision,GANS / Computer Vision,"GANs, computer vision",GANs / Computer vision,GANs / Computer Vision

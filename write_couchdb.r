@@ -141,9 +141,9 @@ for (user in names(reco_new)) {
   if (!(user %in% db_list(cdb))) {
     cdb %>% db_create(user)
   }
-  if (!is.na(couch_revs_limit)) {
+  if (!is.na(couchdb_revs_limit)) {
     # set revisions limit
-    cdb %>% db_revs_limit(user, couch_revs_limit)
+    cdb %>% db_revs_limit(user, couchdb_revs_limit)
   }
   # request compaction
   cdb %>% db_compact(user)
@@ -171,7 +171,7 @@ for (user in names(reco_new)) {
 cat("writing trending papers to couchdb\n")
 
 trending_ids = read_csv(file.path(data_path, "trending.csv")) %>% 
-  arrange(desc(points)) %>% 
+  arrange(desc(weight)) %>% 
   slice(seq_len(trending_n_top)) %>% 
   .$paper_id
 
@@ -196,9 +196,9 @@ if (is.null(rev)) {
   cdb %>% doc_update(trending_dbname, doc, trending_docid, rev[1])
 }
 
-if (!is.na(couch_revs_limit)) {
+if (!is.na(couchdb_revs_limit)) {
   # set revisions limit
-  cdb %>% db_revs_limit(trending_dbname, couch_revs_limit)
+  cdb %>% db_revs_limit(trending_dbname, couchdb_revs_limit)
 }
 # request compaction
 cdb %>% db_compact(trending_dbname)

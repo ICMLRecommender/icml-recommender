@@ -1,0 +1,104 @@
+title_new;title
+Gradient Episodic Memory for Continual Learning;Gradient Episodic Memory for Continuum Learning
+Learning Multiple Tasks with Multilinear Relationship Networks;Learning Multiple Tasks with Deep Relationship Networks
+SVCCA: Singular Vector Canonical Correlation Analysis for Deep Learning Dynamics and Interpretability;SVCCA: Singular Vector Canonical Correlation Analysis for Deep Understanding and Improvement
+PRUNE: Preserving Proximity and Global Ranking for Network Embedding;Preserving Proximity and Global Ranking for Node Embedding
+Deep Subspace Clustering Networks;Deep Subspace Clustering Network
+Learning Graph Representations with Embedding Propagation;Learning Graph Embeddings with Embedding Propagation
+LightGBM: A Highly Efficient Gradient Boosting Decision Tree;A Highly Efficient Gradient Boosting Decision Tree
+Subset Selection and Summarization in Sequential Data;Subset Selection for Sequential Data
+Learned D-AMP: Principled Neural Network based Compressive Image Recovery;Learned D-AMP: Principled Neural-network-based Compressive Image Recovery
+Robust Hypothesis Test for Nonlinear Effect with Gaussian Processes;Robust Hypothesis Test for Functional Effect with Gaussian Processes
+The Importance of Communities for Learning to Influence;Maximizing the Spread of Influence from Training Data
+SchNet: A continuous-filter convolutional neural network for modeling quantum interactions;MolecuLeNet: A continuous-filter convolutional neural network for modeling quantum interactions
+Toward Multimodal Image-to-Image Translation;Multimodal Image-to-Image Translation by Enforcing Bi-Cycle Consistency
+Deep Supervised Discrete Hashing;Deep supervised discrete hashing
+Learning Hierarchical Information Flow with Recurrent Neural Modules;Thalamus Gated Recurrent Modules
+Fader Networks:Manipulating Images by Sliding Attributes;Fader Networks: Generating Image Variations by Sliding Attribute Values
+PredRNN: Recurrent Neural Networks for Predictive Learning using Spatiotemporal LSTMs;PredRNN: Recurrent Neural Networks for Video Prediction using Spatiotemporal LSTMs
+VAIN: Attentional Multi-agent Predictive Modeling;Multi-agent Predictive Modeling with Attentional CommNets
+Active Bias: Training More Accurate Neural Networks by Emphasizing High Variance Samples;Active Bias: Training a More Accurate Neural Network by Emphasizing High Variance Samples
+Resurrecting the sigmoid in deep learning through dynamical isometry: theory and practice;Investigating the learning dynamics of deep neural networks using random matrix theory
+Neural system identification for large populations separating “what” and “where”;"Neural system identification for large populations separating ""what"" and ""where"""
+Reconstructing perceived faces from brain activations with deep adversarial neural decoding;Deep adversarial neural decoding
+Regularized Modal Regression with Applications in Cognitive Impairment Prediction;Cognitive Impairment Prediction in Alzheimer’s Disease with Regularized Modal Regression
+Influence Maximization with $\varepsilon$-Almost Submodular Threshold Functions;Influence Maximization with $\varepsilon$-Almost Submodular Threshold Function
+Solving Most Systems of Random Quadratic Equations;Solving (Almost) all Systems of Random Quadratic Equations
+Stochastic Mirror Descent in Variationally Coherent Optimization Problems;Stochastic Mirror Descent for Non-Convex Optimization
+Efficient Use of Limited-Memory Accelerators for Linear Learning on Heterogeneous Systems;Efficient Use of Limited-Memory Resources to Accelerate Linear Learning
+Uprooting and Rerooting Higher-Order Graphical Models;Uprooting and Rerooting Higher-order Graphical Models
+Expectation Propagation for t-Exponential Family Using q-Algebra;Expectation Propagation for t-Exponential Family Using Q-Algebra
+InfoGAIL: Interpretable Imitation Learning from Visual Demonstrations;Inferring The Latent Structure of Human Decision-Making from Raw Visual Inputs
+Effective Parallelisation for Machine Learning;Radon Machines: Effective Parallelisation for Machine Learning
+Discovering Potential Correlations via Hypercontractivity;Discovering Potential Influence via Information Bottleneck
+Approximation Bounds for Hierarchical Clustering: Average Linkage, Bisecting K-means, and Local Search;An Applied Algorithmic Foundation for Hierarchical Clustering
+When Cyclic Coordinate Descent Outperforms Randomized Coordinate Descent;When Cyclic Coordinate Descent Beats Randomized Coordinate Descent
+Unsupervised learning of object frames by dense equivariant image labelling;Unsupervised object learning from dense equivariant image labelling
+Optimistic posterior sampling for reinforcement learning: worst-case regret bounds;Posterior sampling for reinforcement learning: worst-case regret bounds
+Learning Linear Dynamical Systems via Spectral Filtering;Online Learning of Linear Dynamical Systems
+Universal consistency and minimax rates for online Mondrian Forests;Universal consistency and minimax rates for online Mondrian Forest
+A Learning Error Analysis for Structured Prediction with Approximate Inference;On Learning Errors of Structured Prediction with Approximate Inference
+QSGD: Communication-Efficient SGD via Gradient Quantization and Encoding;Communication-Efficient Stochastic Gradient Descent, with Applications to Neural Networks
+Affinity Clustering: Hierarchical Clustering at Scale;On Distributed Hierarchical Clustering
+Sparse Embedded $k$-Means Clustering;Sparse k-Means Embedding
+Inhomogeneous Hypergraph Clustering with Applications;Inhomogoenous Hypergraph Clustering with Applications
+A Unified Approach to Interpreting Model Predictions;A unified approach to interpreting model predictions
+Efficient Sublinear-Regret Algorithms for Online Sparse Linear Regression with Limited Observation;Efficient Sublinear-Regret Algorithms for Online Sparse Linear Regression
+A New Theory for Matrix Completion;A New Theory for Nonconvex Matrix Completion
+Alternating minimization for dictionary learning with random initialization;Fast Alternating Minimization Algorithms for Dictionary Learning
+Partial Hard Thresholding: Towards A Principled Analysis of Support Recovery;Partial Hard Thresholding: A Towards Unified Analysis of Support Recovery
+Learning Populations of Parameters;Optimally Learning Populations of Parameters
+Improved Dynamic Regret for Non-degenerate Functions;Improved Dynamic Regret for Non-degeneracy Functions
+Learned in Translation: Contextualized Word Vectors;Towards the ImageNet-CNN of NLP: Pretraining Sentence Encoders with Machine Translation
+Learning Spherical Convolution for Fast Features from 360° Imagery;Flat2Sphere: Learning Spherical Convolution for Fast Features from 360° Imagery
+MarrNet: 3D Shape Reconstruction via 2.5D Sketches;3D Shape Reconstruction by Modeling 2.5D Sketch
+Self-Supervised Intrinsic Image Decomposition;Learning to Generalize Intrinsic Images with a Structured Disentangling Autoencoder
+An inner-loop free solution to inverse problems using deep neural networks;Inner-loop free ADMM using Auxiliary Deep Neural Networks
+Language Modeling with Recurrent Highway Hypernetworks;Language modeling with recurrent highway hypernetworks
+Cold-Start Reinforcement Learning with Softmax Policy Gradient;Cold-Start Reinforcement Learning with Softmax Policy Gradients
+Unsupervised Learning of Disentangled and Interpretable Representations from Sequential Data;Unsupervised Learning of Disentangled Latent Representations from Sequential Data
+Visual Interaction Networks: Learning a Physics Simulator from Video;Visual Interaction Networks
+Few-Shot Adversarial Domain Adaptation;Supervised Adversarial Domain Adaptation
+Training Deep Networks without Learning Rates Through Coin Betting;Backprop without Learning Rates Through Coin Betting
+Convergent Block Coordinate Descent for Training Tikhonov Regularized Deep Neural Networks;On the Convergence of Block Coordinate Descent in Training DNNs with Tikhonov Regularization
+Houdini: Fooling Deep Structured Visual and Speech Recognition Models with Adversarial Examples;Houdini: Democratizing Adversarial Examples
+Compression-aware Training of Deep Networks;Compression-aware Training of Deep Neural Networks
+Non-parametric Structured Output Networks;Non-parametric Neural Networks
+Adaptive stimulus selection for optimizing neural population responses;Adaptive sampling for a population of neurons
+Adaptive SVRG Methods under Error Bound Conditions with Unknown Growth Parameter;Searching in the Dark: Practical SVRG Methods under Error Bound Conditions with  Guarantee
+EEG-GRAPH: A Factor-Graph-Based Model for Capturing Spatial, Temporal, and Observational Relationships in Electroencephalograms;EEG-GRAPH: A Factor Graph Based Model for Capturing Spatial, Temporal, and Observational Relationships in Electroencephalograms
+Eigenvalue Decay Implies Polynomial-Time Learnability for Neural Networks;Compressing the Gram Matrix for Learning Neural Networks in Polynomial Time
+Welfare Guarantees from Data;Efficiency Guarantees from Data
+Online control of the false discovery rate with decaying memory;More powerful and flexible rules for online FDR control with memory and weights
+Natural Value Approximators: Learning when to Trust Past Estimates;Natural value approximators: learning when to trust past estimates
+Position-based Multiple-play Bandit Problem with Unknown Position Bias;Position-based Multiple-play Multi-armed Bandit Problem with Unknown Position Bias
+Online to Offline Conversions, Universality and Adaptive Minibatch Sizes;Online to Offline Conversions and Adaptive Minibatch Sizes
+Affine-Invariant Online Optimization and the Low-rank Experts Problem;Affine-Invariant Online Optimization
+Near Minimax Optimal Players for the Finite-Time 3-Expert Prediction Problem;Minimax Optimal Players for the Finite-Time 3-Expert Prediction Problem
+Recycling Privileged Learning and Distribution Matching for Fairness;Recycling for Fairness: Learning with Conditional Distribution Matching Constraints
+From Parity to Preference-based Notions of Fairness in Classification;From Parity to Preference: Learning with Cost-effective Notions of Fairness
+Predicting User Activity Level In Point Processes With Mass Transport Equation;Predicting User Activity Level In Point Process Models With Mass Transport Equation
+Style Transfer from Non-Parallel Text by Cross-Alignment;Style Transfer from Non-parallel Text by Cross-Alignment
+GANs Trained by a Two Time-Scale Update Rule Converge to a Local Nash Equilibrium;Two Time-Scale Update Rule for Generative Adversarial Nets
+Semi-supervised Learning with GANs: Manifold Invariance with Improved Inference;Improved Semi-supervised Learning with GANs using Manifold Invariances
+Bayesian GAN;Bayesian GANs
+ALICE: Towards Understanding Adversarial Learning for Joint Distribution Matching;Towards Understanding Adversarial Learning for Joint Distribution Matching
+Controllable Invariance through Adversarial Feature Learning;Adversarial Invariant Feature Learning
+Linear Time Computation of Moments in Sum-Product Networks;Efficient Computation of Moments in Sum-Product Networks
+End-to-End Differentiable Proving;End-to-end Differentiable Proving
+Distral: Robust multitask reinforcement learning;DisTraL: Robust multitask reinforcement learning
+Second-order Optimization for Deep Reinforcement Learning using Kronecker-factored Approximation;Second-order Optimization in Deep Reinforcement Learning using Kronecker-factored Approximation
+Learning to See Physics via Visual De-animation;Scene Physics Acquisition via Visual De-animation
+Neural Networks for Efficient Bayesian Decoding of Natural Images from Retinal Neurons;Deep Networks for Decoding Natural Images from Retinal Signals
+Unified representation of tractography and diffusion-weighted MRI data using sparse multidimensional arrays;Tensor encoding and decomposition of brain connectomes with application to tractography evaluation
+Streaming Robust Submodular Maximization: A Partitioned Thresholding Approach;Streaming Robust Submodular Maximization:A Partitioned Thresholding Approach
+ADMM without a Fixed Penalty Parameter: Faster Convergence with New Adaptive Penalization;No More Fixed Penalty  Parameter in ADMM: Faster Convergence with New Adaptive Penalization
+Experimental Design for Learning Causal Graphs with Latent Variables;Learning Causal Graphs with Latent Variables
+Causal Effect Inference with Deep Latent-Variable Models;Causal Effect Inference with Deep Latent Variable Models
+Conic Scan-and-Cover algorithms for nonparametric topic modeling;Conic Scan Coverage algorithm for nonparametric topic modeling
+Counterfactual Gaussian Processes for Reliable Decision-making and What-if Reasoning;What-If Reasoning using Counterfactual Gaussian Processes
+Dynamic-Depth Context Tree Weighting;Utile Context Tree Weighting
+Countering Feedback Delays in Multi-Agent Learning;Delayed Mirror Descent in Continuous Games
+A Sharp Error Analysis for the Fused Lasso, with Application to Approximate Changepoint Screening;A Sharp Error Analysis for the Fused Lasso, with Implications to Broader Settings  and Approximate Screening
+Convergence of Gradient EM on Multi-component Mixture of Gaussians;Statistical Convergence Analysis of Gradient EM on General Gaussian Mixture Models
+Multi-View Decision Processes: The Helper-AI Problem;Multi-View Decision Processes

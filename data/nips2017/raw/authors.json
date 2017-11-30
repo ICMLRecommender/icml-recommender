@@ -31,7 +31,7 @@
     "author_id": "10437",
     "author_url": "https://nips.cc/Conferences/2017/Schedule?showSpeaker=10437-8781",
     "author": "Cheng Zhang",
-    "affiliation": "Disney Research",
+    "affiliation": "KTH ROYAL INSTITUTE OF TECHNOLOGY",
     "bio": "Bio is unavailable."
   },
   {
@@ -73,7 +73,7 @@
     "author_id": "10515",
     "author_url": "https://nips.cc/Conferences/2017/Schedule?showSpeaker=10515-8816",
     "author": "Han Liu",
-    "affiliation": "Princeton University",
+    "affiliation": "Tencent AI Lab",
     "bio": "Bio is unavailable."
   },
   {
@@ -143,7 +143,7 @@
     "author_id": "10810",
     "author_url": "https://nips.cc/Conferences/2017/Schedule?showSpeaker=10810-8868",
     "author": "Jinfeng Yi",
-    "affiliation": "Michigan State University",
+    "affiliation": "Tencent AI Lab/IBM TJ Watson Research Center",
     "bio": "Bio is unavailable."
   },
   {
@@ -252,13 +252,6 @@
     "bio": "Bio is unavailable."
   },
   {
-    "author_id": "11338",
-    "author_url": "https://nips.cc/Conferences/2017/Schedule?showSpeaker=11338-9220",
-    "author": "Ginger Smith",
-    "affiliation": "UC Berkeley",
-    "bio": "Bio is unavailable."
-  },
-  {
     "author_id": "11363",
     "author_url": "https://nips.cc/Conferences/2017/Schedule?showSpeaker=11363-8757",
     "author": "Steve Young",
@@ -269,7 +262,7 @@
     "author_id": "11365",
     "author_url": "https://nips.cc/Conferences/2017/Schedule?showSpeaker=11365-9248",
     "author": "Christina Lee",
-    "affiliation": "MIT",
+    "affiliation": "Microsoft Research",
     "bio": "Bio is unavailable."
   },
   {
@@ -381,7 +374,7 @@
     "author_id": "11920",
     "author_url": "https://nips.cc/Conferences/2017/Schedule?showSpeaker=11920-9133",
     "author": "Stephen Keeley",
-    "affiliation": "New York University",
+    "affiliation": "Princeton University",
     "bio": "Bio is unavailable."
   },
   {
@@ -423,7 +416,7 @@
     "author_id": "11999",
     "author_url": "https://nips.cc/Conferences/2017/Schedule?showSpeaker=11999-8824",
     "author": "Brendan Shillingford",
-    "affiliation": "University of British Columbia",
+    "affiliation": "University of Oxford",
     "bio": "Bio is unavailable."
   },
   {
@@ -438,6 +431,13 @@
     "author_url": "https://nips.cc/Conferences/2017/Schedule?showSpeaker=12023-8746",
     "author": "Quoc V Le",
     "affiliation": "Google",
+    "bio": "Bio is unavailable."
+  },
+  {
+    "author_id": "12025",
+    "author_url": "https://nips.cc/Conferences/2017/Schedule?showSpeaker=12025-10097",
+    "author": "John Langford",
+    "affiliation": "Microsoft Research New York",
     "bio": "Bio is unavailable."
   },
   {
@@ -535,7 +535,7 @@
     "author_id": "12239",
     "author_url": "https://nips.cc/Conferences/2017/Schedule?showSpeaker=12239-9305",
     "author": "Patrick Jaillet",
-    "affiliation": "Massachusetts Institute of Technology",
+    "affiliation": "MIT",
     "bio": "Bio is unavailable."
   },
   {
@@ -591,7 +591,7 @@
     "author_id": "12352",
     "author_url": "https://nips.cc/Conferences/2017/Schedule?showSpeaker=12352-9313",
     "author": "Daniel Russo",
-    "affiliation": "Stanford University",
+    "affiliation": "Columbia University",
     "bio": "Bio is unavailable."
   },
   {
@@ -675,7 +675,7 @@
     "author_id": "12642",
     "author_url": "https://nips.cc/Conferences/2017/Schedule?showSpeaker=12642-9088",
     "author": "Victor Gabillon",
-    "affiliation": "Inria Lille - Nord Europe",
+    "affiliation": "QUT - ACEMS",
     "bio": "Bio is unavailable."
   },
   {
@@ -823,6 +823,13 @@
     "author_url": "https://nips.cc/Conferences/2017/Schedule?showSpeaker=12909-10115",
     "author": "Emma Brunskill",
     "affiliation": "CMU",
+    "bio": "Bio is unavailable."
+  },
+  {
+    "author_id": "12914",
+    "author_url": "https://nips.cc/Conferences/2017/Schedule?showSpeaker=12914-8805",
+    "author": "Shuicheng Yan",
+    "affiliation": "National University of Singapore",
     "bio": "Bio is unavailable."
   },
   {
@@ -1017,7 +1024,7 @@
     "author_id": "13419",
     "author_url": "https://nips.cc/Conferences/2017/Schedule?showSpeaker=13419-8752",
     "author": "Adish Singla",
-    "affiliation": "ETH, Zurich",
+    "affiliation": "MPI-SWS",
     "bio": "Bio is unavailable."
   },
   {
@@ -1227,7 +1234,7 @@
     "author_id": "14237",
     "author_url": "https://nips.cc/Conferences/2017/Schedule?showSpeaker=14237-8873",
     "author": "Guangcan Liu",
-    "affiliation": "Nanjing University of Information Science & Technology (NUIST)",
+    "affiliation": "Nanjing University of Information Science & Technology",
     "bio": "Bio is unavailable."
   },
   {
@@ -1563,7 +1570,7 @@
     "author_id": "15053",
     "author_url": "https://nips.cc/Conferences/2017/Schedule?showSpeaker=15053-9431",
     "author": "Sepp Hochreiter",
-    "affiliation": "Johannes Kepler University Linz",
+    "affiliation": "LIT AI Lab / University Linz",
     "bio": "Head of the LIT AI Lab and Professor of bioinformatics at the University of Linz. First to identify and analyze the vanishing gradient problem, the fundamental deep learning problem, in 1991. First author of the main paper on the now widely used LSTM RNNs. He implemented 'learning how to learn' (meta-learning) networks via LSTM RNNs and applied Deep Learning and RNNs to self-driving cars, sentiment analysis, reinforcement learning, bioinformatics, and medicine."
   },
   {
@@ -1591,21 +1598,21 @@
     "author_id": "15159",
     "author_url": "https://nips.cc/Conferences/2017/Schedule?showSpeaker=15159-8844",
     "author": "Wei Liu",
-    "affiliation": "Tencent Technology (Shenzhen) Company Limited",
+    "affiliation": "Tencent AI Lab",
     "bio": "Bio is unavailable."
   },
   {
     "author_id": "15168",
     "author_url": "https://nips.cc/Conferences/2017/Schedule?showSpeaker=15168-9431",
     "author": "Thomas Unterthiner",
-    "affiliation": "Johannes Kepler University Linz",
+    "affiliation": "LIT AI Lab / University Linz",
     "bio": "Bio is unavailable."
   },
   {
     "author_id": "15169",
     "author_url": "https://nips.cc/Conferences/2017/Schedule?showSpeaker=15169-8891",
     "author": "Andreas Mayr",
-    "affiliation": "Johannes Kepler University Linz",
+    "affiliation": "LIT AI Lab / University Linz",
     "bio": "Bio is unavailable."
   },
   {
@@ -1640,7 +1647,7 @@
     "author_id": "15236",
     "author_url": "https://nips.cc/Conferences/2017/Schedule?showSpeaker=15236-9319",
     "author": "Christos Dimitrakakis",
-    "affiliation": "Chalmers university of Technology",
+    "affiliation": "Chalmers / Harvard / Lille / Oslo",
     "bio": "Bio is unavailable."
   },
   {
@@ -1654,7 +1661,7 @@
     "author_id": "15286",
     "author_url": "https://nips.cc/Conferences/2017/Schedule?showSpeaker=15286-9216",
     "author": "Sebastien Lahaie",
-    "affiliation": "Microsoft",
+    "affiliation": "Google",
     "bio": "Bio is unavailable."
   },
   {
@@ -1717,7 +1724,7 @@
     "author_id": "15552",
     "author_url": "https://nips.cc/Conferences/2017/Schedule?showSpeaker=15552-9431",
     "author": "Martin Heusel",
-    "affiliation": "JKU Linz",
+    "affiliation": "LIT AI Lab / University Linz",
     "bio": "Bio is unavailable."
   },
   {
@@ -1745,7 +1752,7 @@
     "author_id": "15629",
     "author_url": "https://nips.cc/Conferences/2017/Schedule?showSpeaker=15629-9287",
     "author": "Tackgeun You",
-    "affiliation": "Pohang University of Science and Technology",
+    "affiliation": "POSTECH",
     "bio": "Bio is unavailable."
   },
   {
@@ -1808,7 +1815,7 @@
     "author_id": "15753",
     "author_url": "https://nips.cc/Conferences/2017/Schedule?showSpeaker=15753-9417",
     "author": "Michael Kamp",
-    "affiliation": "Fraunhofer IAIS",
+    "affiliation": "University of Bonn / Fraunhofer IAIS",
     "bio": "Bio is unavailable."
   },
   {
@@ -1843,7 +1850,7 @@
     "author_id": "15918",
     "author_url": "https://nips.cc/Conferences/2017/Schedule?showSpeaker=15918-8964",
     "author": "Oguz Elibol",
-    "affiliation": "Intel",
+    "affiliation": "Intel Nervana",
     "bio": "Bio is unavailable."
   },
   {
@@ -2032,7 +2039,7 @@
     "author_id": "16944",
     "author_url": "https://nips.cc/Conferences/2017/Schedule?showSpeaker=16944-9350",
     "author": "Ishaan Gulrajani",
-    "affiliation": ".",
+    "affiliation": "Google",
     "bio": "Bio is unavailable."
   },
   {
@@ -2158,7 +2165,7 @@
     "author_id": "17267",
     "author_url": "https://nips.cc/Conferences/2017/Schedule?showSpeaker=17267-9276",
     "author": "Junya Honda",
-    "affiliation": "The University of Tokyo",
+    "affiliation": "The University of Tokyo / RIKEN",
     "bio": "Bio is unavailable."
   },
   {
@@ -2372,13 +2379,6 @@
     "bio": "Bio is unavailable."
   },
   {
-    "author_id": "17635",
-    "author_url": "https://nips.cc/Conferences/2017/Schedule?showSpeaker=17635-9988",
-    "author": "Benjamin Moseley",
-    "affiliation": "Washington University in St Lo",
-    "bio": "Bio is unavailable."
-  },
-  {
     "author_id": "17641",
     "author_url": "https://nips.cc/Conferences/2017/Schedule?showSpeaker=17641-9424",
     "author": "Sham Kakade",
@@ -2410,7 +2410,7 @@
     "author_id": "17660",
     "author_url": "https://nips.cc/Conferences/2017/Schedule?showSpeaker=17660-9048",
     "author": "Ilya Razenshteyn",
-    "affiliation": "MIT",
+    "affiliation": "Columbia University",
     "bio": "Bio is unavailable."
   },
   {
@@ -2540,6 +2540,13 @@
     "bio": "Bio is unavailable."
   },
   {
+    "author_id": "17811",
+    "author_url": "https://nips.cc/Conferences/2017/Schedule?showSpeaker=17811-9300",
+    "author": "Chunyuan Li",
+    "affiliation": "Duke University",
+    "bio": "Bio is unavailable."
+  },
+  {
     "author_id": "17812",
     "author_url": "https://nips.cc/Conferences/2017/Schedule?showSpeaker=17812-9197",
     "author": "Ricardo Henao",
@@ -2634,7 +2641,7 @@
     "author_id": "17896",
     "author_url": "https://nips.cc/Conferences/2017/Schedule?showSpeaker=17896-9016",
     "author": "Abhradeep Guha Thakurta",
-    "affiliation": "APPLE Inc",
+    "affiliation": "University of California Santa Cruz",
     "bio": "Bio is unavailable."
   },
   {
@@ -2708,6 +2715,20 @@
     "bio": "Bio is unavailable."
   },
   {
+    "author_id": "17951",
+    "author_url": "https://nips.cc/Conferences/2017/Schedule?showSpeaker=17951-9449",
+    "author": "Kisuk Lee",
+    "affiliation": "MIT",
+    "bio": "Bio is unavailable."
+  },
+  {
+    "author_id": "17954",
+    "author_url": "https://nips.cc/Conferences/2017/Schedule?showSpeaker=17954-9449",
+    "author": "H. Sebastian Seung",
+    "affiliation": "Princeton University",
+    "bio": "Bio is unavailable."
+  },
+  {
     "author_id": "17955",
     "author_url": "https://nips.cc/Conferences/2017/Schedule?showSpeaker=17955-8799",
     "author": "Constantinos Daskalakis",
@@ -2725,7 +2746,7 @@
     "author_id": "17962",
     "author_url": "https://nips.cc/Conferences/2017/Schedule?showSpeaker=17962-9123",
     "author": "Siamak Ravanbakhsh",
-    "affiliation": "Carnegie Mellon University",
+    "affiliation": "CMU/UBC",
     "bio": "Bio is unavailable."
   },
   {
@@ -2768,6 +2789,13 @@
     "author_url": "https://nips.cc/Conferences/2017/Schedule?showSpeaker=18023-9170",
     "author": "Alessandro Rudi",
     "affiliation": "INRIA",
+    "bio": "Bio is unavailable."
+  },
+  {
+    "author_id": "18036",
+    "author_url": "https://nips.cc/Conferences/2017/Schedule?showSpeaker=18036-9446",
+    "author": "Ritambhara Singh",
+    "affiliation": "University of Virginia",
     "bio": "Bio is unavailable."
   },
   {
@@ -2816,7 +2844,7 @@
     "author_id": "18130",
     "author_url": "https://nips.cc/Conferences/2017/Schedule?showSpeaker=18130-9358",
     "author": "Quoc Tran Dinh",
-    "affiliation": "Department of Statistics and Operations Research, UNC, North Carolina",
+    "affiliation": "Department of Statistics and Operations Research, University of North Carolina at Chapel Hill, North Carolina",
     "bio": "Bio is unavailable."
   },
   {
@@ -2837,7 +2865,7 @@
     "author_id": "18222",
     "author_url": "https://nips.cc/Conferences/2017/Schedule?showSpeaker=18222-8891",
     "author": "Günter Klambauer",
-    "affiliation": "Johannes Kepler University",
+    "affiliation": "LIT AI Lab / University Linz",
     "bio": "Bio is unavailable."
   },
   {
@@ -2865,7 +2893,7 @@
     "author_id": "18413",
     "author_url": "https://nips.cc/Conferences/2017/Schedule?showSpeaker=18413-9073",
     "author": "Sung-Soo Ahn",
-    "affiliation": "Korea Advanced Institute of Science and Technology",
+    "affiliation": "KAIST",
     "bio": "Bio is unavailable."
   },
   {
@@ -2981,17 +3009,10 @@
     "bio": "Bio is unavailable."
   },
   {
-    "author_id": "18853",
-    "author_url": "https://nips.cc/Conferences/2017/Schedule?showSpeaker=18853-9229",
-    "author": "Song Liu",
-    "affiliation": "The Institute of Statistical Mathematics",
-    "bio": "Bio is unavailable."
-  },
-  {
     "author_id": "18860",
     "author_url": "https://nips.cc/Conferences/2017/Schedule?showSpeaker=18860-9003",
     "author": "Serhii Havrylov",
-    "affiliation": "University of Amsterdam",
+    "affiliation": "University of Edinburgh",
     "bio": "Bio is unavailable."
   },
   {
@@ -3005,7 +3026,7 @@
     "author_id": "1895",
     "author_url": "https://nips.cc/Conferences/2017/Schedule?showSpeaker=1895-8987",
     "author": "Massimiliano Pontil",
-    "affiliation": "University College London         & Italian Institute of Technology",
+    "affiliation": "IIT & UCL",
     "bio": "Bio is unavailable."
   },
   {
@@ -3219,6 +3240,13 @@
     "bio": "John Platt is best known for his work in machine learning: the SMO algorithm for support vector machines and calibrating the output of models. He was an early adopter of convolutional neural networks in the 1990s. However, John has worked in many different fields: data systems, computational geometry, object recognition, media UIs, analog computation, handwriting recognition, and applied math. He has discovered two asteroids, and won a Technical Academy Award in 2006 for his work in computer graphics.\n\nJohn currently leads the Applied Science branch of Google Research, which works at the intersection between computer science and physical or biological science."
   },
   {
+    "author_id": "19998",
+    "author_url": "https://nips.cc/Conferences/2017/Schedule?showSpeaker=19998-8806",
+    "author": "Wei Tan",
+    "affiliation": "IBM T. J. Watson Research Center",
+    "bio": "Bio is unavailable."
+  },
+  {
     "author_id": "20024",
     "author_url": "https://nips.cc/Conferences/2017/Schedule?showSpeaker=20024-9363",
     "author": "Soumik Sarkar",
@@ -3341,7 +3369,7 @@
     "author_id": "20581",
     "author_url": "https://nips.cc/Conferences/2017/Schedule?showSpeaker=20581-9099",
     "author": "Wei Chen",
-    "affiliation": "Microsoft Research Asia",
+    "affiliation": "Microsoft Research",
     "bio": "Bio is unavailable."
   },
   {
@@ -3436,13 +3464,6 @@
     "bio": "Bio is unavailable."
   },
   {
-    "author_id": "21280",
-    "author_url": "https://nips.cc/Conferences/2017/Schedule?showSpeaker=21280-10024",
-    "author": "Hakan Bilen",
-    "affiliation": "University of Oxford",
-    "bio": "Bio is unavailable."
-  },
-  {
     "author_id": "21298",
     "author_url": "https://nips.cc/Conferences/2017/Schedule?showSpeaker=21298-9171",
     "author": "Xiaodan Liang",
@@ -3453,7 +3474,7 @@
     "author_id": "21299",
     "author_url": "https://nips.cc/Conferences/2017/Schedule?showSpeaker=21299-9458",
     "author": "Zequn Jie",
-    "affiliation": "National University of Singapore",
+    "affiliation": "Tencent AI Lab",
     "bio": "Bio is unavailable."
   },
   {
@@ -3563,7 +3584,7 @@
   },
   {
     "author_id": "21554",
-    "author_url": "https://nips.cc/Conferences/2017/Schedule?showSpeaker=21554-9413",
+    "author_url": "https://nips.cc/Conferences/2017/Schedule?showSpeaker=21554-9181",
     "author": "Eleanor Batty",
     "affiliation": "Columbia University",
     "bio": "Bio is unavailable."
@@ -3649,7 +3670,7 @@
     "author_id": "21740",
     "author_url": "https://nips.cc/Conferences/2017/Schedule?showSpeaker=21740-9361",
     "author": "Arthur Mensch",
-    "affiliation": "Inria",
+    "affiliation": "Inria Parietal",
     "bio": "Bio is unavailable."
   },
   {
@@ -3691,7 +3712,7 @@
     "author_id": "21955",
     "author_url": "https://nips.cc/Conferences/2017/Schedule?showSpeaker=21955-8937",
     "author": "Xiangru Huang",
-    "affiliation": "UT Austin",
+    "affiliation": "University of Texas at Austin",
     "bio": "I'm currently a PhD student in University of Texas at Austin. My advisor is Qixing Huang."
   },
   {
@@ -3813,13 +3834,6 @@
     "bio": "Bio is unavailable."
   },
   {
-    "author_id": "22139",
-    "author_url": "https://nips.cc/Conferences/2017/Schedule?showSpeaker=22139-9043",
-    "author": "Steven Wu",
-    "affiliation": "University of Pennsylvania",
-    "bio": "I am a post-doc researcher at Microsoft Research--New York City.\n\nMy primary research interests are in developing theory and algorithms for privacy-preserving data analysis. I often study these questions within social and economic contexts. More recently, I have also been working on designing machine learning algorithms in strategic environments and tools for adaptive data analysis. \n\nFor more info: http://www.cis.upenn.edu/~wuzhiwei/"
-  },
-  {
     "author_id": "22157",
     "author_url": "https://nips.cc/Conferences/2017/Schedule?showSpeaker=22157-9561",
     "author": "Jason Fries",
@@ -3844,7 +3858,7 @@
     "author_id": "22168",
     "author_url": "https://nips.cc/Conferences/2017/Schedule?showSpeaker=22168-8815",
     "author": "Di He",
-    "affiliation": "Microsoft Research",
+    "affiliation": "Peking University",
     "bio": "Bio is unavailable."
   },
   {
@@ -3907,7 +3921,7 @@
     "author_id": "22259",
     "author_url": "https://nips.cc/Conferences/2017/Schedule?showSpeaker=22259-9400",
     "author": "Caiming Xiong",
-    "affiliation": "Metamind, Salesforce.com",
+    "affiliation": "Salesforce Research",
     "bio": "Bio is unavailable."
   },
   {
@@ -4079,24 +4093,10 @@
     "bio": "Bio is unavailable."
   },
   {
-    "author_id": "22873",
-    "author_url": "https://nips.cc/Conferences/2017/Schedule?showSpeaker=22873-9275",
-    "author": "Chen-Yu Wei",
-    "affiliation": "Academia Sinica",
-    "bio": "Bio is unavailable."
-  },
-  {
     "author_id": "22884",
     "author_url": "https://nips.cc/Conferences/2017/Schedule?showSpeaker=22884-10049",
     "author": "Olivier Pietquin",
     "affiliation": "DeepMind",
-    "bio": "Bio is unavailable."
-  },
-  {
-    "author_id": "22888",
-    "author_url": "https://nips.cc/Conferences/2017/Schedule?showSpeaker=22888-9426",
-    "author": "Dieterich Lawson",
-    "affiliation": "Google Brain",
     "bio": "Bio is unavailable."
   },
   {
@@ -4107,45 +4107,17 @@
     "bio": "Bio is unavailable."
   },
   {
-    "author_id": "22898",
-    "author_url": "https://nips.cc/Conferences/2017/Schedule?showSpeaker=22898-8899",
-    "author": "Songbai Yan",
-    "affiliation": "University of California, San Diego",
-    "bio": "Bio is unavailable."
-  },
-  {
     "author_id": "22917",
     "author_url": "https://nips.cc/Conferences/2017/Schedule?showSpeaker=22917-9046",
     "author": "Mikhail Yurochkin",
     "affiliation": "University of Michigan",
-    "bio": "Bio is unavailable."
-  },
-  {
-    "author_id": "22918",
-    "author_url": "https://nips.cc/Conferences/2017/Schedule?showSpeaker=22918-9190",
-    "author": "Shinji Ito",
-    "affiliation": "NEC Coorporation",
-    "bio": "Bio is unavailable."
-  },
-  {
-    "author_id": "22932",
-    "author_url": "https://nips.cc/Conferences/2017/Schedule?showSpeaker=22932-8834",
-    "author": "Jonathan Scarlett",
-    "affiliation": "EPFL",
-    "bio": "Bio is unavailable."
+    "bio": "I am a 5th year PhD student in Statistics at the University of Michigan, advised by Prof. Long Nguyen. I received my bachelor degree in applied mathematics and physics from Moscow Institute of Physics and Technology. I enjoy switching topics of my research, which helps me to build broad expertise of Machine learning and be able to answer a question \"here is my data, what do I do?\" for wide range of data types and problems. For detailed description of my current and past work please check my webpage. I am currently on the job market looking for Research Scientist type positions and postdoc opportunities. Click to view my CV."
   },
   {
     "author_id": "22950",
     "author_url": "https://nips.cc/Conferences/2017/Schedule?showSpeaker=22950-8781",
     "author": "Francisco Ruiz",
     "affiliation": "Columbia University",
-    "bio": "Bio is unavailable."
-  },
-  {
-    "author_id": "22956",
-    "author_url": "https://nips.cc/Conferences/2017/Schedule?showSpeaker=22956-9411",
-    "author": "Matt Kusner",
-    "affiliation": "Alan Turing Institute",
     "bio": "Bio is unavailable."
   },
   {
@@ -4264,7 +4236,7 @@
     "author_id": "23201",
     "author_url": "https://nips.cc/Conferences/2017/Schedule?showSpeaker=23201-9259",
     "author": "Anastasiia Mishchuk",
-    "affiliation": "Private entrepreneur",
+    "affiliation": "Szkocka Research Group, Ukraine",
     "bio": "Bio is unavailable."
   },
   {
@@ -4307,13 +4279,6 @@
     "author_url": "https://nips.cc/Conferences/2017/Schedule?showSpeaker=23304-10061",
     "author": "Shay Moran",
     "affiliation": "IAS, Princeton",
-    "bio": "Bio is unavailable."
-  },
-  {
-    "author_id": "23318",
-    "author_url": "https://nips.cc/Conferences/2017/Schedule?showSpeaker=23318-8787",
-    "author": "Diane Bouchacourt",
-    "affiliation": "Facebook",
     "bio": "Bio is unavailable."
   },
   {
@@ -4390,7 +4355,7 @@
     "author_id": "23468",
     "author_url": "https://nips.cc/Conferences/2017/Schedule?showSpeaker=23468-9330",
     "author": "Bo Xin",
-    "affiliation": "Microsoft Research Asia",
+    "affiliation": "Microsoft Research",
     "bio": "Bio is unavailable."
   },
   {
@@ -4403,7 +4368,7 @@
   {
     "author_id": "23472",
     "author_url": "https://nips.cc/Conferences/2017/Schedule?showSpeaker=23472-10113",
-    "author": "John Co-Reyes",
+    "author": "JD Co-Reyes",
     "affiliation": "UC Berkeley",
     "bio": "Interested in solving intelligence. Currently working on hierarchical reinforcement learning and learning a physical intuition of the world."
   },
@@ -4439,7 +4404,7 @@
     "author_id": "23560",
     "author_url": "https://nips.cc/Conferences/2017/Schedule?showSpeaker=23560-9119",
     "author": "Naonori Ueda",
-    "affiliation": "NTT Communication Science Laboratories",
+    "affiliation": "NTT Communication Science Laboratories/ RIKEN AIP",
     "bio": "Bio is unavailable."
   },
   {
@@ -4656,7 +4621,7 @@
     "author_id": "24236",
     "author_url": "https://nips.cc/Conferences/2017/Schedule?showSpeaker=24236-9061",
     "author": "Davis Foote",
-    "affiliation": "UC Berkeley",
+    "affiliation": "Google Brain",
     "bio": "Bio is unavailable."
   },
   {
@@ -4740,7 +4705,7 @@
     "author_id": "24437",
     "author_url": "https://nips.cc/Conferences/2017/Schedule?showSpeaker=24437-9275",
     "author": "Yi-Te Hong",
-    "affiliation": "Dept. of Computer Science, National Taiwan University",
+    "affiliation": "National Taiwan University",
     "bio": "Bio is unavailable."
   },
   {
@@ -4761,7 +4726,7 @@
     "author_id": "24499",
     "author_url": "https://nips.cc/Conferences/2017/Schedule?showSpeaker=24499-8857",
     "author": "Zhanxing Zhu",
-    "affiliation": "Beijing Institute of Big Data Research",
+    "affiliation": "Peking University / Beijing Institute of Big Data Research",
     "bio": "Bio is unavailable."
   },
   {
@@ -4895,7 +4860,7 @@
     "author_url": "https://nips.cc/Conferences/2017/Schedule?showSpeaker=25190-9074",
     "author": "Seunghyun Park",
     "affiliation": "Seoul National University",
-    "bio": "Bio is unavailable."
+    "bio": "Seoul National University (and also in Korea University)\nData Science Laboratory & Artificial Intelligence Laboratory\nHaeul's and Gon's father"
   },
   {
     "author_id": "2520",
@@ -4999,7 +4964,7 @@
     "author_id": "25333",
     "author_url": "https://nips.cc/Conferences/2017/Schedule?showSpeaker=25333-9008",
     "author": "Yu Cheng",
-    "affiliation": "IBM T.J. Watson Research Center",
+    "affiliation": "AI Foundations, IBM Research",
     "bio": "Bio is unavailable."
   },
   {
@@ -5082,7 +5047,7 @@
     "author_id": "25573",
     "author_url": "https://nips.cc/Conferences/2017/Schedule?showSpeaker=25573-9124",
     "author": "Christopher Beckham",
-    "affiliation": "Montreal Institute of Learning Algorithms",
+    "affiliation": "MILA",
     "bio": "Bio is unavailable."
   },
   {
@@ -5149,17 +5114,10 @@
     "bio": "Bio is unavailable."
   },
   {
-    "author_id": "26050",
-    "author_url": "https://nips.cc/Conferences/2017/Schedule?showSpeaker=26050-9445",
-    "author": "Arsenii Ashukha",
-    "affiliation": "Moscow Institute of Physics and Technology",
-    "bio": "I’m getting PhD at University of Amsterdam jointly with Yandex Research, focused on Bayesian Deep Learning by supervision of Dmitry Vetrov and Max Welling."
-  },
-  {
     "author_id": "26061",
     "author_url": "https://nips.cc/Conferences/2017/Schedule?showSpeaker=26061-9445",
     "author": "Dmitry Molchanov",
-    "affiliation": "Skolkovo Institute of Science and Technology",
+    "affiliation": "Yandex",
     "bio": "Bio is unavailable."
   },
   {
@@ -5229,7 +5187,7 @@
     "author_id": "26227",
     "author_url": "https://nips.cc/Conferences/2017/Schedule?showSpeaker=26227-9458",
     "author": "Xiaojie Jin",
-    "affiliation": "National University of Singapore",
+    "affiliation": "National University of Singapore Snap Research",
     "bio": "Bio is unavailable."
   },
   {
@@ -5330,10 +5288,10 @@
     "bio": "Bio is unavailable."
   },
   {
-    "author_id": "26334",
-    "author_url": "https://nips.cc/Conferences/2017/Schedule?showSpeaker=26334-9299",
-    "author": "Ersin Yumer",
-    "affiliation": "Adobe Research",
+    "author_id": "26338",
+    "author_url": "https://nips.cc/Conferences/2017/Schedule?showSpeaker=26338-9099",
+    "author": "Qiwei Ye",
+    "affiliation": "Microsoft Research",
     "bio": "Bio is unavailable."
   },
   {
@@ -5519,6 +5477,20 @@
     "bio": "Bio is unavailable."
   },
   {
+    "author_id": "27594",
+    "author_url": "https://nips.cc/Conferences/2017/Schedule?showSpeaker=27594-9061",
+    "author": "John Schulman",
+    "affiliation": "OpenAI",
+    "bio": "Bio is unavailable."
+  },
+  {
+    "author_id": "27688",
+    "author_url": "https://nips.cc/Conferences/2017/Schedule?showSpeaker=27688-8957",
+    "author": "Cy Gong",
+    "affiliation": "Peking University",
+    "bio": "Bio is unavailable."
+  },
+  {
     "author_id": "2781",
     "author_url": "https://nips.cc/Conferences/2017/Schedule?showSpeaker=2781-8843",
     "author": "Prof. Darrell",
@@ -5536,7 +5508,7 @@
     "author_id": "27889",
     "author_url": "https://nips.cc/Conferences/2017/Schedule?showSpeaker=27889-9174",
     "author": "Masaaki Imaizumi",
-    "affiliation": "Institute of Statistical Mathematics / RIKEN Center for AIP",
+    "affiliation": "Institute of Statistical Mathematics / RIKEN",
     "bio": "Bio is unavailable."
   },
   {
@@ -5566,13 +5538,6 @@
     "author": "Steven Demers",
     "affiliation": "Cognescent",
     "bio": "Steve is a veteran of research in a wide variety of fields.  He received his BS in Electrical Engineering from Cornell and subsequently won the Powell Fellowship while at the cinema school at USC.  Afterwards he headed Oscar winning special effects and R&D teams on movies such as ‘Matrix’ and ‘Lord of the Rings’ which defined processes important to film work today (in particular, technical achievement awards won for ‘Bullet-time’ effect and the subsurface rendering of Gollum’s skin).  After ten years as a supervisor and art director in the film industry he decided to plunge back into graduate school and obtained a PhD in Physics from Caltech in 2014.  His work focused on computational chemistry approaches in finding novel photovoltaic materials.  During this time he worked closely with multiple research groups both at Caltech and Fortune 500 companies.  Deciding to leave academia, upon graduation he joined a management-consulting firm where he headed the analytics department and managed engagements onsite.  He joined Cognescent recently to work on cutting-edge brain-machine interfaces."
-  },
-  {
-    "author_id": "2809",
-    "author_url": "https://nips.cc/Conferences/2017/Schedule?showSpeaker=2809-9026",
-    "author": "Avrim Blum",
-    "affiliation": "CMU",
-    "bio": "Bio is unavailable."
   },
   {
     "author_id": "281",
@@ -5605,8 +5570,8 @@
   {
     "author_id": "28206",
     "author_url": "https://nips.cc/Conferences/2017/Schedule?showSpeaker=28206-9281",
-    "author": "fjwolski Wolski",
-    "affiliation": "OpenAI",
+    "author": "Dwight Crow",
+    "affiliation": "Whisper.ai",
     "bio": "Bio is unavailable."
   },
   {
@@ -5659,6 +5624,13 @@
     "bio": "Bio is unavailable."
   },
   {
+    "author_id": "28369",
+    "author_url": "https://nips.cc/Conferences/2017/Schedule?showSpeaker=28369-8936",
+    "author": "Weidong Cai",
+    "affiliation": "The University of Sydney",
+    "bio": "Bio is unavailable."
+  },
+  {
     "author_id": "28378",
     "author_url": "https://nips.cc/Conferences/2017/Schedule?showSpeaker=28378-8922",
     "author": "Okke Schrijvers",
@@ -5683,7 +5655,7 @@
     "author_id": "28536",
     "author_url": "https://nips.cc/Conferences/2017/Schedule?showSpeaker=28536-9183",
     "author": "Artur Speiser",
-    "affiliation": "research center caesar Bonn",
+    "affiliation": "research center caesar, an associate of the Max Planck Society",
     "bio": "Bio is unavailable."
   },
   {
@@ -5815,8 +5787,8 @@
   {
     "author_id": "29919",
     "author_url": "https://nips.cc/Conferences/2017/Schedule?showSpeaker=29919-9763",
-    "author": "Han Cai",
-    "affiliation": "Shanghai Jiao Tong University",
+    "author": "Rui Luo",
+    "affiliation": "University College London",
     "bio": "Bio is unavailable."
   },
   {
@@ -5879,7 +5851,7 @@
     "author_id": "3032",
     "author_url": "https://nips.cc/Conferences/2017/Schedule?showSpeaker=3032-8906",
     "author": "Yoshinobu Kawahara",
-    "affiliation": "Osaka University",
+    "affiliation": "Osaka University / RIKEN",
     "bio": "Bio is unavailable."
   },
   {
@@ -5907,7 +5879,7 @@
     "author_id": "30494",
     "author_url": "https://nips.cc/Conferences/2017/Schedule?showSpeaker=30494-9259",
     "author": "Dmytro Mishkin",
-    "affiliation": "Czech Technical University in Prague, FEE",
+    "affiliation": "Czech Technical University in Prague",
     "bio": "PhD candidate at Czech Technical University in Prague. Co-founder of Clear Research\n\nWork in computer vision since 2012. Commercial research: developed core technology for madora.co — personalized, visual based shopping app at Clear Research. Academy research: developed MODS – state-of-art algorithm for wide baseline stereo matching and LSUV – state-of-art method for convolution neural networks initialization.\n\nCo-founder of Szkocka Research Group – Ukrainian open research community for computer science."
   },
   {
@@ -5922,7 +5894,7 @@
     "author_url": "https://nips.cc/Conferences/2017/Schedule?showSpeaker=30507-9268",
     "author": "Gauri Jagatap",
     "affiliation": "Iowa State University",
-    "bio": "Bio is unavailable."
+    "bio": "Graduate student at Iowa State University"
   },
   {
     "author_id": "30508",
@@ -6114,6 +6086,13 @@
     "bio": "Bio is unavailable."
   },
   {
+    "author_id": "30823",
+    "author_url": "https://nips.cc/Conferences/2017/Schedule?showSpeaker=30823-10103",
+    "author": "Hadrien Hendrikx",
+    "affiliation": "EPFL",
+    "bio": "Bio is unavailable."
+  },
+  {
     "author_id": "30827",
     "author_url": "https://nips.cc/Conferences/2017/Schedule?showSpeaker=30827-9264",
     "author": "Yonatan Geifman",
@@ -6123,7 +6102,7 @@
   {
     "author_id": "30838",
     "author_url": "https://nips.cc/Conferences/2017/Schedule?showSpeaker=30838-8920",
-    "author": "zhoutong zhang",
+    "author": "Zhoutong Zhang",
     "affiliation": "MIT",
     "bio": "Bio is unavailable."
   },
@@ -6152,7 +6131,7 @@
     "author_id": "30856",
     "author_url": "https://nips.cc/Conferences/2017/Schedule?showSpeaker=30856-9191",
     "author": "Mali Sundaresan",
-    "affiliation": "Indian Institute of Science",
+    "affiliation": "Indian Institute of Science, Bangalore",
     "bio": "Bio is unavailable."
   },
   {
@@ -6166,7 +6145,7 @@
     "author_id": "30864",
     "author_url": "https://nips.cc/Conferences/2017/Schedule?showSpeaker=30864-9015",
     "author": "Zhiao Huang",
-    "affiliation": "Tsinghua University",
+    "affiliation": "IIIS, Tsinghua University",
     "bio": "Bio is unavailable."
   },
   {
@@ -6240,17 +6219,10 @@
     "bio": "Bio is unavailable."
   },
   {
-    "author_id": "30912",
-    "author_url": "https://nips.cc/Conferences/2017/Schedule?showSpeaker=30912-9142",
-    "author": "Matteo Papini",
-    "affiliation": "Politecnico di Milano",
-    "bio": "Bio is unavailable."
-  },
-  {
     "author_id": "30919",
     "author_url": "https://nips.cc/Conferences/2017/Schedule?showSpeaker=30919-8977",
     "author": "Yu Zhang",
-    "affiliation": "Massachusetts Institute of Technology",
+    "affiliation": "Google Brain",
     "bio": "Bio is unavailable."
   },
   {
@@ -6264,7 +6236,7 @@
     "author_id": "30929",
     "author_url": "https://nips.cc/Conferences/2017/Schedule?showSpeaker=30929-9193",
     "author": "Xiaoqian Wang",
-    "affiliation": "University of Texas at Arlington",
+    "affiliation": "University of Pittsburgh",
     "bio": "Bio is unavailable."
   },
   {
@@ -6397,7 +6369,7 @@
     "author_id": "31037",
     "author_url": "https://nips.cc/Conferences/2017/Schedule?showSpeaker=31037-9158",
     "author": "Jaouad Mourtada",
-    "affiliation": "Centre de Mathématiques Appliquées, Ecole Polytechnique",
+    "affiliation": "Ecole Polytechnique",
     "bio": "Bio is unavailable."
   },
   {
@@ -6534,17 +6506,10 @@
     "bio": "Bio is unavailable."
   },
   {
-    "author_id": "31131",
-    "author_url": "https://nips.cc/Conferences/2017/Schedule?showSpeaker=31131-8806",
-    "author": "Wei Tan",
-    "affiliation": "IBM T. J. Watson Research Center",
-    "bio": "Bio is unavailable."
-  },
-  {
     "author_id": "31136",
     "author_url": "https://nips.cc/Conferences/2017/Schedule?showSpeaker=31136-9431",
     "author": "Hubert Ramsauer",
-    "affiliation": "Johannes Kepler Universität Linz",
+    "affiliation": "LIT AI Lab / University Linz",
     "bio": "Bio is unavailable."
   },
   {
@@ -6762,13 +6727,6 @@
     "author_url": "https://nips.cc/Conferences/2017/Schedule?showSpeaker=3151-9383",
     "author": "Honglak Lee",
     "affiliation": "Google / U. Michigan",
-    "bio": "Bio is unavailable."
-  },
-  {
-    "author_id": "31519",
-    "author_url": "https://nips.cc/Conferences/2017/Schedule?showSpeaker=31519-8993",
-    "author": "Alberto Maria Metelli",
-    "affiliation": "Politecnico di Milano",
     "bio": "Bio is unavailable."
   },
   {
@@ -7151,7 +7109,7 @@
   {
     "author_id": "31904",
     "author_url": "https://nips.cc/Conferences/2017/Schedule?showSpeaker=31904-8791",
-    "author": "Hrishikesh Aradhye",
+    "author": "Hrishi Aradhye",
     "affiliation": "Google",
     "bio": "Bio is unavailable."
   },
@@ -7233,6 +7191,13 @@
     "bio": "Bio is unavailable."
   },
   {
+    "author_id": "321",
+    "author_url": "https://nips.cc/Conferences/2017/Schedule?showSpeaker=321-10020",
+    "author": "Alexandru Niculescu-Mizil",
+    "affiliation": "NEC Laboratories America",
+    "bio": "Bio is unavailable."
+  },
+  {
     "author_id": "32100",
     "author_url": "https://nips.cc/Conferences/2017/Schedule?showSpeaker=32100-10015",
     "author": "Sergey Yekhanin",
@@ -7250,7 +7215,7 @@
     "author_id": "32115",
     "author_url": "https://nips.cc/Conferences/2017/Schedule?showSpeaker=32115-8908",
     "author": "Juliette Chevallier",
-    "affiliation": "Ecole polytechnique",
+    "affiliation": "CMAP, École polytechnique",
     "bio": "Bio is unavailable."
   },
   {
@@ -7443,6 +7408,13 @@
     "bio": "Bio is unavailable."
   },
   {
+    "author_id": "32582",
+    "author_url": "https://nips.cc/Conferences/2017/Schedule?showSpeaker=32582-9446",
+    "author": "Arshdeep Sekhon",
+    "affiliation": "University of Virginia",
+    "bio": "Bio is unavailable."
+  },
+  {
     "author_id": "32602",
     "author_url": "https://nips.cc/Conferences/2017/Schedule?showSpeaker=32602-9380",
     "author": "Yuqian Zhang",
@@ -7516,7 +7488,7 @@
     "author_id": "32793",
     "author_url": "https://nips.cc/Conferences/2017/Schedule?showSpeaker=32793-9134",
     "author": "David Klindt",
-    "affiliation": "CIN, University of Tuebingen",
+    "affiliation": "University of Tübingen",
     "bio": "Bio is unavailable."
   },
   {
@@ -7639,6 +7611,13 @@
     "bio": "Bio is unavailable."
   },
   {
+    "author_id": "33742",
+    "author_url": "https://nips.cc/Conferences/2017/Schedule?showSpeaker=33742-8897",
+    "author": "Clara De Paolis Kaluza",
+    "affiliation": "Northeastern University",
+    "bio": "Bio is unavailable."
+  },
+  {
     "author_id": "33782",
     "author_url": "https://nips.cc/Conferences/2017/Schedule?showSpeaker=33782-9363",
     "author": "Zhanhong Jiang",
@@ -7698,7 +7677,7 @@
     "author_id": "34022",
     "author_url": "https://nips.cc/Conferences/2017/Schedule?showSpeaker=34022-9012",
     "author": "Futoshi Futami",
-    "affiliation": "University of Tokyo",
+    "affiliation": "University of Tokyo/RIKEN",
     "bio": "Bio is unavailable."
   },
   {
@@ -7712,7 +7691,7 @@
     "author_id": "34076",
     "author_url": "https://nips.cc/Conferences/2017/Schedule?showSpeaker=34076-8921",
     "author": "Marcel Nonnenmacher",
-    "affiliation": "research center caesar an associate of the Max Planck Society",
+    "affiliation": "research center caesar, an associate of the Max Planck Society",
     "bio": "Bio is unavailable."
   },
   {
@@ -7881,6 +7860,13 @@
     "author_url": "https://nips.cc/Conferences/2017/Schedule?showSpeaker=34154-8850",
     "author": "Xingyuan Sun",
     "affiliation": "Shanghai Jiao Tong University",
+    "bio": "Bio is unavailable."
+  },
+  {
+    "author_id": "34158",
+    "author_url": "https://nips.cc/Conferences/2017/Schedule?showSpeaker=34158-9124",
+    "author": "Evan Racah",
+    "affiliation": "University of Montreal",
     "bio": "Bio is unavailable."
   },
   {
@@ -8153,7 +8139,7 @@
     "author_id": "34291",
     "author_url": "https://nips.cc/Conferences/2017/Schedule?showSpeaker=34291-9306",
     "author": "Stefanos Eleftheriadis",
-    "affiliation": "Prowler.io",
+    "affiliation": "PROWLER.io",
     "bio": "Bio is unavailable."
   },
   {
@@ -8178,17 +8164,10 @@
     "bio": "Bio is unavailable."
   },
   {
-    "author_id": "34307",
-    "author_url": "https://nips.cc/Conferences/2017/Schedule?showSpeaker=34307-10103",
-    "author": "Hadrien Hendrikx",
-    "affiliation": "EPFL",
-    "bio": "Bio is unavailable."
-  },
-  {
     "author_id": "34310",
     "author_url": "https://nips.cc/Conferences/2017/Schedule?showSpeaker=34310-8862",
     "author": "Ilja Kuzborskij",
-    "affiliation": "EPFL",
+    "affiliation": "EPFL / Google Brain Intern",
     "bio": "Bio is unavailable."
   },
   {
@@ -8262,6 +8241,13 @@
     "bio": "Bio is unavailable."
   },
   {
+    "author_id": "34363",
+    "author_url": "https://nips.cc/Conferences/2017/Schedule?showSpeaker=34363-10015",
+    "author": "Luis Ceze",
+    "affiliation": "University of Washington",
+    "bio": "Bio is unavailable."
+  },
+  {
     "author_id": "34365",
     "author_url": "https://nips.cc/Conferences/2017/Schedule?showSpeaker=34365-8964",
     "author": "Xin Wang",
@@ -8279,7 +8265,7 @@
     "author_id": "34380",
     "author_url": "https://nips.cc/Conferences/2017/Schedule?showSpeaker=34380-9423",
     "author": "Georgios Exarchakis",
-    "affiliation": "Ecole Normale Supérieure",
+    "affiliation": "École Normale Supérieure",
     "bio": "Bio is unavailable."
   },
   {
@@ -8301,7 +8287,7 @@
     "author_url": "https://nips.cc/Conferences/2017/Schedule?showSpeaker=34409-9284",
     "author": "Robert Bamler",
     "affiliation": "Disney Research",
-    "bio": "Robert Bamler is a Postdoctoral Associate at Disney Research, Pittsburgh. He works on scalable methods for approximate Bayesian inference and on applications to natural language processing. Robert received his PhD in theoretical condensed matter physics from University of Cologne, Germany in 2016."
+    "bio": "Robert Bamler is a Postdoctoral Associate at Disney Research. He works on scalable methods for approximate Bayesian inference and on applications to natural language processing. Robert received his PhD in theoretical condensed matter physics from University of Cologne, Germany in 2016."
   },
   {
     "author_id": "34416",
@@ -8315,6 +8301,13 @@
     "author_url": "https://nips.cc/Conferences/2017/Schedule?showSpeaker=34418-9423",
     "author": "Matthew Hirn",
     "affiliation": "Michigan State University",
+    "bio": "Bio is unavailable."
+  },
+  {
+    "author_id": "34432",
+    "author_url": "https://nips.cc/Conferences/2017/Schedule?showSpeaker=34432-10013",
+    "author": "Alireza Aghasi",
+    "affiliation": "Institute for Insight",
     "bio": "Bio is unavailable."
   },
   {
@@ -8360,6 +8353,13 @@
     "bio": "Bio is unavailable."
   },
   {
+    "author_id": "34458",
+    "author_url": "https://nips.cc/Conferences/2017/Schedule?showSpeaker=34458-8950",
+    "author": "Tsinghua University CAO",
+    "affiliation": "School of Software, Tsinghua University",
+    "bio": "Bio is unavailable."
+  },
+  {
     "author_id": "34471",
     "author_url": "https://nips.cc/Conferences/2017/Schedule?showSpeaker=34471-10038",
     "author": "SIYUAN MA",
@@ -8384,7 +8384,7 @@
     "author_id": "34489",
     "author_url": "https://nips.cc/Conferences/2017/Schedule?showSpeaker=34489-9089",
     "author": "Aurko Roy",
-    "affiliation": "Google Brain",
+    "affiliation": "Google",
     "bio": "Bio is unavailable."
   },
   {
@@ -8507,6 +8507,13 @@
     "bio": "Bio is unavailable."
   },
   {
+    "author_id": "34632",
+    "author_url": "https://nips.cc/Conferences/2017/Schedule?showSpeaker=34632-8993",
+    "author": "Alberto Maria Metelli",
+    "affiliation": "Politecnico di Milano",
+    "bio": "Bio is unavailable."
+  },
+  {
     "author_id": "34639",
     "author_url": "https://nips.cc/Conferences/2017/Schedule?showSpeaker=34639-9289",
     "author": "Zhenwen Dai",
@@ -8587,7 +8594,7 @@
     "author_id": "34767",
     "author_url": "https://nips.cc/Conferences/2017/Schedule?showSpeaker=34767-9163",
     "author": "Yunzhu Li",
-    "affiliation": "Massachusetts Institute of Technology",
+    "affiliation": "MIT",
     "bio": "Bio is unavailable."
   },
   {
@@ -8650,7 +8657,7 @@
     "author_id": "34811",
     "author_url": "https://nips.cc/Conferences/2017/Schedule?showSpeaker=34811-9229",
     "author": "Akiko Takeda",
-    "affiliation": "The Institute of Statistical Mathematics",
+    "affiliation": "The Institute of Statistical Mathematics / RIKEN",
     "bio": "Bio is unavailable."
   },
   {
@@ -8665,6 +8672,13 @@
     "author_url": "https://nips.cc/Conferences/2017/Schedule?showSpeaker=34829-8951",
     "author": "Daoqiang Zhang",
     "affiliation": "Nanjing University of Aeronautics and Astronautics",
+    "bio": "Bio is unavailable."
+  },
+  {
+    "author_id": "34833",
+    "author_url": "https://nips.cc/Conferences/2017/Schedule?showSpeaker=34833-9189",
+    "author": "Taufik Xu",
+    "affiliation": "Tsinghua University",
     "bio": "Bio is unavailable."
   },
   {
@@ -8706,7 +8720,7 @@
     "author_id": "34890",
     "author_url": "https://nips.cc/Conferences/2017/Schedule?showSpeaker=34890-9331",
     "author": "Christopher Srinivasa",
-    "affiliation": "University of Toronto/RBC Research Institute",
+    "affiliation": "University of Toronto/Borealis AI",
     "bio": "Bio is unavailable."
   },
   {
@@ -8915,9 +8929,9 @@
   {
     "author_id": "35161",
     "author_url": "https://nips.cc/Conferences/2017/Schedule?showSpeaker=35161-10090",
-    "author": "Sebastian Stich",
+    "author": "Sebastian U Stich",
     "affiliation": "EPFL",
-    "bio": "Bio is unavailable."
+    "bio": "Dr. Sebastian Stich is a postdoctoral researcher in machine learning at EPF Lausanne. Before that, he was at the interdisciplinary Center for Operations Research and Econometrics (CORE) in Louvain-la-Neuve (Belgium), working on optimization algorithms for large-scale applications. He has earned his PhD in Computer Science from ETH Zurich in 2014 and a MSc in Mathematics, also from ETH Zurich. \nHe is broadly interested in the theoretical analysis of optimization algorithms for machine learning applications (especially coordinate descent, accelerated methods, randomized methods and derivative-free methods)."
   },
   {
     "author_id": "35186",
@@ -9049,7 +9063,7 @@
     "author_id": "3531",
     "author_url": "https://nips.cc/Conferences/2017/Schedule?showSpeaker=3531-9001",
     "author": "Liva Ralaivola",
-    "affiliation": "LIF, Aix-Marseille University, CNRS",
+    "affiliation": "LIF, IUF, Aix-Marseille University, CNRS",
     "bio": "Bio is unavailable."
   },
   {
@@ -9221,13 +9235,6 @@
     "bio": "Bio is unavailable."
   },
   {
-    "author_id": "35693",
-    "author_url": "https://nips.cc/Conferences/2017/Schedule?showSpeaker=35693-8798",
-    "author": "Shaobing Gao",
-    "affiliation": "Sichuan University",
-    "bio": "I am interested in Computer Vision and Biologically Inspired Vision (in particular, Color Vision, Visual Adaptation, and Neural Network).\n\n2013-2017\nPh.D. of Biomedical Engineering, University of Electronic Science and Technology of China (UESTC), China\n2015-2016\nJoint-Ph.D. of Computational Neuroscience, University College London, UK\n2010-2013\nM.E. of Biomedical Engineering, UESTC, China\n2006-2010\nB.E. of Biomedical Engineering, SWUST, China"
-  },
-  {
     "author_id": "35694",
     "author_url": "https://nips.cc/Conferences/2017/Schedule?showSpeaker=35694-8798",
     "author": "David Barber",
@@ -9266,7 +9273,7 @@
     "author_id": "35700",
     "author_url": "https://nips.cc/Conferences/2017/Schedule?showSpeaker=35700-8805",
     "author": "Jianshu Li",
-    "affiliation": "National University of Singapo",
+    "affiliation": "National University of Singapore",
     "bio": "Bio is unavailable."
   },
   {
@@ -9329,7 +9336,7 @@
     "author_id": "35709",
     "author_url": "https://nips.cc/Conferences/2017/Schedule?showSpeaker=35709-8807",
     "author": "Saurabh Verma",
-    "affiliation": "University of Minnesota",
+    "affiliation": "University of Minnesota Twin Cities",
     "bio": "I am a PhD candidate (Fall 2015 - Present) at the Department of Computer Science, University of Minnesota Twin Cities. My current research focuses on developing Deep Convolutional Networks Models for Graphs. In the past, I have worked on research problems related to learning from high dimensional data, manifold learning, semi-supervised learning in natural language processing, optimization and anomaly detection.\nMy Webpage and Blog."
   },
   {
@@ -9403,7 +9410,7 @@
     "author_id": "35720",
     "author_url": "https://nips.cc/Conferences/2017/Schedule?showSpeaker=35720-8813",
     "author": "Erika Lu",
-    "affiliation": "MIT",
+    "affiliation": "University of Oxford",
     "bio": "Bio is unavailable."
   },
   {
@@ -9431,7 +9438,7 @@
     "author_id": "35724",
     "author_url": "https://nips.cc/Conferences/2017/Schedule?showSpeaker=35724-8936",
     "author": "Hong Chen",
-    "affiliation": "University of Texas at Arlington",
+    "affiliation": "University of Pittsburgh",
     "bio": "Bio is unavailable."
   },
   {
@@ -9439,13 +9446,6 @@
     "author_url": "https://nips.cc/Conferences/2017/Schedule?showSpeaker=35725-8819",
     "author": "Krzysztof M Choromanski",
     "affiliation": "Google Brain Robotics",
-    "bio": "Bio is unavailable."
-  },
-  {
-    "author_id": "35726",
-    "author_url": "https://nips.cc/Conferences/2017/Schedule?showSpeaker=35726-8820",
-    "author": "Isabel Valera",
-    "affiliation": "University of Cambridge",
     "bio": "Bio is unavailable."
   },
   {
@@ -9514,7 +9514,7 @@
     "author_id": "35735",
     "author_url": "https://nips.cc/Conferences/2017/Schedule?showSpeaker=35735-8825",
     "author": "Cong Han Lim",
-    "affiliation": "UW-Madison",
+    "affiliation": "University of Wisconsin-Madison",
     "bio": "Bio is unavailable."
   },
   {
@@ -9535,6 +9535,7 @@
     "author_id": "35738",
     "author_url": "https://nips.cc/Conferences/2017/Schedule?showSpeaker=35738-10053",
     "author": "Anton Osokin",
+    "affiliation": "CS HSE",
     "bio": "Bio is unavailable."
   },
   {
@@ -9737,17 +9738,10 @@
     "bio": "Bio is unavailable."
   },
   {
-    "author_id": "35768",
-    "author_url": "https://nips.cc/Conferences/2017/Schedule?showSpeaker=35768-8854",
-    "author": "Zihang Dai",
-    "affiliation": "CMU",
-    "bio": "Bio is unavailable."
-  },
-  {
     "author_id": "35769",
     "author_url": "https://nips.cc/Conferences/2017/Schedule?showSpeaker=35769-8854",
     "author": "Yulun Du",
-    "affiliation": "CMU",
+    "affiliation": "Carnegie Mellon University",
     "bio": "Bio is unavailable."
   },
   {
@@ -9807,12 +9801,6 @@
     "bio": "Bio is unavailable."
   },
   {
-    "author_id": "35778",
-    "author_url": "https://nips.cc/Conferences/2017/Schedule?showSpeaker=35778-8861",
-    "author": "Giambattista Parascandolo",
-    "bio": "Bio is unavailable."
-  },
-  {
     "author_id": "35779",
     "author_url": "https://nips.cc/Conferences/2017/Schedule?showSpeaker=35779-10064",
     "author": "Thomas Breuel",
@@ -9830,12 +9818,6 @@
     "author_url": "https://nips.cc/Conferences/2017/Schedule?showSpeaker=35781-8866",
     "author": "Soummya Kar",
     "affiliation": "Carnegie Mellon University",
-    "bio": "Bio is unavailable."
-  },
-  {
-    "author_id": "35782",
-    "author_url": "https://nips.cc/Conferences/2017/Schedule?showSpeaker=35782-8868",
-    "author": "Rong Jin",
     "bio": "Bio is unavailable."
   },
   {
@@ -9870,7 +9852,7 @@
     "author_id": "35787",
     "author_url": "https://nips.cc/Conferences/2017/Schedule?showSpeaker=35787-8872",
     "author": "Francesco Locatello",
-    "affiliation": "ETH Zurich",
+    "affiliation": "MPI - ETH Zürich",
     "bio": "Bio is unavailable."
   },
   {
@@ -9946,7 +9928,7 @@
     "author_id": "35798",
     "author_url": "https://nips.cc/Conferences/2017/Schedule?showSpeaker=35798-8881",
     "author": "John D Simeral",
-    "affiliation": "Brown University, VA",
+    "affiliation": "Brown University",
     "bio": "Dr. Simeral is a Assistant Professor of Engineering (Research) at Brown University, a Research Biomedical Engineer with the Department of Veterans Affairs Rehabilitation R&D Service, and leader of the  focus area Restoring Communication and Mobility in the VA Center for Neurorestoration and Neurotechnology. His research is dedicated to integrating neuroscience and engineering disciplines to create unprecedented neural prosthetic technologies to enable communication and control of assistive devices by individuals with paralysis or locked-in syndrome resulting from spinal cord injury, ALS (Lou Gehrig's disease), stoke and other neurological disorders. He directs development of the system architecture, hardware and software for the BrainGate Neural Interface System (in clinical trial, IDE) that decodes intracortical brain signals into commands to control computer cursors, dexterous prosthetic robotic arms and hands, and other assistive technologies. In addition to research expertise in the neurophysiological basis of movement, Dr. Simeral has a decade of industry engineering experience including the design of massively parallel computer systems and high performance microelectronic VLSI microprocessors."
   },
   {
@@ -9960,7 +9942,7 @@
     "author_id": "35800",
     "author_url": "https://nips.cc/Conferences/2017/Schedule?showSpeaker=35800-8881",
     "author": "Erik Sudderth",
-    "affiliation": "UC Irvine",
+    "affiliation": "University of California, Irvine",
     "bio": "Bio is unavailable."
   },
   {
@@ -9995,7 +9977,7 @@
     "author_id": "35805",
     "author_url": "https://nips.cc/Conferences/2017/Schedule?showSpeaker=35805-8884",
     "author": "Bo Dai",
-    "affiliation": "CUHK",
+    "affiliation": "The Chinese University of Hong Kong",
     "bio": "Bio is unavailable."
   },
   {
@@ -10029,7 +10011,7 @@
     "author_id": "35810",
     "author_url": "https://nips.cc/Conferences/2017/Schedule?showSpeaker=35810-8889",
     "author": "Max Hinne",
-    "affiliation": "Donders Institute",
+    "affiliation": "Radboud University",
     "bio": "Bio is unavailable."
   },
   {
@@ -10145,7 +10127,7 @@
     "author_id": "35827",
     "author_url": "https://nips.cc/Conferences/2017/Schedule?showSpeaker=35827-8902",
     "author": "Bradly Stadie",
-    "affiliation": "OpenAI, UC Berkeley",
+    "affiliation": "OpenAI",
     "bio": "Bio is unavailable."
   },
   {
@@ -10248,6 +10230,7 @@
     "author_id": "35842",
     "author_url": "https://nips.cc/Conferences/2017/Schedule?showSpeaker=35842-10031",
     "author": "Shipra Agrawal",
+    "affiliation": "Columbia University",
     "bio": "Bio is unavailable."
   },
   {
@@ -10310,14 +10293,14 @@
     "author_id": "35851",
     "author_url": "https://nips.cc/Conferences/2017/Schedule?showSpeaker=35851-9095",
     "author": "Mingrui Liu",
-    "affiliation": "University of Iowa",
+    "affiliation": "The University of Iowa",
     "bio": "Bio is unavailable."
   },
   {
     "author_id": "35852",
     "author_url": "https://nips.cc/Conferences/2017/Schedule?showSpeaker=35852-9112",
     "author": "Qihang Lin",
-    "affiliation": "Univ Iowa, faculty",
+    "affiliation": "University of Iowa",
     "bio": "Bio is unavailable."
   },
   {
@@ -10338,14 +10321,14 @@
     "author_id": "35855",
     "author_url": "https://nips.cc/Conferences/2017/Schedule?showSpeaker=35855-8921",
     "author": "Giacomo Bassetto",
-    "affiliation": "research center caesar",
+    "affiliation": "research center caesar, an associate of the Max Planck Society",
     "bio": "Bio is unavailable."
   },
   {
     "author_id": "35856",
     "author_url": "https://nips.cc/Conferences/2017/Schedule?showSpeaker=35856-8921",
-    "author": "Kaan Oecal",
-    "affiliation": "research center caesar",
+    "author": "Kaan Öcal",
+    "affiliation": "research center caesar, an associate of the Max Planck Society",
     "bio": "Bio is unavailable."
   },
   {
@@ -10366,7 +10349,7 @@
     "author_id": "35859",
     "author_url": "https://nips.cc/Conferences/2017/Schedule?showSpeaker=35859-8924",
     "author": "Kartik Ahuja",
-    "affiliation": "UCLA",
+    "affiliation": "University of California, Los Angeles",
     "bio": "Bio is unavailable."
   },
   {
@@ -10464,7 +10447,7 @@
     "author_id": "35873",
     "author_url": "https://nips.cc/Conferences/2017/Schedule?showSpeaker=35873-8934",
     "author": "Hao Yu",
-    "affiliation": "Univ. of Southern California",
+    "affiliation": "University of Southern California",
     "bio": "Bio is unavailable."
   },
   {
@@ -10528,7 +10511,7 @@
     "author_url": "https://nips.cc/Conferences/2017/Schedule?showSpeaker=35882-10054",
     "author": "Wei Wen",
     "affiliation": "Duke University",
-    "bio": "I’m a Ph.D. student in Duke University. My research interests include efficient deep learning, model structure learning and brain-inspired computing systems, with applications in computer vision and natural language processing."
+    "bio": "I’m a Ph.D. student in Duke University. My research interests include scalable deep learning, model compression, structure learning and deep neural network understanding."
   },
   {
     "author_id": "35883",
@@ -10548,6 +10531,7 @@
     "author_id": "35885",
     "author_url": "https://nips.cc/Conferences/2017/Schedule?showSpeaker=35885-8944",
     "author": "Daniel Hsu",
+    "affiliation": "Columbia University",
     "bio": "Bio is unavailable."
   },
   {
@@ -10561,6 +10545,7 @@
     "author_id": "35887",
     "author_url": "https://nips.cc/Conferences/2017/Schedule?showSpeaker=35887-8946",
     "author": "Ferran Diego",
+    "affiliation": "Bosch",
     "bio": "Bio is unavailable."
   },
   {
@@ -10604,13 +10589,6 @@
     "author": "Yannai A. Gonczarowski",
     "affiliation": "The Hebrew University of Jerusalem and Microsoft Research",
     "bio": "Yannai Gonczarowski is a Ph.D. student at the Hebrew University of Jerusalem, where his advisors are Noam Nisan and Sergiu Hart. He holds an M.Sc. in Mathematics and a B.Sc. in Mathematics and Computer Science from the same institution. He is also a professionally trained opera singer, holding a master's as well as a bachelor's degree in classical singing. Yannai is also a research intern at Microsoft Research in Herzliya, Israel. His main research interests lie in Game Theory and Algorithmic Game Theory, spanning topics from mechanism design with and without money, to epistemic logic. He is an Adams Fellow of the Israel Academy of Sciences and Humanities."
-  },
-  {
-    "author_id": "35894",
-    "author_url": "https://nips.cc/Conferences/2017/Schedule?showSpeaker=35894-8957",
-    "author": "Chengyue Gong",
-    "affiliation": "PeKing University",
-    "bio": "Bio is unavailable."
   },
   {
     "author_id": "35895",
@@ -10658,7 +10636,7 @@
     "author_id": "35901",
     "author_url": "https://nips.cc/Conferences/2017/Schedule?showSpeaker=35901-8964",
     "author": "Luke Hornof",
-    "affiliation": "Intel",
+    "affiliation": "Intel Nervana",
     "bio": "Bio is unavailable."
   },
   {
@@ -10711,13 +10689,6 @@
     "bio": "Bio is unavailable."
   },
   {
-    "author_id": "35909",
-    "author_url": "https://nips.cc/Conferences/2017/Schedule?showSpeaker=35909-8968",
-    "author": "Jianxin Lin",
-    "affiliation": "USTC",
-    "bio": "Bio is unavailable."
-  },
-  {
     "author_id": "35910",
     "author_url": "https://nips.cc/Conferences/2017/Schedule?showSpeaker=35910-8968",
     "author": "Fei Tian",
@@ -10729,13 +10700,6 @@
     "author_url": "https://nips.cc/Conferences/2017/Schedule?showSpeaker=35911-9139",
     "author": "Ke Tang",
     "affiliation": "University of Science and Technology of China",
-    "bio": "Bio is unavailable."
-  },
-  {
-    "author_id": "35912",
-    "author_url": "https://nips.cc/Conferences/2017/Schedule?showSpeaker=35912-8970",
-    "author": "Xin Yao",
-    "affiliation": "University of Birmingham",
     "bio": "Bio is unavailable."
   },
   {
@@ -10849,7 +10813,7 @@
   },
   {
     "author_id": "35929",
-    "author_url": "https://nips.cc/Conferences/2017/Schedule?showSpeaker=35929-8988",
+    "author_url": "https://nips.cc/Conferences/2017/Schedule?showSpeaker=35929-10001",
     "author": "Peter Bartlett",
     "affiliation": "UC Berkeley",
     "bio": "Bio is unavailable."
@@ -10936,13 +10900,6 @@
     "bio": "Bio is unavailable."
   },
   {
-    "author_id": "35942",
-    "author_url": "https://nips.cc/Conferences/2017/Schedule?showSpeaker=35942-10111",
-    "author": "Zhongwen Xu",
-    "affiliation": "DeepMind",
-    "bio": "Bio is unavailable."
-  },
-  {
     "author_id": "35943",
     "author_url": "https://nips.cc/Conferences/2017/Schedule?showSpeaker=35943-10111",
     "author": "Andre Barreto",
@@ -10953,7 +10910,7 @@
     "author_id": "35944",
     "author_url": "https://nips.cc/Conferences/2017/Schedule?showSpeaker=35944-9001",
     "author": "Julien Audiffren",
-    "affiliation": "CMLA, ENS CACHAN",
+    "affiliation": "Exascale Infolab, Fribourg University",
     "bio": "Bio is unavailable."
   },
   {
@@ -11002,7 +10959,7 @@
     "author_id": "35951",
     "author_url": "https://nips.cc/Conferences/2017/Schedule?showSpeaker=35951-9016",
     "author": "Raef Bassily",
-    "affiliation": "UCSD",
+    "affiliation": "The Ohio State University",
     "bio": "Bio is unavailable."
   },
   {
@@ -11029,7 +10986,7 @@
     "author_id": "35955",
     "author_url": "https://nips.cc/Conferences/2017/Schedule?showSpeaker=35955-9023",
     "author": "Youssef Marzouk",
-    "affiliation": "MIT",
+    "affiliation": "Massachusetts Institute of Technology",
     "bio": "Bio is unavailable."
   },
   {
@@ -11056,7 +11013,7 @@
   {
     "author_id": "35959",
     "author_url": "https://nips.cc/Conferences/2017/Schedule?showSpeaker=35959-9026",
-    "author": "IIIS Mingda Qiao",
+    "author": "Mingda Qiao",
     "affiliation": "IIIS, Tsinghua University",
     "bio": "Bio is unavailable."
   },
@@ -11105,14 +11062,14 @@
     "author_id": "35966",
     "author_url": "https://nips.cc/Conferences/2017/Schedule?showSpeaker=35966-9036",
     "author": "Daniel Guo",
-    "affiliation": "Carnegie Mellon University",
+    "affiliation": "Carnegie Mellon University/Stanford",
     "bio": "Bio is unavailable."
   },
   {
     "author_id": "35967",
     "author_url": "https://nips.cc/Conferences/2017/Schedule?showSpeaker=35967-9038",
     "author": "Tom Sercu",
-    "affiliation": "IBM",
+    "affiliation": "IBM Research",
     "bio": "Bio is unavailable."
   },
   {
@@ -11202,7 +11159,7 @@
     "author_id": "35980",
     "author_url": "https://nips.cc/Conferences/2017/Schedule?showSpeaker=35980-9047",
     "author": "Connor Coley",
-    "affiliation": "MIT Department of Chemical Engineering",
+    "affiliation": "MIT",
     "bio": "Bio is unavailable."
   },
   {
@@ -11216,6 +11173,7 @@
     "author_id": "35982",
     "author_url": "https://nips.cc/Conferences/2017/Schedule?showSpeaker=35982-9426",
     "author": "Andriy Mnih",
+    "affiliation": "DeepMind",
     "bio": "Bio is unavailable."
   },
   {
@@ -11268,13 +11226,6 @@
     "bio": "Bio is unavailable."
   },
   {
-    "author_id": "35990",
-    "author_url": "https://nips.cc/Conferences/2017/Schedule?showSpeaker=35990-9054",
-    "author": "Renato Leme",
-    "affiliation": "Google Research",
-    "bio": "Bio is unavailable."
-  },
-  {
     "author_id": "35991",
     "author_url": "https://nips.cc/Conferences/2017/Schedule?showSpeaker=35991-9054",
     "author": "IIIS Song Zuo",
@@ -11293,13 +11244,6 @@
     "author_url": "https://nips.cc/Conferences/2017/Schedule?showSpeaker=35993-9060",
     "author": "Lin Yang",
     "affiliation": "Johns Hopkins University",
-    "bio": "Bio is unavailable."
-  },
-  {
-    "author_id": "35994",
-    "author_url": "https://nips.cc/Conferences/2017/Schedule?showSpeaker=35994-9060",
-    "author": "Jason Ge",
-    "affiliation": "Princeton University",
     "bio": "Bio is unavailable."
   },
   {
@@ -11471,7 +11415,7 @@
     "author_id": "36019",
     "author_url": "https://nips.cc/Conferences/2017/Schedule?showSpeaker=36019-9080",
     "author": "Karthikeyan Shanmugam",
-    "affiliation": "IBM Research",
+    "affiliation": "IBM Research, NY",
     "bio": "Bio is unavailable."
   },
   {
@@ -11520,7 +11464,7 @@
     "author_id": "36026",
     "author_url": "https://nips.cc/Conferences/2017/Schedule?showSpeaker=36026-9086",
     "author": "Saber Salehkaleybar",
-    "affiliation": "UIUC",
+    "affiliation": "University of Illinois at Urbana-Champaign",
     "bio": "Bio is unavailable."
   },
   {
@@ -11554,7 +11498,7 @@
     "author_id": "36031",
     "author_url": "https://nips.cc/Conferences/2017/Schedule?showSpeaker=36031-9091",
     "author": "Soong Moon Kang",
-    "affiliation": "UCL",
+    "affiliation": "University College London",
     "bio": "Bio is unavailable."
   },
   {
@@ -11611,13 +11555,6 @@
     "author_url": "https://nips.cc/Conferences/2017/Schedule?showSpeaker=36039-10115",
     "author": "Ronan Fruit",
     "affiliation": "Inria Lille",
-    "bio": "Bio is unavailable."
-  },
-  {
-    "author_id": "36040",
-    "author_url": "https://nips.cc/Conferences/2017/Schedule?showSpeaker=36040-10013",
-    "author": "Alireza Aghasi",
-    "affiliation": "IBM TJ Watson Research Center",
     "bio": "Bio is unavailable."
   },
   {
@@ -11727,7 +11664,7 @@
     "author_id": "36056",
     "author_url": "https://nips.cc/Conferences/2017/Schedule?showSpeaker=36056-9411",
     "author": "Chris Russell",
-    "affiliation": "The Alan Turing Institute",
+    "affiliation": "The Alan Turing Institute/ The University of Surrey",
     "bio": "Bio is unavailable."
   },
   {
@@ -11756,20 +11693,6 @@
     "author_url": "https://nips.cc/Conferences/2017/Schedule?showSpeaker=36060-9119",
     "author": "Vlad Niculae",
     "affiliation": "Cornell University",
-    "bio": "Bio is unavailable."
-  },
-  {
-    "author_id": "36061",
-    "author_url": "https://nips.cc/Conferences/2017/Schedule?showSpeaker=36061-10015",
-    "author": "Konstantin Makarychev",
-    "affiliation": "Microsoft",
-    "bio": "Bio is unavailable."
-  },
-  {
-    "author_id": "36062",
-    "author_url": "https://nips.cc/Conferences/2017/Schedule?showSpeaker=36062-10015",
-    "author": "Luis Ceze",
-    "affiliation": "Microsoft",
     "bio": "Bio is unavailable."
   },
   {
@@ -11804,12 +11727,6 @@
     "author_url": "https://nips.cc/Conferences/2017/Schedule?showSpeaker=36067-9124",
     "author": "Tegan Maharaj",
     "affiliation": "MILA, Polytechnic Montreal",
-    "bio": "Bio is unavailable."
-  },
-  {
-    "author_id": "36068",
-    "author_url": "https://nips.cc/Conferences/2017/Schedule?showSpeaker=36068-9124",
-    "author": "Evan Racah",
     "bio": "Bio is unavailable."
   },
   {
@@ -11891,7 +11808,7 @@
     "author_id": "36080",
     "author_url": "https://nips.cc/Conferences/2017/Schedule?showSpeaker=36080-9129",
     "author": "Ahmad Beirami",
-    "affiliation": "Harvard University",
+    "affiliation": "Harvard University & MIT",
     "bio": "Ahmad Beirami received the B.Sc. degree in electrical engineering from Sharif University of Technology, Tehran, Iran, in 2007 and the M.Sc. and Ph.D. degrees in electrical and computer engineering from the Georgia Institute of Technology, Atlanta, GA, USA, in 2011 and 2014, respectively. He is currently a postdoctoral fellow with the school of engineering and applied sciences at Harvard University, and also with electrical engineering and computer science department at MIT. Previously, he was a postdoctoral associate at Duke University. His research interests broadly include information theory, statistics, machine learning, and networks. He is the recipient of the 2013-2014 School of ECE Graduate Research Excellence Award and the 2015 Sigma Xi Best Ph.D. Thesis Award from the Georgia Institute of Technology."
   },
   {
@@ -12097,21 +12014,21 @@
   {
     "author_id": "36109",
     "author_url": "https://nips.cc/Conferences/2017/Schedule?showSpeaker=36109-9150",
-    "author": "Intramural Lee Campbell",
+    "author": "Lee Campbell",
     "affiliation": "Intramural Research Program, National Institute on Drug Abuse",
     "bio": "Bio is unavailable."
   },
   {
     "author_id": "36110",
     "author_url": "https://nips.cc/Conferences/2017/Schedule?showSpeaker=36110-9150",
-    "author": "Intramural Brandon Harvey",
+    "author": "Brandon Harvey",
     "affiliation": "Intramural Research Program, National Institute on Drug Abuse",
     "bio": "Bio is unavailable."
   },
   {
     "author_id": "36111",
     "author_url": "https://nips.cc/Conferences/2017/Schedule?showSpeaker=36111-9150",
-    "author": "Intramural Conor Heins",
+    "author": "Conor Heins",
     "affiliation": "Intramural Research Program, National Institute on Drug Abuse",
     "bio": "Bio is unavailable."
   },
@@ -12133,7 +12050,7 @@
     "author_id": "36114",
     "author_url": "https://nips.cc/Conferences/2017/Schedule?showSpeaker=36114-9151",
     "author": "Caroline Runyan",
-    "affiliation": "Harvard Medical School",
+    "affiliation": "University of Pittsburgh",
     "bio": "Bio is unavailable."
   },
   {
@@ -12349,7 +12266,7 @@
     "author_id": "36145",
     "author_url": "https://nips.cc/Conferences/2017/Schedule?showSpeaker=36145-9180",
     "author": "Flavio Calmon",
-    "affiliation": "Harvard",
+    "affiliation": "Harvard University",
     "bio": "Bio is unavailable."
   },
   {
@@ -12414,13 +12331,6 @@
     "bio": "Bio is unavailable."
   },
   {
-    "author_id": "36155",
-    "author_url": "https://nips.cc/Conferences/2017/Schedule?showSpeaker=36155-9189",
-    "author": "Kun Xu",
-    "affiliation": "Tsinghua University",
-    "bio": "Bio is unavailable."
-  },
-  {
     "author_id": "36156",
     "author_url": "https://nips.cc/Conferences/2017/Schedule?showSpeaker=36156-9190",
     "author": "Akihiro Yabe",
@@ -12463,7 +12373,7 @@
     "author_id": "36162",
     "author_url": "https://nips.cc/Conferences/2017/Schedule?showSpeaker=36162-9196",
     "author": "Bikash Joshi",
-    "affiliation": "UGA",
+    "affiliation": "University of Grenoble Alpes",
     "bio": "Bio is unavailable."
   },
   {
@@ -12505,7 +12415,7 @@
     "author_id": "36170",
     "author_url": "https://nips.cc/Conferences/2017/Schedule?showSpeaker=36170-9197",
     "author": "Zhe Gan",
-    "affiliation": "duke",
+    "affiliation": "Duke University",
     "bio": "Bio is unavailable."
   },
   {
@@ -12519,6 +12429,7 @@
     "author_id": "36172",
     "author_url": "https://nips.cc/Conferences/2017/Schedule?showSpeaker=36172-9199",
     "author": "Marc Lanctot",
+    "affiliation": "DeepMind",
     "bio": "Bio is unavailable."
   },
   {
@@ -12587,7 +12498,7 @@
     "author_id": "36182",
     "author_url": "https://nips.cc/Conferences/2017/Schedule?showSpeaker=36182-9204",
     "author": "Katja Seeliger",
-    "affiliation": "Radboud University",
+    "affiliation": "Donders Institute for Brain, Cognition and Behaviour",
     "bio": "Bio is unavailable."
   },
   {
@@ -12619,25 +12530,11 @@
     "bio": "Bio is unavailable."
   },
   {
-    "author_id": "36187",
-    "author_url": "https://nips.cc/Conferences/2017/Schedule?showSpeaker=36187-10110",
-    "author": "Jialei Wang",
-    "affiliation": "IBM",
-    "bio": "Bio is unavailable."
-  },
-  {
     "author_id": "36188",
     "author_url": "https://nips.cc/Conferences/2017/Schedule?showSpeaker=36188-9989",
     "author": "Peter Frazier",
     "affiliation": "Cornell University",
-    "bio": "Bio is unavailable."
-  },
-  {
-    "author_id": "36189",
-    "author_url": "https://nips.cc/Conferences/2017/Schedule?showSpeaker=36189-9209",
-    "author": "Tom Brown",
-    "affiliation": "OpenAI",
-    "bio": "Bio is unavailable."
+    "bio": "Peter Frazier is an Associate Professor in the School of Operations Research and Information Engineering at Cornell University, and a Staff Data Scientist at Uber.  He received a Ph.D. in Operations Research and Financial Engineering from Princeton University in 2009.  His research is at the intersection of machine learning and operations research, focusing on Bayesian optimization, multi-armed bandits, active learning, and Bayesian nonparametric statistics.   He is an associate editor for Operations Research, ACM TOMACS, and IISE Transactions, and is the recipient of an AFOSR Young Investigator Award and an NSF CAREER Award."
   },
   {
     "author_id": "36190",
@@ -12650,7 +12547,7 @@
     "author_id": "36191",
     "author_url": "https://nips.cc/Conferences/2017/Schedule?showSpeaker=36191-9211",
     "author": "Akshat Kumar",
-    "affiliation": "Singapore Management Universit",
+    "affiliation": "Singapore Management University",
     "bio": "Akshat Kumar is an Assistant Professor in the School of Information Systems at the Singapore Management University. His research interests lie in the area of planning and decision making under uncertainty with a focus on multiagent systems and urban system optimization. Kumar received a Ph.D. in computer science from the University of Massachusetts Amherst advised by Prof. Shlomo Zilberstein. His thesis received best dissertation award at the ICAPS 2014 conference and a runner-up award at AAMAS 2013. His work has also received the outstanding application paper award at ICAPS 2014 and the best paper award in the AAAI 2017 computational sustainability track."
   },
   {
@@ -12700,13 +12597,6 @@
     "author_url": "https://nips.cc/Conferences/2017/Schedule?showSpeaker=36198-9219",
     "author": "Mohammad Maddah-Ali",
     "affiliation": "Nokia Bell Labs",
-    "bio": "Bio is unavailable."
-  },
-  {
-    "author_id": "36199",
-    "author_url": "https://nips.cc/Conferences/2017/Schedule?showSpeaker=36199-9219",
-    "author": "Salman Avestimehr",
-    "affiliation": "USC",
     "bio": "Bio is unavailable."
   },
   {
@@ -12802,7 +12692,7 @@
     "author_id": "36213",
     "author_url": "https://nips.cc/Conferences/2017/Schedule?showSpeaker=36213-9232",
     "author": "Erinc Merdivan",
-    "affiliation": "Austrian Institute of Tech.",
+    "affiliation": "Austrian Institute of Technology GmbH",
     "bio": "Bio is unavailable."
   },
   {
@@ -12947,7 +12837,7 @@
     "author_id": "36234",
     "author_url": "https://nips.cc/Conferences/2017/Schedule?showSpeaker=36234-9259",
     "author": "Filip Radenovic",
-    "affiliation": "VRG, CTU Prague",
+    "affiliation": "Visual Recognition Group, CTU in Prague",
     "bio": "Bio is unavailable."
   },
   {
@@ -12989,7 +12879,7 @@
     "author_id": "36240",
     "author_url": "https://nips.cc/Conferences/2017/Schedule?showSpeaker=36240-9262",
     "author": "Shangyu Chen",
-    "affiliation": "Nanyang Technological Unvi",
+    "affiliation": "Nanyang Technological University, Singapore",
     "bio": "Bio is unavailable."
   },
   {
@@ -13024,7 +12914,7 @@
     "author_id": "36246",
     "author_url": "https://nips.cc/Conferences/2017/Schedule?showSpeaker=36246-9267",
     "author": "Chao Pan",
-    "affiliation": "JP Morgan Chase",
+    "affiliation": "Purdue University",
     "bio": "Bio is unavailable."
   },
   {
@@ -13078,7 +12968,7 @@
     "author_id": "36254",
     "author_url": "https://nips.cc/Conferences/2017/Schedule?showSpeaker=36254-9277",
     "author": "Garrett Andersen",
-    "affiliation": "Prowler.io",
+    "affiliation": "PROWLER.io",
     "bio": "Bio is unavailable."
   },
   {
@@ -13217,7 +13107,7 @@
     "author_id": "36274",
     "author_url": "https://nips.cc/Conferences/2017/Schedule?showSpeaker=36274-9301",
     "author": "Wen Hao Chen",
-    "affiliation": "Student",
+    "affiliation": "National Taiwan University",
     "bio": "Bio is unavailable."
   },
   {
@@ -13319,14 +13209,14 @@
     "author_id": "36289",
     "author_url": "https://nips.cc/Conferences/2017/Schedule?showSpeaker=36289-9313",
     "author": "Chao Qin",
-    "affiliation": "Northwestern University",
+    "affiliation": "Columbia University",
     "bio": "I am a PhD student in Decision, Risk, and Operations at Columbia Business School. My research interests lie in statistical machine learning and sequential decision-making under uncertainty, including multi-armed bandits, (deep) reinforcement learning, Bayesian optimization, and online learning."
   },
   {
     "author_id": "36290",
     "author_url": "https://nips.cc/Conferences/2017/Schedule?showSpeaker=36290-9313",
     "author": "Diego Klabjan",
-    "affiliation": "Northwestern university",
+    "affiliation": "Northwestern University",
     "bio": "Diego Klabjan is a professor at Northwestern University, Department of Industrial Engineering and Management Sciences. He is also Founding Director, Master of Science in Analytics. After obtaining his doctorate from the School of Industrial and Systems Engineering of the Georgia Institute of Technology in 1999 in Algorithms, Combinatorics, and Optimization, in the same year he joined the University of Illinois at Urbana-Champaign. In 2007 he became an associate professor at Northwestern and in 2012 he was promoted to a full professor. His research is focused on machine learning, deep learning and analytics with concentration in finance, transportation, sport, and bioinformatics. Professor Klabjan has led projects with large companies such as Intel, Baxter, Allstate, AbbVie, FedEx Express, General Motors, United Continental, and many others, and he is also assisting numerous start-ups with their analytics needs. He is also a founder of Opex Analytics LLC."
   },
   {
@@ -13361,7 +13251,7 @@
     "author_id": "36295",
     "author_url": "https://nips.cc/Conferences/2017/Schedule?showSpeaker=36295-9316",
     "author": "Eneldo Loza Mencía",
-    "affiliation": "TU Darmstadt",
+    "affiliation": "Technische Universität Darmstadt",
     "bio": "Bio is unavailable."
   },
   {
@@ -13451,20 +13341,14 @@
     "author_id": "36308",
     "author_url": "https://nips.cc/Conferences/2017/Schedule?showSpeaker=36308-9328",
     "author": "Abhishek Kumar",
-    "affiliation": "IBM Research",
-    "bio": "Bio is unavailable."
-  },
-  {
-    "author_id": "36309",
-    "author_url": "https://nips.cc/Conferences/2017/Schedule?showSpeaker=36309-9330",
-    "author": "Hao He",
-    "affiliation": "PekingUniversity",
+    "affiliation": "IBM Research AI",
     "bio": "Bio is unavailable."
   },
   {
     "author_id": "36310",
     "author_url": "https://nips.cc/Conferences/2017/Schedule?showSpeaker=36310-9331",
     "author": "Inmar Givoni",
+    "affiliation": "University of Toronto",
     "bio": "Bio is unavailable."
   },
   {
@@ -13742,7 +13626,7 @@
     "author_id": "36349",
     "author_url": "https://nips.cc/Conferences/2017/Schedule?showSpeaker=36349-9369",
     "author": "Neil Zeghidour",
-    "affiliation": "facebook",
+    "affiliation": "Facebook A.I. Research / Ecole Normale Supérieure",
     "bio": "Bio is unavailable."
   },
   {
@@ -13794,6 +13678,7 @@
     "author_id": "36357",
     "author_url": "https://nips.cc/Conferences/2017/Schedule?showSpeaker=36357-9376",
     "author": "Edouard Grave",
+    "affiliation": "Facebook AI Research",
     "bio": "Bio is unavailable."
   },
   {
@@ -13953,6 +13838,7 @@
     "author_id": "36380",
     "author_url": "https://nips.cc/Conferences/2017/Schedule?showSpeaker=36380-9399",
     "author": "Gergely Neu",
+    "affiliation": "Universitat Pompeu Fabra",
     "bio": "Bio is unavailable."
   },
   {
@@ -14007,7 +13893,7 @@
     "author_id": "36388",
     "author_url": "https://nips.cc/Conferences/2017/Schedule?showSpeaker=36388-9407",
     "author": "Amélie Heliou",
-    "affiliation": "Ecole Polytechnique",
+    "affiliation": "Univ. Grenoble Alpes",
     "bio": "Bio is unavailable."
   },
   {
@@ -14097,7 +13983,7 @@
     "author_id": "36401",
     "author_url": "https://nips.cc/Conferences/2017/Schedule?showSpeaker=36401-9417",
     "author": "Mario Boley",
-    "affiliation": "Cluster of Excellence MMCI and Saarland University",
+    "affiliation": "Max Planck Institute for Informatics and Saarland University",
     "bio": "Bio is unavailable."
   },
   {
@@ -14291,7 +14177,7 @@
     "author_id": "36428",
     "author_url": "https://nips.cc/Conferences/2017/Schedule?showSpeaker=36428-9439",
     "author": "Marc-Alexandre Côté",
-    "affiliation": "Microsoft Maluuba",
+    "affiliation": "Microsoft Research",
     "bio": "Bio is unavailable."
   },
   {
@@ -14307,13 +14193,6 @@
     "author": "Hongyuan Mei",
     "affiliation": "JOHNS HOPKINS UNIVERSITY",
     "bio": "I am a second-year Ph.D. student (2016-) in Department of Computer Science at Johns Hopkins University, affiliated with the Center for Language and Speech Processing, where I am advised by Jason Eisner. \n\nMy research interests are rooted in designing models and algorithms to solve challenging real-life problems (especially in continuous-time scheduling and natural langauge processing). I am currently working on continuous-time sequential modelling (e.g., neural Hawkes process)."
-  },
-  {
-    "author_id": "36431",
-    "author_url": "https://nips.cc/Conferences/2017/Schedule?showSpeaker=36431-9446",
-    "author": "Ritambhara Singh",
-    "affiliation": "University of Virginia",
-    "bio": "Ritambhara (Rita) Singh is a final year Ph.D. candidate in the Department of Computer Science at University of Virginia. She works at the intersection of machine learning and biology with Dr. Yanjun Qi as her advisor. Her research involves developing efficient algorithms for analysis of sequential data as well as applying deep learning models to novel biological applications."
   },
   {
     "author_id": "36432",
@@ -14378,13 +14257,6 @@
     "bio": "Bio is unavailable."
   },
   {
-    "author_id": "36441",
-    "author_url": "https://nips.cc/Conferences/2017/Schedule?showSpeaker=36441-9452",
-    "author": "Mohammad Karimi",
-    "affiliation": "ETH Zurich",
-    "bio": "Bio is unavailable."
-  },
-  {
     "author_id": "36442",
     "author_url": "https://nips.cc/Conferences/2017/Schedule?showSpeaker=36442-9453",
     "author": "Mahsa Derakhshan",
@@ -14403,20 +14275,6 @@
     "author_url": "https://nips.cc/Conferences/2017/Schedule?showSpeaker=36444-9453",
     "author": "Raimondas Kiveris",
     "affiliation": "Google research",
-    "bio": "Bio is unavailable."
-  },
-  {
-    "author_id": "36445",
-    "author_url": "https://nips.cc/Conferences/2017/Schedule?showSpeaker=36445-9455",
-    "author": "Ryan Tibshirani",
-    "affiliation": "Carnegie Mellon University",
-    "bio": "Bio is unavailable."
-  },
-  {
-    "author_id": "36446",
-    "author_url": "https://nips.cc/Conferences/2017/Schedule?showSpeaker=36446-9458",
-    "author": "Li Ping",
-    "affiliation": "Hangzhou Dianzi University, National University of Singapore",
     "bio": "Bio is unavailable."
   },
   {
@@ -14493,12 +14351,7 @@
     "author_id": "36457",
     "author_url": "https://nips.cc/Conferences/2017/Schedule?showSpeaker=36457-9472",
     "author": "Moein Falahatgar",
-    "bio": "Bio is unavailable."
-  },
-  {
-    "author_id": "36458",
-    "author_url": "https://nips.cc/Conferences/2017/Schedule?showSpeaker=36458-9472",
-    "author": "Yi Hao",
+    "affiliation": "UCSD",
     "bio": "Bio is unavailable."
   },
   {
@@ -14529,6 +14382,20 @@
     "bio": "Bio is unavailable."
   },
   {
+    "author_id": "36512",
+    "author_url": "https://nips.cc/Conferences/2017/Schedule?showSpeaker=36512-10043",
+    "author": "Gregory Diamos",
+    "affiliation": "Baidu SVAIL",
+    "bio": "Bio is unavailable."
+  },
+  {
+    "author_id": "36746",
+    "author_url": "https://nips.cc/Conferences/2017/Schedule?showSpeaker=36746-9219",
+    "author": "Salman Avestimehr",
+    "affiliation": "USC",
+    "bio": "Bio is unavailable."
+  },
+  {
     "author_id": "36807",
     "author_url": "https://nips.cc/Conferences/2017/Schedule?showSpeaker=36807-9754",
     "author": "Adam Al-natsheh",
@@ -14536,10 +14403,17 @@
     "bio": "Bio is unavailable."
   },
   {
+    "author_id": "36907",
+    "author_url": "https://nips.cc/Conferences/2017/Schedule?showSpeaker=36907-10043",
+    "author": "Yanqi Zhou",
+    "affiliation": "Baidu Research",
+    "bio": "Bio is unavailable."
+  },
+  {
     "author_id": "3712",
     "author_url": "https://nips.cc/Conferences/2017/Schedule?showSpeaker=3712-8849",
     "author": "Kristen Grauman",
-    "affiliation": "UT Austin",
+    "affiliation": "University of Texas at Austin",
     "bio": "Bio is unavailable."
   },
   {
@@ -14547,6 +14421,20 @@
     "author_url": "https://nips.cc/Conferences/2017/Schedule?showSpeaker=37122-9764",
     "author": "Matthias Mitterreiter",
     "affiliation": "Friedrich Schiller University Jena",
+    "bio": "Bio is unavailable."
+  },
+  {
+    "author_id": "37129",
+    "author_url": "https://nips.cc/Conferences/2017/Schedule?showSpeaker=37129-9472",
+    "author": "Yi Hao",
+    "affiliation": "UCSD",
+    "bio": "Bio is unavailable."
+  },
+  {
+    "author_id": "37389",
+    "author_url": "https://nips.cc/Conferences/2017/Schedule?showSpeaker=37389-9220",
+    "author": "Virginia Smith",
+    "affiliation": "Stanford University",
     "bio": "Bio is unavailable."
   },
   {
@@ -14613,6 +14501,20 @@
     "bio": "Bio is unavailable."
   },
   {
+    "author_id": "38255",
+    "author_url": "https://nips.cc/Conferences/2017/Schedule?showSpeaker=38255-9330",
+    "author": "Hao He",
+    "affiliation": "MIT",
+    "bio": "Bio is unavailable."
+  },
+  {
+    "author_id": "38295",
+    "author_url": "https://nips.cc/Conferences/2017/Schedule?showSpeaker=38295-9128",
+    "author": "Lijie Fan",
+    "affiliation": "Tsinghua University",
+    "bio": "Bio is unavailable."
+  },
+  {
     "author_id": "38397",
     "author_url": "https://nips.cc/Conferences/2017/Schedule?showSpeaker=38397-9767",
     "author": "Emmanuel Kahembwe",
@@ -14648,6 +14550,13 @@
     "bio": "Bio is unavailable."
   },
   {
+    "author_id": "39837",
+    "author_url": "https://nips.cc/Conferences/2017/Schedule?showSpeaker=39837-9229",
+    "author": "Song Liu",
+    "affiliation": "University of Bristol",
+    "bio": "Bio is unavailable."
+  },
+  {
     "author_id": "4001",
     "author_url": "https://nips.cc/Conferences/2017/Schedule?showSpeaker=4001-8887",
     "author": "Yun Fu",
@@ -14658,7 +14567,7 @@
     "author_id": "40010",
     "author_url": "https://nips.cc/Conferences/2017/Schedule?showSpeaker=40010-9755",
     "author": "Ian Johnson",
-    "affiliation": "LBNL",
+    "affiliation": "Lawrence Berkeley National Laboratory",
     "bio": "Bio is unavailable."
   },
   {
@@ -14679,7 +14588,7 @@
     "author_id": "403",
     "author_url": "https://nips.cc/Conferences/2017/Schedule?showSpeaker=403-9399",
     "author": "Claudio Gentile",
-    "affiliation": "University of Insubria",
+    "affiliation": "INRIA",
     "bio": "Bio is unavailable."
   },
   {
@@ -14760,6 +14669,13 @@
     "bio": "Bio is unavailable."
   },
   {
+    "author_id": "43102",
+    "author_url": "https://nips.cc/Conferences/2017/Schedule?showSpeaker=43102-8868",
+    "author": "Jing Rong",
+    "affiliation": "Alibaba",
+    "bio": "Bio is unavailable."
+  },
+  {
     "author_id": "43194",
     "author_url": "https://nips.cc/Conferences/2017/Schedule?showSpeaker=43194-9768",
     "author": "Nicholas Fraser",
@@ -14778,6 +14694,401 @@
     "author_url": "https://nips.cc/Conferences/2017/Schedule?showSpeaker=4357-9380",
     "author": "Yonina Eldar",
     "affiliation": "Israel Institute of Technology",
+    "bio": "Bio is unavailable."
+  },
+  {
+    "author_id": "44044",
+    "author_url": "https://nips.cc/Conferences/2017/Schedule?showSpeaker=44044-9766",
+    "author": "Nancy D O'Brien",
+    "affiliation": "Pacific Northwest National Laboratory",
+    "bio": "Bio is unavailable."
+  },
+  {
+    "author_id": "44125",
+    "author_url": "https://nips.cc/Conferences/2017/Schedule?showSpeaker=44125-8798",
+    "author": "Shaobing Gao",
+    "affiliation": "Sichuan University",
+    "bio": "I am interested in Computer Vision and Biologically Inspired Vision (in particular, Color Vision, Visual Adaptation, and Neural Network). Shao-Bing Gao received his Ph.D. degree from UESTC, Chengdu, China,\nin 2017. He was with the Institute of Behavioral Neuroscience, UCL,\nUK, as a Joint Ph.D. He is currently an associate professor in College\nof Computer Science, Sichuan University. His research interests include\nbiologically inspired vision and image processing. He has authored or\nco-authored over 15 articles on international high-impact journals and\nconferences including TPAMI, TIP, CVPR, ICCV, ECCV, and NIPS. He\nhas also severed as an active reviewer for many journals including TIP,\nCVIU, TCSVT, TII, SPL, and so on."
+  },
+  {
+    "author_id": "44126",
+    "author_url": "https://nips.cc/Conferences/2017/Schedule?showSpeaker=44126-8798",
+    "author": "Daxue Liu",
+    "affiliation": "National University of Defense Technology",
+    "bio": "Bio is unavailable."
+  },
+  {
+    "author_id": "44127",
+    "author_url": "https://nips.cc/Conferences/2017/Schedule?showSpeaker=44127-8798",
+    "author": "Hangen He",
+    "affiliation": "National University of Defense Technology",
+    "bio": "Bio is unavailable."
+  },
+  {
+    "author_id": "44128",
+    "author_url": "https://nips.cc/Conferences/2017/Schedule?showSpeaker=44128-9193",
+    "author": "Cheng Deng",
+    "affiliation": "School of Electronic Engineering, Xidian University, China",
+    "bio": "Bio is unavailable."
+  },
+  {
+    "author_id": "44129",
+    "author_url": "https://nips.cc/Conferences/2017/Schedule?showSpeaker=44129-9193",
+    "author": "Heng Huang",
+    "affiliation": "University of Pittsburgh",
+    "bio": "Bio is unavailable."
+  },
+  {
+    "author_id": "44130",
+    "author_url": "https://nips.cc/Conferences/2017/Schedule?showSpeaker=44130-8820",
+    "author": "Isabel Valera",
+    "affiliation": "MPI for Intelligent Systems",
+    "bio": "Bio is unavailable."
+  },
+  {
+    "author_id": "44131",
+    "author_url": "https://nips.cc/Conferences/2017/Schedule?showSpeaker=44131-8821",
+    "author": "Imon Banerjee",
+    "affiliation": "Stanford University",
+    "bio": "Bio is unavailable."
+  },
+  {
+    "author_id": "44132",
+    "author_url": "https://nips.cc/Conferences/2017/Schedule?showSpeaker=44132-8821",
+    "author": "Daniel Rubin",
+    "affiliation": "Stanford University",
+    "bio": "Dr. Rubin is a tenured Associate Professor of Biomedical Data Science, Radiology, and Medicine (Biomedical Informatics Research) at Stanford University. His NIH-funded research program focuses on artificial intelligence in medicine and quantitative imaging, integrating imaging with clinical and molecular data, and mining these Big Data to discover imaging phenotypes that can predict disease biology, define disease subtypes, and personalize treatment. Key contributions include discovering quantitative imaging phenotypes in radiology, pathology, and ophthalmology images that identify novel clinical subtypes of disease that help to determine treatments and improve clinical outcomes. He has over 240 peer-reviewed publications and 10 inventions."
+  },
+  {
+    "author_id": "44133",
+    "author_url": "https://nips.cc/Conferences/2017/Schedule?showSpeaker=44133-9258",
+    "author": "Susan Athey",
+    "affiliation": "Stanford University",
+    "bio": "Bio is unavailable."
+  },
+  {
+    "author_id": "44134",
+    "author_url": "https://nips.cc/Conferences/2017/Schedule?showSpeaker=44134-10024",
+    "author": "Hakan Bilen",
+    "affiliation": "University of Edinburgh",
+    "bio": "Bio is unavailable."
+  },
+  {
+    "author_id": "44135",
+    "author_url": "https://nips.cc/Conferences/2017/Schedule?showSpeaker=44135-8861",
+    "author": "Giambattista Parascandolo",
+    "affiliation": "Max Planck Institute for Intelligent Systems and and Max Planck ETH CLS",
+    "bio": "Bio is unavailable."
+  },
+  {
+    "author_id": "44136",
+    "author_url": "https://nips.cc/Conferences/2017/Schedule?showSpeaker=44136-8882",
+    "author": "Zhifeng Gao",
+    "affiliation": "Tsinghua University",
+    "bio": "Bio is unavailable."
+  },
+  {
+    "author_id": "44137",
+    "author_url": "https://nips.cc/Conferences/2017/Schedule?showSpeaker=44137-8908",
+    "author": "Stephane Oudard",
+    "affiliation": "HEGP",
+    "bio": "Bio is unavailable."
+  },
+  {
+    "author_id": "44138",
+    "author_url": "https://nips.cc/Conferences/2017/Schedule?showSpeaker=44138-8968",
+    "author": "Jianxin Lin",
+    "affiliation": "USTC",
+    "bio": "Bio is unavailable."
+  },
+  {
+    "author_id": "44139",
+    "author_url": "https://nips.cc/Conferences/2017/Schedule?showSpeaker=44139-8970",
+    "author": "Ke Tang",
+    "affiliation": "Southern University of Science and Technology, China",
+    "bio": "Bio is unavailable."
+  },
+  {
+    "author_id": "44140",
+    "author_url": "https://nips.cc/Conferences/2017/Schedule?showSpeaker=44140-8970",
+    "author": "Xin Yao",
+    "affiliation": "Southern University of Science and Technology, China",
+    "bio": "Bio is unavailable."
+  },
+  {
+    "author_id": "44141",
+    "author_url": "https://nips.cc/Conferences/2017/Schedule?showSpeaker=44141-8999",
+    "author": "Kamal Kamalaruban",
+    "affiliation": "The Australian National Univer",
+    "bio": "Bio is unavailable."
+  },
+  {
+    "author_id": "44142",
+    "author_url": "https://nips.cc/Conferences/2017/Schedule?showSpeaker=44142-10111",
+    "author": "Zhongwen Xu",
+    "affiliation": "DeepMind",
+    "bio": "Bio is unavailable."
+  },
+  {
+    "author_id": "44143",
+    "author_url": "https://nips.cc/Conferences/2017/Schedule?showSpeaker=44143-9006",
+    "author": "Jie Zhou",
+    "affiliation": "Tsinghua University",
+    "bio": "Bio is unavailable."
+  },
+  {
+    "author_id": "44144",
+    "author_url": "https://nips.cc/Conferences/2017/Schedule?showSpeaker=44144-9026",
+    "author": "Avrim Blum",
+    "affiliation": "Toyota Technological Institute at Chicago",
+    "bio": "Bio is unavailable."
+  },
+  {
+    "author_id": "44145",
+    "author_url": "https://nips.cc/Conferences/2017/Schedule?showSpeaker=44145-9043",
+    "author": "Steven Wu",
+    "affiliation": "Microsoft",
+    "bio": "Bio is unavailable."
+  },
+  {
+    "author_id": "44146",
+    "author_url": "https://nips.cc/Conferences/2017/Schedule?showSpeaker=44146-10043",
+    "author": "Sercan Arik",
+    "affiliation": "Baidu Research",
+    "bio": "Bio is unavailable."
+  },
+  {
+    "author_id": "44147",
+    "author_url": "https://nips.cc/Conferences/2017/Schedule?showSpeaker=44147-10043",
+    "author": "John Miller",
+    "affiliation": "Baidu Research",
+    "bio": "Bio is unavailable."
+  },
+  {
+    "author_id": "44148",
+    "author_url": "https://nips.cc/Conferences/2017/Schedule?showSpeaker=44148-10043",
+    "author": "Kainan Peng",
+    "affiliation": "Baidu Research",
+    "bio": "Bio is unavailable."
+  },
+  {
+    "author_id": "44149",
+    "author_url": "https://nips.cc/Conferences/2017/Schedule?showSpeaker=44149-10043",
+    "author": "Wei Ping",
+    "affiliation": "Baidu Research",
+    "bio": "Bio is unavailable."
+  },
+  {
+    "author_id": "44150",
+    "author_url": "https://nips.cc/Conferences/2017/Schedule?showSpeaker=44150-10043",
+    "author": "Jonathan Raiman",
+    "affiliation": "Baidu Research",
+    "bio": "Bio is unavailable."
+  },
+  {
+    "author_id": "44151",
+    "author_url": "https://nips.cc/Conferences/2017/Schedule?showSpeaker=44151-9988",
+    "author": "Benjamin Moseley",
+    "bio": "Bio is unavailable."
+  },
+  {
+    "author_id": "44152",
+    "author_url": "https://nips.cc/Conferences/2017/Schedule?showSpeaker=44152-9099",
+    "author": "Thomas Finley",
+    "bio": "Bio is unavailable."
+  },
+  {
+    "author_id": "44153",
+    "author_url": "https://nips.cc/Conferences/2017/Schedule?showSpeaker=44153-10013",
+    "author": "Afshin Abdi",
+    "affiliation": "Georgia Institute of Technology",
+    "bio": "Bio is unavailable."
+  },
+  {
+    "author_id": "44154",
+    "author_url": "https://nips.cc/Conferences/2017/Schedule?showSpeaker=44154-10045",
+    "author": "Yihong Gong",
+    "bio": "Bio is unavailable."
+  },
+  {
+    "author_id": "44155",
+    "author_url": "https://nips.cc/Conferences/2017/Schedule?showSpeaker=44155-9109",
+    "author": "Xiaokang Yang",
+    "affiliation": "Shanghai Jiao Tong University",
+    "bio": "Bio is unavailable."
+  },
+  {
+    "author_id": "44156",
+    "author_url": "https://nips.cc/Conferences/2017/Schedule?showSpeaker=44156-10015",
+    "author": "Konstantin Makarychev",
+    "bio": "Bio is unavailable."
+  },
+  {
+    "author_id": "44157",
+    "author_url": "https://nips.cc/Conferences/2017/Schedule?showSpeaker=44157-9124",
+    "author": "Samira Ebrahimi Kahou",
+    "affiliation": "Microsoft Maluuba",
+    "bio": "Bio is unavailable."
+  },
+  {
+    "author_id": "44158",
+    "author_url": "https://nips.cc/Conferences/2017/Schedule?showSpeaker=44158-9142",
+    "author": "Matteo Papini",
+    "affiliation": "Politecnico di Milano",
+    "bio": "Matteo Papini was born in Sondrio, Italy, on 5th July 1993. In 2015 he obtained the Bachelor Degree in Ingegneria Informatica (Computer Engineering) cum laude at Politecnico di Milano. In 2017 he obtained the Master Degree in Computer Science and Engineering - Ingegneria Informatica cum laude at Politecnico di Milano. From November 2017 he is a Ph.D. student at Dipartimento di Elettronica, Informazione e Bioingegneria (DEIB) at Politecnico di Milano. His research interests include artificial intelligence, robotics, and machine learning, with a focus on reinforcement learning."
+  },
+  {
+    "author_id": "44159",
+    "author_url": "https://nips.cc/Conferences/2017/Schedule?showSpeaker=44159-9171",
+    "author": "Luna Yang",
+    "affiliation": "Carnegie Mellon University",
+    "bio": "Bio is unavailable."
+  },
+  {
+    "author_id": "44160",
+    "author_url": "https://nips.cc/Conferences/2017/Schedule?showSpeaker=44160-9171",
+    "author": "Shizhen Xu",
+    "affiliation": "Tsinghua University",
+    "bio": "Bio is unavailable."
+  },
+  {
+    "author_id": "44161",
+    "author_url": "https://nips.cc/Conferences/2017/Schedule?showSpeaker=44161-10110",
+    "author": "Jialei Wang",
+    "affiliation": "IBM",
+    "bio": "Bio is unavailable."
+  },
+  {
+    "author_id": "44162",
+    "author_url": "https://nips.cc/Conferences/2017/Schedule?showSpeaker=44162-9209",
+    "author": "Tom Brown",
+    "affiliation": "Google Brain",
+    "bio": "Bio is unavailable."
+  },
+  {
+    "author_id": "44163",
+    "author_url": "https://nips.cc/Conferences/2017/Schedule?showSpeaker=44163-9239",
+    "author": "michael Murias",
+    "affiliation": "Duke University",
+    "bio": "Bio is unavailable."
+  },
+  {
+    "author_id": "44164",
+    "author_url": "https://nips.cc/Conferences/2017/Schedule?showSpeaker=44164-9239",
+    "author": "samantha Major",
+    "bio": "Bio is unavailable."
+  },
+  {
+    "author_id": "44165",
+    "author_url": "https://nips.cc/Conferences/2017/Schedule?showSpeaker=44165-9239",
+    "author": "geraldine Dawson",
+    "bio": "Bio is unavailable."
+  },
+  {
+    "author_id": "44166",
+    "author_url": "https://nips.cc/Conferences/2017/Schedule?showSpeaker=44166-9293",
+    "author": "Jialin Mao",
+    "affiliation": "New York University",
+    "bio": "Bio is unavailable."
+  },
+  {
+    "author_id": "44167",
+    "author_url": "https://nips.cc/Conferences/2017/Schedule?showSpeaker=44167-9299",
+    "author": "Ersin Yumer",
+    "affiliation": "Adobe Research",
+    "bio": "Bio is unavailable."
+  },
+  {
+    "author_id": "44168",
+    "author_url": "https://nips.cc/Conferences/2017/Schedule?showSpeaker=44168-9314",
+    "author": "Tavian Barnes",
+    "affiliation": "Microsoft",
+    "bio": "Bio is unavailable."
+  },
+  {
+    "author_id": "44169",
+    "author_url": "https://nips.cc/Conferences/2017/Schedule?showSpeaker=44169-9314",
+    "author": "Jeffrey Tsang",
+    "bio": "Bio is unavailable."
+  },
+  {
+    "author_id": "44170",
+    "author_url": "https://nips.cc/Conferences/2017/Schedule?showSpeaker=44170-9325",
+    "author": "Yuting Liu",
+    "affiliation": "Beijing Jiaotong University",
+    "bio": "Bio is unavailable."
+  },
+  {
+    "author_id": "44171",
+    "author_url": "https://nips.cc/Conferences/2017/Schedule?showSpeaker=44171-9330",
+    "author": "Satoshi Ikehata",
+    "affiliation": "National Institute of Informatics",
+    "bio": "Bio is unavailable."
+  },
+  {
+    "author_id": "44172",
+    "author_url": "https://nips.cc/Conferences/2017/Schedule?showSpeaker=44172-10081",
+    "author": "Demis Hassabis",
+    "affiliation": "DeepMind",
+    "bio": "Bio is unavailable."
+  },
+  {
+    "author_id": "44173",
+    "author_url": "https://nips.cc/Conferences/2017/Schedule?showSpeaker=44173-10089",
+    "author": "Illia Polosukhin",
+    "bio": "Bio is unavailable."
+  },
+  {
+    "author_id": "44174",
+    "author_url": "https://nips.cc/Conferences/2017/Schedule?showSpeaker=44174-9384",
+    "author": "Man Lan",
+    "bio": "Bio is unavailable."
+  },
+  {
+    "author_id": "44175",
+    "author_url": "https://nips.cc/Conferences/2017/Schedule?showSpeaker=44175-9384",
+    "author": "Qi Zhang",
+    "affiliation": "Fudan University",
+    "bio": "Bio is unavailable."
+  },
+  {
+    "author_id": "44176",
+    "author_url": "https://nips.cc/Conferences/2017/Schedule?showSpeaker=44176-9384",
+    "author": "Xuanjing Huang",
+    "affiliation": "Fudan University",
+    "bio": "Xuanjing Huang is a Professor of the School of Computer Science, Fudan University, Shanghai, China. She received her PhD degree in Computer Science from Fudan University in 1998. From 2008 to 2009, she is a visiting scholar in CIIR, UMass Amherst. Her research interest includes text retrieval, natural language processing, and data intensive computing. She has published dozens of papers in several major conferences including SIGIR, ACL, ICML, IJCAI, AAAI, CIKM, ISWC, EMNLP, WSDM and COLING. She has also translated the second version of “Modern Information Retrieval” to Chinese. In the research community, she served as the organizer of WSDM 2015, competition chair of CIKM 2014, tutorial chair of COLING 2010, SPC or PC member of past WSDM, SIGIR, WWW, CIKM, ACL, IJCAI, EMNLP and many other conferences."
+  },
+  {
+    "author_id": "44177",
+    "author_url": "https://nips.cc/Conferences/2017/Schedule?showSpeaker=44177-9435",
+    "author": "Seyed Iranmanesh",
+    "affiliation": "West Virginia University",
+    "bio": "Bio is unavailable."
+  },
+  {
+    "author_id": "44178",
+    "author_url": "https://nips.cc/Conferences/2017/Schedule?showSpeaker=44178-9445",
+    "author": "Arsenii Ashukha",
+    "bio": "Bio is unavailable."
+  },
+  {
+    "author_id": "44179",
+    "author_url": "https://nips.cc/Conferences/2017/Schedule?showSpeaker=44179-9452",
+    "author": "Mohammad Karimi",
+    "affiliation": "ETH Zurich",
+    "bio": "Bio is unavailable."
+  },
+  {
+    "author_id": "44180",
+    "author_url": "https://nips.cc/Conferences/2017/Schedule?showSpeaker=44180-9457",
+    "author": "Conrado Miranda",
+    "bio": "Bio is unavailable."
+  },
+  {
+    "author_id": "44181",
+    "author_url": "https://nips.cc/Conferences/2017/Schedule?showSpeaker=44181-9457",
+    "author": "Jeshua Bratman",
+    "affiliation": "Twitter",
     "bio": "Bio is unavailable."
   },
   {
@@ -14805,7 +15116,7 @@
     "author_id": "4513",
     "author_url": "https://nips.cc/Conferences/2017/Schedule?showSpeaker=4513-9401",
     "author": "koray kavukcuoglu",
-    "affiliation": "DeepMind",
+    "affiliation": "Google DeepMind",
     "bio": "Bio is unavailable."
   },
   {
@@ -14842,13 +15153,6 @@
     "author": "Arthur Choi",
     "affiliation": "UCLA",
     "bio": "Bio is unavailable."
-  },
-  {
-    "author_id": "4770",
-    "author_url": "https://nips.cc/Conferences/2017/Schedule?showSpeaker=4770-10097",
-    "author": "John Langford",
-    "affiliation": "Microsoft Research",
-    "bio": "John Langford is a machine learning research scientist, a field which he says \"is shifting from an academic discipline to an industrial tool\". He is the author of the weblog hunch.net and the principal developer of Vowpal Wabbit. John works at Microsoft Research New York, of which he was one of the founding members, and was previously affiliated with Yahoo! Research, Toyota Technological Institute, and IBM's Watson Research Center. He studied Physics and Computer Science at the California Institute of Technology, earning a double bachelor's degree in 1997, and received his Ph.D. in Computer Science from Carnegie Mellon University in 2002. He was the program co-chair for the 2012 International Conference on Machine Learning."
   },
   {
     "author_id": "4826",
@@ -14917,7 +15221,7 @@
     "author_id": "5226",
     "author_url": "https://nips.cc/Conferences/2017/Schedule?showSpeaker=5226-9041",
     "author": "Allie Fletcher",
-    "affiliation": "UCLA, UCSC, &  UC Berkeley",
+    "affiliation": "UCLA",
     "bio": "Bio is unavailable."
   },
   {
@@ -14938,7 +15242,7 @@
     "author_id": "5354",
     "author_url": "https://nips.cc/Conferences/2017/Schedule?showSpeaker=5354-9017",
     "author": "Ankan Saha",
-    "affiliation": "University of Chicago",
+    "affiliation": "Linkedin Corporation",
     "bio": "Bio is unavailable."
   },
   {
@@ -15001,7 +15305,7 @@
     "author_id": "5646",
     "author_url": "https://nips.cc/Conferences/2017/Schedule?showSpeaker=5646-9274",
     "author": "Lihong Li",
-    "affiliation": "Microsoft Research",
+    "affiliation": "Google Inc.",
     "bio": "Bio is unavailable."
   },
   {
@@ -15029,7 +15333,7 @@
     "author_id": "5706",
     "author_url": "https://nips.cc/Conferences/2017/Schedule?showSpeaker=5706-8962",
     "author": "Ziming Zhang",
-    "affiliation": "Simon Fraser University",
+    "affiliation": "MERL",
     "bio": "Bio is unavailable."
   },
   {
@@ -15038,6 +15342,13 @@
     "author": "Stephen Wright",
     "affiliation": "UW-Madison",
     "bio": "Steve Wright is a Professor of Computer Sciences at the University of\nWisconsin-Madison. His research interests lie in computational\noptimization and its applications to science and engineering. Prior to\njoining UW-Madison in 2001, Wright was a Senior Computer Scientist\n(1997-2001) and Computer Scientist (1990-1997) at Argonne National\nLaboratory, and Professor of Computer Science at the University of\nChicago (2000-2001). He is the past Chair of the Mathematical\nOptimization Society (formerly the Mathematical Programming Society),\nthe leading professional society in optimization, and a member of the\nBoard of the Society for Industrial and Applied Mathematics (SIAM).\n\nWright is the author or co-author of four widely used books in\nnumerical optimization, including \"Primal Dual Interior-Point Methods\"\n(SIAM, 1997) and \"Numerical Optimization\" (with J. Nocedal, Second\nEdition, Springer, 2006). He has also authored over 85 refereed\njournal papers on optimization theory, algorithms, software, and\napplications. He is coauthor of widely used interior-point software\nfor linear and quadratic optimization. His recent research includes\nalgorithms, applications, and theory for sparse optimization\n(including applications in compressed sensing and machine learning)."
+  },
+  {
+    "author_id": "5802",
+    "author_url": "https://nips.cc/Conferences/2017/Schedule?showSpeaker=5802-9384",
+    "author": "Shiliang Sun",
+    "affiliation": "East China Normal University",
+    "bio": "Bio is unavailable."
   },
   {
     "author_id": "5875",
@@ -15145,6 +15456,13 @@
     "bio": "Bio is unavailable."
   },
   {
+    "author_id": "6363",
+    "author_url": "https://nips.cc/Conferences/2017/Schedule?showSpeaker=6363-10003",
+    "author": "Pablo A Parrilo",
+    "affiliation": "Massachusetts Institute of Technology",
+    "bio": "Bio is unavailable."
+  },
+  {
     "author_id": "6399",
     "author_url": "https://nips.cc/Conferences/2017/Schedule?showSpeaker=6399-9237",
     "author": "Stéphan Clémençon",
@@ -15169,7 +15487,7 @@
     "author_id": "651",
     "author_url": "https://nips.cc/Conferences/2017/Schedule?showSpeaker=651-8916",
     "author": "Stefan Schaal",
-    "affiliation": "USC",
+    "affiliation": "MPI-IS and USC",
     "bio": "Bio is unavailable."
   },
   {
@@ -15177,6 +15495,13 @@
     "author_url": "https://nips.cc/Conferences/2017/Schedule?showSpeaker=654-10016",
     "author": "Manfred Warmuth",
     "affiliation": "Univ. of Calif. at Santa Cruz",
+    "bio": "Bio is unavailable."
+  },
+  {
+    "author_id": "6541",
+    "author_url": "https://nips.cc/Conferences/2017/Schedule?showSpeaker=6541-8968",
+    "author": "Nenghai Yu",
+    "affiliation": "University of Science and Technology of China",
     "bio": "Bio is unavailable."
   },
   {
@@ -15212,6 +15537,12 @@
     "author_url": "https://nips.cc/Conferences/2017/Schedule?showSpeaker=6581-8763",
     "author": "Ian Goodfellow",
     "affiliation": "Google",
+    "bio": "Bio is unavailable."
+  },
+  {
+    "author_id": "6588",
+    "author_url": "https://nips.cc/Conferences/2017/Schedule?showSpeaker=6588-9325",
+    "author": "Zhi-Ming Ma",
     "bio": "Bio is unavailable."
   },
   {
@@ -15309,7 +15640,7 @@
     "author_id": "6948",
     "author_url": "https://nips.cc/Conferences/2017/Schedule?showSpeaker=6948-8814",
     "author": "Li Fei-Fei",
-    "affiliation": "Stanford U",
+    "affiliation": "Stanford University & Google",
     "bio": "Bio is unavailable."
   },
   {
@@ -15449,7 +15780,7 @@
     "author_id": "7730",
     "author_url": "https://nips.cc/Conferences/2017/Schedule?showSpeaker=7730-9220",
     "author": "Ameet S Talwalkar",
-    "affiliation": "UCLA",
+    "affiliation": "CMU",
     "bio": "Bio is unavailable."
   },
   {
@@ -15520,13 +15851,6 @@
     "author_url": "https://nips.cc/Conferences/2017/Schedule?showSpeaker=8006-9193",
     "author": "Feiping Nie",
     "affiliation": "University of Texas Arlington",
-    "bio": "Bio is unavailable."
-  },
-  {
-    "author_id": "8007",
-    "author_url": "https://nips.cc/Conferences/2017/Schedule?showSpeaker=8007-9193",
-    "author": "Heng Huang",
-    "affiliation": "Computer Science and Engineering  University of Texas at Arlington",
     "bio": "Bio is unavailable."
   },
   {
@@ -15656,6 +15980,13 @@
     "bio": "Bio is unavailable."
   },
   {
+    "author_id": "8978",
+    "author_url": "https://nips.cc/Conferences/2017/Schedule?showSpeaker=8978-9458",
+    "author": "Zhe Lin",
+    "affiliation": "Adobe",
+    "bio": "Bio is unavailable."
+  },
+  {
     "author_id": "9017",
     "author_url": "https://nips.cc/Conferences/2017/Schedule?showSpeaker=9017-9030",
     "author": "Aarti Singh",
@@ -15687,7 +16018,7 @@
     "author_id": "9098",
     "author_url": "https://nips.cc/Conferences/2017/Schedule?showSpeaker=9098-9128",
     "author": "Junzhou Huang",
-    "affiliation": "University of Texas at Arlington",
+    "affiliation": "University of Texas at Arlington / Tencent AI Lab",
     "bio": "Bio is unavailable."
   },
   {
@@ -15757,14 +16088,21 @@
     "author_id": "9272",
     "author_url": "https://nips.cc/Conferences/2017/Schedule?showSpeaker=9272-8921",
     "author": "Jakob H Macke",
-    "affiliation": "caesar Bonn & BCCN Tübingen",
+    "affiliation": "research center caesar, an associate of the Max Planck Society",
     "bio": "Bio is unavailable."
   },
   {
     "author_id": "9285",
     "author_url": "https://nips.cc/Conferences/2017/Schedule?showSpeaker=9285-9154",
     "author": "Leonid Sigal",
-    "affiliation": "Disney Research",
+    "affiliation": "Disney Research / University of British Columbia",
+    "bio": "Bio is unavailable."
+  },
+  {
+    "author_id": "9297",
+    "author_url": "https://nips.cc/Conferences/2017/Schedule?showSpeaker=9297-9367",
+    "author": "David Mcallester",
+    "affiliation": "Toyota Tech Institute Chicago",
     "bio": "Bio is unavailable."
   },
   {
@@ -15918,7 +16256,7 @@
     "author_id": "9702",
     "author_url": "https://nips.cc/Conferences/2017/Schedule?showSpeaker=9702-9324",
     "author": "Changyou Chen",
-    "affiliation": "Duke University",
+    "affiliation": "University at Buffalo",
     "bio": "Bio is unavailable."
   },
   {
@@ -15975,7 +16313,7 @@
     "author_url": "https://nips.cc/Conferences/2017/Schedule?showSpeaker=9899-10085",
     "author": "Mateusz Malinowski",
     "affiliation": "DeepMind",
-    "bio": "Bio is unavailable."
+    "bio": "Mateusz Malinowski is a research scientist at DeepMind, where he works at the intersection of computer vision, natural language understanding, and deep learning. He was granted PhD (Dr.-Ing.) with the highest honor (summa cum laude) at Max Planck Institute for Informatics in 2017 in computer vision for his pioneering work on visual question answering, where he proposed the task and developed methods that answer questions about the content of images. Prior to this, he graduated with honors from Saarland University in computer science. Before that, he studied computer science at Wroclaw University in Poland."
   },
   {
     "author_id": "9911",
@@ -16003,6 +16341,69 @@
     "author_url": "https://nips.cc/Conferences/2017/Schedule?showSpeaker=9985-9316",
     "author": "Johannes Fürnkranz",
     "affiliation": "TU Darmstadt",
+    "bio": "Bio is unavailable."
+  },
+  {
+    "author_id": "22873",
+    "author_url": "https://nips.cc/Conferences/2017/Schedule?showSpeaker=22873-9275",
+    "author": "Chen-Yu Wei",
+    "affiliation": "Academia Sinica",
+    "bio": "Bio is unavailable."
+  },
+  {
+    "author_id": "22888",
+    "author_url": "https://nips.cc/Conferences/2017/Schedule?showSpeaker=22888-9426",
+    "author": "Dieterich Lawson",
+    "affiliation": "Google Brain",
+    "bio": "Bio is unavailable."
+  },
+  {
+    "author_id": "22898",
+    "author_url": "https://nips.cc/Conferences/2017/Schedule?showSpeaker=22898-8899",
+    "author": "Songbai Yan",
+    "affiliation": "University of California, San Diego",
+    "bio": "Bio is unavailable."
+  },
+  {
+    "author_id": "22918",
+    "author_url": "https://nips.cc/Conferences/2017/Schedule?showSpeaker=22918-9190",
+    "author": "Shinji Ito",
+    "affiliation": "NEC Coorporation",
+    "bio": "Bio is unavailable."
+  },
+  {
+    "author_id": "22932",
+    "author_url": "https://nips.cc/Conferences/2017/Schedule?showSpeaker=22932-8834",
+    "author": "Jonathan Scarlett",
+    "affiliation": "EPFL",
+    "bio": "Bio is unavailable."
+  },
+  {
+    "author_id": "22956",
+    "author_url": "https://nips.cc/Conferences/2017/Schedule?showSpeaker=22956-9411",
+    "author": "Matt Kusner",
+    "affiliation": "Alan Turing Institute",
+    "bio": "Bio is unavailable."
+  },
+  {
+    "author_id": "23318",
+    "author_url": "https://nips.cc/Conferences/2017/Schedule?showSpeaker=23318-8787",
+    "author": "Diane Bouchacourt",
+    "affiliation": "Facebook",
+    "bio": "Bio is unavailable."
+  },
+  {
+    "author_id": "35990",
+    "author_url": "https://nips.cc/Conferences/2017/Schedule?showSpeaker=35990-9054",
+    "author": "Renato Leme",
+    "affiliation": "Google Research",
+    "bio": "Bio is unavailable."
+  },
+  {
+    "author_id": "35994",
+    "author_url": "https://nips.cc/Conferences/2017/Schedule?showSpeaker=35994-9060",
+    "author": "Jason Ge",
+    "affiliation": "Princeton University",
     "bio": "Bio is unavailable."
   }
 ]

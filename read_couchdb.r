@@ -42,15 +42,14 @@ topics = cdb %>%
   .$rows %>%
   .$doc %>%
   as_tibble() %>% 
-  select(topic_id, topic_cluster_ids)
+  select(topic_id, topic_clusters)
 
 topic_ids = topics$topic_id %>% 
   sort()
 
 topic_clusters = topics %>% 
-  filter(map_lgl(topic_cluster_ids, ~length(.)>0)) %>% 
-  unnest() %>% 
-  rename(topic_cluster_id = topic_cluster_ids)
+  filter(map_lgl(topic_clusters, ~nrow(.)>0)) %>% 
+  unnest()
 
 # Read user tables
 cat("reading couchdb user tables\n")
@@ -75,13 +74,17 @@ user_topics = user_tables %>%
   map("result") %>% 
   map(~list(topic_cluster_id = unlist(.x))) %>% 
   keep(~length(.x$topic_cluster_id)>0) %>% 
-  bind_rows(.id = "user")
+  bind_rows(.id = "user") %>% 
+  distinct()
 
 user_topics = user_topics %>% 
   left_join(topic_clusters, by = "topic_cluster_id") %>% 
   select(-topic_cluster_id) %>% 
-  distinct() %>% 
-  mutate(weight = 1) %>% # each prefered topic gets the same weight
+  filter(!is.na(topic_id)) %>% ## TEMP#####################################"
+  group_by(user, topic_id) %>% 
+  summarise(weight = sum(weight)) %>% 
+  ungroup() %>% 
+  # mutate(weight = 1) %>% # each prefered topic gets the same weight
   complete(user = userids, topic_id = topic_ids, fill = list(weight=0)) %>% 
   mutate(ctr_user_id = match(user, userids)-1) # NOTE: ctr ids start at 0
 

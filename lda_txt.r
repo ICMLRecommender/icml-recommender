@@ -1,3 +1,5 @@
+#!/usr/bin/Rscript --slave
+
 source("common.r")
 library(tidytext)
 library(forcats)
@@ -7,111 +9,39 @@ library(pluralize)
 
 # See http://tidytextmining.com
 
+# read text terms
+filenames = readLines(files_path) %>% 
+  as_factor()
+
+vocab = readLines(vocab_path) %>% 
+  as_factor()
+
+text_terms_filtered = readLines(mult_path) %>% 
+  str_extract_all("\\d+:\\d+") %>% 
+  map(str_split, ":", simplify=TRUE) %>% 
+  map(set_colnames, c("term_id", "n")) %>% 
+  map(as_tibble) %>% 
+  bind_rows(.id = "file_id") %>% 
+  transmute(filename = filenames[as.integer(file_id)],
+            term = vocab[as.integer(term_id)+1],
+            n = as.integer(n))
+
 # read papers
 papers = fromJSON(file.path(data_path, "papers.json")) %>% 
   as_tibble()
 
-# read texts
-#===========================================
-txt_files = dir(txt_path, pattern = "\\.txt", full.names = TRUE)
-
-filenames = basename(txt_files) %>%
-  tools::file_path_sans_ext()
-
-text_strings = txt_files %>%
-  map_chr(~readLines(.) %>% str_c(collapse="\n"))
-
-texts = data_frame(filename = filenames,
-                   text = text_strings)
-
-# create stop words
-#===========================================
-data(stop_words)
-
-latex_stopwords = text_strings %>% 
-  str_extract_all("\\\\\\w+") %>% 
-  as_vector() %>% 
-  unique() %>% 
-  str_extract("\\w+") %>% 
-  str_to_lower()
-
-my_stopwords = c("known", "setting", "settings", "case", "used", "approach", "approaches", "outperform", "outperforms", 
-                 "study", "studies", "better", "important","emph", "small","study", "application", "applications", 
-                 "dataset", "datasets", "learn", "learning","parameter", "parameters","mean","means","type",
-                 "work","function","functions","sqrt","improve","machine","efficient",
-                 "input","world","general","develop","particular","value","significant",
-                 "training","framework","simple","provide","number","method","experiment","experiments",
-                 "proposed","strongly", "early","models","model","methods","method","propose","paper",
-                 "problem","problems","algorithms","algorithm","real","based","function","approach","result",
-                 "results","different","performance","extend","demonstrate","standard","datum", "data",
-                 "large","existing","using","novel","analysis","introduce","technique","techniques","using",
-                 "achieve","synthetic","arxiv")
-
-all_stopwords = stop_words$word %>% 
-  c(latex_stopwords) %>%
-  c(my_stopwords) %>% 
-  unique()
-
-# tokenize and count
-#===========================================
-
-text_terms = texts %>% 
-  mutate(term = text %>% 
-           map(str_extract_all, pattern="\\b[a-zA-Z]\\w{2,}+\\b", simplify=TRUE) %>% # words of 3 characters at least
-           map(str_to_lower) %>% 
-           map(~discard(., . %in% all_stopwords)) %>% 
-           map(singularize) %>% # slow...
-           map(~discard(., . %in% all_stopwords)) %>% 
-           map(str_c, collapse=" ") %>% 
-           tokenize_ngrams(n = 2, n_min = 1)) %>% 
-  unnest() %>% 
-  count(filename, term, sort = TRUE) %>%
-  ungroup() %>% 
-  bind_tf_idf(term, filename, n)
-
-text_terms %>%
-  top_n(50, tf_idf) %>%
-  arrange(desc(tf_idf)) %>%
-  mutate(term = as_factor(term) %>% fct_rev()) %>% 
-  ggplot(aes(term, tf_idf, fill = filename)) +
-  geom_col() + 
-  xlab(NULL) +
-  coord_flip()
-
-# filter terms
-#===========================================
-text_terms %>% 
-  ggplot(aes(tf_idf)) + 
-  geom_histogram()
-
-# min_tfidf = 0.05
-min_df = 0.05
-max_df = 0.95
-
-text_terms_filtered = text_terms %>% 
-  # filter(tf_idf > min_tfidf) %>%
-  mutate(df = exp(-idf)) %>%
-  filter(df >= min_df, df <= max_df)
-
-terms_filtered = text_terms_filtered %>% 
-  distinct(term, idf)
-
-n_obs = sum(text_terms_filtered$n)
-n_terms = nrow(terms_filtered)
-n_docs = n_distinct(text_terms_filtered$filename)
-
-cat(n_terms, "terms\n")
-cat(n_docs, "documents\n")
-
+#===============================================================================
 # Topic modeling: LDA
-#===========================================
+#===============================================================================
+
 # convert to DocumentTermMatrix
-texts_dtm = text_terms_filtered %>% 
+
+texts_dtm = text_terms_filtered  %>% 
   cast_dtm(filename, term, n)
 
 # grid of parameters for LDA
 
-# k_vec = seq(15,30)
+# k_vec = c(20, 25, 30)
 # alpha_vec = c(0.05, 0.1, 0.2, 0.5)
 
 k_vec = lda_n_topics
@@ -128,7 +58,6 @@ for (i in seq_len(nrow(lda_params))) {
   cat("running lda: k =", k, "\n")
   
   # LDA settings
-  set.seed(2017)
   lda_ctrl = list(alpha = alpha,
                   estimate.alpha = FALSE, 
                   verbose = 1, 
@@ -161,17 +90,22 @@ for (i in seq_len(nrow(lda_params))) {
 
   # get documents topic distributions
   paper_counts = text_terms_filtered %>%
+    mutate(filename = as.character(filename)) %>% 
     group_by(filename) %>%
     summarise(n=sum(n))
 
   gamma = texts_lda %>%
     tidy(matrix = "gamma") %>%
-    rename(filename=document, topic_id=topic)
+    rename(filename=document, topic_id=topic) %>% 
+    left_join(paper_counts, by="filename") %>%
+    mutate(gamma=n*gamma) %>% # gamma unnormalized
+    group_by(topic_id) %>%
+    mutate(gamma_norm=gamma/sum(gamma)) %>% # gamma normalized by topic
+    ungroup()
 
   topic_weights = gamma %>%
-    left_join(paper_counts, by="filename") %>%
     group_by(topic_id) %>%
-    summarize(topic_sum=sum(gamma*n)) %>%
+    summarize(topic_sum=sum(gamma)) %>%
     ungroup() %>%
     mutate(topic_weight=topic_sum/sum(topic_sum))
   
@@ -209,13 +143,13 @@ for (i in seq_len(nrow(lda_params))) {
 
   gamma %>%
     group_by(topic_id) %>%
-    top_n(10, gamma) %>%
-    mutate(rk = rank(gamma, ties.method = "first")) %>%
+    top_n(10, gamma_norm) %>%
+    mutate(rk = rank(gamma_norm, ties.method = "first")) %>%
     ungroup() %>%
     left_join(papers %>%
                 select(filename, title),
               by="filename") %>%
-    ggplot(aes(rk, gamma, fill = factor(topic_id))) +
+    ggplot(aes(rk, gamma_norm, fill = factor(topic_id))) +
     geom_col(show.legend = FALSE, alpha=.3) +
     geom_text(aes(rk, y=0, label=title), hjust=0) +
     facet_wrap(~ topic_id, scales = "free", labeller = as_labeller(topic_labeller)) +
@@ -231,25 +165,22 @@ for (i in seq_len(nrow(lda_params))) {
   # =============================
 
   papers_subject_areas = papers %>%
-    select(filename, subject_areas) %>%
-    filter(subject_areas %>% map_lgl(is.data.frame)) %>%
-    mutate(primary_subject_area = map(subject_areas, slice, 1)) %>%
-    unnest(primary_subject_area)
+    select(filename, subject_area_1, subject_area_2)
 
   gamma_subjects = gamma %>%
     left_join(papers_subject_areas, by = "filename") %>%
-    left_join(paper_counts, by="filename") %>%
     group_by(topic_id, subject_area_1, subject_area_2) %>%
-    summarise(gamma = sum(gamma*n)) %>%
-    group_by(subject_area_1, subject_area_2) %>%
-    mutate(gamma = gamma/sum(gamma))
+    summarise(gamma = sum(gamma)) %>%
+    group_by(topic_id) %>%
+    mutate(gamma_norm = gamma/sum(gamma)) %>% 
+    ungroup()
 
   gamma_subjects %>%
     group_by(topic_id) %>%
-    top_n(10, gamma) %>%
-    mutate(rk = rank(gamma, ties.method = "first")) %>%
+    top_n(10, gamma_norm) %>%
+    mutate(rk = rank(gamma_norm, ties.method = "first")) %>%
     ungroup() %>%
-    ggplot(aes(rk, gamma, fill = factor(topic_id))) +
+    ggplot(aes(rk, gamma_norm, fill = factor(topic_id))) +
     geom_col(show.legend = FALSE, alpha=.3) +
     geom_text(aes(rk, y=0, label=str_c(subject_area_1, "/" ,subject_area_2)), hjust=0) +
     facet_wrap(~ topic_id, scales = "free", labeller = as_labeller(topic_labeller)) +
@@ -290,13 +221,13 @@ for (i in seq_len(nrow(lda_params))) {
   # papers topic proportions
   # =============================
   paper_topics_nested = gamma %>%
-    select(filename, topic_id, weight = gamma) %>%
+    select(filename, topic_id, weight = gamma_norm) %>%
     group_by(filename) %>%
     arrange(desc(weight)) %>%
     nest(.key = "topics")
 
   topic_papers_nested = gamma %>%
-    select(topic_id, filename, weight = gamma) %>%
+    select(topic_id, filename, weight = gamma_norm) %>%
     left_join(papers %>%
                 select(paper_id, filename),
               by="filename") %>%
@@ -310,71 +241,125 @@ for (i in seq_len(nrow(lda_params))) {
   # =============================
 
   topic_subjects_nested = gamma_subjects %>%
-    select(topic_id, subject_area_1, subject_area_2, weight = gamma) %>%
+    select(topic_id, subject_area_1, subject_area_2, weight = gamma_norm) %>%
     group_by(topic_id) %>%
     arrange(desc(weight)) %>%
     nest(.key = "subject_areas")
 
   # topics term proportions
   # =======================
-  topic_words_nested = beta %>%
+  topic_terms_nested = beta %>%
     select(topic_id, term, weight=beta) %>%
     group_by(topic_id) %>%
     arrange(desc(weight)) %>%
     nest(.key = "terms")
 
-  topics = topic_weights %>%
-    arrange(desc(topic_weight)) %>%
-    left_join(topic_words_nested, by="topic_id") %>%
-    left_join(topic_papers_nested, by="topic_id") %>%
-    left_join(topic_subjects_nested, by="topic_id")
-
-  # Topic clusters
+  # topic clusters
   #================
 
-  ############### TEMP #####
-  # topic_labels_file = file.path(raw_path, "topic_labels.csv")
-  #
-  # download.file(topic_labels_url, topic_labels_file)
-  #
-  # topic_labels = read_delim(topic_labels_file, delim = ",", trim_ws = TRUE) %>%
-  #   select(topic_id, labels) %>%
-  #   mutate(labels = str_split(labels, "/") %>%
-  #            map(str_trim))
+  topic_labels_file = file.path(raw_path, "topic_labels.csv")
 
-  topic_clusters = topics %>%
-    # mutate(labels = map(terms, ~.$term[1])) %>%  ############### TEMP #####
-  mutate(labels = map(subject_areas, ~.$subject_area_1[1:2])) %>%  ############### TEMP #####
-  # left_join(topic_labels, by = "topic_id") %>% ############### TEMP #####
-  unnest(labels, .drop = FALSE) %>%
+  download.file(topic_labels_url, topic_labels_file)
+
+  topic_labels = read_delim(topic_labels_file, delim = ",", trim_ws = TRUE) %>%
+    select(topic_id, labels) %>%
+    mutate(labels = str_split(labels, "/") %>%
+             map(str_trim))
+  
+  topic_topic_clusters = topic_weights %>%
+    # left_join(topic_terms_nested, by="topic_id") %>%
+    # mutate(labels = map(terms, ~.$term[1])) %>%  # use first word
+    # left_join(topic_subjects_nested, by="topic_id") %>%
+    # mutate(labels = map(subject_areas, ~.$subject_area_1[1:2])) %>% # use first subject_area_1
+    left_join(topic_labels, by = "topic_id") %>% # use handmade topic labels
+    mutate(weight = 1/map_int(labels, length)) %>% 
+    unnest(labels, .drop = FALSE) %>%
     rename(label = labels) %>%
-    filter(!is.na(label)) %>%
+    filter(!is.na(label))
+  
+  topic_cluster_weights = topic_topic_clusters %>%
     group_by(label) %>%
-    summarise(topic_ids = list(unique(topic_id)),
-              topic_cluster_weight = sum(topic_weight),
-              terms = list(map2(terms, topic_cluster_weight, ~mutate(.x, weight = weight * .y)) %>%
-                             bind_rows() %>%
-                             mutate(weight = weight / sum(weight)) %>%
-                             group_by(term) %>%
-                             summarise(weight = sum(weight)) %>%
-                             arrange(desc(weight))),
-              papers = list(bind_rows(papers) %>%
-                              group_by(paper_id) %>%
-                              summarise(weight = sum(weight)) %>%
-                              arrange(desc(weight)))) %>%
-    arrange(desc(topic_cluster_weight)) %>%
-    mutate(topic_cluster_id = seq_len(n())) %>%
+    summarize(topic_cluster_sum=sum(weight*topic_sum),
+              topics = list(data_frame(topic_id = topic_id,
+                                  weight = weight/sum(weight)))) %>% 
+    mutate(topic_cluster_weight=topic_cluster_sum/sum(topic_cluster_sum)) %>% 
+    arrange(desc(topic_cluster_weight)) %>% 
+    mutate(topic_cluster_id = seq_len(n()))
+  
+  topic_topic_clusters = topic_topic_clusters %>% 
+    left_join(topic_cluster_weights %>% 
+                select(label, topic_cluster_id), by = "label") %>% 
     select(topic_cluster_id, everything())
-
-  topics = topics %>%
-    left_join(topic_clusters %>%
-                select(topic_cluster_id, topic_ids) %>%
-                unnest() %>%
-                rename(topic_id = topic_ids) %>%
-                group_by(topic_id) %>%
-                summarise(topic_cluster_ids = list(topic_cluster_id)),
-              by = "topic_id")
-
+  
+  topic_clusters_nested = topic_topic_clusters %>% 
+    select(topic_id, topic_cluster_id, weight) %>% 
+    group_by(topic_id) %>% 
+    nest(.key = "topic_clusters")
+  
+  # join to topics
+  topics = topic_weights %>%
+    arrange(desc(topic_weight)) %>%
+    left_join(topic_terms_nested, by="topic_id") %>%
+    left_join(topic_papers_nested, by="topic_id") %>%
+    left_join(topic_subjects_nested, by="topic_id") %>%
+    left_join(topic_clusters_nested, by="topic_id")
+  
+  
+  # Analyse topic clusters
+  # ===========================
+  
+  # topic clusters terms
+  topic_cluster_terms_nested = beta %>% 
+    left_join(topic_topic_clusters, by = "topic_id") %>% 
+    group_by(label, term) %>% 
+    summarise(beta = sum(beta*topic_sum*weight)) %>% 
+    group_by(label) %>% 
+    mutate(beta = beta/sum(beta)) %>% 
+    ungroup() %>% 
+    left_join(topic_cluster_weights %>% 
+                select(label, topic_cluster_id), by = "label") %>% 
+    select(topic_cluster_id, term, weight = beta) %>% 
+    group_by(topic_cluster_id) %>% 
+    nest(.key = "terms")
+  
+  # topic clusters papers
+  topic_cluster_papers_nested = gamma %>% 
+    left_join(topic_topic_clusters, by = "topic_id") %>% 
+    left_join(papers %>%
+                select(paper_id, filename),
+              by="filename") %>%
+    select(-filename) %>% 
+    group_by(label, paper_id) %>% 
+    summarise(gamma = sum(gamma*weight)) %>% 
+    group_by(label) %>% 
+    mutate(gamma_norm = gamma/sum(gamma)) %>% 
+    ungroup() %>% 
+    left_join(topic_cluster_weights %>% 
+                select(label, topic_cluster_id), by = "label") %>% 
+    select(topic_cluster_id, paper_id, weight = gamma_norm) %>% 
+    group_by(topic_cluster_id) %>% 
+    nest(.key = "papers")
+  
+  # topic clusters subjects
+  topic_cluster_subjects_nested = gamma_subjects %>% 
+    left_join(topic_topic_clusters, by = "topic_id") %>% 
+    group_by(label, subject_area_1, subject_area_2) %>% 
+    summarise(gamma = sum(gamma*weight)) %>% 
+    group_by(label) %>% 
+    mutate(gamma_norm = gamma/sum(gamma)) %>% 
+    ungroup() %>% 
+    left_join(topic_cluster_weights %>% 
+                select(label, topic_cluster_id), by = "label") %>% 
+    select(topic_cluster_id, subject_area_1, subject_area_2, weight = gamma_norm) %>% 
+    group_by(topic_cluster_id) %>% 
+    nest(.key = "subject_areas")
+  
+  # join 
+  topic_clusters = topic_cluster_weights %>%
+    left_join(topic_cluster_terms_nested, by="topic_cluster_id") %>%
+    left_join(topic_cluster_papers_nested, by="topic_cluster_id") %>%
+    left_join(topic_cluster_subjects_nested, by="topic_cluster_id")
+  
   # write json
   #============
   papers = papers %>%
@@ -426,11 +411,51 @@ for (i in seq_len(nrow(lda_params))) {
       split(seq_len(nrow(.))) %>%
       sapply(print_topic) %>%
       writeLines(fc)
+    
+    print_topic_cluster = function(df, n=10) {
+      out = c(str_c("# [", format(df$topic_cluster_weight*100, digit=3), "%] topic_cluster ", df$topic_cluster_id, ": ", df$label))
+      terms = df$terms[[1]] %>%
+        arrange(desc(weight)) %>%
+        select(weight, term) %>%
+        slice(seq_len(n))
+      out = c(out, knitr::kable(terms), "\n")
+      papers = df$papers[[1]] %>%
+        arrange(desc(weight)) %>%
+        select(weight, title) %>%
+        slice(seq_len(n))
+      out = c(out, knitr::kable(papers), "\n")
+      subject_areas = df$subject_areas[[1]] %>%
+        arrange(desc(weight)) %>%
+        select(weight, subject_area_1, subject_area_2) %>%
+        slice(seq_len(n))
+      out = c(out, knitr::kable(subject_areas), "\n")
+    }
+    
+    fc = file(file.path(data_path, paste0("topic_clusters", lda_suffix, ".md")))
+    
+    topic_clusters %>%
+      group_by(topic_cluster_id) %>%
+      do(mutate(., papers = map(papers, ~left_join(., paper_titles, by = "paper_id")))) %>%
+      split(seq_len(nrow(.))) %>%
+      sapply(print_topic_cluster) %>%
+      writeLines(fc)
 
     close(fc)
   }
   
 }
+
+# write theta_v.dat
+# -----------------------------
+
+theta_v_path = file.path(data_path, "theta_v.dat")
+  
+gamma %>% 
+  select(filename, topic_id, gamma) %>% 
+  spread(topic_id, gamma) %>% 
+  arrange(factor(filename, levels = filenames)) %>% 
+  select(-filename) %>% 
+  write_delim(theta_v_path, delim = " ", col_names = FALSE)
 
 # compute information criterions
 # -----------------------------
@@ -438,7 +463,7 @@ lda_params = lda_params %>%
   mutate(p = k*(n_terms-1) + n_docs*(k-1)) %>% # nb of free parameters
   mutate(aic = -2*log_like+2*p+2*p*(p+1)/(n_obs-p-1)) %>%
   mutate(bic = -2*log_like+p*log(n_obs)) %>%
-  mutate(log_pp = (-log_like + p)/n_obs) # log penalized perplexity
+  mutate(log_pp = (-log_like + p)/n_obs) # log penalized perplexityT
 # NOTE: these criterions might be wrong if the loglike returned by LDA is up to a constant
 
 lda_params %>%

@@ -1,0 +1,121 @@
+subject_area_1,subject_area_2,labels
+Algorithms,,Algo
+Algorithms,Active Learning,Algo ActiveLearn
+Algorithms,Bandit Algorithms,Algo Bandits
+Algorithms,Boosting and Ensemble Methods,Algo Boosting Ensembles
+Algorithms,Classification,Algo Classification
+Algorithms,Clustering,Algo Clustering
+Algorithms,Collaborative Filtering,Algo CollabFiltering
+Algorithms,"Components Analysis (e.g., CCA, ICA, LDA, PCA)",Algo DimReduction
+Algorithms,Density Estimation,Algo DensityEstimation
+Algorithms,Dynamical Systems,Algo DynamicSystem
+Algorithms,Hyperparameter Selection,Algo HyperparamSelection
+Algorithms,Kernel Methods,Algo Kernels
+Algorithms,Metric Learning,Algo Metric
+Algorithms,Missing Data,Algo MissingData
+Algorithms,Model Selection and Structure Learning,Algo StructureLearn
+Algorithms,Multitask and Transfer Learning,Algo Multitask Transfer
+Algorithms,Nonlinear Dimensionality Reduction and Manifold Learning,Algo DimReduction Manifold
+Algorithms,Online Learning,Algo OnlineLearn
+Algorithms,Ranking and Preference Learning,Algo Ranking Preference
+Algorithms,Regression,Algo Regression
+Algorithms,Reinforcement Learning,Algo RL
+Algorithms,Representation Learning,Algo Representation
+Algorithms,Semi-Supervised Learning,Algo SemiSupervised
+Algorithms,Similarity and Distance Learning,Algo Similarity Distance
+Algorithms,Sparse Coding and Dimensionality Expansion,Algo SparseCoding DimExpansion
+Algorithms,Sparsity and Compressed Sensing,Algo Sparsity CompressSensing
+Algorithms,Spectral Methods,Algo Spectral
+Algorithms,Stochastic Methods,Algo Stochastic
+Algorithms,Structured Prediction,Algo StructuredPred
+Algorithms,Unsupervised Learning,Algo Unsupervised
+Applications,,Applied
+Applications,Audio and Speech Processing,Applied Audio Speech
+Applications,Computational Biology and Bioinformatics,Applied Bioinformatics
+Applications,Computational Social Science,Applied SocialSci
+Applications,Computer Vision,Applied Vision
+Applications,Dialog- and/or Communication-Based Learning,Applied Dialog Communication
+Applications,"Fairness, Accountability, and Transparency",Applied Fairness Accountability Transparency
+Applications,Hardware and Systems,Applied Hardware Systems
+Applications,Information Retrieval,Applied IR
+Applications,Matrix and Tensor Factorization,Applied MatrixFact TensorFact
+Applications,Natural Language Processing,Applied NLP
+Applications,Natural Scene Statistics,Applied NaturalScene
+Applications,Network Analysis,Applied Networks
+Applications,Object Recognition,Applied ObjectRecognition
+Applications,"Privacy, Anonymity, and Security",Applied Privacy Anonymity Security
+Applications,Recommender Systems,Applied RecSys
+Applications,Signal Processing,Applied SigProc
+Applications,Speech Recognition,Applied Speech
+Applications,Time Series Analysis,Applied TimeSeries
+Applications,"Video, Motion and Tracking",Applied Video Tracking
+Applications,Visual Features,Applied VisualFeatures
+Applications,Visual Perception,Applied VisualPerception
+Applications,Visual Question Answering,Applied VisualQA
+Applications,Web Applications and Internet Data,Applied Web Internet
+"Data, Competitions, Implementations, and Software",,Data Competitions Software
+"Data, Competitions, Implementations, and Software",Data Sets or Data Repositories,Data DataSets DataRepo
+Deep Learning,,Deep
+Deep Learning,Adversarial Networks,Deep Adversarial
+Deep Learning,Attention Models,Deep Attention
+Deep Learning,Biologically Plausible Deep Networks,Deep BiologicallyPlausible
+Deep Learning,Deep Autoencoders,Deep Autoencoders
+Deep Learning,Efficient Inference Methods,Deep EfficientInference
+Deep Learning,Efficient Training Methods,Deep EfficientTraining
+Deep Learning,Embedding Approaches,Deep Embedding
+Deep Learning,Generative Models,Deep Generative
+Deep Learning,Learning to Learn,Deep Learn2Learn
+Deep Learning,Memory-Augmented Neural Networks,Deep Memory
+Deep Learning,One-Shot/Low-Shot Learning Approaches,Deep OneShot LowShot
+Deep Learning,Optimization for Deep Networks,Deep Optimization
+Deep Learning,Predictive Models,Deep PredictiveModels
+Deep Learning,Program Induction,Deep ProgramInduction
+Deep Learning,Recurrent Networks,Deep RNNs
+Deep Learning,Supervised Deep Networks,Deep Supervised
+Deep Learning,Visualization/Expository Techniques for Deep Networks,Deep Visualization
+Neuroscience and cognitive science,,Neuro CogSci
+Neuroscience and cognitive science,Auditory Perception and Modeling,Neuro CogSci Auditory
+Neuroscience and cognitive science,Brain--Computer Interfaces and Neural Prostheses,Neuro CogSci BCI NeuralProstheses
+Neuroscience and cognitive science,Brain Imaging,Neuro CogSci BrainImaging
+Neuroscience and cognitive science,Brain Mapping,Neuro CogSci BrainMapping
+Neuroscience and cognitive science,Cognitive Science,CogSci
+Neuroscience and cognitive science,Connectomics,Neuro CogSci Connectomics
+Neuroscience and cognitive science,Memory,Neuro CogSci Memory
+Neuroscience and cognitive science,Neural Coding,Neuro CogSci Coding
+Neuroscience and cognitive science,Neuroscience,Neuro
+Neuroscience and cognitive science,Perception,Neuro CogSci Perception
+None of the above,,None
+Optimization,,Optim
+Optimization,Combinatorial Optimization,Optim Combinatorial
+Optimization,Convex Optimization,Optim Convex
+Optimization,Non-Convex Optimization,Optim NonConvex
+Optimization,Submodular Optimization,Optim Submodular
+Probabilistic Methods,,Prob
+Probabilistic Methods,Bayesian Nonparametrics,Prob BNP
+Probabilistic Methods,Belief Propagation,Prob BeliefProp
+Probabilistic Methods,Causal Inference,Prob Causal
+Probabilistic Methods,Distributed Inference,Prob Distributed
+Probabilistic Methods,Gaussian Processes,Prob GPs
+Probabilistic Methods,Graphical Models,Prob Graphical
+Probabilistic Methods,Hierarchical Models,Prob Hierarchical
+Probabilistic Methods,Latent Variable Models,Prob LatentVariable
+Probabilistic Methods,MCMC,Prob MCMC
+Probabilistic Methods,Topic Models,Prob TopicModels
+Probabilistic Methods,Variational Inference,Prob Variational
+Reinforcement Learning and Planning,,RL
+Reinforcement Learning and Planning,Decision and Control,RL Decision Control
+Reinforcement Learning and Planning,Markov Decision Processes,RL MDPs
+Reinforcement Learning and Planning,Model-Based RL,RL ModelBased
+Reinforcement Learning and Planning,Multi-Agent RL,RL MultiAgent
+Reinforcement Learning and Planning,Planning,RL Planning
+Theory,,Theory
+Theory,Computational Complexity,Theory Complexity
+Theory,Control Theory,Theory Control
+Theory,Frequentist Statistics,Theory Frequentist
+Theory,Game Theory and Computational Economics,Theory Game Economics
+Theory,Information Theory,Theory Information
+Theory,Large Deviations and Asymptotic Analysis,Theory LargeDeviations Asymptotic
+Theory,Learning Theory,Theory Learning
+Theory,Regularization,Theory Regularization
+Theory,Spaces of Functions and Kernels,Theory FunctionSpaces Kernels
+Theory,Statistical Physics of Learning,Theory StatPhysics

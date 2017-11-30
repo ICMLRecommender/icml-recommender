@@ -57,33 +57,33 @@ authors %>%
   toJSON(pretty = TRUE) %>% 
   write(file.path(raw_path, "authors.json"))
 
-# Subjects (website)
-#==========================
-
-html = str_c(schedule_url, "?bySubject") %>% 
-  read_html() %>% 
-  html_nodes("#bySubjectForm > label[for]")
-
-subject_ids = html %>% 
-  html_attr("for") %>% 
-  str_extract("\\d+")
-
-subject_labels = html %>% 
-  html_text() %>% 
-  str_trim()
-
-
-subjects = data_frame(subject_id = subject_ids,
-                      subject = subject_labels) %>% 
-  mutate(event_ids = subject_id %>% map(parse_subject, 
-                                        schedule_url = schedule_url, 
-                                        .pb = progress_estimated(n())))
-  
-event_subjects = subjects %>% 
-  unnest() %>% 
-  group_by(event_id) %>% 
-  nest(.key = "subjects")
-
-event_subjects %>% 
-  toJSON(pretty = TRUE) %>% 
-  write(file.path(raw_path, "event_subjects.json"))
+# # Subjects (website)
+# #==========================
+# 
+# html = str_c(schedule_url, "?bySubject") %>% 
+#   read_html() %>% 
+#   html_nodes("#bySubjectForm > label[for]")
+# 
+# subject_ids = html %>% 
+#   html_attr("for") %>% 
+#   str_extract("\\d+")
+# 
+# subject_labels = html %>% 
+#   html_text() %>% 
+#   str_trim()
+# 
+# 
+# subjects = data_frame(subject_id = subject_ids,
+#                       subject = subject_labels) %>% 
+#   mutate(event_ids = subject_id %>% map(parse_subject, 
+#                                         schedule_url = schedule_url, 
+#                                         .pb = progress_estimated(n())))
+#   
+# event_subjects = subjects %>% 
+#   unnest() %>% 
+#   group_by(event_id) %>% 
+#   nest(.key = "subjects")
+# 
+# event_subjects %>% 
+#   toJSON(pretty = TRUE) %>% 
+#   write(file.path(raw_path, "event_subjects.json"))

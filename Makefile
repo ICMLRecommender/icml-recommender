@@ -105,7 +105,8 @@ clean_abstracts_txt:
 TXT2DAT_FILES = $(TXT_PATH)/$(MULT_FILE) $(TXT_PATH)/$(FILES_FILE) $(TXT_PATH)/$(VOCAB_FILE)
 
 $(TXT2DAT_FILES):
-	python $(PDF_CONVERSION_PATH) -t $(TXT_PATH) -m txt2dat
+	./tokenize_txt.r
+	#python $(PDF_CONVERSION_PATH) -t $(TXT_PATH) -m txt2dat
 	
 txt2dat: $(TXT2DAT_FILES)
 
@@ -133,10 +134,15 @@ dl_data_zip:
 	cd -
 	
 # make topics json
-TOPICS_FILES = $(DATA_PATH)/topics.json $(DATA_PATH)/topic_clusters.json $(DATA_PATH)/papers_topics.json
-$(TOPICS_FILES): $(TXT_PATH)/$(FILES_FILE) $(TXT_PATH)/$(VOCAB_FILE) $(LDA_OUTPUT_PATH)/final.gamma $(LDA_OUTPUT_PATH)/final.beta $(DATA_PATH)/papers.json 
-	./topics.r
+# TOPICS_FILES = $(DATA_PATH)/topics.json $(DATA_PATH)/topic_clusters.json $(DATA_PATH)/papers_topics.json
+# $(TOPICS_FILES): $(TXT_PATH)/$(FILES_FILE) $(TXT_PATH)/$(VOCAB_FILE) $(LDA_OUTPUT_PATH)/final.gamma $(LDA_OUTPUT_PATH)/final.beta $(DATA_PATH)/papers.json 
+# 	./topics.r
+# 
 
+TOPICS_FILES = $(DATA_PATH)/topics.json $(DATA_PATH)/topic_clusters.json $(DATA_PATH)/papers_topics.json $(DATA_PATH)/theta_v.dat
+$(TOPICS_FILES): $(TXT_PATH)/$(FILES_FILE) $(TXT_PATH)/$(VOCAB_FILE) $(TXT_PATH)/$(MULT_FILE) $(DATA_PATH)/papers.json 
+	./lda_txt.r
+	
 topics: $(TOPICS_FILES)
 
 clean_topics: 
@@ -145,6 +151,7 @@ clean_topics:
 # initialize couchdb
 init_db: $(DATA_PATH)/papers_topics.json $(DATA_PATH)/authors.json $(DATA_PATH)/schedule.json $(DATA_PATH)/topics.json $(DATA_PATH)/topic_clusters.json
 	./init_couchdb.r
+
 	
 # read user likes and topic preferences from couchdb	
 READ_DB_FILES = $(DATA_PATH)/userids.dat $(DATA_PATH)/users.dat $(DATA_PATH)/items.dat $(DATA_PATH)/theta_u.dat
@@ -160,9 +167,13 @@ clean_db:
 # compute ctr latent features
 CTR_FILES = $(CTR_OUTPUT_PATH)/final-U.dat $(CTR_OUTPUT_PATH)/final-V.dat
 
-$(CTR_FILES): $(DATA_PATH)/users.dat $(DATA_PATH)/items.dat $(DATA_PATH)/theta_u.dat $(LDA_OUTPUT_PATH)/final.gamma
+# $(CTR_FILES): $(DATA_PATH)/users.dat $(DATA_PATH)/items.dat $(DATA_PATH)/theta_u.dat $(LDA_OUTPUT_PATH)/final.gamma
+# 	mkdir -p $(CTR_OUTPUT_PATH)
+# 	ctr2/ctr --directory $(CTR_OUTPUT_PATH) --user $(DATA_PATH)/users.dat --item $(DATA_PATH)/items.dat --theta_v_init $(LDA_OUTPUT_PATH)/final.gamma --theta_u_init $(DATA_PATH)/theta_u.dat --num_factors $(LDA_N_TOPICS) --a ${CTR_A} --b ${CTR_B} --alpha_u_smooth $(CTR_ALPHA_U_SMOOTH) --alpha_v_smooth $(CTR_ALPHA_V_SMOOTH) --lambda_u $(CTR_LAMBDA_U) --lambda_v $(CTR_LAMBDA_V) --max_iter ${CTR_MAX_ITER}
+	
+$(CTR_FILES): $(DATA_PATH)/users.dat $(DATA_PATH)/items.dat $(DATA_PATH)/theta_u.dat $(DATA_PATH)/theta_v.dat
 	mkdir -p $(CTR_OUTPUT_PATH)
-	ctr2/ctr --directory $(CTR_OUTPUT_PATH) --user $(DATA_PATH)/users.dat --item $(DATA_PATH)/items.dat --theta_v_init $(LDA_OUTPUT_PATH)/final.gamma --theta_u_init $(DATA_PATH)/theta_u.dat --num_factors $(LDA_N_TOPICS) --a ${CTR_A} --b ${CTR_B} --alpha_u_smooth $(CTR_ALPHA_U_SMOOTH) --alpha_v_smooth $(CTR_ALPHA_V_SMOOTH) --lambda_u $(CTR_LAMBDA_U) --lambda_v $(CTR_LAMBDA_V) --max_iter ${CTR_MAX_ITER}
+	ctr2/ctr --directory $(CTR_OUTPUT_PATH) --user $(DATA_PATH)/users.dat --item $(DATA_PATH)/items.dat --theta_v_init $(DATA_PATH)/theta_v.dat --theta_u_init $(DATA_PATH)/theta_u.dat --num_factors $(LDA_N_TOPICS) --a ${CTR_A} --b ${CTR_B} --alpha_u_smooth $(CTR_ALPHA_U_SMOOTH) --alpha_v_smooth $(CTR_ALPHA_V_SMOOTH) --lambda_u $(CTR_LAMBDA_U) --lambda_v $(CTR_LAMBDA_V) --max_iter ${CTR_MAX_ITER}
 	
 run_ctr: $(CTR_FILES)
 
