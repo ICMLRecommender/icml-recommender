@@ -156,7 +156,8 @@ init_db: $(DATA_PATH)/papers_topics.json $(DATA_PATH)/authors.json $(DATA_PATH)/
 # read user likes and topic preferences from couchdb	
 READ_DB_FILES = $(DATA_PATH)/userids.dat $(DATA_PATH)/users.dat $(DATA_PATH)/items.dat $(DATA_PATH)/theta_u.dat
 
-$(READ_DB_FILES): $(TXT_PATH)/$(FILES_FILE)
+#$(READ_DB_FILES): $(TXT_PATH)/$(FILES_FILE)
+$(READ_DB_FILES): 
 	./read_couchdb.r
 	
 read_db: $(READ_DB_FILES)
@@ -171,7 +172,8 @@ CTR_FILES = $(CTR_OUTPUT_PATH)/final-U.dat $(CTR_OUTPUT_PATH)/final-V.dat
 # 	mkdir -p $(CTR_OUTPUT_PATH)
 # 	ctr2/ctr --directory $(CTR_OUTPUT_PATH) --user $(DATA_PATH)/users.dat --item $(DATA_PATH)/items.dat --theta_v_init $(LDA_OUTPUT_PATH)/final.gamma --theta_u_init $(DATA_PATH)/theta_u.dat --num_factors $(LDA_N_TOPICS) --a ${CTR_A} --b ${CTR_B} --alpha_u_smooth $(CTR_ALPHA_U_SMOOTH) --alpha_v_smooth $(CTR_ALPHA_V_SMOOTH) --lambda_u $(CTR_LAMBDA_U) --lambda_v $(CTR_LAMBDA_V) --max_iter ${CTR_MAX_ITER}
 	
-$(CTR_FILES): $(DATA_PATH)/users.dat $(DATA_PATH)/items.dat $(DATA_PATH)/theta_u.dat $(DATA_PATH)/theta_v.dat
+#$(CTR_FILES): $(DATA_PATH)/users.dat $(DATA_PATH)/items.dat $(DATA_PATH)/theta_u.dat $(DATA_PATH)/theta_v.dat
+$(CTR_FILES): $(DATA_PATH)/users.dat $(DATA_PATH)/items.dat $(DATA_PATH)/theta_u.dat
 	mkdir -p $(CTR_OUTPUT_PATH)
 	ctr2/ctr --directory $(CTR_OUTPUT_PATH) --user $(DATA_PATH)/users.dat --item $(DATA_PATH)/items.dat --theta_v_init $(DATA_PATH)/theta_v.dat --theta_u_init $(DATA_PATH)/theta_u.dat --num_factors $(LDA_N_TOPICS) --a ${CTR_A} --b ${CTR_B} --alpha_u_smooth $(CTR_ALPHA_U_SMOOTH) --alpha_v_smooth $(CTR_ALPHA_V_SMOOTH) --lambda_u $(CTR_LAMBDA_U) --lambda_v $(CTR_LAMBDA_V) --max_iter ${CTR_MAX_ITER}
 	
@@ -181,7 +183,8 @@ clean_run_ctr:
 	rm -rf $(CTR_OUTPUT_PATH)
 
 # write recommendations to couchdb
-write_db: $(DATA_PATH)/userids.dat $(TXT_PATH)/$(TXT_PATH)/$(FILES_FILE) $(CTR_OUTPUT_PATH)/final-U.dat $(CTR_OUTPUT_PATH)/final-V.dat
+#write_db: $(DATA_PATH)/userids.dat $(TXT_PATH)/$(TXT_PATH)/$(FILES_FILE) $(CTR_OUTPUT_PATH)/final-U.dat $(CTR_OUTPUT_PATH)/final-V.dat
+write_db: $(DATA_PATH)/userids.dat $(CTR_OUTPUT_PATH)/final-U.dat $(CTR_OUTPUT_PATH)/final-V.dat
 	./write_couchdb.r
 
 # clean
