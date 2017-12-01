@@ -57,7 +57,7 @@ lda-c:
 	cd lda-c; $(MAKE); cd ..
 	
 # make ctr2
-ctr2: ctr2/ctr
+ctr2: 
 	cd ctr2; $(MAKE); cd ..
 
 # scrape data
