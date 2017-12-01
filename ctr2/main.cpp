@@ -88,7 +88,8 @@ int main(int argc, char* argv[]) {
   char*  user_path = NULL;
   char*  item_path = NULL;
   double a = 1.0;
-  double b = 0.01;
+  //double b = 0.01;
+  double b = -1;
   double lambda_u = 0.01;
   double lambda_v = 0.01;
   double alpha_v_smooth = 0.0;
@@ -201,17 +202,6 @@ int main(int argc, char* argv[]) {
   }
   printf("item file: %s\n", item_path);
 
-  printf("a: %.4f\n", a);
-  printf("b: %.4f\n", b);
-  printf("lambda_u: %.4f\n", lambda_u);
-  printf("lambda_v: %.4f\n", lambda_v);
-  printf("alpha_u_smooth: %.5f\n", alpha_u_smooth);
-  printf("alpha_v_smooth: %.5f\n", alpha_v_smooth);
-  printf("random seed: %d\n", (int)random_seed);
-  printf("save lag: %d\n", save_lag);
-  printf("max iter: %d\n", max_iter);
-  printf("number of factors: %d\n", num_factors);
-
   if (mult_u_path != NULL) {
     if (!file_exists(mult_u_path)) {
       printf("mult_u file %s doesn't exist! quit ...\n", mult_u_path);
@@ -280,16 +270,7 @@ int main(int argc, char* argv[]) {
 
   printf("\n");
 
-  /// save the settings
-  int ctr_run = 1;
-  //if (mult_v_path == NULL) ctr_run = 0; // TODO check mult_user_path?
-  ctr_hyperparameter ctr_param;
-  ctr_param.set(a, b, lambda_u, lambda_v, alpha_u_smooth, alpha_v_smooth, beta_smooth,
-      random_seed, max_iter, save_lag, theta_u_opt, theta_v_opt, ctr_run, lda_regression);
-  sprintf(filename, "%s/settings.txt", directory); 
-  ctr_param.save(filename);
-  
-  /// init random numbe generator
+  /// init random number generator
   RANDOM_NUMBER = new_random_number_generator(random_seed);
 
   // read users
@@ -304,6 +285,37 @@ int main(int argc, char* argv[]) {
   items->read_data(item_path);
   int num_items = (int)items->m_vec_data.size();
 
+  // compute b
+  if (b <= 0.0) {
+    int num_entries = 0;
+    for (int i = 0; i < num_users; i ++) {
+      num_entries += users->m_vec_len[i];
+    }
+    b = a*num_entries/(num_users*num_items-num_entries);
+  }
+  
+  /// print information
+  printf("a: %.4f\n", a);
+  printf("b: %.4f\n", b);
+  printf("lambda_u: %.4f\n", lambda_u);
+  printf("lambda_v: %.4f\n", lambda_v);
+  printf("alpha_u_smooth: %.5f\n", alpha_u_smooth);
+  printf("alpha_v_smooth: %.5f\n", alpha_v_smooth);
+  printf("random seed: %d\n", (int)random_seed);
+  printf("save lag: %d\n", save_lag);
+  printf("max iter: %d\n", max_iter);
+  printf("number of factors: %d\n", num_factors);
+  
+  /// save the settings
+  int ctr_run = 1;
+  //if (mult_v_path == NULL) ctr_run = 0; // TODO check mult_user_path?
+  ctr_hyperparameter ctr_param;
+  ctr_param.set(a, b, lambda_u, lambda_v, alpha_u_smooth, alpha_v_smooth, beta_smooth,
+                random_seed, max_iter, save_lag, theta_u_opt, theta_v_opt, ctr_run, lda_regression);
+  sprintf(filename, "%s/settings.txt", directory); 
+  ctr_param.save(filename);
+  
+  
   // create model instance
   c_ctr* ctr = new c_ctr();
   ctr->set_model_parameters(num_factors, num_users, num_items);

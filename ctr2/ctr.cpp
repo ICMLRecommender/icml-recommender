@@ -182,7 +182,7 @@ void c_ctr::learn_map_estimate(const c_data* users, const c_data* items,
 
   /// confidence parameters
   double a_minus_b = param->a - param->b;
-
+  
   while ((iter < param->max_iter and converge > 1e-4 ) or iter < min_iter) {
 
     log_likelihood_old = log_likelihood;
@@ -220,11 +220,13 @@ void c_ctr::learn_map_estimate(const c_data* users, const c_data* items,
 
         // adding the topic vector
         // even when ctr_run=0, m_theta=0
-        gsl_blas_daxpy(param->lambda_u, &theta_u.vector, x);
+        //gsl_blas_daxpy(param->lambda_u, &theta_u.vector, x);
+        gsl_blas_daxpy(param->lambda_u/n, &theta_u.vector, x);
 
         gsl_matrix_memcpy(B, A); // save for computing likelihood
-
-        gsl_matrix_add_diagonal(A, param->lambda_u);
+        
+        //gsl_matrix_add_diagonal(A, param->lambda_u);
+        gsl_matrix_add_diagonal(A, param->lambda_u/n);
         matrix_vector_solve(A, x, &u.vector);
 
         // likelihood part of theta, even when theta=0, which is a
@@ -232,7 +234,8 @@ void c_ctr::learn_map_estimate(const c_data* users, const c_data* items,
         gsl_vector_memcpy(x, &u.vector);
         gsl_vector_sub(x, &theta_u.vector);
         gsl_blas_ddot(x, x, &result);
-        log_likelihood += -0.5 * param->lambda_u * result;
+        //log_likelihood += -0.5 * param->lambda_u * result;
+        log_likelihood += -0.5 * param->lambda_u/n * result;
 
 //        if (param->ctr_run && param->theta_u_opt) {
 //          const c_document* doc =  c_u->m_docs[i];
@@ -285,11 +288,13 @@ void c_ctr::learn_map_estimate(const c_data* users, const c_data* items,
 
         // adding the topic vector
         // even when ctr_run=0, m_theta=0
-        gsl_blas_daxpy(param->lambda_v, &theta_v.vector, x);
+        //gsl_blas_daxpy(param->lambda_v, &theta_v.vector, x);
+        gsl_blas_daxpy(param->lambda_v/m, &theta_v.vector, x);
         
         gsl_matrix_memcpy(B, A); // save for computing likelihood 
 
-        gsl_matrix_add_diagonal(A, param->lambda_v);  
+        //gsl_matrix_add_diagonal(A, param->lambda_v);
+        gsl_matrix_add_diagonal(A, param->lambda_v/m);  
         matrix_vector_solve(A, x, &v.vector);
 
         // update the likelihood for the relevant part
@@ -306,7 +311,8 @@ void c_ctr::learn_map_estimate(const c_data* users, const c_data* items,
         gsl_vector_memcpy(x, &v.vector);
         gsl_vector_sub(x, &theta_v.vector);
         gsl_blas_ddot(x, x, &result);
-        log_likelihood += -0.5 * param->lambda_v * result;
+        //log_likelihood += -0.5 * param->lambda_v * result;
+        log_likelihood += -0.5 * param->lambda_v/m * result;
         
 //        if (param->ctr_run && param->theta_v_opt) {
 //          const c_document* doc =  c_v->m_docs[j];
